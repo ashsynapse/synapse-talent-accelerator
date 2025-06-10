@@ -1,7 +1,5 @@
-
 import React from "react";
 import BlogPostTemplate from "../../components/BlogPostTemplate";
-import { Linkedin } from "lucide-react";
 
 const SideHustlesGigEconomy = () => {
   return (
@@ -12,6 +10,8 @@ const SideHustlesGigEconomy = () => {
       readTime="6 min read"
       category="Industry Insights"
       excerpt="In recent years, the gig economy has seen exponential growth, driven largely by Generation Z. This digitally savvy generation, born between the mid-to-late 1990s and early 2010s, is redefining work culture by embracing flexibility, entrepreneurship, and multiple streams of income."
+      authorImage="/lovable-uploads/96df22e6-25e5-4fc0-9c4f-cdd584a9d1cb.png"
+      authorLinkedIn="https://www.linkedin.com/in/alitaghikhani/"
     >
       <img 
         src="https://cdn-images-1.medium.com/max/800/1*iulfYJoPsSlZl_fdEXouPw.png" 
@@ -98,17 +98,32 @@ const SideHustlesGigEconomy = () => {
         <div className="mt-12 pt-8 border-t border-synapse-lighter">
           <h3 className="text-xl font-semibold text-synapse-dark mb-4">About the Author</h3>
           <div className="flex items-center gap-4">
+            <img 
+              src="/lovable-uploads/96df22e6-25e5-4fc0-9c4f-cdd584a9d1cb.png" 
+              alt="Ali Taghikhani"
+              className="w-16 h-16 rounded-full object-cover border-2 border-synapse-lighter"
+            />
             <div>
-              <p className="text-lg font-medium text-synapse-dark">Ali Taghikhani</p>
+              <a 
+                href="https://www.linkedin.com/in/alitaghikhani/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-lg font-medium text-synapse-dark hover:text-synapse-primary transition-colors"
+              >
+                Ali Taghikhani
+              </a>
               <p className="text-synapse-gray">CEO and Co-founder at Synapse</p>
               <a 
                 href="https://www.linkedin.com/in/alitaghikhani/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-synapse-primary hover:underline font-medium flex items-center gap-2 mt-2"
+                className="text-synapse-primary hover:opacity-80 transition-opacity mt-2 inline-block"
               >
-                <Linkedin size={16} />
-                LinkedIn Profile
+                <img 
+                  src="/lovable-uploads/344e36e1-0b51-4898-a96b-b56550c5f01d.png" 
+                  alt="LinkedIn"
+                  className="w-5 h-5"
+                />
               </a>
             </div>
           </div>

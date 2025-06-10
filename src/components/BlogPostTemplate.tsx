@@ -2,7 +2,7 @@
 import React from "react";
 import PageTemplate from "./PageTemplate";
 import { Button } from "@/components/ui/button";
-import { Calendar, User, Clock, ArrowLeft, Share2, BookmarkPlus } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, Share2, BookmarkPlus } from "lucide-react";
 
 interface BlogPostTemplateProps {
   title: string;
@@ -12,6 +12,8 @@ interface BlogPostTemplateProps {
   category: string;
   children: React.ReactNode;
   excerpt?: string;
+  authorImage?: string;
+  authorLinkedIn?: string;
 }
 
 const BlogPostTemplate = ({ 
@@ -21,7 +23,9 @@ const BlogPostTemplate = ({
   readTime, 
   category, 
   children,
-  excerpt 
+  excerpt,
+  authorImage,
+  authorLinkedIn
 }: BlogPostTemplateProps) => {
   return (
     <PageTemplate 
@@ -55,9 +59,26 @@ const BlogPostTemplate = ({
             </h1>
             
             <div className="flex flex-wrap items-center gap-6 text-synapse-gray">
-              <div className="flex items-center gap-2">
-                <User size={18} />
-                <span className="font-medium">{author}</span>
+              <div className="flex items-center gap-3">
+                {authorImage && (
+                  <img 
+                    src={authorImage} 
+                    alt={author}
+                    className="w-10 h-10 rounded-full object-cover border-2 border-synapse-lighter"
+                  />
+                )}
+                {authorLinkedIn ? (
+                  <a 
+                    href={authorLinkedIn} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="font-medium hover:text-synapse-primary transition-colors"
+                  >
+                    {author}
+                  </a>
+                ) : (
+                  <span className="font-medium">{author}</span>
+                )}
               </div>
               <div className="flex items-center gap-2">
                 <Calendar size={18} />
