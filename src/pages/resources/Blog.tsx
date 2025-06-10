@@ -22,6 +22,10 @@ const blogPosts = [
 const categories = ["All", "Industry Insights"];
 
 const Blog = () => {
+  const handleBlogClick = (href: string) => {
+    window.location.href = href;
+  };
+
   return (
     <PageTemplate 
       title="Recruitment Blog"
@@ -54,7 +58,11 @@ const Blog = () => {
           {/* Blog Posts Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
-              <Card key={index} className="border hover:border-synapse-primary transition-all duration-300 group h-full">
+              <Card 
+                key={index} 
+                className="border hover:border-synapse-primary transition-all duration-300 group h-full cursor-pointer"
+                onClick={() => handleBlogClick(post.href)}
+              >
                 <CardContent className="p-0 flex flex-col h-full">
                   {/* Blog Image */}
                   <div className="w-full h-48 overflow-hidden rounded-t-lg">
@@ -83,14 +91,9 @@ const Blog = () => {
                     <div className="flex items-center justify-between text-sm text-synapse-gray mb-4">
                       <div className="flex items-center gap-2">
                         <User size={16} />
-                        <a 
-                          href={post.authorLinkedIn} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="font-medium hover:text-synapse-primary transition-colors"
-                        >
+                        <span className="font-medium">
                           {post.author}
-                        </a>
+                        </span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Clock size={16} />
@@ -107,7 +110,10 @@ const Blog = () => {
                         variant="ghost" 
                         size="sm"
                         className="text-synapse-primary hover:bg-synapse-light p-2"
-                        onClick={() => window.location.href = post.href}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleBlogClick(post.href);
+                        }}
                       >
                         <ArrowRight size={16} />
                       </Button>
