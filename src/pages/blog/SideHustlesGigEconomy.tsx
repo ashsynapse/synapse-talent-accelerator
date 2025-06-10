@@ -6,7 +6,7 @@ const SideHustlesGigEconomy = () => {
   return (
     <BlogPostTemplate
       title="The Rise of Side Hustles: Why Gen Z is Shaping the Gig Economy"
-      author="SRN Knowledge Base"
+      author="Ali Taghikhani"
       date="February 21, 2025"
       readTime="6 min read"
       category="Industry Insights"
