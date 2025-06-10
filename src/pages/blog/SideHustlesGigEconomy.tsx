@@ -1,6 +1,7 @@
 
 import React from "react";
 import BlogPostTemplate from "../../components/BlogPostTemplate";
+import { Linkedin } from "lucide-react";
 
 const SideHustlesGigEconomy = () => {
   return (
@@ -18,7 +19,7 @@ const SideHustlesGigEconomy = () => {
         className="w-full rounded-lg mb-8"
       />
 
-      <div className="prose prose-lg max-w-none text-synapse-gray leading-relaxed">
+      <article className="prose prose-lg max-w-none text-synapse-gray leading-relaxed">
         <p className="text-xl font-medium mb-8 text-synapse-dark">
           In recent years, the gig economy has seen exponential growth, driven largely by Generation Z. This digitally savvy generation, born between the mid-to-late 1990s and early 2010s, is redefining work culture by embracing flexibility, entrepreneurship, and multiple streams of income. From freelancing and content creation to e-commerce and consulting, Gen Z is leveraging technology to create opportunities beyond the traditional 9-to-5 model.
         </p>
@@ -99,19 +100,20 @@ const SideHustlesGigEconomy = () => {
           <div className="flex items-center gap-4">
             <div>
               <p className="text-lg font-medium text-synapse-dark">Ali Taghikhani</p>
-              <p className="text-synapse-gray">Recruitment Industry Expert</p>
+              <p className="text-synapse-gray">CEO and Co-founder at Synapse</p>
               <a 
                 href="https://www.linkedin.com/in/alitaghikhani/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-synapse-primary hover:underline font-medium"
+                className="text-synapse-primary hover:underline font-medium flex items-center gap-2 mt-2"
               >
-                Connect on LinkedIn
+                <Linkedin size={16} />
+                LinkedIn Profile
               </a>
             </div>
           </div>
         </div>
-      </div>
+      </article>
     </BlogPostTemplate>
   );
 };
