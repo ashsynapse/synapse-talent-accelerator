@@ -3,10 +3,10 @@ import React from "react";
 
 const RecruiterKPISection = () => {
   const metrics = [
-    { value: "$30K", description: "Maximum can earn per placement" },
-    { value: "499+", description: "Active Roles" },
-    { value: "48-Hour", description: "Average Candidates Match Time" },
-    { value: "97%", description: "Recruiter Satisfaction" }
+    { value: "$15K+", description: "Minimum Recruiter Earnings Per Placement" },
+    { value: "499+", description: "High-Demand Open Roles Across Multiple Sectors" },
+    { value: "50%", description: "Commission Rate With No Cap on Earnings" },
+    { value: "97%", description: "Recruiter Experience Score Across Our Network" }
   ];
 
   return (
