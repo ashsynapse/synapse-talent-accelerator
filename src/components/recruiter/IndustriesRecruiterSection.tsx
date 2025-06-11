@@ -3,56 +3,56 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   Code2, 
-  Briefcase, 
-  Calculator, 
-  Heart, 
-  Factory, 
   TrendingUp, 
+  Settings, 
   Users, 
-  Crown
+  DollarSign,
+  Calculator,
+  Scale,
+  Factory
 } from "lucide-react";
 
 const IndustriesRecruiterSection = () => {
   const industries = [
     {
-      name: "Technology",
+      name: "Information Technology",
       icon: Code2,
-      description: "Software engineers, data scientists, DevOps specialists, and IT professionals"
+      description: "Software engineers, data scientists, AI specialists, and tech professionals"
     },
     {
-      name: "Finance",
+      name: "Digital Marketing",
       icon: TrendingUp,
-      description: "Investment bankers, financial advisors, analysts, and portfolio managers"
+      description: "Digital marketing professionals, SEO specialists, content creators"
     },
     {
-      name: "Healthcare",
-      icon: Heart,
-      description: "Medical professionals, administrators, technicians, and support staff"
+      name: "Engineering",
+      icon: Settings,
+      description: "Engineering professionals across mechanical, electrical, civil disciplines"
+    },
+    {
+      name: "Human Resources (HR)",
+      icon: Users,
+      description: "HR professionals, talent acquisition specialists, organizational development"
+    },
+    {
+      name: "Sales",
+      icon: DollarSign,
+      description: "Sales executives, business development, account management professionals"
+    },
+    {
+      name: "Accounting",
+      icon: Calculator,
+      description: "Accounting and finance professionals, CPAs, financial analysts"
     },
     {
       name: "Legal",
-      icon: Briefcase,
-      description: "Attorneys, paralegals, compliance officers, and legal support staff"
+      icon: Scale,
+      description: "Legal professionals specializing in corporate law, litigation, compliance"
     },
     {
       name: "Manufacturing",
       icon: Factory,
-      description: "Engineers, project managers, quality control, and operations specialists"
-    },
-    {
-      name: "Sales & Marketing",
-      icon: Calculator,
-      description: "Sales representatives, marketing managers, business development, and growth specialists"
-    },
-    {
-      name: "Leadership",
-      icon: Crown,
-      description: "C-Suite executives, VPs, directors, and senior management professionals"
-    },
-    {
-      name: "Operations",
-      icon: Users,
-      description: "Operations managers, business analysts, project coordinators, and process specialists"
+      description: "Manufacturing professionals, operations, supply chain management"
     }
   ];
 
