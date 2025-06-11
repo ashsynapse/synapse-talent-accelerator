@@ -4,45 +4,30 @@ import { Card, CardContent } from "@/components/ui/card";
 import { 
   Code2, 
   TrendingUp, 
-  Settings, 
-  Users, 
-  DollarSign,
-  Calculator,
+  Heart, 
   Scale,
-  Factory
+  Factory,
+  Calculator,
+  Crown,
+  Users
 } from "lucide-react";
 
 const IndustriesRecruiterSection = () => {
   const industries = [
     {
-      name: "Information Technology",
+      name: "Technology",
       icon: Code2,
       description: "Software engineers, data scientists, AI specialists, and tech professionals"
     },
     {
-      name: "Digital Marketing",
+      name: "Finance",
       icon: TrendingUp,
-      description: "Digital marketing professionals, SEO specialists, content creators"
+      description: "Investment bankers, financial advisors, analysts, and portfolio managers"
     },
     {
-      name: "Engineering",
-      icon: Settings,
-      description: "Engineering professionals across mechanical, electrical, civil disciplines"
-    },
-    {
-      name: "Human Resources (HR)",
-      icon: Users,
-      description: "HR professionals, talent acquisition specialists, organizational development"
-    },
-    {
-      name: "Sales",
-      icon: DollarSign,
-      description: "Sales executives, business development, account management professionals"
-    },
-    {
-      name: "Accounting",
-      icon: Calculator,
-      description: "Accounting and finance professionals, CPAs, financial analysts"
+      name: "Healthcare",
+      icon: Heart,
+      description: "Medical professionals, administrators, technicians, and support staff"
     },
     {
       name: "Legal",
@@ -53,6 +38,21 @@ const IndustriesRecruiterSection = () => {
       name: "Manufacturing",
       icon: Factory,
       description: "Manufacturing professionals, operations, supply chain management"
+    },
+    {
+      name: "Sales & Marketing",
+      icon: Calculator,
+      description: "Sales executives, marketing managers, business development professionals"
+    },
+    {
+      name: "Leadership",
+      icon: Crown,
+      description: "C-Suite executives, VPs, directors, and senior management professionals"
+    },
+    {
+      name: "Operations",
+      icon: Users,
+      description: "Operations managers, business analysts, project coordinators, and process specialists"
     }
   ];
 

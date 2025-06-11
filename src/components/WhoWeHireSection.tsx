@@ -5,12 +5,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { 
   Code2, 
   TrendingUp, 
-  Settings, 
-  Users, 
-  DollarSign,
-  Calculator,
+  Heart, 
   Scale,
   Factory,
+  Calculator,
+  Crown,
+  Users,
   Sparkles
 } from "lucide-react";
 
@@ -19,34 +19,19 @@ const WhoWeHireSection = () => {
 
   const industries = [
     {
-      title: "Information Technology",
+      title: "Technology",
       description: "Software engineers, data scientists, AI specialists, and tech professionals",
       icon: <Code2 className="h-8 w-8 text-white" />
     },
     {
-      title: "Digital Marketing",
-      description: "Digital marketing professionals, SEO specialists, content creators",
+      title: "Finance",
+      description: "Investment bankers, financial advisors, analysts, and portfolio managers",
       icon: <TrendingUp className="h-8 w-8 text-white" />
     },
     {
-      title: "Engineering",
-      description: "Engineering professionals across mechanical, electrical, civil disciplines",
-      icon: <Settings className="h-8 w-8 text-white" />
-    },
-    {
-      title: "Human Resources (HR)",
-      description: "HR professionals, talent acquisition specialists, organizational development",
-      icon: <Users className="h-8 w-8 text-white" />
-    },
-    {
-      title: "Sales",
-      description: "Sales executives, business development, account management professionals",
-      icon: <DollarSign className="h-8 w-8 text-white" />
-    },
-    {
-      title: "Accounting",
-      description: "Accounting and finance professionals, CPAs, financial analysts",
-      icon: <Calculator className="h-8 w-8 text-white" />
+      title: "Healthcare",
+      description: "Medical professionals, administrators, technicians, and support staff",
+      icon: <Heart className="h-8 w-8 text-white" />
     },
     {
       title: "Legal",
@@ -57,6 +42,21 @@ const WhoWeHireSection = () => {
       title: "Manufacturing",
       description: "Manufacturing professionals, operations, supply chain management",
       icon: <Factory className="h-8 w-8 text-white" />
+    },
+    {
+      title: "Sales & Marketing",
+      description: "Sales executives, marketing managers, business development professionals",
+      icon: <Calculator className="h-8 w-8 text-white" />
+    },
+    {
+      title: "Leadership",
+      description: "C-Suite executives, VPs, directors, and senior management professionals",
+      icon: <Crown className="h-8 w-8 text-white" />
+    },
+    {
+      title: "Operations",
+      description: "Operations managers, business analysts, project coordinators, and process specialists",
+      icon: <Users className="h-8 w-8 text-white" />
     }
   ];
 
