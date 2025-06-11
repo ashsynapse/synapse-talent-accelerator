@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 
@@ -13,7 +14,7 @@ const RecruiterHeroSection = () => {
             Earn top commissions. Access live jobs. Work on your schedule.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+          <div className="flex justify-center items-center mb-12">
             <Button 
               className="relative overflow-hidden bg-gradient-to-r from-synapse-primary to-synapse-secondary hover:from-synapse-secondary hover:to-synapse-primary text-white font-semibold text-lg py-6 px-10 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group border-2 border-transparent"
               onClick={() => window.open("https://app.synapserecruiternetwork.com/", "_blank")}
@@ -33,13 +34,6 @@ const RecruiterHeroSection = () => {
                 Join Now
                 <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
               </span>
-            </Button>
-            <Button 
-              variant="outline"
-              className="border-2 border-synapse-primary text-synapse-primary bg-white hover:bg-synapse-light text-lg py-6 px-8 rounded-xl transition-all duration-200 shadow-soft hover:shadow-medium"
-              onClick={() => window.open("https://app.synapserecruiternetwork.com/login", "_blank")}
-            >
-              Login
             </Button>
           </div>
 
