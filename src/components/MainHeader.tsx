@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Plus, Minus, 
@@ -206,7 +205,7 @@ const MainHeader = () => {
               
               {item.submenu && (
                 <div className="absolute top-full left-1/2 transform -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pt-2">
-                  <div className="bg-white/70 backdrop-blur-xl shadow-medium border border-white/20 rounded-xl p-6">
+                  <div className="bg-white/95 backdrop-blur-lg shadow-medium border border-white/30 rounded-xl p-6">
                     <div className="grid grid-cols-2 gap-4 min-w-[500px]">
                       {item.submenu.map((subItem) => {
                         const IconComponent = getIconForSubmenu(subItem.label);
@@ -266,7 +265,7 @@ const MainHeader = () => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <nav className="lg:hidden bg-white/70 backdrop-blur-xl border-t border-white/10 shadow-medium">
+        <nav className="lg:hidden bg-white/95 backdrop-blur-lg border-t border-white/20 shadow-medium">
           <div className="container-wide py-4">
             <div className="space-y-2">
               {navItems.map((item) => (
@@ -316,7 +315,7 @@ const MainHeader = () => {
               ))}
             </div>
             
-            <div className="flex flex-col space-y-3 mt-6 pt-4 border-t border-white/10">
+            <div className="flex flex-col space-y-3 mt-6 pt-4 border-t border-white/20">
               <Button
                 className="btn-primary w-full"
                 onClick={() => {
