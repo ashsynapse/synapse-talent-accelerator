@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import PageTemplate from "./PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -208,13 +207,13 @@ const BlogPostTemplate = ({
         </div>
       </div>
 
-      <article className="py-8 md:py-20 bg-white">
+      <article className="py-4 md:py-8 lg:py-12 xl:py-20 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Back to Blog */}
-          <div className="mb-6 md:mb-8">
+          <div className="mb-4 md:mb-6 lg:mb-8">
             <Button 
               variant="ghost" 
-              className="text-synapse-primary hover:bg-synapse-light"
+              className="text-synapse-primary hover:bg-synapse-light text-sm md:text-base"
               onClick={() => window.location.href = '/blog'}
             >
               <ArrowLeft size={16} className="mr-2" />
@@ -224,27 +223,27 @@ const BlogPostTemplate = ({
 
           {/* Mobile/Tablet Table of Contents - Collapsible */}
           {headings.length > 0 && (
-            <div className="xl:hidden mb-6 md:mb-8">
+            <div className="xl:hidden mb-4 md:mb-6 lg:mb-8">
               <Accordion type="single" collapsible className="bg-gray-50 rounded-lg">
                 <AccordionItem value="table-of-contents" className="border-none">
-                  <AccordionTrigger className="px-4 md:px-6 py-3 md:py-4 hover:no-underline">
+                  <AccordionTrigger className="px-3 md:px-4 lg:px-6 py-2 md:py-3 lg:py-4 hover:no-underline">
                     <div className="flex items-center gap-2">
-                      <Menu size={18} className="text-synapse-primary" />
-                      <span className="text-base md:text-lg font-semibold text-synapse-dark">Table of Contents</span>
+                      <Menu size={16} md:size={18} className="text-synapse-primary" />
+                      <span className="text-sm md:text-base lg:text-lg font-semibold text-synapse-dark">Table of Contents</span>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="px-4 md:px-6 pb-4">
+                  <AccordionContent className="px-3 md:px-4 lg:px-6 pb-3 md:pb-4">
                     <nav className="space-y-1">
                       {headings.map((heading) => (
                         <button
                           key={heading.id}
                           onClick={() => scrollToHeading(heading.id)}
-                          className={`block w-full text-left text-sm py-2 px-3 rounded transition-colors ${
+                          className={`block w-full text-left text-xs md:text-sm py-1.5 md:py-2 px-2 md:px-3 rounded transition-colors ${
                             activeHeading === heading.id
                               ? 'bg-synapse-primary text-white'
                               : 'text-synapse-gray hover:text-synapse-primary hover:bg-white'
                           }`}
-                          style={{ marginLeft: heading.level > 2 ? `${(heading.level - 2) * 12}px` : '0' }}
+                          style={{ marginLeft: heading.level > 2 ? `${(heading.level - 2) * 8}px` : '0' }}
                         >
                           {heading.text}
                         </button>
@@ -257,7 +256,7 @@ const BlogPostTemplate = ({
           )}
 
           {/* Main Content Layout */}
-          <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 md:gap-6 lg:gap-8">
             {/* Table of Contents - Left Sidebar - Hidden on mobile and tablet */}
             {headings.length > 0 && (
               <div className="hidden xl:block xl:col-span-3">
@@ -287,24 +286,24 @@ const BlogPostTemplate = ({
             {/* Main Article Content */}
             <div className={headings.length > 0 ? "xl:col-span-6" : "xl:col-span-9"}>
               {/* Article Header */}
-              <header className="mb-8 md:mb-12">
-                <div className="mb-4">
-                  <span className="text-sm px-3 py-1 bg-synapse-lighter text-synapse-primary rounded-full font-medium">
+              <header className="mb-6 md:mb-8 lg:mb-12">
+                <div className="mb-3 md:mb-4">
+                  <span className="text-xs md:text-sm px-2 md:px-3 py-1 bg-synapse-lighter text-synapse-primary rounded-full font-medium">
                     {category}
                   </span>
                 </div>
                 
-                <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-synapse-dark mb-6 leading-tight">
+                <h1 className="text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold text-synapse-dark mb-4 md:mb-6 leading-tight">
                   {title}
                 </h1>
                 
-                <div className="flex flex-wrap items-center gap-4 md:gap-6 text-synapse-gray mb-6">
-                  <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center gap-3 md:gap-4 lg:gap-6 text-synapse-gray mb-4 md:mb-6">
+                  <div className="flex items-center gap-2 md:gap-3">
                     {authorImage && (
                       <img 
                         src={authorImage} 
                         alt={author}
-                        className="w-10 h-10 rounded-full object-cover border-2 border-synapse-lighter"
+                        className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover border-2 border-synapse-lighter"
                       />
                     )}
                     {authorLinkedIn ? (
@@ -312,66 +311,66 @@ const BlogPostTemplate = ({
                         href={authorLinkedIn} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="font-medium hover:text-synapse-primary transition-colors"
+                        className="font-medium hover:text-synapse-primary transition-colors text-sm md:text-base"
                       >
                         {author}
                       </a>
                     ) : (
-                      <span className="font-medium">{author}</span>
+                      <span className="font-medium text-sm md:text-base">{author}</span>
                     )}
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar size={18} />
-                    <span>{date}</span>
+                  <div className="flex items-center gap-1.5 md:gap-2">
+                    <Calendar size={14} className="md:w-[18px] md:h-[18px]" />
+                    <span className="text-xs md:text-sm">{date}</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Clock size={18} />
-                    <span>{readTime}</span>
+                  <div className="flex items-center gap-1.5 md:gap-2">
+                    <Clock size={14} className="md:w-[18px] md:h-[18px]" />
+                    <span className="text-xs md:text-sm">{readTime}</span>
                   </div>
                 </div>
 
                 {/* Share Actions */}
-                <div className="flex items-center gap-3 pb-6 border-b border-gray-200">
+                <div className="flex items-center gap-2 md:gap-3 pb-4 md:pb-6 border-b border-gray-200">
                   <div className="relative">
                     <Button 
                       variant="outline" 
                       size="sm" 
-                      className="text-synapse-primary border-synapse-primary hover:bg-synapse-light"
+                      className="text-synapse-primary border-synapse-primary hover:bg-synapse-light text-xs md:text-sm"
                       onClick={() => setShowShareMenu(!showShareMenu)}
                     >
-                      <Share2 size={16} className="mr-2" />
+                      <Share2 size={14} className="mr-1.5 md:mr-2 md:w-4 md:h-4" />
                       Share
                     </Button>
                     
                     {/* Share Dropdown Menu */}
                     {showShareMenu && (
-                      <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-10 min-w-[160px]">
+                      <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-10 min-w-[140px] md:min-w-[160px]">
                         <button
                           onClick={() => handleShare('facebook')}
-                          className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 flex items-center gap-2"
+                          className="w-full px-3 md:px-4 py-1.5 md:py-2 text-left text-xs md:text-sm hover:bg-gray-50 flex items-center gap-2"
                         >
-                          <Facebook size={16} />
+                          <Facebook size={14} className="md:w-4 md:h-4" />
                           Facebook
                         </button>
                         <button
                           onClick={() => handleShare('twitter')}
-                          className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 flex items-center gap-2"
+                          className="w-full px-3 md:px-4 py-1.5 md:py-2 text-left text-xs md:text-sm hover:bg-gray-50 flex items-center gap-2"
                         >
-                          <Twitter size={16} />
+                          <Twitter size={14} className="md:w-4 md:h-4" />
                           Twitter
                         </button>
                         <button
                           onClick={() => handleShare('linkedin')}
-                          className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 flex items-center gap-2"
+                          className="w-full px-3 md:px-4 py-1.5 md:py-2 text-left text-xs md:text-sm hover:bg-gray-50 flex items-center gap-2"
                         >
-                          <Linkedin size={16} />
+                          <Linkedin size={14} className="md:w-4 md:h-4" />
                           LinkedIn
                         </button>
                         <button
                           onClick={() => handleShare()}
-                          className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 flex items-center gap-2"
+                          className="w-full px-3 md:px-4 py-1.5 md:py-2 text-left text-xs md:text-sm hover:bg-gray-50 flex items-center gap-2"
                         >
-                          {copied ? <Check size={16} /> : <Copy size={16} />}
+                          {copied ? <Check size={14} className="md:w-4 md:h-4" /> : <Copy size={14} className="md:w-4 md:h-4" />}
                           {copied ? 'Copied!' : 'Copy Link'}
                         </button>
                       </div>
@@ -381,65 +380,33 @@ const BlogPostTemplate = ({
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    className="text-synapse-primary border-synapse-primary hover:bg-synapse-light"
+                    className="text-synapse-primary border-synapse-primary hover:bg-synapse-light text-xs md:text-sm"
                     onClick={handleBookmark}
                   >
-                    <BookmarkPlus size={16} className="mr-2" />
+                    <BookmarkPlus size={14} className="mr-1.5 md:mr-2 md:w-4 md:h-4" />
                     Save
                   </Button>
                 </div>
               </header>
 
               {/* Article Content */}
-              <div className="prose prose-sm md:prose-lg max-w-none prose-headings:text-synapse-dark prose-a:text-synapse-primary hover:prose-a:text-synapse-secondary">
+              <div className="prose prose-sm md:prose-base lg:prose-lg max-w-none prose-headings:text-synapse-dark prose-a:text-synapse-primary hover:prose-a:text-synapse-secondary">
                 {children}
               </div>
 
-              {/* CTA Section - Moved above author box */}
-              <div className="mt-12 mb-8">
-                <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-6 md:p-8 text-white">
-                  <h3 className="text-xl md:text-2xl font-semibold mb-3">Ready to Transform Your Hiring?</h3>
-                  <p className="text-sm md:text-base mb-4 text-white/90 leading-relaxed">
+              {/* CTA Section - Above author box */}
+              <div className="mt-8 md:mt-10 lg:mt-12 mb-6 md:mb-8">
+                <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-4 md:p-6 lg:p-8 text-white">
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 md:mb-3">Ready to Transform Your Hiring?</h3>
+                  <p className="text-xs md:text-sm lg:text-base mb-3 md:mb-4 text-white/90 leading-relaxed">
                     Discover how AI-powered recruitment can help you find top talent faster and more efficiently.
                   </p>
                   <Button 
-                    className="bg-white text-synapse-primary hover:bg-gray-100 w-full md:w-auto"
+                    className="bg-white text-synapse-primary hover:bg-gray-100 w-full md:w-auto text-sm md:text-base"
                     onClick={() => window.location.href = '/contact'}
                   >
                     Book a Demo
                   </Button>
-                </div>
-              </div>
-
-              {/* Author Box */}
-              <div className="border-t border-gray-200 pt-8">
-                <div className="flex items-start gap-4">
-                  {authorImage && (
-                    <img 
-                      src={authorImage} 
-                      alt={author}
-                      className="w-16 h-16 rounded-full object-cover border-2 border-synapse-lighter flex-shrink-0"
-                    />
-                  )}
-                  <div>
-                    <h4 className="font-semibold text-synapse-dark mb-1">
-                      {authorLinkedIn ? (
-                        <a 
-                          href={authorLinkedIn} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="hover:text-synapse-primary transition-colors"
-                        >
-                          {author}
-                        </a>
-                      ) : (
-                        author
-                      )}
-                    </h4>
-                    <p className="text-sm text-synapse-gray">
-                      Expert in AI recruitment and talent acquisition strategies.
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -501,7 +468,7 @@ const BlogPostTemplate = ({
           </div>
 
           {/* Mobile-only sections - Show on mobile what's in the sidebar */}
-          <div className="md:hidden mt-8 space-y-6">
+          <div className="md:hidden mt-6 space-y-4">
             {/* Recent Articles - Mobile */}
             <div className="bg-gray-50 rounded-lg p-4">
               <h3 className="text-base font-semibold text-synapse-dark mb-3">Recent Articles</h3>
