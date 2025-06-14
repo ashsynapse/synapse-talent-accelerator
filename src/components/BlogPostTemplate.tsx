@@ -33,9 +33,11 @@ const BlogPostTemplate = ({
   const [headings, setHeadings] = useState<Array<{id: string, text: string, level: number}>>([]);
   const [activeHeading, setActiveHeading] = useState<string>("");
   const [copied, setCopied] = useState(false);
+  const [copiedEnd, setCopiedEnd] = useState(false);
   const [readingProgress, setReadingProgress] = useState(0);
   const [showBookmarkDialog, setShowBookmarkDialog] = useState(false);
   const [showShareMenu, setShowShareMenu] = useState(false);
+  const [showShareMenuEnd, setShowShareMenuEnd] = useState(false);
   const [bookmarks, setBookmarks] = useState<string[]>([]);
   const { toast } = useToast();
   const isMobile = useIsMobile();
@@ -118,7 +120,7 @@ const BlogPostTemplate = ({
     }
   };
 
-  const handleShare = async (platform?: string) => {
+  const handleShare = async (platform?: string, isEndSection?: boolean) => {
     const currentUrl = window.location.href;
     const shareText = `Check out this article: ${title}`;
 
@@ -132,12 +134,17 @@ const BlogPostTemplate = ({
       // Copy to clipboard
       try {
         await navigator.clipboard.writeText(currentUrl);
-        setCopied(true);
+        if (isEndSection) {
+          setCopiedEnd(true);
+          setTimeout(() => setCopiedEnd(false), 2000);
+        } else {
+          setCopied(true);
+          setTimeout(() => setCopied(false), 2000);
+        }
         toast({
           title: "URL Copied!",
           description: "The article URL has been copied to your clipboard.",
         });
-        setTimeout(() => setCopied(false), 2000);
       } catch (err) {
         toast({
           title: "Copy failed",
@@ -147,6 +154,7 @@ const BlogPostTemplate = ({
       }
     }
     setShowShareMenu(false);
+    setShowShareMenuEnd(false);
   };
 
   const handleBookmark = () => {
@@ -394,8 +402,8 @@ const BlogPostTemplate = ({
                 {children}
               </div>
 
-              {/* CTA Section - Show on mobile/tablet only, positioned before author section */}
-              <div className="mt-8 md:mt-10 lg:mt-12 mb-6 md:mb-8 xl:hidden">
+              {/* CTA Section - Show on mobile/tablet only, positioned before article content */}
+              <div className="mb-6 md:mb-8 lg:mb-12 xl:hidden">
                 <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-4 md:p-6 lg:p-8 text-white">
                   <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 md:mb-3">Ready to Transform Your Hiring?</h3>
                   <p className="text-xs md:text-sm lg:text-base mb-3 md:mb-4 text-white/90 leading-relaxed">
@@ -406,6 +414,69 @@ const BlogPostTemplate = ({
                     onClick={() => window.location.href = '/contact'}
                   >
                     Book a Demo
+                  </Button>
+                </div>
+              </div>
+
+              {/* Share Actions at the End - Same as beginning */}
+              <div className="mt-8 md:mt-10 lg:mt-12 pt-6 md:pt-8 border-t border-gray-200">
+                <div className="flex items-center gap-2 md:gap-3">
+                  <span className="text-sm md:text-base text-synapse-gray font-medium">Share this article:</span>
+                  
+                  <div className="relative">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="text-synapse-primary border-synapse-primary hover:bg-synapse-light text-xs md:text-sm"
+                      onClick={() => setShowShareMenuEnd(!showShareMenuEnd)}
+                    >
+                      <Share2 size={14} className="mr-1.5 md:mr-2 w-3.5 h-3.5 md:w-4 md:h-4" />
+                      Share
+                    </Button>
+                    
+                    {/* Share Dropdown Menu - End */}
+                    {showShareMenuEnd && (
+                      <div className="absolute bottom-full left-0 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-10 min-w-[140px] md:min-w-[160px]">
+                        <button
+                          onClick={() => handleShare('facebook', true)}
+                          className="w-full px-3 md:px-4 py-1.5 md:py-2 text-left text-xs md:text-sm hover:bg-gray-50 flex items-center gap-2"
+                        >
+                          <Facebook size={14} className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                          Facebook
+                        </button>
+                        <button
+                          onClick={() => handleShare('twitter', true)}
+                          className="w-full px-3 md:px-4 py-1.5 md:py-2 text-left text-xs md:text-sm hover:bg-gray-50 flex items-center gap-2"
+                        >
+                          <Twitter size={14} className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                          Twitter
+                        </button>
+                        <button
+                          onClick={() => handleShare('linkedin', true)}
+                          className="w-full px-3 md:px-4 py-1.5 md:py-2 text-left text-xs md:text-sm hover:bg-gray-50 flex items-center gap-2"
+                        >
+                          <Linkedin size={14} className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                          LinkedIn
+                        </button>
+                        <button
+                          onClick={() => handleShare(undefined, true)}
+                          className="w-full px-3 md:px-4 py-1.5 md:py-2 text-left text-xs md:text-sm hover:bg-gray-50 flex items-center gap-2"
+                        >
+                          {copiedEnd ? <Check size={14} className="w-3.5 h-3.5 md:w-4 md:h-4" /> : <Copy size={14} className="w-3.5 h-3.5 md:w-4 md:h-4" />}
+                          {copiedEnd ? 'Copied!' : 'Copy Link'}
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                  
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="text-synapse-primary border-synapse-primary hover:bg-synapse-light text-xs md:text-sm"
+                    onClick={handleBookmark}
+                  >
+                    <BookmarkPlus size={14} className="mr-1.5 md:mr-2 w-3.5 h-3.5 md:w-4 md:h-4" />
+                    Save
                   </Button>
                 </div>
               </div>
@@ -455,7 +526,7 @@ const BlogPostTemplate = ({
 
                 {/* Newsletter Signup */}
                 <div className="bg-white border border-gray-200 rounded-lg p-4">
-                  <h3 className="text-base font-semibold text-synapse-dark mb-2">Stay Ahead of the Hiring Curve</h3>
+                  <h3 className="text-base font-semibold text-synapse-dark mb-3">Stay Ahead of the Hiring Curve</h3>
                   <p className="text-xs text-synapse-gray mb-3 leading-relaxed">
                     Subscribe to receive AI hiring insights, trends, and expert tips — directly in your inbox.
                   </p>
@@ -466,10 +537,9 @@ const BlogPostTemplate = ({
                       className="w-full px-2 py-2 border border-gray-300 rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-synapse-primary focus:border-transparent"
                     />
                     <Button 
-                      size="sm"
-                      className="w-full bg-synapse-primary hover:bg-synapse-primary/90 text-xs"
+                      className="w-full bg-synapse-primary hover:bg-synapse-primary/90"
                     >
-                      <Mail size={14} className="mr-1" />
+                      <Mail size={16} className="mr-2" />
                       Subscribe
                     </Button>
                     <div className="flex items-start gap-2">
@@ -551,11 +621,14 @@ const BlogPostTemplate = ({
         </div>
       )}
 
-      {/* Click outside to close share menu */}
-      {showShareMenu && (
+      {/* Click outside to close share menus */}
+      {(showShareMenu || showShareMenuEnd) && (
         <div 
           className="fixed inset-0 z-5" 
-          onClick={() => setShowShareMenu(false)}
+          onClick={() => {
+            setShowShareMenu(false);
+            setShowShareMenuEnd(false);
+          }}
         />
       )}
     </PageTemplate>
