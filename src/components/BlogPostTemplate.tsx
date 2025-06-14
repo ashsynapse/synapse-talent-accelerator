@@ -202,16 +202,16 @@ const BlogPostTemplate = ({
       <div className="fixed top-0 left-0 w-full z-50">
         <div className="h-1 bg-gray-200">
           <div 
-            className="h-full bg-synapse-primary transition-all duration-150 ease-out"
+            className="h-1 bg-synapse-primary transition-all duration-150 ease-out"
             style={{ width: `${readingProgress}%` }}
           />
         </div>
       </div>
 
-      <article className="py-20 bg-white">
-        <div className="container-wide">
+      <article className="py-8 md:py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-7xl">
           {/* Back to Blog */}
-          <div className="mb-8">
+          <div className="mb-6 md:mb-8">
             <Button 
               variant="ghost" 
               className="text-synapse-primary hover:bg-synapse-light"
@@ -224,16 +224,16 @@ const BlogPostTemplate = ({
 
           {/* Mobile/Tablet Table of Contents - Collapsible */}
           {headings.length > 0 && (
-            <div className="xl:hidden mb-8">
+            <div className="xl:hidden mb-6 md:mb-8">
               <Accordion type="single" collapsible className="bg-gray-50 rounded-lg">
                 <AccordionItem value="table-of-contents" className="border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                  <AccordionTrigger className="px-4 md:px-6 py-3 md:py-4 hover:no-underline">
                     <div className="flex items-center gap-2">
                       <Menu size={18} className="text-synapse-primary" />
-                      <span className="text-lg font-semibold text-synapse-dark">Table of Contents</span>
+                      <span className="text-base md:text-lg font-semibold text-synapse-dark">Table of Contents</span>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4">
+                  <AccordionContent className="px-4 md:px-6 pb-4">
                     <nav className="space-y-1">
                       {headings.map((heading) => (
                         <button
@@ -257,7 +257,7 @@ const BlogPostTemplate = ({
           )}
 
           {/* Main Content Layout */}
-          <div className="grid grid-cols-1 xl:grid-cols-12 gap-8">
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 lg:gap-8">
             {/* Table of Contents - Left Sidebar - Hidden on mobile and tablet */}
             {headings.length > 0 && (
               <div className="hidden xl:block xl:col-span-3">
@@ -287,18 +287,18 @@ const BlogPostTemplate = ({
             {/* Main Article Content */}
             <div className={headings.length > 0 ? "xl:col-span-6" : "xl:col-span-9"}>
               {/* Article Header */}
-              <header className="mb-12">
+              <header className="mb-8 md:mb-12">
                 <div className="mb-4">
                   <span className="text-sm px-3 py-1 bg-synapse-lighter text-synapse-primary rounded-full font-medium">
                     {category}
                   </span>
                 </div>
                 
-                <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6 leading-tight">
+                <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-synapse-dark mb-6 leading-tight">
                   {title}
                 </h1>
                 
-                <div className="flex flex-wrap items-center gap-6 text-synapse-gray mb-6">
+                <div className="flex flex-wrap items-center gap-4 md:gap-6 text-synapse-gray mb-6">
                   <div className="flex items-center gap-3">
                     {authorImage && (
                       <img 
@@ -391,8 +391,56 @@ const BlogPostTemplate = ({
               </header>
 
               {/* Article Content */}
-              <div className="prose prose-lg max-w-none">
+              <div className="prose prose-sm md:prose-lg max-w-none prose-headings:text-synapse-dark prose-a:text-synapse-primary hover:prose-a:text-synapse-secondary">
                 {children}
+              </div>
+
+              {/* CTA Section - Moved above author box */}
+              <div className="mt-12 mb-8">
+                <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-6 md:p-8 text-white">
+                  <h3 className="text-xl md:text-2xl font-semibold mb-3">Ready to Transform Your Hiring?</h3>
+                  <p className="text-sm md:text-base mb-4 text-white/90 leading-relaxed">
+                    Discover how AI-powered recruitment can help you find top talent faster and more efficiently.
+                  </p>
+                  <Button 
+                    className="bg-white text-synapse-primary hover:bg-gray-100 w-full md:w-auto"
+                    onClick={() => window.location.href = '/contact'}
+                  >
+                    Book a Demo
+                  </Button>
+                </div>
+              </div>
+
+              {/* Author Box */}
+              <div className="border-t border-gray-200 pt-8">
+                <div className="flex items-start gap-4">
+                  {authorImage && (
+                    <img 
+                      src={authorImage} 
+                      alt={author}
+                      className="w-16 h-16 rounded-full object-cover border-2 border-synapse-lighter flex-shrink-0"
+                    />
+                  )}
+                  <div>
+                    <h4 className="font-semibold text-synapse-dark mb-1">
+                      {authorLinkedIn ? (
+                        <a 
+                          href={authorLinkedIn} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-synapse-primary transition-colors"
+                        >
+                          {author}
+                        </a>
+                      ) : (
+                        author
+                      )}
+                    </h4>
+                    <p className="text-sm text-synapse-gray">
+                      Expert in AI recruitment and talent acquisition strategies.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -419,21 +467,6 @@ const BlogPostTemplate = ({
                   >
                     See All →
                   </a>
-                </div>
-
-                {/* CTA Section */}
-                <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-4 text-white">
-                  <h3 className="text-base font-semibold mb-2">Ready to Transform Your Hiring?</h3>
-                  <p className="text-xs mb-3 text-white/90 leading-relaxed">
-                    Discover how AI-powered recruitment can help you find top talent faster.
-                  </p>
-                  <Button 
-                    size="sm"
-                    className="w-full bg-white text-synapse-primary hover:bg-gray-100 text-xs"
-                    onClick={() => window.location.href = '/contact'}
-                  >
-                    Book a Demo
-                  </Button>
                 </div>
 
                 {/* Newsletter Signup */}
@@ -468,7 +501,7 @@ const BlogPostTemplate = ({
           </div>
 
           {/* Mobile-only sections - Show on mobile what's in the sidebar */}
-          <div className="md:hidden mt-12 space-y-6">
+          <div className="md:hidden mt-8 space-y-6">
             {/* Recent Articles - Mobile */}
             <div className="bg-gray-50 rounded-lg p-4">
               <h3 className="text-base font-semibold text-synapse-dark mb-3">Recent Articles</h3>
@@ -491,23 +524,9 @@ const BlogPostTemplate = ({
               </a>
             </div>
 
-            {/* CTA Section - Mobile */}
-            <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-6 text-white">
-              <h3 className="text-lg font-semibold mb-3">Ready to Transform Your Hiring?</h3>
-              <p className="text-sm mb-4 text-white/90">
-                Discover how AI-powered recruitment can help you find top talent faster and more efficiently.
-              </p>
-              <Button 
-                className="w-full bg-white text-synapse-primary hover:bg-gray-100"
-                onClick={() => window.location.href = '/contact'}
-              >
-                Book a Demo
-              </Button>
-            </div>
-
             {/* Newsletter Signup - Mobile */}
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-synapse-dark mb-3">Stay Ahead of the Hiring Curve</h3>
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="text-base font-semibold text-synapse-dark mb-3">Stay Ahead of the Hiring Curve</h3>
               <p className="text-sm text-synapse-gray mb-4">
                 Subscribe to receive AI hiring insights, trends, and expert tips — directly in your inbox.
               </p>
