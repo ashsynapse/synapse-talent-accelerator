@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Plus, Minus, 
@@ -52,7 +53,7 @@ const MainHeader = () => {
       "Sales & Marketing": Calculator,
       "Leadership": Crown,
       "Operations": Users,
-      "Blogs": FileText,
+      "Blog": FileText,
       "Case Studies": FileText,
       "Events": Calendar,
       "About Us": Info,
@@ -87,7 +88,7 @@ const MainHeader = () => {
       "Sales & Marketing": "Revenue-driving roles",
       "Leadership": "Executive positions",
       "Operations": "Operational excellence",
-      "Blogs": "Industry insights",
+      "Blog": "Industry insights",
       "Case Studies": "Success stories",
       "Events": "Upcoming events",
       "About Us": "Our company story",
@@ -143,7 +144,7 @@ const MainHeader = () => {
       label: "Resources", 
       href: null,
       submenu: [
-        { label: "Blogs", href: "/blogs" },
+        { label: "Blog", href: "/blog" },
         { label: "Case Studies", href: "/case-studies" },
         { label: "Events", href: "/events" }
       ]
