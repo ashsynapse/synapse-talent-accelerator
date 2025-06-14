@@ -68,7 +68,7 @@ export const navItems = [
     page: <Recruiters />,
   },
   {
-    to: "/blogs",
+    to: "/blog",
     page: <Blog />,
   },
   {
@@ -105,7 +105,7 @@ export const navItems = [
   },
   // Blog post routes - only keeping the side hustles one
   {
-    to: "/blogs/side-hustles-gig-economy",
+    to: "/blog/side-hustles-gig-economy",
     page: <SideHustlesGigEconomy />,
   },
 ];

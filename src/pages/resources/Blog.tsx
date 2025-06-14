@@ -7,7 +7,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 import { Calendar, User, ArrowRight, Clock, Search } from "lucide-react";
 import NewsletterSignup from "../../components/NewsletterSignup";
 
@@ -20,45 +19,12 @@ const blogPosts = [
     date: "February 21, 2025",
     readTime: "6 min read",
     category: "Industry Insights",
-    href: "/blogs/side-hustles-gig-economy",
+    href: "/blog/side-hustles-gig-economy",
     image: "https://cdn-images-1.medium.com/max/800/1*iulfYJoPsSlZl_fdEXouPw.png"
-  },
-  {
-    title: "AI Recruitment Trends for 2025: What's Coming Next",
-    excerpt: "Artificial Intelligence is revolutionizing recruitment processes. From automated screening to predictive analytics, discover the key AI trends that will shape hiring in 2025 and beyond.",
-    author: "Sarah Johnson",
-    authorLinkedIn: "#",
-    date: "February 18, 2025",
-    readTime: "8 min read",
-    category: "Technology",
-    href: "#",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop"
-  },
-  {
-    title: "Remote Work Culture: Building Strong Teams Across Distances",
-    excerpt: "Remote work has become the new normal. Learn how to build and maintain strong team cultures, improve communication, and boost productivity in distributed teams.",
-    author: "Michael Chen",
-    authorLinkedIn: "#",
-    date: "February 15, 2025",
-    readTime: "5 min read",
-    category: "Remote Work",
-    href: "#",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop"
-  },
-  {
-    title: "The Future of Talent Acquisition: Strategies for Success",
-    excerpt: "Traditional recruitment methods are evolving rapidly. Explore innovative strategies for attracting, engaging, and retaining top talent in today's competitive market.",
-    author: "Emma Rodriguez",
-    authorLinkedIn: "#",
-    date: "February 12, 2025",
-    readTime: "7 min read",
-    category: "Strategy",
-    href: "#",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop"
   }
 ];
 
-const categories = ["All", "Industry Insights", "Technology", "Remote Work", "Strategy"];
+const categories = ["All", "Industry Insights"];
 
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -149,7 +115,7 @@ const Blog = () => {
 
           {/* Category Tabs */}
           <Tabs value={activeCategory} onValueChange={handleCategoryChange} className="mb-12">
-            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-5 bg-synapse-lighter/50">
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 bg-synapse-lighter/50">
               {categories.map((category) => (
                 <TabsTrigger
                   key={category}
@@ -236,54 +202,6 @@ const Blog = () => {
                   </Card>
                 ))}
               </div>
-
-              {/* Pagination */}
-              {totalPages > 1 && (
-                <Pagination className="mb-16">
-                  <PaginationContent>
-                    <PaginationItem>
-                      <PaginationPrevious 
-                        href="#"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          if (currentPage > 1) setCurrentPage(currentPage - 1);
-                        }}
-                        className={currentPage === 1 ? "pointer-events-none opacity-50" : "hover:bg-synapse-light text-synapse-primary"}
-                      />
-                    </PaginationItem>
-                    
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                      <PaginationItem key={page}>
-                        <PaginationLink 
-                          href="#"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setCurrentPage(page);
-                          }}
-                          isActive={currentPage === page}
-                          className={currentPage === page 
-                            ? "bg-synapse-primary text-white hover:bg-synapse-secondary" 
-                            : "hover:bg-synapse-light text-synapse-primary"
-                          }
-                        >
-                          {page}
-                        </PaginationLink>
-                      </PaginationItem>
-                    ))}
-                    
-                    <PaginationItem>
-                      <PaginationNext 
-                        href="#"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          if (currentPage < totalPages) setCurrentPage(currentPage + 1);
-                        }}
-                        className={currentPage === totalPages ? "pointer-events-none opacity-50" : "hover:bg-synapse-light text-synapse-primary"}
-                      />
-                    </PaginationItem>
-                  </PaginationContent>
-                </Pagination>
-              )}
 
               {/* No Results Message */}
               {filteredPosts.length === 0 && (

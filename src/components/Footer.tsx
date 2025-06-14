@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Linkedin, Twitter, Instagram, MessageCircle } from "lucide-react";
 import { FaDiscord } from 'react-icons/fa';
@@ -154,7 +153,7 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4">Resources</h4>
             <ul className="space-y-2">
               {[
-                { label: "Blogs", href: "/blogs" },
+                { label: "Blog", href: "/blog" },
                 { label: "Case Studies", href: "/case-studies" },
                 { label: "Events", href: "/events" }
               ].map((item) => (
