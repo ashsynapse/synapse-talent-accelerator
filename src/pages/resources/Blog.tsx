@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -31,6 +31,22 @@ const Blog = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
+
+  // Add keyboard shortcut for search
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
+        event.preventDefault();
+        const searchInput = document.querySelector('input[placeholder*="Search"]') as HTMLInputElement;
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
@@ -64,8 +80,24 @@ const Blog = () => {
       title="Synapse Blog"
       description="Stay updated with the latest insights, trends, and best practices in recruitment and talent acquisition"
     >
-      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
-        <div className="container-wide">
+      {/* Hero Section - Similar to FAQ */}
+      <section className="pt-32 pb-16 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-20 left-1/3 w-24 h-24 bg-white/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+        
+        {/* Grid Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+            backgroundSize: '40px 40px'
+          }}></div>
+        </div>
+
+        <div className="container-wide text-center relative">
           {/* Breadcrumbs */}
           <div className="mb-8">
             <Breadcrumb>
@@ -73,14 +105,14 @@ const Blog = () => {
                 <BreadcrumbItem>
                   <BreadcrumbLink 
                     href="/" 
-                    className="text-synapse-gray hover:text-synapse-primary transition-colors"
+                    className="text-white/80 hover:text-white transition-colors"
                   >
                     Home
                   </BreadcrumbLink>
                 </BreadcrumbItem>
-                <BreadcrumbSeparator />
+                <BreadcrumbSeparator className="text-white/60" />
                 <BreadcrumbItem>
-                  <BreadcrumbPage className="text-synapse-dark font-medium">
+                  <BreadcrumbPage className="text-white font-medium">
                     Blog
                   </BreadcrumbPage>
                 </BreadcrumbItem>
@@ -88,31 +120,36 @@ const Blog = () => {
             </Breadcrumb>
           </div>
 
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Synapse Blog
-            </h1>
-            <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
-              Expert insights, industry trends, and actionable strategies to transform your recruitment process
-            </p>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Synapse Blog
+          </h1>
+          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+            Expert insights, industry trends, and actionable strategies to transform your recruitment process
+          </p>
 
           {/* Search Bar */}
-          <div className="max-w-md mx-auto mb-8">
+          <div className="max-w-2xl mx-auto relative">
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-synapse-gray" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-synapse-gray h-5 w-5" />
               <Input
                 type="text"
                 placeholder="Search articles..."
                 value={searchTerm}
                 onChange={handleSearchChange}
-                className="pl-12 h-12 text-base border-synapse-primary/20 focus:border-synapse-primary"
+                className="w-full pl-12 pr-4 py-4 text-lg border-0 bg-white/95 backdrop-blur-sm shadow-xl rounded-xl focus:ring-2 focus:ring-white/50"
                 aria-label="Search blog articles"
               />
             </div>
+            <div className="mt-4 text-white/80 text-sm">
+              Press <kbd className="px-2 py-1 bg-white/20 rounded">Ctrl + K</kbd> to search
+            </div>
           </div>
+        </div>
+      </section>
 
+      {/* Content Section */}
+      <section className="py-16 bg-white">
+        <div className="container-wide">
           {/* Category Tabs */}
           <Tabs value={activeCategory} onValueChange={handleCategoryChange} className="mb-12">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 bg-synapse-lighter/50">

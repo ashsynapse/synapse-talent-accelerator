@@ -1,5 +1,5 @@
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -169,6 +169,22 @@ const FAQ = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
+  // Add keyboard shortcut for search
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
+        event.preventDefault();
+        const searchInput = document.querySelector('input[placeholder*="Search"]') as HTMLInputElement;
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   // Filter FAQs based on search query
   const filteredCategories = useMemo(() => {
     if (!searchQuery.trim()) {
@@ -188,6 +204,11 @@ const FAQ = () => {
   }, [searchQuery, selectedCategory]);
 
   const totalFAQs = faqCategories.reduce((total, category) => total + category.faqs.length, 0);
+
+  const handleCategoryClick = (categoryId: string) => {
+    setSelectedCategory(categoryId);
+    setSearchQuery(""); // Clear search when selecting category
+  };
 
   return (
     <PageTemplate 
@@ -251,7 +272,7 @@ const FAQ = () => {
                     <div
                       key={category.id}
                       className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300 cursor-pointer group"
-                      onClick={() => setSelectedCategory(category.id)}
+                      onClick={() => handleCategoryClick(category.id)}
                     >
                       <div className="flex items-center mb-4">
                         <div className="w-12 h-12 bg-synapse-lighter rounded-lg flex items-center justify-center mr-4">
