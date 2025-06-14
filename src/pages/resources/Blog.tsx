@@ -80,8 +80,8 @@ const Blog = () => {
       title="Synapse Blog"
       description="Stay updated with the latest insights, trends, and best practices in recruitment and talent acquisition"
     >
-      {/* Hero Section - Similar to FAQ */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary relative overflow-hidden">
+      {/* Hero Section - Consistent with FAQ */}
+      <section className="pt-24 pb-12 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
@@ -99,7 +99,7 @@ const Blog = () => {
 
         <div className="container-wide text-center relative">
           {/* Breadcrumbs */}
-          <div className="mb-8">
+          <div className="mb-6">
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -120,15 +120,15 @@ const Blog = () => {
             </Breadcrumb>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Synapse Blog
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-white/90 max-w-2xl mx-auto mb-6">
             Expert insights, industry trends, and actionable strategies to transform your recruitment process
           </p>
 
           {/* Search Bar */}
-          <div className="max-w-2xl mx-auto relative">
+          <div className="max-w-xl mx-auto relative">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-synapse-gray h-5 w-5" />
               <Input
@@ -136,11 +136,11 @@ const Blog = () => {
                 placeholder="Search articles..."
                 value={searchTerm}
                 onChange={handleSearchChange}
-                className="w-full pl-12 pr-4 py-4 text-lg border-0 bg-white/95 backdrop-blur-sm shadow-xl rounded-xl focus:ring-2 focus:ring-white/50"
+                className="w-full pl-12 pr-4 py-3 text-base border-0 bg-white/95 backdrop-blur-sm shadow-xl rounded-xl focus:ring-2 focus:ring-white/50"
                 aria-label="Search blog articles"
               />
             </div>
-            <div className="mt-4 text-white/80 text-sm">
+            <div className="mt-3 text-white/80 text-sm">
               Press <kbd className="px-2 py-1 bg-white/20 rounded">Ctrl + K</kbd> to search
             </div>
           </div>
