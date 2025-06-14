@@ -1,3 +1,4 @@
+
 import React, { useState, useMemo, useEffect } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import PageTemplate from "../../components/PageTemplate";
@@ -202,7 +203,7 @@ const FAQ = () => {
       description={currentCategory ? `${currentCategory.description} - Find answers to common questions about SRN platform` : "Find answers to common questions about SRN platform, membership, commissions, and policies"}
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary relative overflow-hidden">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
@@ -220,7 +221,7 @@ const FAQ = () => {
 
         <div className="container-wide text-center relative">
           {/* Breadcrumbs */}
-          <div className="mb-8">
+          <div className="mb-6">
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -261,15 +262,15 @@ const FAQ = () => {
             </Breadcrumb>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             {currentCategory ? currentCategory.title : "SRN Help Center"}
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-white/90 max-w-2xl mx-auto mb-6">
             {currentCategory ? currentCategory.description : "Find answers and support for the Synapse Recruiter Network platform"}
           </p>
 
           {/* Search Bar */}
-          <div className="max-w-2xl mx-auto relative">
+          <div className="max-w-xl mx-auto relative">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-synapse-gray h-5 w-5" />
               <Input
@@ -277,10 +278,10 @@ const FAQ = () => {
                 placeholder="Search for answers..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 text-lg border-0 bg-white/95 backdrop-blur-sm shadow-xl rounded-xl focus:ring-2 focus:ring-white/50"
+                className="w-full pl-12 pr-4 py-3 text-base border-0 bg-white/95 backdrop-blur-sm shadow-xl rounded-xl focus:ring-2 focus:ring-white/50"
               />
             </div>
-            <div className="mt-4 text-white/80 text-sm">
+            <div className="mt-3 text-white/80 text-sm">
               Press <kbd className="px-2 py-1 bg-white/20 rounded">Ctrl + K</kbd> to search
             </div>
           </div>
@@ -288,31 +289,31 @@ const FAQ = () => {
       </section>
 
       {/* Categories or Search Results */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container-wide">
           {!searchQuery && !selectedCategory && !showAllArticles ? (
             <>
               {/* Category Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                 {faqCategories.map((category) => {
                   const IconComponent = category.icon;
                   return (
                     <div
                       key={category.id}
-                      className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300 cursor-pointer group"
+                      className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer group"
                       onClick={() => handleCategoryClick(category.id)}
                     >
-                      <div className="flex items-center mb-4">
-                        <div className="w-12 h-12 bg-synapse-lighter rounded-lg flex items-center justify-center mr-4">
-                          <IconComponent className="h-6 w-6 text-synapse-primary" />
+                      <div className="flex items-center mb-3">
+                        <div className="w-10 h-10 bg-synapse-lighter rounded-lg flex items-center justify-center mr-3">
+                          <IconComponent className="h-5 w-5 text-synapse-primary" />
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-synapse-dark group-hover:text-synapse-primary transition-colors">
+                          <h3 className="text-lg font-bold text-synapse-dark group-hover:text-synapse-primary transition-colors">
                             {category.title}
                           </h3>
                         </div>
                       </div>
-                      <p className="text-synapse-gray mb-4">{category.description}</p>
+                      <p className="text-synapse-gray mb-3 text-sm">{category.description}</p>
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-synapse-gray">
                           {category.faqs.length} articles
@@ -326,7 +327,7 @@ const FAQ = () => {
 
               {/* Browse All Articles Button */}
               <div className="text-center">
-                <h2 className="text-2xl font-bold text-synapse-dark mb-4">
+                <h2 className="text-xl font-bold text-synapse-dark mb-3">
                   Browse all {totalFAQs} articles
                 </h2>
                 <Button
@@ -438,7 +439,7 @@ const FAQ = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
