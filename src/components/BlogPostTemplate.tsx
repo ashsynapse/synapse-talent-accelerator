@@ -35,13 +35,22 @@ const BlogPostTemplate = ({
   const [copied, setCopied] = useState(false);
   const [readingProgress, setReadingProgress] = useState(0);
   const [showBookmarkDialog, setShowBookmarkDialog] = useState(false);
+  const [bookmarks, setBookmarks] = useState<string[]>([]);
   const { toast } = useToast();
   const isMobile = useIsMobile();
+
+  // Load bookmarks from localStorage on component mount
+  useEffect(() => {
+    const savedBookmarks = localStorage.getItem('synapse-bookmarks');
+    if (savedBookmarks) {
+      setBookmarks(JSON.parse(savedBookmarks));
+    }
+  }, []);
 
   // Extract headings from content for table of contents
   useEffect(() => {
     const extractHeadings = () => {
-      const headingElements = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      const headingElements = document.querySelectorAll('.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6');
       const headingList = Array.from(headingElements).map((heading, index) => {
         const id = `heading-${index}`;
         heading.id = id;
@@ -109,6 +118,11 @@ const BlogPostTemplate = ({
   };
 
   const handleBookmark = () => {
+    const currentUrl = window.location.href;
+    const newBookmarks = [...bookmarks, currentUrl];
+    setBookmarks(newBookmarks);
+    localStorage.setItem('synapse-bookmarks', JSON.stringify(newBookmarks));
+    
     setShowBookmarkDialog(true);
     setTimeout(() => {
       setShowBookmarkDialog(false);
@@ -143,12 +157,14 @@ const BlogPostTemplate = ({
       title={title}
       description={excerpt}
     >
-      {/* Reading Progress Bar */}
+      {/* Reading Progress Bar - Changed to brand primary color */}
       <div className="fixed top-0 left-0 w-full z-50">
-        <Progress 
-          value={readingProgress} 
-          className="h-1 rounded-none bg-gray-200"
-        />
+        <div className="h-1 bg-gray-200">
+          <div 
+            className="h-full bg-synapse-primary transition-all duration-150 ease-out"
+            style={{ width: `${readingProgress}%` }}
+          />
+        </div>
       </div>
 
       <article className="py-20 bg-white">
@@ -167,8 +183,8 @@ const BlogPostTemplate = ({
 
           {/* Main Content Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            {/* Table of Contents - Left Sidebar - Hidden on Mobile */}
-            {!isMobile && (
+            {/* Table of Contents - Left Sidebar - Only content headings, hidden on mobile */}
+            {!isMobile && headings.length > 0 && (
               <div className="lg:col-span-3">
                 <div className="sticky top-32">
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -194,7 +210,7 @@ const BlogPostTemplate = ({
             )}
 
             {/* Main Article Content */}
-            <div className={isMobile ? "col-span-1" : "lg:col-span-6"}>
+            <div className={!isMobile && headings.length > 0 ? "lg:col-span-6" : "lg:col-span-9"}>
               {/* Article Header */}
               <header className="mb-12">
                 <div className="mb-4">
