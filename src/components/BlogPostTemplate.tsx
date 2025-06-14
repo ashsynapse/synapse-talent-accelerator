@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from "react";
 import PageTemplate from "./PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -395,8 +396,8 @@ const BlogPostTemplate = ({
                 {children}
               </div>
 
-              {/* CTA Section - Above author box */}
-              <div className="mt-8 md:mt-10 lg:mt-12 mb-6 md:mb-8">
+              {/* CTA Section - Show on mobile/tablet only, hidden on desktop */}
+              <div className="mt-8 md:mt-10 lg:mt-12 mb-6 md:mb-8 xl:hidden">
                 <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-4 md:p-6 lg:p-8 text-white">
                   <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 md:mb-3">Ready to Transform Your Hiring?</h3>
                   <p className="text-xs md:text-sm lg:text-base mb-3 md:mb-4 text-white/90 leading-relaxed">
@@ -435,6 +436,23 @@ const BlogPostTemplate = ({
                   >
                     See All →
                   </a>
+                </div>
+
+                {/* CTA Section - Desktop only, positioned between recent articles and newsletter */}
+                <div className="hidden xl:block">
+                  <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-4 text-white">
+                    <h3 className="text-base font-semibold mb-2">Ready to Transform Your Hiring?</h3>
+                    <p className="text-xs mb-3 text-white/90 leading-relaxed">
+                      Discover how AI-powered recruitment can help you find top talent faster and more efficiently.
+                    </p>
+                    <Button 
+                      size="sm"
+                      className="bg-white text-synapse-primary hover:bg-gray-100 w-full text-xs"
+                      onClick={() => window.location.href = '/contact'}
+                    >
+                      Book a Demo
+                    </Button>
+                  </div>
                 </div>
 
                 {/* Newsletter Signup */}
