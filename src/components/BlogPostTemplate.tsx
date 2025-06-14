@@ -182,10 +182,10 @@ const BlogPostTemplate = ({
           </div>
 
           {/* Main Content Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            {/* Table of Contents - Left Sidebar - Only content headings, hidden on mobile */}
-            {!isMobile && headings.length > 0 && (
-              <div className="lg:col-span-3">
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-8">
+            {/* Table of Contents - Left Sidebar - Hidden on mobile and tablet */}
+            {headings.length > 0 && (
+              <div className="hidden xl:block xl:col-span-3">
                 <div className="sticky top-32">
                   <div className="bg-gray-50 rounded-lg p-6">
                     <h3 className="text-lg font-semibold text-synapse-dark mb-4">Table of Contents</h3>
@@ -210,7 +210,7 @@ const BlogPostTemplate = ({
             )}
 
             {/* Main Article Content */}
-            <div className={!isMobile && headings.length > 0 ? "lg:col-span-6" : "lg:col-span-9"}>
+            <div className={headings.length > 0 ? "xl:col-span-6" : "xl:col-span-9"}>
               {/* Article Header */}
               <header className="mb-12">
                 <div className="mb-4">
@@ -284,75 +284,139 @@ const BlogPostTemplate = ({
               </div>
             </div>
 
-            {/* Right Sidebar - Hidden on Mobile */}
-            {!isMobile && (
-              <div className="lg:col-span-3">
-                <div className="sticky top-32 space-y-8">
-                  {/* Recent Articles */}
-                  <div className="bg-gray-50 rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-synapse-dark mb-4">Recent Articles</h3>
-                    <div className="space-y-4">
-                      {recentArticles.map((article, index) => (
-                        <a
-                          key={index}
-                          href={article.href}
-                          className="block text-sm text-synapse-gray hover:text-synapse-primary transition-colors"
-                        >
-                          {article.title}
-                        </a>
-                      ))}
-                    </div>
-                    <a 
-                      href="/blog" 
-                      className="inline-block mt-4 text-sm text-synapse-primary hover:underline font-medium"
-                    >
-                      See All →
-                    </a>
-                  </div>
-
-                  {/* CTA Section */}
-                  <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-6 text-white">
-                    <h3 className="text-lg font-semibold mb-3">Ready to Transform Your Hiring?</h3>
-                    <p className="text-sm mb-4 text-white/90">
-                      Discover how AI-powered recruitment can help you find top talent faster and more efficiently.
-                    </p>
-                    <Button 
-                      className="w-full bg-white text-synapse-primary hover:bg-gray-100"
-                      onClick={() => window.location.href = '/contact'}
-                    >
-                      Book a Demo
-                    </Button>
-                  </div>
-
-                  {/* Newsletter Signup */}
-                  <div className="bg-white border border-gray-200 rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-synapse-dark mb-3">Stay Ahead of the Hiring Curve</h3>
-                    <p className="text-sm text-synapse-gray mb-4">
-                      Subscribe to receive AI hiring insights, trends, and expert tips — directly in your inbox.
-                    </p>
-                    <div className="space-y-3">
-                      <input
-                        type="email"
-                        placeholder="Enter your email address"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-synapse-primary focus:border-transparent"
-                      />
-                      <Button 
-                        className="w-full bg-synapse-primary hover:bg-synapse-primary/90"
+            {/* Right Sidebar - Hidden on mobile, shown on tablet and desktop */}
+            <div className="hidden md:block xl:col-span-3">
+              <div className="sticky top-32 space-y-8">
+                {/* Recent Articles */}
+                <div className="bg-gray-50 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-synapse-dark mb-4">Recent Articles</h3>
+                  <div className="space-y-4">
+                    {recentArticles.map((article, index) => (
+                      <a
+                        key={index}
+                        href={article.href}
+                        className="block text-sm text-synapse-gray hover:text-synapse-primary transition-colors"
                       >
-                        <Mail size={16} className="mr-2" />
-                        Subscribe
-                      </Button>
-                      <div className="flex items-start gap-2">
-                        <input type="checkbox" id="agree" className="mt-1" />
-                        <label htmlFor="agree" className="text-xs text-synapse-gray">
-                          I agree to receive email updates from Synapse. You can unsubscribe at any time.
-                        </label>
-                      </div>
+                        {article.title}
+                      </a>
+                    ))}
+                  </div>
+                  <a 
+                    href="/blog" 
+                    className="inline-block mt-4 text-sm text-synapse-primary hover:underline font-medium"
+                  >
+                    See All →
+                  </a>
+                </div>
+
+                {/* CTA Section */}
+                <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-6 text-white">
+                  <h3 className="text-lg font-semibold mb-3">Ready to Transform Your Hiring?</h3>
+                  <p className="text-sm mb-4 text-white/90">
+                    Discover how AI-powered recruitment can help you find top talent faster and more efficiently.
+                  </p>
+                  <Button 
+                    className="w-full bg-white text-synapse-primary hover:bg-gray-100"
+                    onClick={() => window.location.href = '/contact'}
+                  >
+                    Book a Demo
+                  </Button>
+                </div>
+
+                {/* Newsletter Signup */}
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-synapse-dark mb-3">Stay Ahead of the Hiring Curve</h3>
+                  <p className="text-sm text-synapse-gray mb-4">
+                    Subscribe to receive AI hiring insights, trends, and expert tips — directly in your inbox.
+                  </p>
+                  <div className="space-y-3">
+                    <input
+                      type="email"
+                      placeholder="Enter your email address"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-synapse-primary focus:border-transparent"
+                    />
+                    <Button 
+                      className="w-full bg-synapse-primary hover:bg-synapse-primary/90"
+                    >
+                      <Mail size={16} className="mr-2" />
+                      Subscribe
+                    </Button>
+                    <div className="flex items-start gap-2">
+                      <input type="checkbox" id="agree" className="mt-1" />
+                      <label htmlFor="agree" className="text-xs text-synapse-gray">
+                        I agree to receive email updates from Synapse. You can unsubscribe at any time.
+                      </label>
                     </div>
                   </div>
                 </div>
               </div>
-            )}
+            </div>
+          </div>
+
+          {/* Mobile-only sections - Show on mobile what's in the sidebar */}
+          <div className="md:hidden mt-12 space-y-8">
+            {/* Recent Articles - Mobile */}
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-synapse-dark mb-4">Recent Articles</h3>
+              <div className="space-y-4">
+                {recentArticles.map((article, index) => (
+                  <a
+                    key={index}
+                    href={article.href}
+                    className="block text-sm text-synapse-gray hover:text-synapse-primary transition-colors"
+                  >
+                    {article.title}
+                  </a>
+                ))}
+              </div>
+              <a 
+                href="/blog" 
+                className="inline-block mt-4 text-sm text-synapse-primary hover:underline font-medium"
+              >
+                See All →
+              </a>
+            </div>
+
+            {/* CTA Section - Mobile */}
+            <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-6 text-white">
+              <h3 className="text-lg font-semibold mb-3">Ready to Transform Your Hiring?</h3>
+              <p className="text-sm mb-4 text-white/90">
+                Discover how AI-powered recruitment can help you find top talent faster and more efficiently.
+              </p>
+              <Button 
+                className="w-full bg-white text-synapse-primary hover:bg-gray-100"
+                onClick={() => window.location.href = '/contact'}
+              >
+                Book a Demo
+              </Button>
+            </div>
+
+            {/* Newsletter Signup - Mobile */}
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-synapse-dark mb-3">Stay Ahead of the Hiring Curve</h3>
+              <p className="text-sm text-synapse-gray mb-4">
+                Subscribe to receive AI hiring insights, trends, and expert tips — directly in your inbox.
+              </p>
+              <div className="space-y-3">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-synapse-primary focus:border-transparent"
+                />
+                <Button 
+                  className="w-full bg-synapse-primary hover:bg-synapse-primary/90"
+                >
+                  <Mail size={16} className="mr-2" />
+                  Subscribe
+                </Button>
+                <div className="flex items-start gap-2">
+                  <input type="checkbox" id="agree-mobile" className="mt-1" />
+                  <label htmlFor="agree-mobile" className="text-xs text-synapse-gray">
+                    I agree to receive email updates from Synapse. You can unsubscribe at any time.
+                  </label>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </article>
