@@ -1,111 +1,34 @@
+
 import React, { useState, useEffect } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Plus, Minus, 
-         Bot, Users, Building2, Search, UserCheck, 
-         Briefcase, Code, TrendingUp, Heart, Scale,
-         Factory, Calculator, Crown, FileText, 
-         Calendar, Phone, Info, HelpCircle, Target,
-         Globe, Clock, GraduationCap, Shield, Brain } from "lucide-react";
 
 const MainHeader = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [expandedItems, setExpandedItems] = useState<string[]>([]);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMobileItem = (itemLabel: string) => {
-    setExpandedItems(prev => 
-      prev.includes(itemLabel) 
-        ? prev.filter(item => item !== itemLabel)
-        : [...prev, itemLabel]
-    );
+  const toggleDropdown = (dropdown: string) => {
+    setOpenDropdown(openDropdown === dropdown ? null : dropdown);
   };
 
-  const getIconForSubmenu = (label: string) => {
-    const iconMap: { [key: string]: any } = {
-      "Passive AI Sourcing": Bot,
-      "AI Candidate Discovery": Search,
-      "Project Staffing": Users,
-      "Executive Search": Crown,
-      "Remote Staffing": Globe,
-      "Permanent Placement": UserCheck,
-      "Contingent Staffing": Clock,
-      "Apprenticeship AI Sourcing": GraduationCap,
-      "AI Candidate Sourcing": Bot,
-      "Pre-Employment AI Screening": Shield,
-      "AI Resume Analysis": Brain,
-      "Technology": Code,
-      "Finance": TrendingUp,
-      "Healthcare": Heart,
-      "Legal": Scale,
-      "Manufacturing": Factory,
-      "Sales & Marketing": Calculator,
-      "Leadership": Crown,
-      "Operations": Users,
-      "Blogs": FileText,
-      "Case Studies": FileText,
-      "Events": Calendar,
-      "About Us": Info,
-      "Team": Users,
-      "Recruiters": UserCheck,
-      "Careers": Briefcase,
-      "FAQ": HelpCircle,
-      "Contact Us": Phone
-    };
-    
-    return iconMap[label] || FileText;
+  const closeAllDropdowns = () => {
+    setOpenDropdown(null);
   };
 
-  const getDescriptionForSubmenu = (label: string) => {
-    const descriptionMap: { [key: string]: string } = {
-      "Passive AI Sourcing": "AI-powered talent discovery",
-      "AI Candidate Discovery": "Smart candidate matching",
-      "Project Staffing": "Flexible project teams",
-      "Executive Search": "Leadership recruitment",
-      "Remote Staffing": "Global remote talent",
-      "Permanent Placement": "Long-term hires",
-      "Contingent Staffing": "Temporary workforce",
-      "Apprenticeship AI Sourcing": "Entry-level talent",
-      "AI Candidate Sourcing": "Automated talent search",
-      "Pre-Employment AI Screening": "Smart candidate assessment",
-      "AI Resume Analysis": "Intelligent resume parsing",
-      "Technology": "Tech talent solutions",
-      "Finance": "Financial sector expertise",
-      "Healthcare": "Medical professionals",
-      "Legal": "Legal industry specialists",
-      "Manufacturing": "Industrial workforce",
-      "Sales & Marketing": "Revenue-driving roles",
-      "Leadership": "Executive positions",
-      "Operations": "Operational excellence",
-      "Blogs": "Industry insights",
-      "Case Studies": "Success stories",
-      "Events": "Upcoming events",
-      "About Us": "Our company story",
-      "Team": "Meet our team",
-      "Recruiters": "Join our network",
-      "Careers": "Work with us",
-      "FAQ": "Common questions",
-      "Contact Us": "Get in touch"
-    };
-    
-    return descriptionMap[label] || "Learn more";
-  };
-
-  const navItems = [
-    { 
-      label: "Solutions", 
+  const navigationItems = [
+    {
+      label: "Solutions",
       href: "/recruitment-solutions",
-      submenu: [
+      dropdown: [
         { label: "Passive AI Sourcing", href: "/recruitment-solutions" },
         { label: "AI Candidate Discovery", href: "/recruitment-solutions" },
         { label: "Project Staffing", href: "/recruitment-solutions" },
@@ -116,19 +39,19 @@ const MainHeader = () => {
         { label: "Apprenticeship AI Sourcing", href: "/recruitment-solutions" }
       ]
     },
-    { 
-      label: "Products", 
+    {
+      label: "Products",
       href: "/recruitment-tools",
-      submenu: [
+      dropdown: [
         { label: "AI Candidate Sourcing", href: "/recruitment-tools" },
         { label: "Pre-Employment AI Screening", href: "/recruitment-tools" },
         { label: "AI Resume Analysis", href: "/recruitment-tools" }
       ]
     },
-    { 
-      label: "Industries", 
+    {
+      label: "Industries",
       href: "/industries",
-      submenu: [
+      dropdown: [
         { label: "Technology", href: "/industries" },
         { label: "Finance", href: "/industries" },
         { label: "Healthcare", href: "/industries" },
@@ -139,206 +62,152 @@ const MainHeader = () => {
         { label: "Operations", href: "/industries" }
       ]
     },
-    { 
-      label: "Resources", 
-      href: null,
-      submenu: [
-        { label: "Blogs", href: "/blogs" },
+    {
+      label: "Resources",
+      href: "/blog",
+      dropdown: [
+        { label: "Blog", href: "/blog" },
         { label: "Case Studies", href: "/case-studies" },
         { label: "Events", href: "/events" }
       ]
     },
-    { 
-      label: "Company", 
-      href: null,
-      submenu: [
+    {
+      label: "Company",
+      href: "/about",
+      dropdown: [
         { label: "About Us", href: "/about" },
         { label: "Team", href: "/team" },
         { label: "Recruiters", href: "/recruiters" },
         { label: "Careers", href: "/careers" },
-        { label: "FAQ", href: "/faq" },
-        { label: "Contact Us", href: "/contact" }
+        { label: "FAQ", href: "/faq" }
       ]
     }
   ];
 
   return (
-    <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/40 backdrop-blur-xl border-b border-white/10 shadow-lg py-2"
-          : "bg-white/70 backdrop-blur-lg py-3"
-      }`}
-    >
-      <div className="container-wide flex justify-between items-center">
-        <div className="flex items-center">
-          <a href="/" className="flex items-center space-x-1">
-            <img 
-              src="/lovable-uploads/4e0b1cf8-ab85-4f55-a3fb-5f39206731ef.png" 
-              alt="Synapse Logo" 
-              className="h-8 w-8"
-            />
-            <span className="text-2xl font-bold text-synapse-primary">
-              Synapse
-            </span>
-          </a>
-        </div>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-1 ml-12">
-          {navItems.map((item) => (
-            <div key={item.label} className="relative group">
-              {item.href ? (
-                <a
-                  href={item.href}
-                  className="flex items-center px-3 py-2 text-sm font-medium text-synapse-dark hover:text-synapse-primary transition-colors"
-                >
-                  {item.label}
-                  {item.submenu && <ChevronDown size={16} className="ml-1" />}
-                </a>
-              ) : (
-                <span className="flex items-center px-3 py-2 text-sm font-medium text-synapse-dark hover:text-synapse-primary transition-colors cursor-default">
-                  {item.label}
-                  {item.submenu && <ChevronDown size={16} className="ml-1" />}
-                </span>
-              )}
-              
-              {item.submenu && (
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pt-2">
-                  <div className="bg-white/95 backdrop-blur-lg shadow-medium border border-white/30 rounded-xl p-6">
-                    <div className="grid grid-cols-2 gap-4 min-w-[500px]">
-                      {item.submenu.map((subItem) => {
-                        const IconComponent = getIconForSubmenu(subItem.label);
-                        const description = getDescriptionForSubmenu(subItem.label);
-                        return (
-                          <a
-                            key={subItem.label}
-                            href={subItem.href}
-                            className="group/item flex items-start p-3 rounded-lg hover:bg-white/80 hover:shadow-soft transition-all duration-200 border border-transparent hover:border-synapse-primary/20"
-                          >
-                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-synapse-primary to-synapse-secondary flex items-center justify-center mr-3 group-hover/item:scale-110 transition-transform duration-200">
-                              <IconComponent className="h-5 w-5 text-white" />
-                            </div>
-                            <div className="flex-1">
-                              <h3 className="font-semibold text-synapse-dark group-hover/item:text-synapse-primary transition-colors text-sm leading-tight">
-                                {subItem.label}
-                              </h3>
-                              <p className="text-xs text-synapse-gray mt-1 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200">
-                                {description}
-                              </p>
-                            </div>
-                          </a>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-          
-          <div className="flex items-center gap-3 ml-8">
-            <Button
-              className="btn-primary"
-              onClick={() => window.location.href = "/contact"}
-            >
-              Book Demo
-            </Button>
-            <Button
-              variant="outline"
-              className="border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white transition-colors"
-              onClick={() => window.open("https://app.synapserecruiternetwork.com/", "_blank")}
-            >
-              Login
-            </Button>
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white/80 backdrop-blur-lg border-b border-gray-200/50 shadow-sm' 
+        : 'bg-white border-b border-gray-200'
+    }`}>
+      <div className="container-wide">
+        <nav className="flex items-center justify-between h-20" onMouseLeave={closeAllDropdowns}>
+          {/* Logo */}
+          <div className="flex items-center space-x-2">
+            <a href="/" className="flex items-center space-x-2 group">
+              <img 
+                src="/lovable-uploads/4e0b1cf8-ab85-4f55-a3fb-5f39206731ef.png" 
+                alt="Synapse Logo" 
+                className="h-8 w-8 transition-transform group-hover:scale-105"
+              />
+              <span className="text-2xl font-bold text-synapse-dark group-hover:text-synapse-primary transition-colors">
+                Synapse
+              </span>
+            </a>
           </div>
-        </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden text-synapse-dark p-2"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <nav className="lg:hidden bg-white/95 backdrop-blur-lg border-t border-white/20 shadow-medium">
-          <div className="container-wide py-4">
-            <div className="space-y-2">
-              {navItems.map((item) => (
-                <div key={item.label}>
-                  <div className="flex items-center justify-between">
-                    {item.href ? (
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navigationItems.map((item) => (
+              <div key={item.label} className="relative group">
+                <button
+                  className="flex items-center space-x-1 text-synapse-dark hover:text-synapse-primary transition-colors py-2 px-1 font-medium"
+                  onMouseEnter={() => toggleDropdown(item.label)}
+                  onClick={() => window.location.href = item.href}
+                >
+                  <span>{item.label}</span>
+                  <ChevronDown size={16} className={`transition-transform ${
+                    openDropdown === item.label ? 'rotate-180' : ''
+                  }`} />
+                </button>
+                
+                {openDropdown === item.label && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/30 py-2 z-50">
+                    {item.dropdown.map((dropdownItem) => (
                       <a
-                        href={item.href}
-                        className="flex-1 py-2 text-synapse-dark hover:text-synapse-primary font-medium transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
+                        key={dropdownItem.label}
+                        href={dropdownItem.href}
+                        className="block px-4 py-3 text-synapse-dark hover:text-synapse-primary hover:bg-synapse-lighter/50 transition-colors"
                       >
-                        {item.label}
+                        {dropdownItem.label}
                       </a>
-                    ) : (
-                      <span className="flex-1 py-2 text-synapse-dark font-medium">
-                        {item.label}
-                      </span>
-                    )}
-                    {item.submenu && (
-                      <button
-                        onClick={() => toggleMobileItem(item.label)}
-                        className="p-2 text-synapse-dark hover:text-synapse-primary transition-colors"
-                      >
-                        {expandedItems.includes(item.label) ? (
-                          <Minus size={20} />
-                        ) : (
-                          <Plus size={20} />
-                        )}
-                      </button>
-                    )}
+                    ))}
                   </div>
-                  {item.submenu && expandedItems.includes(item.label) && (
-                    <div className="pl-4 space-y-1 mt-2">
-                      {item.submenu.map((subItem) => (
-                        <a
-                          key={subItem.label}
-                          href={subItem.href}
-                          className="block py-2 text-sm text-synapse-gray hover:text-synapse-primary transition-colors"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {subItem.label}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-            
-            <div className="flex flex-col space-y-3 mt-6 pt-4 border-t border-white/20">
-              <Button
-                className="btn-primary w-full"
-                onClick={() => {
-                  window.location.href = "/contact";
-                  setMobileMenuOpen(false);
-                }}
-              >
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <a href="/contact">
+              <Button className="btn-primary">
                 Book Demo
               </Button>
-              <Button
-                variant="outline"
-                className="border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white transition-colors w-full"
-                onClick={() => {
-                  window.open("https://app.synapserecruiternetwork.com/", "_blank");
-                  setMobileMenuOpen(false);
-                }}
-              >
+            </a>
+            <a href="/recruiters">
+              <Button variant="outline" className="border-synapse-primary text-synapse-primary hover:bg-synapse-light">
                 Login
               </Button>
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="lg:hidden p-2 text-synapse-dark hover:text-synapse-primary transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </nav>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="lg:hidden bg-white/95 backdrop-blur-lg border-t border-white/20 py-4 space-y-4">
+            {navigationItems.map((item) => (
+              <div key={item.label}>
+                <button
+                  className="flex items-center justify-between w-full text-left text-synapse-dark hover:text-synapse-primary transition-colors py-2 px-4 font-medium"
+                  onClick={() => toggleDropdown(item.label)}
+                >
+                  <span>{item.label}</span>
+                  <ChevronDown size={16} className={`transition-transform ${
+                    openDropdown === item.label ? 'rotate-180' : ''
+                  }`} />
+                </button>
+                
+                {openDropdown === item.label && (
+                  <div className="bg-synapse-lighter/30 py-2 ml-4">
+                    {item.dropdown.map((dropdownItem) => (
+                      <a
+                        key={dropdownItem.label}
+                        href={dropdownItem.href}
+                        className="block px-4 py-2 text-synapse-gray hover:text-synapse-primary transition-colors"
+                      >
+                        {dropdownItem.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+            
+            <div className="pt-4 px-4 space-y-3 border-t border-gray-200">
+              <a href="/contact" className="block">
+                <Button className="btn-primary w-full">
+                  Book Demo
+                </Button>
+              </a>
+              <a href="/recruiters" className="block">
+                <Button variant="outline" className="border-synapse-primary text-synapse-primary hover:bg-synapse-light w-full">
+                  Login
+                </Button>
+              </a>
             </div>
           </div>
-        </nav>
-      )}
+        )}
+      </div>
     </header>
   );
 };
