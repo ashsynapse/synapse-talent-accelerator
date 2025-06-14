@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 import PageTemplate from "./PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Calendar, Clock, ArrowLeft, Share2, BookmarkPlus, Copy, Check, Mail, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, Share2, BookmarkPlus, Copy, Check, Mail, Facebook, Twitter, Linkedin, Menu } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface BlogPostTemplateProps {
@@ -175,16 +176,16 @@ const BlogPostTemplate = ({
   // Updated recent articles with working links
   const recentArticles = [
     {
+      title: "The Rise of Side Hustles: Why Gen Z is Shaping the Gig Economy",
+      href: "/blog/side-hustles-gig-economy"
+    },
+    {
       title: "AI Recruitment Trends That Will Dominate 2025",
       href: "/blog/ai-recruitment-2025"
     },
     {
       title: "The Future of Remote Recruitment: A Complete Guide", 
       href: "/blog/remote-recruitment-guide"
-    },
-    {
-      title: "Talent Acquisition Strategies: Best Practices for Sourcing",
-      href: "/blog/talent-acquisition-strategies"
     },
     {
       title: "Strategic Sourcing: Finding Top Talent in Competitive Markets",
@@ -221,6 +222,40 @@ const BlogPostTemplate = ({
             </Button>
           </div>
 
+          {/* Mobile/Tablet Table of Contents - Collapsible */}
+          {headings.length > 0 && (
+            <div className="xl:hidden mb-8">
+              <Accordion type="single" collapsible className="bg-gray-50 rounded-lg">
+                <AccordionItem value="table-of-contents" className="border-none">
+                  <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                    <div className="flex items-center gap-2">
+                      <Menu size={18} className="text-synapse-primary" />
+                      <span className="text-lg font-semibold text-synapse-dark">Table of Contents</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    <nav className="space-y-1">
+                      {headings.map((heading) => (
+                        <button
+                          key={heading.id}
+                          onClick={() => scrollToHeading(heading.id)}
+                          className={`block w-full text-left text-sm py-2 px-3 rounded transition-colors ${
+                            activeHeading === heading.id
+                              ? 'bg-synapse-primary text-white'
+                              : 'text-synapse-gray hover:text-synapse-primary hover:bg-white'
+                          }`}
+                          style={{ marginLeft: heading.level > 2 ? `${(heading.level - 2) * 12}px` : '0' }}
+                        >
+                          {heading.text}
+                        </button>
+                      ))}
+                    </nav>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          )}
+
           {/* Main Content Layout */}
           <div className="grid grid-cols-1 xl:grid-cols-12 gap-8">
             {/* Table of Contents - Left Sidebar - Hidden on mobile and tablet */}
@@ -239,7 +274,6 @@ const BlogPostTemplate = ({
                               ? 'bg-synapse-primary text-white'
                               : 'text-synapse-gray hover:text-synapse-primary hover:bg-white'
                           }`}
-                          style={{ marginLeft: heading.level > 2 ? `${(heading.level - 2) * 12}px` : '0' }}
                         >
                           {heading.text}
                         </button>
