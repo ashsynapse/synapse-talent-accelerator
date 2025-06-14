@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo, useEffect } from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -9,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { 
   ArrowRight, 
   Search, 
@@ -233,6 +233,28 @@ const FAQ = () => {
         </div>
 
         <div className="container-wide text-center relative">
+          {/* Breadcrumbs */}
+          <div className="mb-8">
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink 
+                    href="/" 
+                    className="text-white/80 hover:text-white transition-colors"
+                  >
+                    Home
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="text-white/60" />
+                <BreadcrumbItem>
+                  <BreadcrumbPage className="text-white font-medium">
+                    FAQ
+                  </BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Synapse Help Center
           </h1>
