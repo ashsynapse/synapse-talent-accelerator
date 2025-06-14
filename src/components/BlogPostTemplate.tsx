@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from "react";
 import PageTemplate from "./PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -230,7 +228,7 @@ const BlogPostTemplate = ({
                 <AccordionItem value="table-of-contents" className="border-none">
                   <AccordionTrigger className="px-3 md:px-4 lg:px-6 py-2 md:py-3 lg:py-4 hover:no-underline">
                     <div className="flex items-center gap-2">
-                      <Menu size={16} className="text-synapse-primary md:w-[18px] md:h-[18px]" />
+                      <Menu size={16} className="text-synapse-primary w-4 h-4 md:w-[18px] md:h-[18px]" />
                       <span className="text-sm md:text-base lg:text-lg font-semibold text-synapse-dark">Table of Contents</span>
                     </div>
                   </AccordionTrigger>
@@ -322,11 +320,11 @@ const BlogPostTemplate = ({
                     )}
                   </div>
                   <div className="flex items-center gap-1.5 md:gap-2">
-                    <Calendar size={14} className="md:w-[18px] md:h-[18px]" />
+                    <Calendar size={14} className="w-3.5 h-3.5 md:w-[18px] md:h-[18px]" />
                     <span className="text-xs md:text-sm">{date}</span>
                   </div>
                   <div className="flex items-center gap-1.5 md:gap-2">
-                    <Clock size={14} className="md:w-[18px] md:h-[18px]" />
+                    <Clock size={14} className="w-3.5 h-3.5 md:w-[18px] md:h-[18px]" />
                     <span className="text-xs md:text-sm">{readTime}</span>
                   </div>
                 </div>
@@ -340,7 +338,7 @@ const BlogPostTemplate = ({
                       className="text-synapse-primary border-synapse-primary hover:bg-synapse-light text-xs md:text-sm"
                       onClick={() => setShowShareMenu(!showShareMenu)}
                     >
-                      <Share2 size={14} className="mr-1.5 md:mr-2 md:w-4 md:h-4" />
+                      <Share2 size={14} className="mr-1.5 md:mr-2 w-3.5 h-3.5 md:w-4 md:h-4" />
                       Share
                     </Button>
                     
@@ -351,28 +349,28 @@ const BlogPostTemplate = ({
                           onClick={() => handleShare('facebook')}
                           className="w-full px-3 md:px-4 py-1.5 md:py-2 text-left text-xs md:text-sm hover:bg-gray-50 flex items-center gap-2"
                         >
-                          <Facebook size={14} className="md:w-4 md:h-4" />
+                          <Facebook size={14} className="w-3.5 h-3.5 md:w-4 md:h-4" />
                           Facebook
                         </button>
                         <button
                           onClick={() => handleShare('twitter')}
                           className="w-full px-3 md:px-4 py-1.5 md:py-2 text-left text-xs md:text-sm hover:bg-gray-50 flex items-center gap-2"
                         >
-                          <Twitter size={14} className="md:w-4 md:h-4" />
+                          <Twitter size={14} className="w-3.5 h-3.5 md:w-4 md:h-4" />
                           Twitter
                         </button>
                         <button
                           onClick={() => handleShare('linkedin')}
                           className="w-full px-3 md:px-4 py-1.5 md:py-2 text-left text-xs md:text-sm hover:bg-gray-50 flex items-center gap-2"
                         >
-                          <Linkedin size={14} className="md:w-4 md:h-4" />
+                          <Linkedin size={14} className="w-3.5 h-3.5 md:w-4 md:h-4" />
                           LinkedIn
                         </button>
                         <button
                           onClick={() => handleShare()}
                           className="w-full px-3 md:px-4 py-1.5 md:py-2 text-left text-xs md:text-sm hover:bg-gray-50 flex items-center gap-2"
                         >
-                          {copied ? <Check size={14} className="md:w-4 md:h-4" /> : <Copy size={14} className="md:w-4 md:h-4" />}
+                          {copied ? <Check size={14} className="w-3.5 h-3.5 md:w-4 md:h-4" /> : <Copy size={14} className="w-3.5 h-3.5 md:w-4 md:h-4" />}
                           {copied ? 'Copied!' : 'Copy Link'}
                         </button>
                       </div>
@@ -385,7 +383,7 @@ const BlogPostTemplate = ({
                     className="text-synapse-primary border-synapse-primary hover:bg-synapse-light text-xs md:text-sm"
                     onClick={handleBookmark}
                   >
-                    <BookmarkPlus size={14} className="mr-1.5 md:mr-2 md:w-4 md:h-4" />
+                    <BookmarkPlus size={14} className="mr-1.5 md:mr-2 w-3.5 h-3.5 md:w-4 md:h-4" />
                     Save
                   </Button>
                 </div>
@@ -396,7 +394,7 @@ const BlogPostTemplate = ({
                 {children}
               </div>
 
-              {/* CTA Section - Show on mobile/tablet only, hidden on desktop */}
+              {/* CTA Section - Show on mobile/tablet only, positioned before author section */}
               <div className="mt-8 md:mt-10 lg:mt-12 mb-6 md:mb-8 xl:hidden">
                 <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-4 md:p-6 lg:p-8 text-white">
                   <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 md:mb-3">Ready to Transform Your Hiring?</h3>
