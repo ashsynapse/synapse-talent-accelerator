@@ -1,5 +1,5 @@
-
 import React, { useState, useMemo, useEffect } from "react";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -119,8 +119,13 @@ const faqCategories = [
 ];
 
 const FAQ = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [showAllArticles, setShowAllArticles] = useState(false);
+  
+  const categoryParam = searchParams.get('category');
+  const selectedCategory = categoryParam || null;
 
   // Add keyboard shortcut for search
   useEffect(() => {
@@ -138,12 +143,26 @@ const FAQ = () => {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  // Update page title and meta description based on category
+  useEffect(() => {
+    if (selectedCategory) {
+      const category = faqCategories.find(cat => cat.id === selectedCategory);
+      if (category) {
+        document.title = `${category.title} - FAQ | Synapse International`;
+      }
+    }
+  }, [selectedCategory]);
+
   // Filter FAQs based on search query
   const filteredCategories = useMemo(() => {
     if (!searchQuery.trim()) {
-      return selectedCategory 
-        ? faqCategories.filter(cat => cat.id === selectedCategory)
-        : faqCategories;
+      if (selectedCategory) {
+        return faqCategories.filter(cat => cat.id === selectedCategory);
+      }
+      if (showAllArticles) {
+        return faqCategories;
+      }
+      return [];
     }
 
     const query = searchQuery.toLowerCase();
@@ -154,19 +173,33 @@ const FAQ = () => {
         faq.answer.toLowerCase().includes(query)
       )
     })).filter(category => category.faqs.length > 0);
-  }, [searchQuery, selectedCategory]);
+  }, [searchQuery, selectedCategory, showAllArticles]);
 
   const totalFAQs = faqCategories.reduce((total, category) => total + category.faqs.length, 0);
 
   const handleCategoryClick = (categoryId: string) => {
-    setSelectedCategory(categoryId);
     setSearchQuery(""); // Clear search when selecting category
+    setShowAllArticles(false);
+    setSearchParams({ category: categoryId });
   };
+
+  const handleBackToCategories = () => {
+    setSearchParams({});
+    setShowAllArticles(false);
+  };
+
+  const handleBrowseAllArticles = () => {
+    setShowAllArticles(!showAllArticles);
+    setSearchParams({});
+    setSearchQuery("");
+  };
+
+  const currentCategory = selectedCategory ? faqCategories.find(cat => cat.id === selectedCategory) : null;
 
   return (
     <PageTemplate 
-      title="Help Center - Synapse International"
-      description="Find answers to common questions about SRN platform, membership, commissions, and policies"
+      title={currentCategory ? `${currentCategory.title} - FAQ` : "Help Center"} 
+      description={currentCategory ? `${currentCategory.description} - Find answers to common questions about SRN platform` : "Find answers to common questions about SRN platform, membership, commissions, and policies"}
     >
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary relative overflow-hidden">
@@ -199,20 +232,40 @@ const FAQ = () => {
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="text-white/60" />
-                <BreadcrumbItem>
-                  <BreadcrumbPage className="text-white font-medium">
-                    FAQ
-                  </BreadcrumbPage>
-                </BreadcrumbItem>
+                {currentCategory ? (
+                  <>
+                    <BreadcrumbItem>
+                      <BreadcrumbLink 
+                        href="/faq" 
+                        className="text-white/80 hover:text-white transition-colors"
+                        onClick={handleBackToCategories}
+                      >
+                        FAQ
+                      </BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator className="text-white/60" />
+                    <BreadcrumbItem>
+                      <BreadcrumbPage className="text-white font-medium">
+                        {currentCategory.title}
+                      </BreadcrumbPage>
+                    </BreadcrumbItem>
+                  </>
+                ) : (
+                  <BreadcrumbItem>
+                    <BreadcrumbPage className="text-white font-medium">
+                      FAQ
+                    </BreadcrumbPage>
+                  </BreadcrumbItem>
+                )}
               </BreadcrumbList>
             </Breadcrumb>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            SRN Help Center
+            {currentCategory ? currentCategory.title : "SRN Help Center"}
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-            Find answers and support for the Synapse Recruiter Network platform
+            {currentCategory ? currentCategory.description : "Find answers and support for the Synapse Recruiter Network platform"}
           </p>
 
           {/* Search Bar */}
@@ -237,7 +290,7 @@ const FAQ = () => {
       {/* Categories or Search Results */}
       <section className="py-16 bg-white">
         <div className="container-wide">
-          {!searchQuery ? (
+          {!searchQuery && !selectedCategory && !showAllArticles ? (
             <>
               {/* Category Cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -271,13 +324,13 @@ const FAQ = () => {
                 })}
               </div>
 
-              {/* Recent Articles */}
+              {/* Browse All Articles Button */}
               <div className="text-center">
                 <h2 className="text-2xl font-bold text-synapse-dark mb-4">
                   Browse all {totalFAQs} articles
                 </h2>
                 <Button
-                  onClick={() => setSelectedCategory(null)}
+                  onClick={handleBrowseAllArticles}
                   className="bg-synapse-primary hover:bg-synapse-primary/90"
                 >
                   View All Articles
@@ -288,13 +341,13 @@ const FAQ = () => {
           ) : null}
 
           {/* FAQ Content */}
-          {(searchQuery || selectedCategory) && (
+          {(searchQuery || selectedCategory || showAllArticles) && (
             <div className="max-w-4xl mx-auto">
               {/* Back to Categories */}
-              {selectedCategory && !searchQuery && (
+              {(selectedCategory || showAllArticles) && !searchQuery && (
                 <Button
                   variant="ghost"
-                  onClick={() => setSelectedCategory(null)}
+                  onClick={handleBackToCategories}
                   className="mb-8 text-synapse-primary hover:bg-synapse-light"
                 >
                   ← Back to all categories
@@ -313,10 +366,26 @@ const FAQ = () => {
                 </div>
               )}
 
+              {/* Category-specific SEO content */}
+              {selectedCategory && !searchQuery && currentCategory && (
+                <div className="mb-8 p-6 bg-synapse-light rounded-lg">
+                  <div className="flex items-center mb-4">
+                    <currentCategory.icon className="h-6 w-6 text-synapse-primary mr-3" />
+                    <h2 className="text-2xl font-bold text-synapse-dark">
+                      {currentCategory.title}
+                    </h2>
+                  </div>
+                  <p className="text-synapse-gray mb-4">{currentCategory.description}</p>
+                  <p className="text-sm text-synapse-gray">
+                    This section contains {currentCategory.faqs.length} frequently asked questions about {currentCategory.title.toLowerCase()}.
+                  </p>
+                </div>
+              )}
+
               {/* FAQ Sections */}
               {filteredCategories.map((category) => (
                 <div key={category.id} className="mb-12">
-                  {(!selectedCategory || searchQuery) && (
+                  {(!selectedCategory || searchQuery || showAllArticles) && (
                     <div className="flex items-center mb-6">
                       <category.icon className="h-6 w-6 text-synapse-primary mr-3" />
                       <h2 className="text-2xl font-bold text-synapse-dark">
