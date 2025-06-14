@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import PageTemplate from "./PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -228,7 +229,7 @@ const BlogPostTemplate = ({
                 <AccordionItem value="table-of-contents" className="border-none">
                   <AccordionTrigger className="px-3 md:px-4 lg:px-6 py-2 md:py-3 lg:py-4 hover:no-underline">
                     <div className="flex items-center gap-2">
-                      <Menu size={16} md:size={18} className="text-synapse-primary" />
+                      <Menu size={16} className="text-synapse-primary md:w-[18px] md:h-[18px]" />
                       <span className="text-sm md:text-base lg:text-lg font-semibold text-synapse-dark">Table of Contents</span>
                     </div>
                   </AccordionTrigger>
