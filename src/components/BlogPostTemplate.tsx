@@ -4,6 +4,7 @@ import PageTemplate from "./PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ArrowLeft, Share2, BookmarkPlus, User } from "lucide-react";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import { useToast } from "@/hooks/use-toast";
 import TableOfContents from "./blog/TableOfContents";
 import BlogSidebar from "./blog/BlogSidebar";
 
@@ -30,6 +31,24 @@ const BlogPostTemplate = ({
   authorImage,
   authorLinkedIn
 }: BlogPostTemplateProps) => {
+  const { toast } = useToast();
+  
+  const handleShare = async () => {
+    try {
+      const url = window.location.href;
+      await navigator.clipboard.writeText(url);
+      toast({
+        title: "URL Copied!",
+        description: "The blog post URL has been copied to your clipboard.",
+      });
+    } catch (err) {
+      toast({
+        title: "Copy Failed",
+        description: "Unable to copy URL to clipboard.",
+        variant: "destructive",
+      });
+    }
+  };
   
   // Table of contents items - these would be generated dynamically in a real implementation
   const tocItems = [
@@ -37,8 +56,7 @@ const BlogPostTemplate = ({
     { id: "key-benefits", title: "Key Benefits for Companies Engaging Gen Z Talent", level: 3 },
     { id: "gig-economy-benefits", title: "How Businesses Can Benefit from the Gig Economy", level: 2 },
     { id: "strategic-implementation", title: "Strategic Implementation Areas", level: 3 },
-    { id: "recruitment-firms-role", title: "The Role of Recruitment Firms in Connecting Businesses with Gen Z Talent", level: 2 },
-    { id: "embrace-future", title: "Embrace the Future of Work", level: 3 }
+    { id: "recruitment-firms-role", title: "The Role of Recruitment Firms in Connecting Businesses with Gen Z Talent", level: 2 }
   ];
 
   // Related articles - these would come from your CMS or API
@@ -88,17 +106,8 @@ const BlogPostTemplate = ({
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink 
-                    href="/blog" 
-                    className="text-synapse-gray hover:text-synapse-primary transition-colors"
-                  >
-                    Blog
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
                   <BreadcrumbPage className="text-synapse-dark font-medium">
-                    {title}
+                    Blog
                   </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
@@ -178,9 +187,14 @@ const BlogPostTemplate = ({
 
                 {/* Share Actions */}
                 <div className="flex items-center gap-3 pt-6 border-t border-gray-200">
-                  <Button variant="outline" size="sm" className="text-synapse-primary border-synapse-primary hover:bg-synapse-light">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="text-synapse-primary border-synapse-primary hover:bg-synapse-light"
+                    onClick={handleShare}
+                  >
                     <Share2 size={16} className="mr-2" />
-                    Share
+                    Share Article
                   </Button>
                   <Button variant="outline" size="sm" className="text-synapse-primary border-synapse-primary hover:bg-synapse-light">
                     <BookmarkPlus size={16} className="mr-2" />
@@ -201,7 +215,12 @@ const BlogPostTemplate = ({
                     <p className="text-sm">Published by {author} on {date}</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Button variant="outline" size="sm" className="text-synapse-primary border-synapse-primary hover:bg-synapse-light">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="text-synapse-primary border-synapse-primary hover:bg-synapse-light"
+                      onClick={handleShare}
+                    >
                       <Share2 size={16} className="mr-2" />
                       Share Article
                     </Button>
