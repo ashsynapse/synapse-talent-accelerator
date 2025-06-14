@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import PageTemplate from "./PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -70,11 +69,21 @@ const BlogPostTemplate = ({
   // Track active heading and reading progress while scrolling
   useEffect(() => {
     const handleScroll = () => {
-      // Calculate reading progress
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      setReadingProgress(scrolled);
+      // Calculate reading progress based on article content only
+      const articleElement = document.querySelector('article');
+      if (articleElement) {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const articleTop = articleElement.offsetTop;
+        const articleHeight = articleElement.offsetHeight;
+        const windowHeight = window.innerHeight;
+        
+        // Calculate progress from start of article to end of article content
+        const scrollableHeight = Math.max(0, articleHeight - windowHeight);
+        const articleScrolled = Math.max(0, winScroll - articleTop);
+        const scrolled = scrollableHeight > 0 ? Math.min(100, (articleScrolled / scrollableHeight) * 100) : 0;
+        
+        setReadingProgress(scrolled);
+      }
 
       // Track active heading
       const headingElements = headings.map(h => document.getElementById(h.id)).filter(Boolean);
