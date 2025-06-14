@@ -152,12 +152,12 @@ const Blog = () => {
         <div className="container-wide">
           {/* Category Tabs */}
           <Tabs value={activeCategory} onValueChange={handleCategoryChange} className="mb-12">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 bg-synapse-lighter/50">
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 bg-synapse-lighter/50 p-1 rounded-lg">
               {categories.map((category) => (
                 <TabsTrigger
                   key={category}
                   value={category}
-                  className="data-[state=active]:bg-synapse-primary data-[state=active]:text-white text-synapse-dark hover:bg-synapse-light transition-colors min-h-[44px]"
+                  className="data-[state=active]:bg-synapse-primary data-[state=active]:text-white text-synapse-dark hover:bg-synapse-light transition-colors px-4 py-3 rounded-md text-sm font-medium flex items-center justify-center"
                 >
                   {category}
                 </TabsTrigger>
