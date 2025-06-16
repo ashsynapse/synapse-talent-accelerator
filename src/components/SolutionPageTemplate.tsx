@@ -37,23 +37,25 @@ const SolutionPageTemplate = ({
   return (
     <PageTemplate title={title} description={description}>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary">
-        <div className="container-wide text-center text-white">
-          <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/30">
-            Solution
-          </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            {heroTitle}
-          </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-            {heroDescription}
-          </p>
-          <Button 
-            className="bg-white text-synapse-primary hover:bg-white/90 transition-colors"
-            onClick={() => window.location.href = "/contact"}
-          >
-            Get Started <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+        <div className="container-wide">
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
+              Solution
+            </Badge>
+            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
+              {heroTitle}
+            </h1>
+            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
+              {heroDescription}
+            </p>
+            <Button 
+              className="btn-primary"
+              onClick={() => window.location.href = "/contact"}
+            >
+              Get Started <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
         </div>
       </section>
 
