@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -80,8 +79,8 @@ const Blog = () => {
       title="Synapse Blog"
       description="Stay updated with the latest insights, trends, and best practices in recruitment and talent acquisition"
     >
-      {/* Hero Section - Consistent with FAQ */}
-      <section className="pt-24 pb-12 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary relative overflow-hidden">
+      {/* Hero Section - Reduced height */}
+      <section className="pt-20 pb-8 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
@@ -99,7 +98,7 @@ const Blog = () => {
 
         <div className="container-wide text-center relative">
           {/* Breadcrumbs */}
-          <div className="mb-6">
+          <div className="mb-4">
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -120,10 +119,10 @@ const Blog = () => {
             </Breadcrumb>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
             Synapse Blog
           </h1>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto mb-6">
+          <p className="text-lg text-white/90 max-w-2xl mx-auto mb-4">
             Expert insights, industry trends, and actionable strategies to transform your recruitment process
           </p>
 
@@ -140,7 +139,7 @@ const Blog = () => {
                 aria-label="Search blog articles"
               />
             </div>
-            <div className="mt-3 text-white/80 text-sm">
+            <div className="mt-2 text-white/80 text-sm">
               Press <kbd className="px-2 py-1 bg-white/20 rounded">Ctrl + K</kbd> to search
             </div>
           </div>
@@ -148,10 +147,10 @@ const Blog = () => {
       </section>
 
       {/* Content Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container-wide">
           {/* Category Tabs */}
-          <Tabs value={activeCategory} onValueChange={handleCategoryChange} className="mb-12">
+          <Tabs value={activeCategory} onValueChange={handleCategoryChange} className="mb-8">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 bg-synapse-lighter/50 p-1 rounded-lg">
               {categories.map((category) => (
                 <TabsTrigger
@@ -164,9 +163,9 @@ const Blog = () => {
               ))}
             </TabsList>
 
-            <TabsContent value={activeCategory} className="mt-8">
+            <TabsContent value={activeCategory} className="mt-6">
               {/* Blog Posts Grid */}
-              <div className="grid md:grid-cols-2 gap-8 mb-16">
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
                 {currentPosts.map((post, index) => (
                   <Card 
                     key={index} 

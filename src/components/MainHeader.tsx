@@ -107,37 +107,37 @@ const MainHeader = () => {
       label: "Solutions", 
       href: "/recruitment-solutions",
       submenu: [
-        { label: "Passive AI Sourcing", href: "/recruitment-solutions" },
-        { label: "AI Candidate Discovery", href: "/recruitment-solutions" },
-        { label: "Project Staffing", href: "/recruitment-solutions" },
-        { label: "Executive Search", href: "/recruitment-solutions" },
-        { label: "Remote Staffing", href: "/recruitment-solutions" },
-        { label: "Permanent Placement", href: "/recruitment-solutions" },
-        { label: "Contingent Staffing", href: "/recruitment-solutions" },
-        { label: "Apprenticeship AI Sourcing", href: "/recruitment-solutions" }
+        { label: "Passive AI Sourcing", href: "/recruitment-solutions/passive-ai-sourcing" },
+        { label: "AI Candidate Discovery", href: "/recruitment-solutions/ai-candidate-discovery" },
+        { label: "Project Staffing", href: "/recruitment-solutions/project-staffing" },
+        { label: "Executive Search", href: "/recruitment-solutions/executive-search" },
+        { label: "Remote Staffing", href: "/recruitment-solutions/remote-staffing" },
+        { label: "Permanent Placement", href: "/recruitment-solutions/permanent-placement" },
+        { label: "Contingent Staffing", href: "/recruitment-solutions/contingent-staffing" },
+        { label: "Apprenticeship AI Sourcing", href: "/recruitment-solutions/apprenticeship-ai-sourcing" }
       ]
     },
     { 
       label: "Products", 
       href: "/recruitment-tools",
       submenu: [
-        { label: "AI Candidate Sourcing", href: "/recruitment-tools" },
-        { label: "Pre-Employment AI Screening", href: "/recruitment-tools" },
-        { label: "AI Resume Analysis", href: "/recruitment-tools" }
+        { label: "AI Candidate Sourcing", href: "/recruitment-tools/ai-candidate-sourcing" },
+        { label: "Pre-Employment AI Screening", href: "/recruitment-tools/pre-employment-screening" },
+        { label: "AI Resume Analysis", href: "/recruitment-tools/ai-resume-analysis" }
       ]
     },
     { 
       label: "Industries", 
       href: "/industries",
       submenu: [
-        { label: "Technology", href: "/industries" },
-        { label: "Finance", href: "/industries" },
-        { label: "Healthcare", href: "/industries" },
-        { label: "Legal", href: "/industries" },
-        { label: "Manufacturing", href: "/industries" },
-        { label: "Sales & Marketing", href: "/industries" },
-        { label: "Leadership", href: "/industries" },
-        { label: "Operations", href: "/industries" }
+        { label: "Technology", href: "/industries/technology" },
+        { label: "Finance", href: "/industries/finance" },
+        { label: "Healthcare", href: "/industries/healthcare" },
+        { label: "Legal", href: "/industries/legal" },
+        { label: "Manufacturing", href: "/industries/manufacturing" },
+        { label: "Sales & Marketing", href: "/industries/sales-marketing" },
+        { label: "Leadership", href: "/industries/leadership" },
+        { label: "Operations", href: "/industries/operations" }
       ]
     },
     { 
@@ -172,6 +172,7 @@ const MainHeader = () => {
       }`}
     >
       <div className="container-wide flex justify-between items-center">
+        {/* Logo */}
         <div className="flex items-center">
           <a href="/" className="flex items-center space-x-1">
             <img 
@@ -185,8 +186,8 @@ const MainHeader = () => {
           </a>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-1 ml-12">
+        {/* Centered Desktop Navigation */}
+        <nav className="hidden lg:flex items-center justify-center flex-1 space-x-1">
           {navItems.map((item) => (
             <div key={item.label} className="relative group">
               {item.href ? (
@@ -237,23 +238,24 @@ const MainHeader = () => {
               )}
             </div>
           ))}
-          
-          <div className="flex items-center gap-3 ml-8">
-            <Button
-              className="btn-primary"
-              onClick={() => window.location.href = "/contact"}
-            >
-              Book Demo
-            </Button>
-            <Button
-              variant="outline"
-              className="border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white transition-colors"
-              onClick={() => window.open("https://app.synapserecruiternetwork.com/", "_blank")}
-            >
-              Login
-            </Button>
-          </div>
         </nav>
+
+        {/* Right side buttons */}
+        <div className="hidden lg:flex items-center gap-3">
+          <Button
+            className="btn-primary"
+            onClick={() => window.location.href = "/contact"}
+          >
+            Book Demo
+          </Button>
+          <Button
+            variant="outline"
+            className="border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white transition-colors"
+            onClick={() => window.open("https://app.synapserecruiternetwork.com/", "_blank")}
+          >
+            Login
+          </Button>
+        </div>
 
         {/* Mobile Menu Button */}
         <button

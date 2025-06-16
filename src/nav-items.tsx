@@ -1,3 +1,4 @@
+
 import Index from "./pages/Index";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
@@ -19,8 +20,11 @@ import Partners from "./pages/Partners";
 import Locations from "./pages/Locations";
 import Glossary from "./pages/Glossary";
 
-// Blog post imports - only keeping the one blog
+// Blog post imports
 import SideHustlesGigEconomy from "./pages/blog/SideHustlesGigEconomy";
+
+// Solution page imports
+import PassiveAISourcing from "./pages/solutions/PassiveAISourcing";
 
 export const navItems = [
   {
@@ -103,9 +107,14 @@ export const navItems = [
     to: "/glossary",
     page: <Glossary />,
   },
-  // Blog post routes - only keeping the side hustles one
+  // Blog post routes
   {
     to: "/blog/side-hustles-gig-economy",
     page: <SideHustlesGigEconomy />,
+  },
+  // Solution page routes
+  {
+    to: "/recruitment-solutions/passive-ai-sourcing",
+    page: <PassiveAISourcing />,
   },
 ];
