@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import PageTemplate from "./PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -397,26 +398,59 @@ const BlogPostTemplate = ({
                 </div>
               </header>
 
-              {/* Article Content */}
-              <div className="prose prose-sm md:prose-base lg:prose-lg max-w-none prose-headings:text-synapse-dark prose-a:text-synapse-primary hover:prose-a:text-synapse-secondary">
-                {children}
-              </div>
-
-              {/* CTA Section - Show on mobile/tablet only, positioned before article content */}
-              <div className="mb-6 md:mb-8 lg:mb-12 xl:hidden">
-                <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-4 md:p-6 lg:p-8 text-white">
-                  <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 md:mb-3">Ready to Transform Your Hiring?</h3>
-                  <p className="text-xs md:text-sm lg:text-base mb-3 md:mb-4 text-white/90 leading-relaxed">
+              {/* CTA Section - Show on mobile only, positioned before article content */}
+              <div className="mb-6 md:mb-8 lg:mb-12 md:hidden">
+                <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-4 text-white">
+                  <h3 className="text-lg font-semibold mb-2">Ready to Transform Your Hiring?</h3>
+                  <p className="text-sm mb-3 text-white/90 leading-relaxed">
                     Discover how AI-powered recruitment can help you find top talent faster and more efficiently.
                   </p>
                   <Button 
-                    className="bg-white text-synapse-primary hover:bg-gray-100 w-full md:w-auto text-sm md:text-base"
+                    className="bg-white text-synapse-primary hover:bg-gray-100 w-full text-sm"
                     onClick={() => window.location.href = '/contact'}
                   >
                     Book a Demo
                   </Button>
                 </div>
               </div>
+
+              {/* Article Content with standardized image sizing */}
+              <div className="prose prose-sm md:prose-base lg:prose-lg max-w-none prose-headings:text-synapse-dark prose-a:text-synapse-primary hover:prose-a:text-synapse-secondary prose-img:rounded-lg prose-img:shadow-soft prose-img:max-h-96 prose-img:w-full prose-img:object-cover">
+                {children}
+              </div>
+
+              {/* About Author Section - Mobile positioning adjusted */}
+              {author === "Ali Taghikhani" && (
+                <div className="mt-8 p-6 bg-gray-50 rounded-lg border">
+                  <h3 className="text-lg font-semibold text-synapse-dark mb-4">About the Author</h3>
+                  <div className="flex items-start gap-4">
+                    {authorImage && (
+                      <img 
+                        src={authorImage} 
+                        alt={author}
+                        className="w-16 h-16 rounded-full object-cover border-2 border-synapse-lighter flex-shrink-0"
+                      />
+                    )}
+                    <div>
+                      <h4 className="font-semibold text-synapse-dark mb-1">Ali Taghikhani</h4>
+                      <p className="text-sm text-synapse-primary mb-2">CEO & Co-Founder</p>
+                      <p className="text-sm text-synapse-gray leading-relaxed">
+                        Ali is driven by a mission to improve how people find the right opportunities. With over a decade of experience in talent and technology, he's focused on using AI to make recruitment more efficient, fair, and human-centered.
+                      </p>
+                      {authorLinkedIn && (
+                        <a 
+                          href={authorLinkedIn} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-block mt-2 text-sm text-synapse-primary hover:underline"
+                        >
+                          Connect on LinkedIn
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
 
               {/* Share Actions at the End - Same as beginning */}
               <div className="mt-8 md:mt-10 lg:mt-12 pt-6 md:pt-8 border-t border-gray-200">
@@ -507,21 +541,19 @@ const BlogPostTemplate = ({
                   </a>
                 </div>
 
-                {/* CTA Section - Desktop only, positioned between recent articles and newsletter */}
-                <div className="hidden xl:block">
-                  <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-4 text-white">
-                    <h3 className="text-base font-semibold mb-2">Ready to Transform Your Hiring?</h3>
-                    <p className="text-xs mb-3 text-white/90 leading-relaxed">
-                      Discover how AI-powered recruitment can help you find top talent faster and more efficiently.
-                    </p>
-                    <Button 
-                      size="sm"
-                      className="bg-white text-synapse-primary hover:bg-gray-100 w-full text-xs"
-                      onClick={() => window.location.href = '/contact'}
-                    >
-                      Book a Demo
-                    </Button>
-                  </div>
+                {/* CTA Section - Tablet and Desktop only */}
+                <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-4 text-white">
+                  <h3 className="text-base font-semibold mb-2">Ready to Transform Your Hiring?</h3>
+                  <p className="text-xs mb-3 text-white/90 leading-relaxed">
+                    Discover how AI-powered recruitment can help you find top talent faster and more efficiently.
+                  </p>
+                  <Button 
+                    size="sm"
+                    className="bg-white text-synapse-primary hover:bg-gray-100 w-full text-xs"
+                    onClick={() => window.location.href = '/contact'}
+                  >
+                    Book a Demo
+                  </Button>
                 </div>
 
                 {/* Newsletter Signup */}

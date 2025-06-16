@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -79,8 +80,8 @@ const Blog = () => {
       title="Synapse Blog"
       description="Stay updated with the latest insights, trends, and best practices in recruitment and talent acquisition"
     >
-      {/* Hero Section - Reduced height */}
-      <section className="pt-20 pb-8 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary relative overflow-hidden">
+      {/* Hero Section - Further reduced height */}
+      <section className="pt-20 pb-6 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
@@ -98,7 +99,7 @@ const Blog = () => {
 
         <div className="container-wide text-center relative">
           {/* Breadcrumbs */}
-          <div className="mb-4">
+          <div className="mb-3">
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -119,27 +120,27 @@ const Blog = () => {
             </Breadcrumb>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">
             Synapse Blog
           </h1>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto mb-4">
+          <p className="text-base text-white/90 max-w-2xl mx-auto mb-3">
             Expert insights, industry trends, and actionable strategies to transform your recruitment process
           </p>
 
           {/* Search Bar */}
           <div className="max-w-xl mx-auto relative">
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-synapse-gray h-5 w-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-synapse-gray h-4 w-4" />
               <Input
                 type="text"
                 placeholder="Search articles..."
                 value={searchTerm}
                 onChange={handleSearchChange}
-                className="w-full pl-12 pr-4 py-3 text-base border-0 bg-white/95 backdrop-blur-sm shadow-xl rounded-xl focus:ring-2 focus:ring-white/50"
+                className="w-full pl-12 pr-4 py-2 text-sm border-0 bg-white/95 backdrop-blur-sm shadow-xl rounded-xl focus:ring-2 focus:ring-white/50"
                 aria-label="Search blog articles"
               />
             </div>
-            <div className="mt-2 text-white/80 text-sm">
+            <div className="mt-2 text-white/80 text-xs">
               Press <kbd className="px-2 py-1 bg-white/20 rounded">Ctrl + K</kbd> to search
             </div>
           </div>
@@ -147,25 +148,25 @@ const Blog = () => {
       </section>
 
       {/* Content Section */}
-      <section className="py-12 bg-white">
+      <section className="py-8 bg-white">
         <div className="container-wide">
           {/* Category Tabs */}
-          <Tabs value={activeCategory} onValueChange={handleCategoryChange} className="mb-8">
+          <Tabs value={activeCategory} onValueChange={handleCategoryChange} className="mb-6">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 bg-synapse-lighter/50 p-1 rounded-lg">
               {categories.map((category) => (
                 <TabsTrigger
                   key={category}
                   value={category}
-                  className="data-[state=active]:bg-synapse-primary data-[state=active]:text-white text-synapse-dark hover:bg-synapse-light transition-colors px-4 py-3 rounded-md text-sm font-medium flex items-center justify-center"
+                  className="data-[state=active]:bg-synapse-primary data-[state=active]:text-white text-synapse-dark hover:bg-synapse-light transition-colors px-4 py-2 rounded-md text-sm font-medium flex items-center justify-center"
                 >
                   {category}
                 </TabsTrigger>
               ))}
             </TabsList>
 
-            <TabsContent value={activeCategory} className="mt-6">
-              {/* Blog Posts Grid */}
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <TabsContent value={activeCategory} className="mt-4">
+              {/* Blog Posts Grid - Optimized for viewport */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                 {currentPosts.map((post, index) => (
                   <Card 
                     key={index} 
@@ -174,8 +175,8 @@ const Blog = () => {
                     role="article"
                   >
                     <CardContent className="p-0 flex flex-col h-full">
-                      {/* Blog Image */}
-                      <div className="w-full h-64 overflow-hidden rounded-t-lg">
+                      {/* Blog Image - Reduced height */}
+                      <div className="w-full h-48 overflow-hidden rounded-t-lg">
                         <img 
                           src={post.image} 
                           alt={`Featured image for ${post.title}`}
@@ -184,53 +185,53 @@ const Blog = () => {
                         />
                       </div>
                       
-                      <div className="p-6 flex flex-col flex-grow">
-                        <div className="mb-4">
+                      <div className="p-4 flex flex-col flex-grow">
+                        <div className="mb-3">
                           <Badge 
                             variant="secondary" 
-                            className="bg-synapse-lighter text-synapse-primary hover:bg-synapse-light"
+                            className="bg-synapse-lighter text-synapse-primary hover:bg-synapse-light text-xs"
                           >
                             {post.category}
                           </Badge>
                         </div>
                         
-                        <h2 className="text-xl font-bold mb-3 text-synapse-dark group-hover:text-synapse-primary transition-colors leading-tight">
+                        <h2 className="text-lg font-bold mb-2 text-synapse-dark group-hover:text-synapse-primary transition-colors leading-tight line-clamp-2">
                           {post.title}
                         </h2>
                         
-                        <p className="text-synapse-gray mb-6 flex-grow line-clamp-3 text-base leading-relaxed">
+                        <p className="text-synapse-gray mb-4 flex-grow line-clamp-2 text-sm leading-relaxed">
                           {post.excerpt}
                         </p>
                         
-                        <div className="flex items-center justify-between text-sm text-synapse-gray mb-4">
-                          <div className="flex items-center gap-2">
-                            <User size={16} aria-hidden="true" />
+                        <div className="flex items-center justify-between text-xs text-synapse-gray mb-3">
+                          <div className="flex items-center gap-1">
+                            <User size={12} aria-hidden="true" />
                             <span className="font-medium">
                               {post.author}
                             </span>
                           </div>
-                          <div className="flex items-center gap-2">
-                            <Clock size={16} aria-hidden="true" />
+                          <div className="flex items-center gap-1">
+                            <Clock size={12} aria-hidden="true" />
                             <span>{post.readTime}</span>
                           </div>
                         </div>
                         
                         <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2 text-sm text-synapse-gray">
-                            <Calendar size={16} aria-hidden="true" />
+                          <div className="flex items-center gap-1 text-xs text-synapse-gray">
+                            <Calendar size={12} aria-hidden="true" />
                             <span>{post.date}</span>
                           </div>
                           <Button 
                             variant="ghost" 
                             size="sm"
-                            className="text-synapse-primary hover:bg-synapse-light p-3 min-h-[44px] min-w-[44px]"
+                            className="text-synapse-primary hover:bg-synapse-light p-2 min-h-[36px] min-w-[36px]"
                             onClick={(e) => {
                               e.stopPropagation();
                               handleBlogClick(post.href);
                             }}
                             aria-label={`Read article: ${post.title}`}
                           >
-                            <ArrowRight size={18} />
+                            <ArrowRight size={16} />
                           </Button>
                         </div>
                       </div>
@@ -241,7 +242,7 @@ const Blog = () => {
 
               {/* No Results Message */}
               {filteredPosts.length === 0 && (
-                <div className="text-center py-16">
+                <div className="text-center py-12">
                   <h3 className="text-xl font-semibold text-synapse-dark mb-4">
                     No articles found
                   </h3>

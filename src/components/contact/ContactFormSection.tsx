@@ -8,42 +8,42 @@ const ContactFormSection = () => {
   const { addToRefs } = useScrollAnimation();
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 bg-white">
       <div className="container-wide">
         {/* Mobile and Tablet Layout */}
         <div className="lg:hidden">
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div 
               ref={addToRefs}
-              className="scroll-animate bg-white p-6 rounded-xl shadow-soft border border-gray-100"
+              className="scroll-animate bg-white p-4 rounded-xl shadow-soft border border-gray-100"
             >
-              <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary p-3 rounded-lg inline-block mb-4">
-                <MessageCircle className="h-6 w-6 text-white" />
+              <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary p-2 rounded-lg inline-block mb-3">
+                <MessageCircle className="h-5 w-5 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-synapse-dark mb-2">Quick Response</h3>
-              <p className="text-synapse-gray">Get a response within 24 hours from our AI hiring specialists</p>
+              <h3 className="text-base font-bold text-synapse-dark mb-2">Quick Response</h3>
+              <p className="text-sm text-synapse-gray">Get a response within 24 hours from our AI hiring specialists</p>
             </div>
 
             <div 
               ref={addToRefs}
-              className="scroll-animate bg-white p-6 rounded-xl shadow-soft border border-gray-100"
+              className="scroll-animate bg-white p-4 rounded-xl shadow-soft border border-gray-100"
             >
-              <div className="bg-gradient-to-br from-synapse-secondary to-synapse-tertiary p-3 rounded-lg inline-block mb-4">
-                <Clock className="h-6 w-6 text-white" />
+              <div className="bg-gradient-to-br from-synapse-secondary to-synapse-tertiary p-2 rounded-lg inline-block mb-3">
+                <Clock className="h-5 w-5 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-synapse-dark mb-2">24/7 Availability</h3>
-              <p className="text-synapse-gray">Our AI systems work around the clock, just like your hiring needs</p>
+              <h3 className="text-base font-bold text-synapse-dark mb-2">24/7 Availability</h3>
+              <p className="text-sm text-synapse-gray">Our AI systems work around the clock, just like your hiring needs</p>
             </div>
 
             <div 
               ref={addToRefs}
-              className="scroll-animate bg-white p-6 rounded-xl shadow-soft border border-gray-100"
+              className="scroll-animate bg-white p-4 rounded-xl shadow-soft border border-gray-100"
             >
-              <div className="bg-gradient-to-br from-synapse-tertiary to-synapse-primary p-3 rounded-lg inline-block mb-4">
-                <Globe className="h-6 w-6 text-white" />
+              <div className="bg-gradient-to-br from-synapse-tertiary to-synapse-primary p-2 rounded-lg inline-block mb-3">
+                <Globe className="h-5 w-5 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-synapse-dark mb-2">Global Reach</h3>
-              <p className="text-synapse-gray">Access talent worldwide with our AI-powered sourcing network</p>
+              <h3 className="text-base font-bold text-synapse-dark mb-2">Global Reach</h3>
+              <p className="text-sm text-synapse-gray">Access talent worldwide with our AI-powered sourcing network</p>
             </div>
           </div>
           
@@ -53,40 +53,40 @@ const ContactFormSection = () => {
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start">
+        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start">
           {/* Left Column - Feature Cards */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             <div 
               ref={addToRefs}
-              className="scroll-animate bg-white p-6 rounded-xl shadow-soft border border-gray-100"
+              className="scroll-animate bg-white p-4 rounded-xl shadow-soft border border-gray-100"
             >
-              <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary p-3 rounded-lg inline-block mb-4">
-                <MessageCircle className="h-6 w-6 text-white" />
+              <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary p-2 rounded-lg inline-block mb-3">
+                <MessageCircle className="h-5 w-5 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-synapse-dark mb-2">Quick Response</h3>
-              <p className="text-synapse-gray">Get a response within 24 hours from our AI hiring specialists</p>
+              <h3 className="text-base font-bold text-synapse-dark mb-2">Quick Response</h3>
+              <p className="text-sm text-synapse-gray">Get a response within 24 hours from our AI hiring specialists</p>
             </div>
 
             <div 
               ref={addToRefs}
-              className="scroll-animate bg-white p-6 rounded-xl shadow-soft border border-gray-100"
+              className="scroll-animate bg-white p-4 rounded-xl shadow-soft border border-gray-100"
             >
-              <div className="bg-gradient-to-br from-synapse-secondary to-synapse-tertiary p-3 rounded-lg inline-block mb-4">
-                <Clock className="h-6 w-6 text-white" />
+              <div className="bg-gradient-to-br from-synapse-secondary to-synapse-tertiary p-2 rounded-lg inline-block mb-3">
+                <Clock className="h-5 w-5 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-synapse-dark mb-2">24/7 Availability</h3>
-              <p className="text-synapse-gray">Our AI systems work around the clock, just like your hiring needs</p>
+              <h3 className="text-base font-bold text-synapse-dark mb-2">24/7 Availability</h3>
+              <p className="text-sm text-synapse-gray">Our AI systems work around the clock, just like your hiring needs</p>
             </div>
 
             <div 
               ref={addToRefs}
-              className="scroll-animate bg-white p-6 rounded-xl shadow-soft border border-gray-100"
+              className="scroll-animate bg-white p-4 rounded-xl shadow-soft border border-gray-100"
             >
-              <div className="bg-gradient-to-br from-synapse-tertiary to-synapse-primary p-3 rounded-lg inline-block mb-4">
-                <Globe className="h-6 w-6 text-white" />
+              <div className="bg-gradient-to-br from-synapse-tertiary to-synapse-primary p-2 rounded-lg inline-block mb-3">
+                <Globe className="h-5 w-5 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-synapse-dark mb-2">Global Reach</h3>
-              <p className="text-synapse-gray">Access talent worldwide with our AI-powered sourcing network</p>
+              <h3 className="text-base font-bold text-synapse-dark mb-2">Global Reach</h3>
+              <p className="text-sm text-synapse-gray">Access talent worldwide with our AI-powered sourcing network</p>
             </div>
           </div>
 

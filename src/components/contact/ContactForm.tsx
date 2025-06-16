@@ -55,9 +55,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-soft mx-auto max-w-2xl">
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold text-synapse-dark mb-4">
+    <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-soft mx-auto max-w-xl">
+      <div className="mb-6">
+        <h2 className="text-2xl font-bold text-synapse-dark mb-3">
           Get in Touch
         </h2>
         <p className="text-synapse-gray">
@@ -65,8 +65,8 @@ const ContactForm = () => {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid md:grid-cols-2 gap-6">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="fullName">Full Name *</Label>
             <Input
@@ -91,7 +91,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="phoneNumber">Phone Number</Label>
             <Input
@@ -136,19 +136,19 @@ const ContactForm = () => {
             value={formData.message}
             onChange={(e) => handleInputChange("message", e.target.value)}
             placeholder="Please provide details about your inquiry..."
-            rows={4}
+            rows={3}
             required
           />
         </div>
 
         <Button 
           type="submit" 
-          className="w-full btn-primary text-lg py-4"
+          className="w-full btn-primary text-base py-3"
         >
           Submit Request
         </Button>
         
-        <p className="text-sm text-synapse-gray text-center">
+        <p className="text-xs text-synapse-gray text-center">
           By submitting this form, you agree to our privacy policy. We'll never share your information.
         </p>
       </form>
