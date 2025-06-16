@@ -34,17 +34,17 @@ const MainHeader = () => {
 
   const getIconForSubmenu = (label: string) => {
     const iconMap: { [key: string]: any } = {
-      "Passive AI Sourcing": Bot,
-      "AI Candidate Discovery": Search,
+      "Passive Intelligent Sourcing": Bot,
+      "Intelligent Candidate Discovery": Search,
       "Project Staffing": Users,
       "Executive Search": Crown,
       "Remote Staffing": Globe,
       "Permanent Placement": UserCheck,
       "Contingent Staffing": Clock,
-      "Apprenticeship AI Sourcing": GraduationCap,
-      "AI Candidate Sourcing": Bot,
-      "Pre-Employment AI Screening": Shield,
-      "AI Resume Analysis": Brain,
+      "Apprenticeship Smart Sourcing": GraduationCap,
+      "Intelligent Candidate Sourcing": Bot,
+      "Pre-Employment Smart Screening": Shield,
+      "Intelligent Resume Analysis": Brain,
       "Technology": Code,
       "Finance": TrendingUp,
       "Healthcare": Heart,
@@ -69,17 +69,17 @@ const MainHeader = () => {
 
   const getDescriptionForSubmenu = (label: string) => {
     const descriptionMap: { [key: string]: string } = {
-      "Passive AI Sourcing": "AI-powered talent discovery",
-      "AI Candidate Discovery": "Smart candidate matching",
+      "Passive Intelligent Sourcing": "Smart talent discovery",
+      "Intelligent Candidate Discovery": "Advanced candidate matching",
       "Project Staffing": "Flexible project teams",
       "Executive Search": "Leadership recruitment",
       "Remote Staffing": "Global remote talent",
       "Permanent Placement": "Long-term hires",
       "Contingent Staffing": "Temporary workforce",
-      "Apprenticeship AI Sourcing": "Entry-level talent",
-      "AI Candidate Sourcing": "Automated talent search",
-      "Pre-Employment AI Screening": "Smart candidate assessment",
-      "AI Resume Analysis": "Intelligent resume parsing",
+      "Apprenticeship Smart Sourcing": "Entry-level talent",
+      "Intelligent Candidate Sourcing": "Automated talent search",
+      "Pre-Employment Smart Screening": "Advanced candidate assessment",
+      "Intelligent Resume Analysis": "Smart resume parsing",
       "Technology": "Tech talent solutions",
       "Finance": "Financial sector expertise",
       "Healthcare": "Medical professionals",
@@ -107,23 +107,23 @@ const MainHeader = () => {
       label: "Solutions", 
       href: "/recruitment-solutions",
       submenu: [
-        { label: "Passive AI Sourcing", href: "/recruitment-solutions" },
-        { label: "AI Candidate Discovery", href: "/recruitment-solutions" },
+        { label: "Passive Intelligent Sourcing", href: "/recruitment-solutions" },
+        { label: "Intelligent Candidate Discovery", href: "/recruitment-solutions" },
         { label: "Project Staffing", href: "/recruitment-solutions" },
         { label: "Executive Search", href: "/recruitment-solutions" },
         { label: "Remote Staffing", href: "/recruitment-solutions" },
         { label: "Permanent Placement", href: "/recruitment-solutions" },
         { label: "Contingent Staffing", href: "/recruitment-solutions" },
-        { label: "Apprenticeship AI Sourcing", href: "/recruitment-solutions" }
+        { label: "Apprenticeship Smart Sourcing", href: "/recruitment-solutions" }
       ]
     },
     { 
       label: "Products", 
       href: "/recruitment-tools",
       submenu: [
-        { label: "AI Candidate Sourcing", href: "/recruitment-tools" },
-        { label: "Pre-Employment AI Screening", href: "/recruitment-tools" },
-        { label: "AI Resume Analysis", href: "/recruitment-tools" }
+        { label: "Intelligent Candidate Sourcing", href: "/recruitment-tools" },
+        { label: "Pre-Employment Smart Screening", href: "/recruitment-tools" },
+        { label: "Intelligent Resume Analysis", href: "/recruitment-tools" }
       ]
     },
     { 

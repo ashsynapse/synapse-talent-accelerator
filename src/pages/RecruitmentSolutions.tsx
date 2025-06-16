@@ -9,13 +9,13 @@ import FinalCtaSection from "../components/FinalCtaSection";
 const solutions = [
   {
     icon: <Brain className="w-8 h-8" />,
-    title: "Passive AI Sourcing",
-    description: "AI-powered sourcing to identify and engage top talent who aren't actively job searching",
+    title: "Passive Intelligent Sourcing",
+    description: "Smart sourcing to identify and engage top talent who aren't actively job searching",
     href: "/recruitment-solutions"
   },
   {
     icon: <Target className="w-8 h-8" />,
-    title: "AI Candidate Discovery",
+    title: "Intelligent Candidate Discovery",
     description: "Comprehensive candidate sourcing strategies to find the perfect match for your roles",
     href: "/recruitment-solutions"
   },
@@ -51,7 +51,7 @@ const solutions = [
   },
   {
     icon: <GraduationCap className="w-8 h-8" />,
-    title: "Apprenticeship AI Sourcing",
+    title: "Apprenticeship Smart Sourcing",
     description: "Specialized recruitment for apprenticeship programs and early career professionals",
     href: "/recruitment-solutions"
   }
@@ -61,7 +61,7 @@ const RecruitmentSolutions = () => {
   return (
     <PageTemplate 
       title="Recruitment Solutions"
-      description="Comprehensive AI-powered recruitment solutions for modern hiring challenges"
+      description="Comprehensive intelligent recruitment solutions for modern hiring challenges"
     >
       <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
@@ -70,7 +70,7 @@ const RecruitmentSolutions = () => {
               Recruitment Solutions
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
-              End-to-end recruitment solutions powered by AI and backed by global expertise. From passive recruitment to executive search, we deliver tailored strategies that transform your hiring process.
+              End-to-end recruitment solutions powered by intelligent technology and backed by global expertise. From passive recruitment to executive search, we deliver tailored strategies that transform your hiring process.
             </p>
           </div>
 

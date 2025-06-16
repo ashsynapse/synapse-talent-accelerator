@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import PageTemplate from "./PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -397,12 +398,17 @@ const BlogPostTemplate = ({
                 </div>
               </header>
 
+              {/* Article Content with standardized image sizing */}
+              <div className="prose prose-sm md:prose-base lg:prose-lg max-w-none prose-headings:text-synapse-dark prose-a:text-synapse-primary hover:prose-a:text-synapse-secondary prose-img:rounded-lg prose-img:shadow-soft prose-img:max-h-96 prose-img:w-full prose-img:object-cover">
+                {children}
+              </div>
+
               {/* CTA Section - Show on mobile only, positioned after article content but before author */}
               <div className="mt-8 mb-8 md:hidden">
                 <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-4 text-white">
                   <h3 className="text-lg font-semibold mb-2">Ready to Transform Your Hiring?</h3>
                   <p className="text-sm mb-3 text-white/90 leading-relaxed">
-                    Discover how AI-powered recruitment can help you find top talent faster and more efficiently.
+                    Discover how our intelligent recruitment solutions can help you find top talent faster and more efficiently.
                   </p>
                   <Button 
                     className="bg-white text-synapse-primary hover:bg-gray-100 w-full text-sm"
@@ -411,11 +417,6 @@ const BlogPostTemplate = ({
                     Book a Demo
                   </Button>
                 </div>
-              </div>
-
-              {/* Article Content with standardized image sizing */}
-              <div className="prose prose-sm md:prose-base lg:prose-lg max-w-none prose-headings:text-synapse-dark prose-a:text-synapse-primary hover:prose-a:text-synapse-secondary prose-img:rounded-lg prose-img:shadow-soft prose-img:max-h-96 prose-img:w-full prose-img:object-cover">
-                {children}
               </div>
 
               {/* About Author Section - Updated with proper description for Ali */}
@@ -434,7 +435,7 @@ const BlogPostTemplate = ({
                       <h4 className="font-semibold text-synapse-dark mb-1">Ali Taghikhani</h4>
                       <p className="text-sm text-synapse-primary mb-2">CEO & Co-Founder</p>
                       <p className="text-sm text-synapse-gray leading-relaxed">
-                        Ali is driven by a mission to improve how people find the right opportunities. With over a decade of experience in talent and technology, he's focused on using AI to make recruitment more efficient, fair, and human-centered.
+                        Ali is driven by a mission to improve how people find the right opportunities. With over a decade of experience in talent and technology, he's focused on using intelligent systems to make recruitment more efficient, fair, and human-centered.
                       </p>
                       {authorLinkedIn && (
                         <a 
@@ -544,7 +545,7 @@ const BlogPostTemplate = ({
                 <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-4 text-white">
                   <h3 className="text-base font-semibold mb-2">Ready to Transform Your Hiring?</h3>
                   <p className="text-xs mb-3 text-white/90 leading-relaxed">
-                    Discover how AI-powered recruitment can help you find top talent faster and more efficiently.
+                    Discover how intelligent recruitment solutions can help you find top talent faster and more efficiently.
                   </p>
                   <Button 
                     size="sm"
@@ -559,7 +560,7 @@ const BlogPostTemplate = ({
                 <div className="bg-white border border-gray-200 rounded-lg p-4">
                   <h3 className="text-base font-semibold text-synapse-dark mb-3">Stay Ahead of the Hiring Curve</h3>
                   <p className="text-xs text-synapse-gray mb-3 leading-relaxed">
-                    Subscribe to receive AI hiring insights, trends, and expert tips — directly in your inbox.
+                    Subscribe to receive intelligent hiring insights, trends, and expert tips — directly in your inbox.
                   </p>
                   <div className="space-y-2">
                     <input
@@ -613,7 +614,7 @@ const BlogPostTemplate = ({
             <div className="bg-white border border-gray-200 rounded-lg p-4">
               <h3 className="text-base font-semibold text-synapse-dark mb-3">Stay Ahead of the Hiring Curve</h3>
               <p className="text-sm text-synapse-gray mb-4">
-                Subscribe to receive AI hiring insights, trends, and expert tips — directly in your inbox.
+                Subscribe to receive intelligent hiring insights, trends, and expert tips — directly in your inbox.
               </p>
               <div className="space-y-3">
                 <input

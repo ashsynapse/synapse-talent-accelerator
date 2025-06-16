@@ -9,20 +9,20 @@ import FinalCtaSection from "../components/FinalCtaSection";
 const products = [
   {
     icon: <Brain className="w-8 h-8" />,
-    title: "AI Candidate Sourcing",
-    description: "Advanced AI algorithms to identify and source the best candidates from our global talent network",
+    title: "Intelligent Candidate Sourcing",
+    description: "Advanced algorithms to identify and source the best candidates from our global talent network",
     href: "/recruitment-tools"
   },
   {
     icon: <Shield className="w-8 h-8" />,
-    title: "Pre-Employment Screening",
+    title: "Pre-Employment Smart Screening",
     description: "Comprehensive background checks and pre-employment screening to ensure quality hires",
     href: "/recruitment-tools"
   },
   {
     icon: <FileSearch className="w-8 h-8" />,
-    title: "AI Resume Analysis",
-    description: "Intelligent resume parsing and screening to quickly identify qualified candidates",
+    title: "Intelligent Resume Analysis",
+    description: "Smart resume parsing and screening to quickly identify qualified candidates",
     href: "/recruitment-tools"
   }
 ];
@@ -31,7 +31,7 @@ const Products = () => {
   return (
     <PageTemplate 
       title="Recruitment Products"
-      description="AI-powered recruitment tools and products for modern hiring needs"
+      description="Intelligent recruitment tools and products for modern hiring needs"
     >
       <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
@@ -40,7 +40,7 @@ const Products = () => {
               Recruitment Products
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
-              Cutting-edge AI-powered tools designed to streamline your recruitment process and deliver exceptional results for your hiring needs.
+              Cutting-edge intelligent tools designed to streamline your recruitment process and deliver exceptional results for your hiring needs.
             </p>
           </div>
 
