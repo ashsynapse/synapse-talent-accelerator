@@ -9,51 +9,51 @@ import FinalCtaSection from "../components/FinalCtaSection";
 const solutions = [
   {
     icon: <Brain className="w-8 h-8" />,
-    title: "Passive Recruitment",
+    title: "Passive AI Sourcing",
     description: "AI-powered sourcing to identify and engage top talent who aren't actively job searching",
-    href: "/recruitment-solutions/passive-recruitment"
+    href: "/recruitment-solutions"
   },
   {
     icon: <Target className="w-8 h-8" />,
-    title: "Candidate Sourcing",
+    title: "AI Candidate Discovery",
     description: "Comprehensive candidate sourcing strategies to find the perfect match for your roles",
-    href: "/recruitment-solutions/candidate-sourcing"
+    href: "/recruitment-solutions"
   },
   {
     icon: <Briefcase className="w-8 h-8" />,
     title: "Project Staffing",
     description: "Specialized staffing solutions for short-term and long-term project requirements",
-    href: "/recruitment-solutions/project-staffing"
+    href: "/recruitment-solutions"
   },
   {
     icon: <Users className="w-8 h-8" />,
     title: "Executive Search",
     description: "Specialized recruitment for C-level and senior leadership positions",
-    href: "/recruitment-solutions/executive-search"
+    href: "/recruitment-solutions"
   },
   {
     icon: <Globe className="w-8 h-8" />,
     title: "Remote Staffing",
     description: "Global remote talent acquisition for distributed teams and remote-first companies",
-    href: "/recruitment-solutions/remote-staffing"
+    href: "/recruitment-solutions"
   },
   {
     icon: <UserCheck className="w-8 h-8" />,
-    title: "Permanent Staffing",
+    title: "Permanent Placement",
     description: "Full-time permanent placement services across all industries and skill levels",
-    href: "/recruitment-solutions/permanent-staffing"
+    href: "/recruitment-solutions"
   },
   {
     icon: <Clock className="w-8 h-8" />,
     title: "Contingent Staffing",
     description: "Flexible staffing solutions for temporary and contract positions",
-    href: "/recruitment-solutions/contingent-staffing"
+    href: "/recruitment-solutions"
   },
   {
     icon: <GraduationCap className="w-8 h-8" />,
-    title: "Apprenticeship Recruitment",
+    title: "Apprenticeship AI Sourcing",
     description: "Specialized recruitment for apprenticeship programs and early career professionals",
-    href: "/recruitment-solutions/apprenticeship-recruitment"
+    href: "/recruitment-solutions"
   }
 ];
 

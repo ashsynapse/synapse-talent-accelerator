@@ -11,19 +11,19 @@ const products = [
     icon: <Brain className="w-8 h-8" />,
     title: "AI Candidate Sourcing",
     description: "Advanced AI algorithms to identify and source the best candidates from our global talent network",
-    href: "/recruitment-tools/ai-candidate-sourcing"
+    href: "/recruitment-tools"
   },
   {
     icon: <Shield className="w-8 h-8" />,
     title: "Pre-Employment Screening",
     description: "Comprehensive background checks and pre-employment screening to ensure quality hires",
-    href: "/recruitment-tools/pre-employment-screening"
+    href: "/recruitment-tools"
   },
   {
     icon: <FileSearch className="w-8 h-8" />,
-    title: "AI Resume Screening",
+    title: "AI Resume Analysis",
     description: "Intelligent resume parsing and screening to quickly identify qualified candidates",
-    href: "/recruitment-tools/ai-resume-screening"
+    href: "/recruitment-tools"
   }
 ];
 

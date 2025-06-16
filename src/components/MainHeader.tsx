@@ -107,23 +107,23 @@ const MainHeader = () => {
       label: "Solutions", 
       href: "/recruitment-solutions",
       submenu: [
-        { label: "Passive AI Sourcing", href: "/recruitment-solutions/passive-ai-sourcing" },
-        { label: "AI Candidate Discovery", href: "/recruitment-solutions/ai-candidate-discovery" },
-        { label: "Project Staffing", href: "/recruitment-solutions/project-staffing" },
-        { label: "Executive Search", href: "/recruitment-solutions/executive-search" },
-        { label: "Remote Staffing", href: "/recruitment-solutions/remote-staffing" },
-        { label: "Permanent Placement", href: "/recruitment-solutions/permanent-placement" },
-        { label: "Contingent Staffing", href: "/recruitment-solutions/contingent-staffing" },
-        { label: "Apprenticeship AI Sourcing", href: "/recruitment-solutions/apprenticeship-ai-sourcing" }
+        { label: "Passive AI Sourcing", href: "/recruitment-solutions" },
+        { label: "AI Candidate Discovery", href: "/recruitment-solutions" },
+        { label: "Project Staffing", href: "/recruitment-solutions" },
+        { label: "Executive Search", href: "/recruitment-solutions" },
+        { label: "Remote Staffing", href: "/recruitment-solutions" },
+        { label: "Permanent Placement", href: "/recruitment-solutions" },
+        { label: "Contingent Staffing", href: "/recruitment-solutions" },
+        { label: "Apprenticeship AI Sourcing", href: "/recruitment-solutions" }
       ]
     },
     { 
       label: "Products", 
       href: "/recruitment-tools",
       submenu: [
-        { label: "AI Candidate Sourcing", href: "/recruitment-tools/ai-candidate-sourcing" },
-        { label: "Pre-Employment AI Screening", href: "/recruitment-tools/pre-employment-screening" },
-        { label: "AI Resume Analysis", href: "/recruitment-tools/ai-resume-analysis" }
+        { label: "AI Candidate Sourcing", href: "/recruitment-tools" },
+        { label: "Pre-Employment AI Screening", href: "/recruitment-tools" },
+        { label: "AI Resume Analysis", href: "/recruitment-tools" }
       ]
     },
     { 
