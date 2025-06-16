@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import PageTemplate from "./PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -398,8 +397,8 @@ const BlogPostTemplate = ({
                 </div>
               </header>
 
-              {/* CTA Section - Show on mobile only, positioned before article content */}
-              <div className="mb-6 md:mb-8 lg:mb-12 md:hidden">
+              {/* CTA Section - Show on mobile only, positioned after article content but before author */}
+              <div className="mt-8 mb-8 md:hidden">
                 <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-lg p-4 text-white">
                   <h3 className="text-lg font-semibold mb-2">Ready to Transform Your Hiring?</h3>
                   <p className="text-sm mb-3 text-white/90 leading-relaxed">
@@ -419,7 +418,7 @@ const BlogPostTemplate = ({
                 {children}
               </div>
 
-              {/* About Author Section - Mobile positioning adjusted */}
+              {/* About Author Section - Updated with proper description for Ali */}
               {author === "Ali Taghikhani" && (
                 <div className="mt-8 p-6 bg-gray-50 rounded-lg border">
                   <h3 className="text-lg font-semibold text-synapse-dark mb-4">About the Author</h3>

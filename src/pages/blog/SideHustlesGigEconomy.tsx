@@ -17,7 +17,7 @@ const SideHustlesGigEconomy = () => {
       <img 
         src="https://cdn-images-1.medium.com/max/800/1*iulfYJoPsSlZl_fdEXouPw.png" 
         alt="The Rise of Side Hustles: Gen Z and Gig Economy Trends"
-        className="w-full rounded-lg mb-8"
+        className="w-full max-h-96 object-cover rounded-lg mb-8"
       />
 
       <div className="prose prose-lg max-w-none text-black leading-relaxed">
@@ -83,40 +83,6 @@ const SideHustlesGigEconomy = () => {
         <p className="mb-8 text-lg leading-7 text-black">
           As the gig economy continues to reshape the professional landscape, businesses that embrace this shift will benefit from a dynamic, skilled, and adaptable workforce. Partnering with Gen Z talent through strategic recruitment can drive innovation, efficiency, and long-term success.
         </p>
-
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <h3 className="text-xl font-semibold text-black mb-4">About the Author</h3>
-          <div className="flex items-center gap-4">
-            <img 
-              src="/lovable-uploads/96df22e6-25e5-4fc0-9c4f-cdd584a9d1cb.png" 
-              alt="Ali Taghikhani"
-              className="w-16 h-16 rounded-full object-cover border-2 border-synapse-lighter"
-            />
-            <div>
-              <a 
-                href="https://www.linkedin.com/in/alitaghikhani/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-lg font-medium text-black hover:text-synapse-primary transition-colors"
-              >
-                Ali Taghikhani
-              </a>
-              <p className="text-gray-600">CEO and Co-founder at Synapse</p>
-              <a 
-                href="https://www.linkedin.com/in/alitaghikhani/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-synapse-primary hover:opacity-80 transition-opacity mt-2 inline-block"
-              >
-                <img 
-                  src="/lovable-uploads/344e36e1-0b51-4898-a96b-b56550c5f01d.png" 
-                  alt="LinkedIn"
-                  className="w-5 h-5"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </BlogPostTemplate>
   );
