@@ -216,16 +216,16 @@ const MainHeader = () => {
                           <a
                             key={subItem.label}
                             href={subItem.href}
-                            className="group/item flex items-start p-3 rounded-lg hover:bg-white/80 hover:shadow-soft transition-all duration-200 border border-transparent hover:border-synapse-primary/20"
+                            className="group/item flex items-start p-3 rounded-lg hover:bg-white/80 hover:shadow-soft transition-all duration-200 border border-transparent hover:border-synapse-primary/20 h-[72px]"
                           >
-                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-synapse-primary to-synapse-secondary flex items-center justify-center mr-3 group-hover/item:scale-110 transition-transform duration-200">
+                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-synapse-primary to-synapse-secondary flex items-center justify-center mr-3 group-hover/item:scale-110 transition-transform duration-200 flex-shrink-0">
                               <IconComponent className="h-5 w-5 text-white" />
                             </div>
-                            <div className="flex-1">
-                              <h3 className="font-semibold text-synapse-dark group-hover/item:text-synapse-primary transition-colors text-sm leading-tight">
+                            <div className="flex-1 min-w-0">
+                              <h3 className="font-semibold text-synapse-dark group-hover/item:text-synapse-primary transition-colors text-sm leading-tight mb-1">
                                 {subItem.label}
                               </h3>
-                              <p className="text-xs text-synapse-gray mt-1 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200">
+                              <p className="text-xs text-synapse-gray opacity-0 group-hover/item:opacity-100 transition-opacity duration-200 leading-tight">
                                 {description}
                               </p>
                             </div>
