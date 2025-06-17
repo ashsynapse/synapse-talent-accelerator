@@ -4,60 +4,60 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Zap, Users, Settings, Briefcase, Target, Calendar, TrendingUp } from "lucide-react";
+import { Search, Database, Filter, Target, Zap, Users, Brain, Globe } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
-const ContingentStaffing = () => {
+const IntelligentCandidateDiscovery = () => {
   const keyFeatures = [
     {
-      title: "Rapid Deployment",
-      description: "Quick placement of skilled professionals for immediate workforce needs",
+      title: "Multi-Platform Sourcing",
+      description: "Comprehensive candidate discovery across professional networks, databases, and platforms",
+      icon: <Globe className="w-6 h-6" />
+    },
+    {
+      title: "AI-Powered Matching",
+      description: "Advanced algorithms analyze skills, experience, and cultural fit indicators",
+      icon: <Brain className="w-6 h-6" />
+    },
+    {
+      title: "Smart Filtering",
+      description: "Intelligent filters that go beyond keywords to understand candidate potential",
+      icon: <Filter className="w-6 h-6" />
+    },
+    {
+      title: "Real-Time Discovery",
+      description: "Continuous candidate discovery with instant notifications for perfect matches",
       icon: <Zap className="w-6 h-6" />
-    },
-    {
-      title: "Flexible Terms",
-      description: "Short-term, long-term, and project-based staffing arrangements",
-      icon: <Settings className="w-6 h-6" />
-    },
-    {
-      title: "Specialized Skills",
-      description: "Access to niche expertise and specialized skill sets on-demand",
-      icon: <Target className="w-6 h-6" />
-    },
-    {
-      title: "Scalable Solutions",
-      description: "Easy scaling of workforce based on business demands and seasonal needs",
-      icon: <TrendingUp className="w-6 h-6" />
     }
   ];
 
   const benefits = [
     {
-      title: "Cost Control",
-      description: "Manage labor costs effectively with flexible staffing arrangements",
-      icon: <Briefcase className="w-6 h-6 text-white" />
+      title: "Expanded Reach",
+      description: "Access talent from multiple sources in a single, unified search experience",
+      icon: <Database className="w-6 h-6 text-white" />
     },
     {
-      title: "Agile Workforce",
-      description: "Quickly adapt to changing business requirements and market conditions",
-      icon: <Calendar className="w-6 h-6 text-white" />
+      title: "Intelligent Insights",
+      description: "Deep candidate analysis including skills assessment and career trajectory",
+      icon: <Target className="w-6 h-6 text-white" />
     },
     {
-      title: "Risk Mitigation",
-      description: "Reduce employment risks while maintaining operational flexibility",
+      title: "Faster Discovery",
+      description: "Reduce time-to-find from weeks to hours with automated candidate identification",
+      icon: <Zap className="w-6 h-6 text-white" />
+    },
+    {
+      title: "Quality Matching",
+      description: "Higher success rates through AI-driven candidate-role compatibility analysis",
       icon: <Users className="w-6 h-6 text-white" />
-    },
-    {
-      title: "Time Efficiency",
-      description: "Faster hiring process for urgent staffing needs and temporary gaps",
-      icon: <Clock className="w-6 h-6 text-white" />
     }
   ];
 
   return (
     <PageTemplate 
-      title="Contingent Staffing Solutions" 
-      description="Flexible staffing solutions for temporary and contract positions"
+      title="Intelligent Candidate Discovery" 
+      description="AI-powered candidate discovery and matching platform"
     >
       {/* Hero Section */}
       <section className="pt-32 pb-12 bg-gradient-to-br from-white to-synapse-lighter/30">
@@ -67,16 +67,16 @@ const ContingentStaffing = () => {
               Recruitment Solution
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Contingent Staffing Solutions
+              Intelligent Candidate Discovery
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Meet your immediate workforce needs with flexible contingent staffing. Our AI-powered platform delivers skilled professionals for temporary, contract, and project-based roles with speed and precision.
+              Transform your candidate sourcing with AI-powered discovery that finds the perfect match faster than ever. Our intelligent platform searches, analyzes, and ranks candidates across multiple channels in real-time.
             </p>
             <Button 
               className="btn-primary"
               onClick={() => window.location.href = "/contact"}
             >
-              Get Contingent Staff
+              Discover Candidates
             </Button>
           </div>
         </div>
@@ -86,7 +86,7 @@ const ContingentStaffing = () => {
       <section className="py-12 bg-white">
         <div className="container-wide">
           <h2 className="text-3xl font-bold text-center mb-8 text-synapse-dark">
-            Contingent Staffing Features
+            Discovery Features
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {keyFeatures.map((feature, index) => (
@@ -114,7 +114,7 @@ const ContingentStaffing = () => {
       <section className="py-12 bg-synapse-lighter/30">
         <div className="container-wide">
           <h2 className="text-3xl font-bold text-center mb-8 text-synapse-dark">
-            Contingent Staffing Benefits
+            Discovery Advantages
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
@@ -141,32 +141,32 @@ const ContingentStaffing = () => {
         <div className="container-wide">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-synapse-dark">
-              Flexibility Meets Excellence
+              Next-Generation Candidate Discovery
             </h2>
             <p className="text-lg text-synapse-gray mb-8">
-              Our contingent staffing solutions provide the perfect balance of flexibility and quality. Whether you need immediate coverage for unexpected departures or specialized expertise for specific projects, we deliver professionals who hit the ground running.
+              Our intelligent discovery platform combines the power of AI with comprehensive talent mapping to revolutionize how you find and engage candidates. Experience the future of recruitment with smart, efficient, and precise candidate discovery.
             </p>
             <div className="grid md:grid-cols-3 gap-8 text-left">
               <div>
                 <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
-                  <Clock className="w-6 h-6 text-white" />
+                  <Search className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Speed & Agility</h3>
-                <p className="text-synapse-gray">Rapid response to urgent staffing needs with pre-vetted talent pools.</p>
+                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Advanced Search</h3>
+                <p className="text-synapse-gray">Sophisticated search algorithms that understand context, skills, and career patterns.</p>
               </div>
               <div>
                 <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
-                  <Settings className="w-6 h-6 text-white" />
+                  <Brain className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Flexible Arrangements</h3>
-                <p className="text-synapse-gray">Customizable terms and conditions to match your specific business requirements.</p>
+                <h3 className="text-xl font-bold mb-3 text-synapse-dark">AI Intelligence</h3>
+                <p className="text-synapse-gray">Machine learning models that improve matching accuracy with every search.</p>
               </div>
               <div>
                 <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-white" />
+                  <Target className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Quality Professionals</h3>
-                <p className="text-synapse-gray">Skilled contingent workers who integrate seamlessly with your existing teams.</p>
+                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Precision Results</h3>
+                <p className="text-synapse-gray">Highly accurate candidate recommendations that save time and improve hiring outcomes.</p>
               </div>
             </div>
           </div>
@@ -178,4 +178,4 @@ const ContingentStaffing = () => {
   );
 };
 
-export default ContingentStaffing;
+export default IntelligentCandidateDiscovery;

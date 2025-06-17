@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Plus, Minus, 
@@ -109,14 +108,14 @@ const MainHeader = () => {
       label: "Solutions", 
       href: "/recruitment-solutions",
       submenu: [
-        { label: "Passive Intelligent Sourcing", href: "/recruitment-solutions" },
-        { label: "Intelligent Candidate Discovery", href: "/recruitment-solutions" },
-        { label: "Project Staffing", href: "/recruitment-solutions" },
-        { label: "Executive Search", href: "/recruitment-solutions" },
-        { label: "Remote Staffing", href: "/recruitment-solutions" },
-        { label: "Permanent Placement", href: "/recruitment-solutions" },
-        { label: "Contingent Staffing", href: "/recruitment-solutions" },
-        { label: "Apprenticeship Smart Sourcing", href: "/recruitment-solutions" }
+        { label: "Passive Intelligent Sourcing", href: "/solutions/passive-intelligent-sourcing" },
+        { label: "Intelligent Candidate Discovery", href: "/solutions/intelligent-candidate-discovery" },
+        { label: "Project Staffing", href: "/solutions/project-staffing" },
+        { label: "Executive Search", href: "/solutions/executive-search" },
+        { label: "Remote Staffing", href: "/solutions/remote-staffing" },
+        { label: "Permanent Placement", href: "/solutions/permanent-placement" },
+        { label: "Contingent Staffing", href: "/solutions/contingent-staffing" },
+        { label: "Apprenticeship Smart Sourcing", href: "/solutions/apprenticeship-smart-sourcing" }
       ]
     },
     { 

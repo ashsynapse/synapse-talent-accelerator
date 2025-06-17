@@ -4,60 +4,60 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Zap, Users, Settings, Briefcase, Target, Calendar, TrendingUp } from "lucide-react";
+import { Brain, Search, Target, Users, Eye, Zap, Shield, Clock } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
-const ContingentStaffing = () => {
+const PassiveIntelligentSourcing = () => {
   const keyFeatures = [
     {
-      title: "Rapid Deployment",
-      description: "Quick placement of skilled professionals for immediate workforce needs",
-      icon: <Zap className="w-6 h-6" />
+      title: "AI-Powered Discovery",
+      description: "Advanced algorithms identify passive candidates who aren't actively job searching but are perfect matches",
+      icon: <Brain className="w-6 h-6" />
     },
     {
-      title: "Flexible Terms",
-      description: "Short-term, long-term, and project-based staffing arrangements",
-      icon: <Settings className="w-6 h-6" />
+      title: "Stealth Engagement",
+      description: "Discreet outreach strategies that respect candidate privacy while building interest",
+      icon: <Eye className="w-6 h-6" />
     },
     {
-      title: "Specialized Skills",
-      description: "Access to niche expertise and specialized skill sets on-demand",
+      title: "Talent Mapping",
+      description: "Comprehensive mapping of talent pools across industries and skill sets",
       icon: <Target className="w-6 h-6" />
     },
     {
-      title: "Scalable Solutions",
-      description: "Easy scaling of workforce based on business demands and seasonal needs",
-      icon: <TrendingUp className="w-6 h-6" />
+      title: "Relationship Building",
+      description: "Long-term engagement strategies to nurture passive talent for future opportunities",
+      icon: <Users className="w-6 h-6" />
     }
   ];
 
   const benefits = [
     {
-      title: "Cost Control",
-      description: "Manage labor costs effectively with flexible staffing arrangements",
-      icon: <Briefcase className="w-6 h-6 text-white" />
+      title: "Hidden Talent Access",
+      description: "Reach top-tier professionals who aren't visible through traditional recruitment channels",
+      icon: <Search className="w-6 h-6 text-white" />
     },
     {
-      title: "Agile Workforce",
-      description: "Quickly adapt to changing business requirements and market conditions",
-      icon: <Calendar className="w-6 h-6 text-white" />
+      title: "Competitive Advantage",
+      description: "Access candidates before they enter the active job market",
+      icon: <Zap className="w-6 h-6 text-white" />
     },
     {
-      title: "Risk Mitigation",
-      description: "Reduce employment risks while maintaining operational flexibility",
-      icon: <Users className="w-6 h-6 text-white" />
+      title: "Quality Over Quantity",
+      description: "Focus on high-caliber candidates who are currently employed and successful",
+      icon: <Shield className="w-6 h-6 text-white" />
     },
     {
-      title: "Time Efficiency",
-      description: "Faster hiring process for urgent staffing needs and temporary gaps",
+      title: "Strategic Pipeline",
+      description: "Build talent pipelines for future hiring needs and succession planning",
       icon: <Clock className="w-6 h-6 text-white" />
     }
   ];
 
   return (
     <PageTemplate 
-      title="Contingent Staffing Solutions" 
-      description="Flexible staffing solutions for temporary and contract positions"
+      title="Passive Intelligent Sourcing" 
+      description="AI-powered passive talent discovery and engagement strategies"
     >
       {/* Hero Section */}
       <section className="pt-32 pb-12 bg-gradient-to-br from-white to-synapse-lighter/30">
@@ -67,16 +67,16 @@ const ContingentStaffing = () => {
               Recruitment Solution
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Contingent Staffing Solutions
+              Passive Intelligent Sourcing
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Meet your immediate workforce needs with flexible contingent staffing. Our AI-powered platform delivers skilled professionals for temporary, contract, and project-based roles with speed and precision.
+              Unlock the hidden talent market with our AI-powered passive sourcing solution. Identify, engage, and attract top-tier professionals who aren't actively looking but are open to the right opportunity.
             </p>
             <Button 
               className="btn-primary"
               onClick={() => window.location.href = "/contact"}
             >
-              Get Contingent Staff
+              Start Passive Sourcing
             </Button>
           </div>
         </div>
@@ -86,7 +86,7 @@ const ContingentStaffing = () => {
       <section className="py-12 bg-white">
         <div className="container-wide">
           <h2 className="text-3xl font-bold text-center mb-8 text-synapse-dark">
-            Contingent Staffing Features
+            Key Features
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {keyFeatures.map((feature, index) => (
@@ -114,7 +114,7 @@ const ContingentStaffing = () => {
       <section className="py-12 bg-synapse-lighter/30">
         <div className="container-wide">
           <h2 className="text-3xl font-bold text-center mb-8 text-synapse-dark">
-            Contingent Staffing Benefits
+            Benefits of Passive Sourcing
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
@@ -141,32 +141,32 @@ const ContingentStaffing = () => {
         <div className="container-wide">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-synapse-dark">
-              Flexibility Meets Excellence
+              Why Choose Our Passive Sourcing Solution
             </h2>
             <p className="text-lg text-synapse-gray mb-8">
-              Our contingent staffing solutions provide the perfect balance of flexibility and quality. Whether you need immediate coverage for unexpected departures or specialized expertise for specific projects, we deliver professionals who hit the ground running.
+              Our AI-powered platform revolutionizes passive recruitment by combining intelligent discovery algorithms with sophisticated engagement strategies. We help you access the 70% of professionals who aren't actively job searching but are open to the right opportunity.
             </p>
             <div className="grid md:grid-cols-3 gap-8 text-left">
               <div>
                 <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
-                  <Clock className="w-6 h-6 text-white" />
+                  <Brain className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Speed & Agility</h3>
-                <p className="text-synapse-gray">Rapid response to urgent staffing needs with pre-vetted talent pools.</p>
+                <h3 className="text-xl font-bold mb-3 text-synapse-dark">AI-Driven Intelligence</h3>
+                <p className="text-synapse-gray">Advanced machine learning identifies passive talent patterns and engagement opportunities.</p>
               </div>
               <div>
                 <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
-                  <Settings className="w-6 h-6 text-white" />
+                  <Target className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Flexible Arrangements</h3>
-                <p className="text-synapse-gray">Customizable terms and conditions to match your specific business requirements.</p>
+                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Precision Targeting</h3>
+                <p className="text-synapse-gray">Identify the exact passive candidates who match your specific requirements and culture.</p>
               </div>
               <div>
                 <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
                   <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Quality Professionals</h3>
-                <p className="text-synapse-gray">Skilled contingent workers who integrate seamlessly with your existing teams.</p>
+                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Relationship Focus</h3>
+                <p className="text-synapse-gray">Build long-term talent relationships that create ongoing recruitment advantages.</p>
               </div>
             </div>
           </div>
@@ -178,4 +178,4 @@ const ContingentStaffing = () => {
   );
 };
 
-export default ContingentStaffing;
+export default PassiveIntelligentSourcing;

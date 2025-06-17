@@ -38,6 +38,16 @@ import SalesMarketing from "./pages/industries/SalesMarketing";
 import Leadership from "./pages/industries/Leadership";
 import Operations from "./pages/industries/Operations";
 
+// Solution page imports
+import PassiveIntelligentSourcing from "./pages/solutions/PassiveIntelligentSourcing";
+import IntelligentCandidateDiscovery from "./pages/solutions/IntelligentCandidateDiscovery";
+import ProjectStaffing from "./pages/solutions/ProjectStaffing";
+import ExecutiveSearch from "./pages/solutions/ExecutiveSearch";
+import RemoteStaffing from "./pages/solutions/RemoteStaffing";
+import PermanentPlacement from "./pages/solutions/PermanentPlacement";
+import ContingentStaffing from "./pages/solutions/ContingentStaffing";
+import ApprenticeshipSmartSourcing from "./pages/solutions/ApprenticeshipSmartSourcing";
+
 export const navItems = [
   {
     to: "/",
@@ -173,5 +183,38 @@ export const navItems = [
   {
     to: "/industries/operations",
     page: <Operations />,
+  },
+  // Solution routes
+  {
+    to: "/solutions/passive-intelligent-sourcing",
+    page: <PassiveIntelligentSourcing />,
+  },
+  {
+    to: "/solutions/intelligent-candidate-discovery",
+    page: <IntelligentCandidateDiscovery />,
+  },
+  {
+    to: "/solutions/project-staffing",
+    page: <ProjectStaffing />,
+  },
+  {
+    to: "/solutions/executive-search",
+    page: <ExecutiveSearch />,
+  },
+  {
+    to: "/solutions/remote-staffing",
+    page: <RemoteStaffing />,
+  },
+  {
+    to: "/solutions/permanent-placement",
+    page: <PermanentPlacement />,
+  },
+  {
+    to: "/solutions/contingent-staffing",
+    page: <ContingentStaffing />,
+  },
+  {
+    to: "/solutions/apprenticeship-smart-sourcing",
+    page: <ApprenticeshipSmartSourcing />,
   },
 ];
