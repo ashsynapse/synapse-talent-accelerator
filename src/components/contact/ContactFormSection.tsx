@@ -11,18 +11,8 @@ const ContactFormSection = () => {
     <section className="pt-24 pb-8 bg-white">
       <div className="container-wide">
         <div className="grid lg:grid-cols-12 gap-8 items-start">
-          {/* Left Column - Hero Text + Feature Cards */}
+          {/* Left Column - Feature Cards */}
           <div className="lg:col-span-4 space-y-4">
-            {/* Hero Text */}
-            <div 
-              ref={addToRefs}
-              className="scroll-animate mb-6"
-            >
-              <p className="text-lg text-synapse-gray leading-relaxed">
-                Ready to transform your hiring process with AI? Let's discuss how our autonomous AI agents can scale your talent acquisition.
-              </p>
-            </div>
-
             <div 
               ref={addToRefs}
               className="scroll-animate bg-white p-4 rounded-xl shadow-soft border border-gray-100 hover:shadow-medium transition-shadow"
