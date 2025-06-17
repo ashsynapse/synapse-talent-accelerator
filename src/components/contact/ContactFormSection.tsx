@@ -8,11 +8,11 @@ const ContactFormSection = () => {
   const { addToRefs } = useScrollAnimation();
 
   return (
-    <section className="pt-24 pb-8 bg-white">
+    <section className="pt-20 pb-8 bg-white">
       <div className="container-wide">
         <div className="grid lg:grid-cols-12 gap-8 items-start">
           {/* Left Column - Feature Cards */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="lg:col-span-4 space-y-4 order-2 lg:order-1">
             <div 
               ref={addToRefs}
               className="scroll-animate bg-white p-4 rounded-xl shadow-soft border border-gray-100 hover:shadow-medium transition-shadow"
@@ -48,7 +48,7 @@ const ContactFormSection = () => {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-8 order-1 lg:order-2">
             <ContactForm />
           </div>
         </div>
