@@ -27,9 +27,9 @@ const products = [
   },
   {
     icon: <Database className="w-8 h-8" />,
-    title: "ATS Bypass Engine",
-    description: "Smart resume optimizer that reverse-engineers ATS systems with invisible keyword embedding and success scoring",
-    href: "/tools/ats-bypass-engine"
+    title: "Smart ATS Integration",
+    description: "Seamless integration with existing ATS systems for unified candidate management and workflow automation",
+    href: "/tools/smart-ats-integration"
   }
 ];
 
