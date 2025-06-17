@@ -1,349 +1,292 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuContent,
+  NavigationMenuTrigger,
+  NavigationMenuLink,
+} from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Plus, Minus, 
-         Bot, Users, Building2, Search, UserCheck, 
-         Briefcase, Code, TrendingUp, Heart, Scale,
-         Factory, Calculator, Crown, FileText, 
-         Calendar, Phone, Info, HelpCircle, Target,
-         Globe, Clock, GraduationCap, Shield, Brain, Send, Zap } from "lucide-react";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import { ModeToggle } from "./ModeToggle";
+import { Link } from "react-router-dom";
+
+interface NavItem {
+  title: string;
+  to: string;
+  icon?: React.ComponentType<any>;
+  description?: string;
+  children?: NavItem[];
+}
+
+const navItems: NavItem[] = [
+  {
+    title: "Solutions",
+    to: "/solutions",
+    children: [
+      {
+        title: "Passive Intelligent Sourcing",
+        to: "/solutions/passive-intelligent-sourcing",
+        description: "Smart sourcing to identify and engage top talent who aren't actively job searching",
+      },
+      {
+        title: "Intelligent Candidate Discovery",
+        to: "/solutions/intelligent-candidate-discovery",
+        description: "Comprehensive candidate sourcing strategies to find the perfect match for your roles",
+      },
+      {
+        title: "Project Staffing",
+        to: "/solutions/project-staffing",
+        description: "Specialized staffing solutions for short-term and long-term project requirements",
+      },
+      {
+        title: "Executive Search",
+        to: "/solutions/executive-search",
+        description: "Specialized recruitment for C-level and senior leadership positions",
+      },
+      {
+        title: "Remote Staffing",
+        to: "/solutions/remote-staffing",
+        description: "Global remote talent acquisition for distributed teams and remote-first companies",
+      },
+      {
+        title: "Permanent Placement",
+        to: "/solutions/permanent-placement",
+        description: "Full-time permanent placement services across all industries and skill levels",
+      },
+      {
+        title: "Contingent Staffing",
+        to: "/solutions/contingent-staffing",
+        description: "Flexible staffing solutions for temporary and contract positions",
+      },
+      {
+        title: "Apprenticeship Smart Sourcing",
+        to: "/solutions/apprenticeship-smart-sourcing",
+        description: "Specialized recruitment for apprenticeship programs and early career professionals",
+      },
+    ],
+  },
+  {
+    title: "Tools",
+    to: "/tools",
+    children: [
+      {
+        title: "AI Sourcing Agent",
+        to: "/tools/ai-sourcing-agent",
+        description: "Automated candidate sourcing with AI-powered agents",
+      },
+      {
+        title: "AI Outreach Agent",
+        to: "/tools/ai-outreach-agent",
+        description: "Personalized candidate outreach using AI-driven communication",
+      },
+      {
+        title: "AI Submission Agent",
+        to: "/tools/ai-submission-agent",
+        description: "Streamlined candidate submission process with AI assistance",
+      },
+      {
+        title: "ATS Bypass Engine",
+        to: "/tools/ats-bypass-engine",
+        description: "Bypass applicant tracking systems with intelligent automation",
+      },
+    ],
+  },
+  {
+    title: "Industries",
+    to: "/industries",
+    children: [
+      {
+        title: "Technology",
+        to: "/industries/technology",
+        description: "Recruitment solutions for the fast-paced tech industry",
+      },
+      {
+        title: "Finance",
+        to: "/industries/finance",
+        description: "Specialized recruitment for financial institutions and services",
+      },
+      {
+        title: "Healthcare",
+        to: "/industries/healthcare",
+        description: "Talent acquisition for healthcare providers and organizations",
+      },
+      {
+        title: "Legal",
+        to: "/industries/legal",
+        description: "Recruitment services for law firms and legal departments",
+      },
+      {
+        title: "Manufacturing",
+        to: "/industries/manufacturing",
+        description: "Staffing solutions for manufacturing companies and facilities",
+      },
+      {
+        title: "Sales & Marketing",
+        to: "/industries/sales-marketing",
+        description: "Recruiting top sales and marketing professionals",
+      },
+      {
+        title: "Leadership",
+        to: "/industries/leadership",
+        description: "Executive search and leadership recruitment services",
+      },
+      {
+        title: "Operations",
+        to: "/industries/operations",
+        description: "Staffing solutions for operations and supply chain management",
+      },
+    ],
+  },
+  {
+    title: "Resources",
+    to: "/resources",
+    children: [
+      {
+        title: "Blog",
+        to: "/blog",
+        description: "Insights and articles on AI recruitment and talent acquisition",
+      },
+      {
+        title: "Case Studies",
+        to: "/case-studies",
+        description: "Real-world examples of successful AI recruitment strategies",
+      },
+      {
+        title: "Events",
+        to: "/events",
+        description: "Upcoming webinars, conferences, and industry events",
+      },
+    ],
+  },
+  {
+    title: "Company",
+    to: "/company",
+    children: [
+      {
+        title: "About Us",
+        to: "/about",
+        description: "Learn about our mission, vision, and values",
+      },
+      {
+        title: "Team",
+        to: "/team",
+        description: "Meet our team of AI experts and recruitment specialists",
+      },
+      {
+        title: "Recruiters",
+        to: "/recruiters",
+        description: "Join our network of AI-powered recruiters",
+      },
+      {
+        title: "Careers",
+        to: "/careers",
+        description: "Explore job opportunities at Synapse",
+      },
+      {
+        title: "FAQ",
+        to: "/faq",
+        description: "Frequently asked questions about our services",
+      },
+      {
+        title: "Contact Us",
+        to: "/contact",
+        description: "Get in touch with our team",
+      },
+    ],
+  },
+];
 
 const MainHeader = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [expandedItems, setExpandedItems] = useState<string[]>([]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const toggleMobileItem = (itemLabel: string) => {
-    setExpandedItems(prev => 
-      prev.includes(itemLabel) 
-        ? prev.filter(item => item !== itemLabel)
-        : [...prev, itemLabel]
-    );
-  };
-
-  const getIconForSubmenu = (label: string) => {
-    const iconMap: { [key: string]: any } = {
-      "Passive Intelligent Sourcing": Bot,
-      "Intelligent Candidate Discovery": Search,
-      "Project Staffing": Users,
-      "Executive Search": Crown,
-      "Remote Staffing": Globe,
-      "Permanent Placement": UserCheck,
-      "Contingent Staffing": Clock,
-      "Apprenticeship Smart Sourcing": GraduationCap,
-      "AI Sourcing Agent": Bot,
-      "AI Outreach Agent": Send,
-      "AI Submission Agent": Target,
-      "ATS Bypass Engine": Zap,
-      "Technology": Code,
-      "Finance": TrendingUp,
-      "Healthcare": Heart,
-      "Legal": Scale,
-      "Manufacturing": Factory,
-      "Sales & Marketing": Calculator,
-      "Leadership": Crown,
-      "Operations": Users,
-      "Blog": FileText,
-      "Case Studies": FileText,
-      "Events": Calendar,
-      "About Us": Info,
-      "Team": Users,
-      "Recruiters": UserCheck,
-      "Careers": Briefcase,
-      "FAQ": HelpCircle,
-      "Contact Us": Phone
-    };
-    
-    return iconMap[label] || FileText;
-  };
-
-  const getDescriptionForSubmenu = (label: string) => {
-    const descriptionMap: { [key: string]: string } = {
-      "Passive Intelligent Sourcing": "Smart talent discovery",
-      "Intelligent Candidate Discovery": "Advanced candidate matching",
-      "Project Staffing": "Flexible project teams",
-      "Executive Search": "Leadership recruitment",
-      "Remote Staffing": "Global remote talent",
-      "Permanent Placement": "Long-term hires",
-      "Contingent Staffing": "Temporary workforce",
-      "Apprenticeship Smart Sourcing": "Entry-level talent",
-      "AI Sourcing Agent": "Automated candidate sourcing",
-      "AI Outreach Agent": "Personalized candidate outreach",
-      "AI Submission Agent": "End-to-end submission handling",
-      "ATS Bypass Engine": "Smart resume optimization",
-      "Technology": "Tech talent solutions",
-      "Finance": "Financial sector expertise",
-      "Healthcare": "Medical professionals",
-      "Legal": "Legal industry specialists",
-      "Manufacturing": "Industrial workforce",
-      "Sales & Marketing": "Revenue-driving roles",
-      "Leadership": "Executive positions",
-      "Operations": "Operational excellence",
-      "Blog": "Industry insights",
-      "Case Studies": "Success stories",
-      "Events": "Upcoming events",
-      "About Us": "Our company story",
-      "Team": "Meet our team",
-      "Recruiters": "Join our network",
-      "Careers": "Work with us",
-      "FAQ": "Common questions",
-      "Contact Us": "Get in touch"
-    };
-    
-    return descriptionMap[label] || "Learn more";
-  };
-
-  const navItems = [
-    { 
-      label: "Solutions", 
-      href: "/recruitment-solutions",
-      submenu: [
-        { label: "Passive Intelligent Sourcing", href: "/solutions/passive-intelligent-sourcing" },
-        { label: "Intelligent Candidate Discovery", href: "/solutions/intelligent-candidate-discovery" },
-        { label: "Project Staffing", href: "/solutions/project-staffing" },
-        { label: "Executive Search", href: "/solutions/executive-search" },
-        { label: "Remote Staffing", href: "/solutions/remote-staffing" },
-        { label: "Permanent Placement", href: "/solutions/permanent-placement" },
-        { label: "Contingent Staffing", href: "/solutions/contingent-staffing" },
-        { label: "Apprenticeship Smart Sourcing", href: "/solutions/apprenticeship-smart-sourcing" }
-      ]
-    },
-    { 
-      label: "Tools", 
-      href: "/recruitment-tools",
-      submenu: [
-        { label: "AI Sourcing Agent", href: "/tools/ai-sourcing-agent" },
-        { label: "AI Outreach Agent", href: "/tools/ai-outreach-agent" },
-        { label: "AI Submission Agent", href: "/tools/ai-submission-agent" },
-        { label: "ATS Bypass Engine", href: "/tools/ats-bypass-engine" }
-      ]
-    },
-    { 
-      label: "Industries", 
-      href: "/industries",
-      submenu: [
-        { label: "Technology", href: "/industries/technology" },
-        { label: "Finance", href: "/industries/finance" },
-        { label: "Healthcare", href: "/industries/healthcare" },
-        { label: "Legal", href: "/industries/legal" },
-        { label: "Manufacturing", href: "/industries/manufacturing" },
-        { label: "Sales & Marketing", href: "/industries/sales-marketing" },
-        { label: "Leadership", href: "/industries/leadership" },
-        { label: "Operations", href: "/industries/operations" }
-      ]
-    },
-    { 
-      label: "Resources", 
-      href: null,
-      submenu: [
-        { label: "Blog", href: "/blog" },
-        { label: "Case Studies", href: "/case-studies" },
-        { label: "Events", href: "/events" }
-      ]
-    },
-    { 
-      label: "Company", 
-      href: null,
-      submenu: [
-        { label: "About Us", href: "/about" },
-        { label: "Team", href: "/team" },
-        { label: "Recruiters", href: "/recruiters" },
-        { label: "Careers", href: "/careers" },
-        { label: "FAQ", href: "/faq" },
-        { label: "Contact Us", href: "/contact" }
-      ]
-    }
-  ];
-
   return (
-    <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/40 backdrop-blur-xl border-b border-white/10 shadow-lg py-2"
-          : "bg-white/70 backdrop-blur-lg py-3"
-      }`}
-    >
-      <div className="container-wide flex justify-between items-center">
-        {/* Logo */}
-        <div className="flex items-center">
-          <a href="/" className="flex items-center space-x-1">
-            <img 
-              src="/lovable-uploads/4e0b1cf8-ab85-4f55-a3fb-5f39206731ef.png" 
-              alt="Synapse Logo" 
-              className="h-8 w-8"
-            />
-            <span className="text-2xl font-bold text-synapse-primary">
-              Synapse
-            </span>
-          </a>
-        </div>
+    <header className="bg-white sticky top-0 z-50 border-b">
+      <div className="container-wide py-4 flex items-center justify-between">
+        <Link to="/" className="flex items-center space-x-2">
+          <img
+            src="/lovable-uploads/4e0b1cf8-ab85-4f55-a3fb-5f39206731ef.png"
+            alt="Synapse Logo"
+            className="h-8 w-8"
+          />
+          <span className="text-2xl font-bold text-synapse-dark">Synapse</span>
+        </Link>
 
-        {/* Centered Desktop Navigation */}
-        <nav className="hidden lg:flex items-center justify-center flex-1 space-x-1">
-          {navItems.map((item) => (
-            <div key={item.label} className="relative group">
-              {item.href ? (
-                <a
-                  href={item.href}
-                  className="flex items-center px-3 py-2 text-sm font-medium text-synapse-dark hover:text-synapse-primary transition-colors"
-                >
-                  {item.label}
-                  {item.submenu && <ChevronDown size={16} className="ml-1" />}
-                </a>
-              ) : (
-                <span className="flex items-center px-3 py-2 text-sm font-medium text-synapse-dark hover:text-synapse-primary transition-colors cursor-default">
-                  {item.label}
-                  {item.submenu && <ChevronDown size={16} className="ml-1" />}
-                </span>
-              )}
-              
-              {item.submenu && (
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pt-2">
-                  <div className="bg-white/95 backdrop-blur-lg shadow-medium border border-white/30 rounded-xl p-6">
-                    <div className="grid grid-cols-3 gap-4 min-w-[750px]">
-                      {item.submenu.map((subItem) => {
-                        const IconComponent = getIconForSubmenu(subItem.label);
-                        const description = getDescriptionForSubmenu(subItem.label);
-                        return (
-                          <a
-                            key={subItem.label}
-                            href={subItem.href}
-                            className="group/item flex items-start p-3 rounded-lg hover:bg-white/80 hover:shadow-soft transition-all duration-200 border border-transparent hover:border-synapse-primary/20 h-[72px]"
-                          >
-                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-synapse-primary to-synapse-secondary flex items-center justify-center mr-3 group-hover/item:scale-110 transition-transform duration-200 flex-shrink-0">
-                              <IconComponent className="h-5 w-5 text-white" />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <h3 className="font-semibold text-synapse-dark group-hover/item:text-synapse-primary transition-colors text-sm leading-tight mb-1">
-                                {subItem.label}
-                              </h3>
-                              <p className="text-xs text-synapse-gray opacity-0 group-hover/item:opacity-100 transition-opacity duration-200 leading-tight">
-                                {description}
-                              </p>
-                            </div>
-                          </a>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </nav>
-
-        {/* Right side buttons */}
-        <div className="hidden lg:flex items-center gap-3">
-          <Button
-            className="btn-primary"
-            onClick={() => window.location.href = "/contact"}
-          >
-            Book Demo
-          </Button>
-          <Button
-            variant="outline"
-            className="border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white transition-colors"
-            onClick={() => window.open("https://app.synapserecruiternetwork.com/", "_blank")}
-          >
-            Login
-          </Button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden text-synapse-dark p-2"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <nav className="lg:hidden bg-white/95 backdrop-blur-lg border-t border-white/20 shadow-medium">
-          <div className="container-wide py-4">
-            <div className="space-y-2">
+        <div className="hidden lg:flex items-center space-x-6">
+          <NavigationMenu>
+            <NavigationMenuList>
               {navItems.map((item) => (
-                <div key={item.label}>
-                  <div className="flex items-center justify-between">
-                    {item.href ? (
-                      <a
-                        href={item.href}
-                        className="flex-1 py-2 text-synapse-dark hover:text-synapse-primary font-medium transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {item.label}
-                      </a>
-                    ) : (
-                      <span className="flex-1 py-2 text-synapse-dark font-medium">
-                        {item.label}
-                      </span>
-                    )}
-                    {item.submenu && (
-                      <button
-                        onClick={() => toggleMobileItem(item.label)}
-                        className="p-2 text-synapse-dark hover:text-synapse-primary transition-colors"
-                      >
-                        {expandedItems.includes(item.label) ? (
-                          <Minus size={20} />
-                        ) : (
-                          <Plus size={20} />
-                        )}
-                      </button>
-                    )}
-                  </div>
-                  {item.submenu && expandedItems.includes(item.label) && (
-                    <div className="pl-4 space-y-1 mt-2">
-                      {item.submenu.map((subItem) => (
-                        <a
-                          key={subItem.label}
-                          href={subItem.href}
-                          className="block py-2 text-sm text-synapse-gray hover:text-synapse-primary transition-colors"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {subItem.label}
-                        </a>
+                <NavigationMenuItem key={item.title}>
+                  <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[600px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                      {item.children?.map((child) => (
+                        <div key={child.to} className="group">
+                          <NavigationMenuLink asChild>
+                            <a
+                              href={child.to}
+                              className="flex h-full w-full select-none flex-col justify-start rounded-md bg-gradient-to-b from-muted/50 to-muted p-4 no-underline outline-none focus:shadow-md hover:bg-accent transition-colors"
+                            >
+                              <div className="mb-2 flex items-center gap-2">
+                                {child.icon && <child.icon className="h-4 w-4 text-synapse-primary" />}
+                                <div className="text-sm font-medium leading-none text-synapse-dark line-clamp-1">
+                                  {child.title}
+                                </div>
+                              </div>
+                              <p className="text-xs leading-snug text-muted-foreground line-clamp-2">
+                                {child.description}
+                              </p>
+                            </a>
+                          </NavigationMenuLink>
+                        </div>
                       ))}
                     </div>
-                  )}
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
+
+          <Button variant="secondary">Book a Demo</Button>
+          <ModeToggle />
+        </div>
+
+        <Sheet>
+          <SheetTrigger className="lg:hidden">
+            <Menu />
+          </SheetTrigger>
+          <SheetContent className="sm:max-w-xs p-0">
+            <SheetHeader className="pl-6 pt-6">
+              <SheetTitle>Synapse</SheetTitle>
+              <SheetDescription>
+                Navigate through our solutions, tools, and resources.
+              </SheetDescription>
+            </SheetHeader>
+            <div className="py-4">
+              {navItems.map((item) => (
+                <div key={item.title} className="mb-2">
+                  <div className="px-6 py-2 font-bold text-synapse-dark">{item.title}</div>
+                  {item.children?.map((child) => (
+                    <a
+                      key={child.to}
+                      href={child.to}
+                      className="block px-6 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      {child.title}
+                    </a>
+                  ))}
                 </div>
               ))}
             </div>
-            
-            <div className="flex flex-col space-y-3 mt-6 pt-4 border-t border-white/20">
-              <Button
-                className="btn-primary w-full"
-                onClick={() => {
-                  window.location.href = "/contact";
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Book Demo
-              </Button>
-              <Button
-                variant="outline"
-                className="border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white transition-colors w-full"
-                onClick={() => {
-                  window.open("https://app.synapserecruiternetwork.com/", "_blank");
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Login
-              </Button>
+            <div className="p-6">
+              <Button variant="secondary" className="w-full">Book a Demo</Button>
             </div>
-          </div>
-        </nav>
-      )}
+            <div className="p-6 border-t">
+              <ModeToggle />
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
     </header>
   );
 };
