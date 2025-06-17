@@ -13,11 +13,11 @@ interface FaqChildPageTemplateProps {
 const FaqChildPageTemplate = ({ title, description, breadcrumbTitle, children }: FaqChildPageTemplateProps) => {
   return (
     <PageTemplate title={title} description={description}>
-      {/* Minimal Hero Section - Similar to Careers page */}
-      <section className="pt-24 pb-6 bg-white">
+      {/* Minimal Hero Section - Exactly like Careers page */}
+      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           {/* Breadcrumbs */}
-          <div className="mb-4">
+          <div className="mb-8">
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -47,19 +47,19 @@ const FaqChildPageTemplate = ({ title, description, breadcrumbTitle, children }:
             </Breadcrumb>
           </div>
 
-          <div className="max-w-4xl">
-            <h1 className="text-2xl md:text-3xl font-bold text-synapse-dark mb-2">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
               {title}
             </h1>
-            <p className="text-base text-synapse-gray">
+            <p className="text-xl text-synapse-gray max-w-4xl mx-auto leading-relaxed">
               {description}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Content Section - Immediately visible */}
-      <section className="pb-8 bg-white">
+      {/* Content Section - Immediately visible without scrolling */}
+      <section className="py-8 bg-white">
         <div className="container-wide">
           {children}
         </div>
