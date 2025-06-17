@@ -55,32 +55,32 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-4 shadow-soft mx-auto max-w-xl">
-      <div className="mb-4">
-        <h2 className="text-xl font-bold text-synapse-dark mb-2">
+    <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-medium">
+      <div className="mb-6">
+        <h2 className="text-2xl font-bold text-synapse-dark mb-3">
           Get in Touch
         </h2>
-        <p className="text-sm text-synapse-gray">
+        <p className="text-base text-synapse-gray">
           Fill out the form below and our team will get back to you within 24 hours.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <div className="grid md:grid-cols-2 gap-3">
-          <div className="space-y-1">
-            <Label htmlFor="fullName" className="text-sm">Full Name *</Label>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="space-y-2">
+            <Label htmlFor="fullName" className="text-base font-medium">Full Name *</Label>
             <Input
               id="fullName"
               value={formData.fullName}
               onChange={(e) => handleInputChange("fullName", e.target.value)}
               placeholder="John Smith"
               required
-              className="h-9"
+              className="h-11 text-base"
             />
           </div>
           
-          <div className="space-y-1">
-            <Label htmlFor="email" className="text-sm">Email Address *</Label>
+          <div className="space-y-2">
+            <Label htmlFor="email" className="text-base font-medium">Email Address *</Label>
             <Input
               id="email"
               type="email"
@@ -88,40 +88,40 @@ const ContactForm = () => {
               onChange={(e) => handleInputChange("email", e.target.value)}
               placeholder="john@company.com"
               required
-              className="h-9"
+              className="h-11 text-base"
             />
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-3">
-          <div className="space-y-1">
-            <Label htmlFor="phoneNumber" className="text-sm">Phone Number</Label>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="space-y-2">
+            <Label htmlFor="phoneNumber" className="text-base font-medium">Phone Number</Label>
             <Input
               id="phoneNumber"
               type="tel"
               value={formData.phoneNumber}
               onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
               placeholder="+1 (555) 123-4567"
-              className="h-9"
+              className="h-11 text-base"
             />
           </div>
           
-          <div className="space-y-1">
-            <Label htmlFor="companyName" className="text-sm">Company Name</Label>
+          <div className="space-y-2">
+            <Label htmlFor="companyName" className="text-base font-medium">Company Name</Label>
             <Input
               id="companyName"
               value={formData.companyName}
               onChange={(e) => handleInputChange("companyName", e.target.value)}
               placeholder="Acme Corp"
-              className="h-9"
+              className="h-11 text-base"
             />
           </div>
         </div>
 
-        <div className="space-y-1">
-          <Label htmlFor="reasonForContact" className="text-sm">Reason for Contact *</Label>
+        <div className="space-y-2">
+          <Label htmlFor="reasonForContact" className="text-base font-medium">Reason for Contact *</Label>
           <Select value={formData.reasonForContact} onValueChange={(value) => handleInputChange("reasonForContact", value)}>
-            <SelectTrigger className="h-9">
+            <SelectTrigger className="h-11 text-base">
               <SelectValue placeholder="Select reason for contact" />
             </SelectTrigger>
             <SelectContent>
@@ -133,27 +133,27 @@ const ContactForm = () => {
           </Select>
         </div>
 
-        <div className="space-y-1">
-          <Label htmlFor="message" className="text-sm">Message *</Label>
+        <div className="space-y-2">
+          <Label htmlFor="message" className="text-base font-medium">Message *</Label>
           <Textarea
             id="message"
             value={formData.message}
             onChange={(e) => handleInputChange("message", e.target.value)}
             placeholder="Please provide details about your inquiry..."
-            rows={3}
+            rows={4}
             required
-            className="resize-none"
+            className="resize-none text-base"
           />
         </div>
 
         <Button 
           type="submit" 
-          className="w-full btn-primary text-sm py-2"
+          className="w-full btn-primary text-base py-3 h-12"
         >
           Submit Request
         </Button>
         
-        <p className="text-xs text-synapse-gray text-center">
+        <p className="text-sm text-synapse-gray text-center">
           By submitting this form, you agree to our privacy policy. We'll never share your information.
         </p>
       </form>

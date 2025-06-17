@@ -8,90 +8,47 @@ const ContactFormSection = () => {
   const { addToRefs } = useScrollAnimation();
 
   return (
-    <section className="py-4 bg-white">
+    <section className="py-6 bg-white">
       <div className="container-wide">
-        {/* Mobile and Tablet Layout */}
-        <div className="lg:hidden">
-          <div className="grid md:grid-cols-3 gap-4 mb-6">
-            <div 
-              ref={addToRefs}
-              className="scroll-animate bg-white p-3 rounded-xl shadow-soft border border-gray-100"
-            >
-              <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary p-2 rounded-lg inline-block mb-2">
-                <MessageCircle className="h-4 w-4 text-white" />
-              </div>
-              <h3 className="text-sm font-bold text-synapse-dark mb-1">Quick Response</h3>
-              <p className="text-xs text-synapse-gray">Get a response within 24 hours from our AI hiring specialists</p>
-            </div>
-
-            <div 
-              ref={addToRefs}
-              className="scroll-animate bg-white p-3 rounded-xl shadow-soft border border-gray-100"
-            >
-              <div className="bg-gradient-to-br from-synapse-secondary to-synapse-tertiary p-2 rounded-lg inline-block mb-2">
-                <Clock className="h-4 w-4 text-white" />
-              </div>
-              <h3 className="text-sm font-bold text-synapse-dark mb-1">24/7 Availability</h3>
-              <p className="text-xs text-synapse-gray">Our AI systems work around the clock, just like your hiring needs</p>
-            </div>
-
-            <div 
-              ref={addToRefs}
-              className="scroll-animate bg-white p-3 rounded-xl shadow-soft border border-gray-100"
-            >
-              <div className="bg-gradient-to-br from-synapse-tertiary to-synapse-primary p-2 rounded-lg inline-block mb-2">
-                <Globe className="h-4 w-4 text-white" />
-              </div>
-              <h3 className="text-sm font-bold text-synapse-dark mb-1">Global Reach</h3>
-              <p className="text-xs text-synapse-gray">Access talent worldwide with our AI-powered sourcing network</p>
-            </div>
-          </div>
-          
-          <div className="flex justify-center">
-            <ContactForm />
-          </div>
-        </div>
-
-        {/* Desktop Layout */}
-        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start">
+        <div className="grid lg:grid-cols-12 gap-8 items-start">
           {/* Left Column - Feature Cards */}
-          <div className="space-y-3">
+          <div className="lg:col-span-5 space-y-4">
             <div 
               ref={addToRefs}
-              className="scroll-animate bg-white p-3 rounded-xl shadow-soft border border-gray-100"
+              className="scroll-animate bg-white p-5 rounded-xl shadow-soft border border-gray-100 hover:shadow-medium transition-shadow"
             >
-              <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary p-2 rounded-lg inline-block mb-2">
-                <MessageCircle className="h-4 w-4 text-white" />
+              <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary p-3 rounded-lg inline-block mb-3">
+                <MessageCircle className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-sm font-bold text-synapse-dark mb-1">Quick Response</h3>
-              <p className="text-xs text-synapse-gray">Get a response within 24 hours from our AI hiring specialists</p>
+              <h3 className="text-lg font-bold text-synapse-dark mb-2">Quick Response</h3>
+              <p className="text-base text-synapse-gray">Get a response within 24 hours from our AI hiring specialists</p>
             </div>
 
             <div 
               ref={addToRefs}
-              className="scroll-animate bg-white p-3 rounded-xl shadow-soft border border-gray-100"
+              className="scroll-animate bg-white p-5 rounded-xl shadow-soft border border-gray-100 hover:shadow-medium transition-shadow"
             >
-              <div className="bg-gradient-to-br from-synapse-secondary to-synapse-tertiary p-2 rounded-lg inline-block mb-2">
-                <Clock className="h-4 w-4 text-white" />
+              <div className="bg-gradient-to-br from-synapse-secondary to-synapse-tertiary p-3 rounded-lg inline-block mb-3">
+                <Clock className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-sm font-bold text-synapse-dark mb-1">24/7 Availability</h3>
-              <p className="text-xs text-synapse-gray">Our AI systems work around the clock, just like your hiring needs</p>
+              <h3 className="text-lg font-bold text-synapse-dark mb-2">24/7 Availability</h3>
+              <p className="text-base text-synapse-gray">Our AI systems work around the clock, just like your hiring needs</p>
             </div>
 
             <div 
               ref={addToRefs}
-              className="scroll-animate bg-white p-3 rounded-xl shadow-soft border border-gray-100"
+              className="scroll-animate bg-white p-5 rounded-xl shadow-soft border border-gray-100 hover:shadow-medium transition-shadow"
             >
-              <div className="bg-gradient-to-br from-synapse-tertiary to-synapse-primary p-2 rounded-lg inline-block mb-2">
-                <Globe className="h-4 w-4 text-white" />
+              <div className="bg-gradient-to-br from-synapse-tertiary to-synapse-primary p-3 rounded-lg inline-block mb-3">
+                <Globe className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-sm font-bold text-synapse-dark mb-1">Global Reach</h3>
-              <p className="text-xs text-synapse-gray">Access talent worldwide with our AI-powered sourcing network</p>
+              <h3 className="text-lg font-bold text-synapse-dark mb-2">Global Reach</h3>
+              <p className="text-base text-synapse-gray">Access talent worldwide with our AI-powered sourcing network</p>
             </div>
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="lg:sticky lg:top-8">
+          <div className="lg:col-span-7">
             <ContactForm />
           </div>
         </div>
