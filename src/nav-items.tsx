@@ -28,6 +28,16 @@ import AIOutreachAgent from "./pages/tools/AIOutreachAgent";
 import AISubmissionAgent from "./pages/tools/AISubmissionAgent";
 import ATSBypassEngine from "./pages/tools/ATSBypassEngine";
 
+// Industry page imports
+import Technology from "./pages/industries/Technology";
+import Finance from "./pages/industries/Finance";
+import Healthcare from "./pages/industries/Healthcare";
+import Legal from "./pages/industries/Legal";
+import Manufacturing from "./pages/industries/Manufacturing";
+import SalesMarketing from "./pages/industries/SalesMarketing";
+import Leadership from "./pages/industries/Leadership";
+import Operations from "./pages/industries/Operations";
+
 export const navItems = [
   {
     to: "/",
@@ -130,5 +140,38 @@ export const navItems = [
   {
     to: "/tools/ats-bypass-engine",
     page: <ATSBypassEngine />,
+  },
+  // Industry routes
+  {
+    to: "/industries/technology",
+    page: <Technology />,
+  },
+  {
+    to: "/industries/finance",
+    page: <Finance />,
+  },
+  {
+    to: "/industries/healthcare",
+    page: <Healthcare />,
+  },
+  {
+    to: "/industries/legal",
+    page: <Legal />,
+  },
+  {
+    to: "/industries/manufacturing",
+    page: <Manufacturing />,
+  },
+  {
+    to: "/industries/sales-marketing",
+    page: <SalesMarketing />,
+  },
+  {
+    to: "/industries/leadership",
+    page: <Leadership />,
+  },
+  {
+    to: "/industries/operations",
+    page: <Operations />,
   },
 ];
