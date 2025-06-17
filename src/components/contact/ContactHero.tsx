@@ -8,7 +8,7 @@ const ContactHero = () => {
   return (
     <section className="pt-24 pb-4 bg-gradient-to-br from-white via-synapse-lighter/30 to-synapse-light/50">
       <div className="container-wide">
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="max-w-3xl">
           <div 
             ref={addToRefs}
             className="scroll-animate inline-flex items-center gap-2 bg-synapse-lighter/50 px-3 py-1 rounded-full mb-3"
