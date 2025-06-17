@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Linkedin, Twitter, Instagram, MessageCircle } from "lucide-react";
 import { FaDiscord } from 'react-icons/fa';
@@ -66,14 +67,14 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4">Solutions</h4>
             <ul className="space-y-2">
               {[
-                { label: "Passive AI Sourcing", href: "/recruitment-solutions" },
-                { label: "AI Candidate Discovery", href: "/recruitment-solutions" }, 
-                { label: "Project Staffing", href: "/recruitment-solutions" },
-                { label: "Executive Search", href: "/recruitment-solutions" },
-                { label: "Remote Staffing", href: "/recruitment-solutions" },
-                { label: "Permanent Placement", href: "/recruitment-solutions" },
-                { label: "Contingent Staffing", href: "/recruitment-solutions" },
-                { label: "Apprenticeship AI Sourcing", href: "/recruitment-solutions" }
+                { label: "Passive Intelligent Sourcing", href: "/solutions/passive-intelligent-sourcing" },
+                { label: "Intelligent Candidate Discovery", href: "/solutions/intelligent-candidate-discovery" }, 
+                { label: "Project Staffing", href: "/solutions/project-staffing" },
+                { label: "Executive Search", href: "/solutions/executive-search" },
+                { label: "Remote Staffing", href: "/solutions/remote-staffing" },
+                { label: "Permanent Placement", href: "/solutions/permanent-placement" },
+                { label: "Contingent Staffing", href: "/solutions/contingent-staffing" },
+                { label: "Apprenticeship Smart Sourcing", href: "/solutions/apprenticeship-smart-sourcing" }
               ].map((item) => (
                 <li key={item.label}>
                   <a
@@ -88,12 +89,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-4">Products</h4>
+            <h4 className="text-lg font-bold mb-4">Tools</h4>
             <ul className="space-y-2">
               {[
-                { label: "AI Candidate Sourcing", href: "/recruitment-tools" },
-                { label: "Pre-Employment AI Screening", href: "/recruitment-tools" },
-                { label: "AI Resume Analysis", href: "/recruitment-tools" }
+                { label: "AI Sourcing Agent", href: "/tools/ai-sourcing-agent" },
+                { label: "AI Outreach Agent", href: "/tools/ai-outreach-agent" },
+                { label: "AI Submission Agent", href: "/tools/ai-submission-agent" },
+                { label: "ATS Bypass Engine", href: "/tools/ats-bypass-engine" }
               ].map((item) => (
                 <li key={item.label}>
                   <a
@@ -128,14 +130,14 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4">Industries</h4>
             <ul className="space-y-2">
               {[
-                { label: "Technology", href: "/industries" },
-                { label: "Finance", href: "/industries" },
-                { label: "Healthcare", href: "/industries" },
-                { label: "Legal", href: "/industries" },
-                { label: "Manufacturing", href: "/industries" },
-                { label: "Sales & Marketing", href: "/industries" },
-                { label: "Leadership", href: "/industries" },
-                { label: "Operations", href: "/industries" }
+                { label: "Technology", href: "/industries/technology" },
+                { label: "Finance", href: "/industries/finance" },
+                { label: "Healthcare", href: "/industries/healthcare" },
+                { label: "Legal", href: "/industries/legal" },
+                { label: "Manufacturing", href: "/industries/manufacturing" },
+                { label: "Sales & Marketing", href: "/industries/sales-marketing" },
+                { label: "Leadership", href: "/industries/leadership" },
+                { label: "Operations", href: "/industries/operations" }
               ].map((item) => (
                 <li key={item.label}>
                   <a

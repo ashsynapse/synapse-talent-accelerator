@@ -11,49 +11,49 @@ const solutions = [
     icon: <Brain className="w-8 h-8" />,
     title: "Passive Intelligent Sourcing",
     description: "Smart sourcing to identify and engage top talent who aren't actively job searching",
-    href: "/recruitment-solutions"
+    href: "/solutions/passive-intelligent-sourcing"
   },
   {
     icon: <Target className="w-8 h-8" />,
     title: "Intelligent Candidate Discovery",
     description: "Comprehensive candidate sourcing strategies to find the perfect match for your roles",
-    href: "/recruitment-solutions"
+    href: "/solutions/intelligent-candidate-discovery"
   },
   {
     icon: <Briefcase className="w-8 h-8" />,
     title: "Project Staffing",
     description: "Specialized staffing solutions for short-term and long-term project requirements",
-    href: "/recruitment-solutions"
+    href: "/solutions/project-staffing"
   },
   {
     icon: <Users className="w-8 h-8" />,
     title: "Executive Search",
     description: "Specialized recruitment for C-level and senior leadership positions",
-    href: "/recruitment-solutions"
+    href: "/solutions/executive-search"
   },
   {
     icon: <Globe className="w-8 h-8" />,
     title: "Remote Staffing",
     description: "Global remote talent acquisition for distributed teams and remote-first companies",
-    href: "/recruitment-solutions"
+    href: "/solutions/remote-staffing"
   },
   {
     icon: <UserCheck className="w-8 h-8" />,
     title: "Permanent Placement",
     description: "Full-time permanent placement services across all industries and skill levels",
-    href: "/recruitment-solutions"
+    href: "/solutions/permanent-placement"
   },
   {
     icon: <Clock className="w-8 h-8" />,
     title: "Contingent Staffing",
     description: "Flexible staffing solutions for temporary and contract positions",
-    href: "/recruitment-solutions"
+    href: "/solutions/contingent-staffing"
   },
   {
     icon: <GraduationCap className="w-8 h-8" />,
     title: "Apprenticeship Smart Sourcing",
     description: "Specialized recruitment for apprenticeship programs and early career professionals",
-    href: "/recruitment-solutions"
+    href: "/solutions/apprenticeship-smart-sourcing"
   }
 ];
 
