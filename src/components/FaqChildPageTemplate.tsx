@@ -14,10 +14,10 @@ const FaqChildPageTemplate = ({ title, description, breadcrumbTitle, children }:
   return (
     <PageTemplate title={title} description={description}>
       {/* Minimal Hero Section */}
-      <section className="pt-28 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-20 pb-4 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           {/* Breadcrumbs */}
-          <div className="mb-4">
+          <div className="mb-3">
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -48,10 +48,10 @@ const FaqChildPageTemplate = ({ title, description, breadcrumbTitle, children }:
           </div>
 
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-synapse-dark mb-3">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-synapse-dark mb-2">
               {title}
             </h1>
-            <p className="text-lg text-synapse-gray">
+            <p className="text-base text-synapse-gray">
               {description}
             </p>
           </div>
@@ -59,7 +59,7 @@ const FaqChildPageTemplate = ({ title, description, breadcrumbTitle, children }:
       </section>
 
       {/* Content Section */}
-      <section className="py-8 bg-white">
+      <section className="py-4 bg-white">
         <div className="container-wide">
           {children}
         </div>
