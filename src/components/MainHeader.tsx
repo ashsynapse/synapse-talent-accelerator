@@ -6,7 +6,7 @@ import { Menu, X, ChevronDown, Plus, Minus,
          Briefcase, Code, TrendingUp, Heart, Scale,
          Factory, Calculator, Crown, FileText, 
          Calendar, Phone, Info, HelpCircle, Target,
-         Globe, Clock, GraduationCap, Shield, Brain } from "lucide-react";
+         Globe, Clock, GraduationCap, Shield, Brain, Send, Zap } from "lucide-react";
 
 const MainHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,9 +42,10 @@ const MainHeader = () => {
       "Permanent Placement": UserCheck,
       "Contingent Staffing": Clock,
       "Apprenticeship Smart Sourcing": GraduationCap,
-      "Intelligent Candidate Sourcing": Bot,
-      "Pre-Employment Smart Screening": Shield,
-      "Intelligent Resume Analysis": Brain,
+      "AI Sourcing Agent": Bot,
+      "AI Outreach Agent": Send,
+      "AI Submission Agent": Target,
+      "ATS Bypass Engine": Zap,
       "Technology": Code,
       "Finance": TrendingUp,
       "Healthcare": Heart,
@@ -77,9 +78,10 @@ const MainHeader = () => {
       "Permanent Placement": "Long-term hires",
       "Contingent Staffing": "Temporary workforce",
       "Apprenticeship Smart Sourcing": "Entry-level talent",
-      "Intelligent Candidate Sourcing": "Automated talent search",
-      "Pre-Employment Smart Screening": "Advanced candidate assessment",
-      "Intelligent Resume Analysis": "Smart resume parsing",
+      "AI Sourcing Agent": "Automated candidate sourcing",
+      "AI Outreach Agent": "Personalized candidate outreach",
+      "AI Submission Agent": "End-to-end submission handling",
+      "ATS Bypass Engine": "Smart resume optimization",
       "Technology": "Tech talent solutions",
       "Finance": "Financial sector expertise",
       "Healthcare": "Medical professionals",
@@ -121,9 +123,10 @@ const MainHeader = () => {
       label: "Tools", 
       href: "/recruitment-tools",
       submenu: [
-        { label: "Intelligent Candidate Sourcing", href: "/recruitment-tools" },
-        { label: "Pre-Employment Smart Screening", href: "/recruitment-tools" },
-        { label: "Intelligent Resume Analysis", href: "/recruitment-tools" }
+        { label: "AI Sourcing Agent", href: "/tools/ai-sourcing-agent" },
+        { label: "AI Outreach Agent", href: "/tools/ai-outreach-agent" },
+        { label: "AI Submission Agent", href: "/tools/ai-submission-agent" },
+        { label: "ATS Bypass Engine", href: "/tools/ats-bypass-engine" }
       ]
     },
     { 

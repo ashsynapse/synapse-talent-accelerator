@@ -3,51 +3,30 @@ import React from "react";
 import PageTemplate from "../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, TrendingUp, Settings, Users, DollarSign, Calculator, Scale, Factory } from "lucide-react";
+import { Code, TrendingUp, Heart, Scale, Factory, Calculator, Crown, Users } from "lucide-react";
 import FinalCtaSection from "../components/FinalCtaSection";
 
 const industries = [
   {
     icon: <Code className="w-8 h-8" />,
-    title: "Information Technology",
+    title: "Technology",
     description: "Specialized recruitment for software engineers, data scientists, AI/ML experts, and tech leadership",
-    href: "/industries/information-technology",
+    href: "/industries/technology",
     roles: ["Software Engineers", "Data Scientists", "DevOps Engineers", "Product Managers"]
   },
   {
     icon: <TrendingUp className="w-8 h-8" />,
-    title: "Digital Marketing",
-    description: "Digital marketing professionals including SEO specialists, content creators, and marketing managers",
-    href: "/industries/digital-marketing",
-    roles: ["Digital Marketers", "SEO Specialists", "Content Creators", "Social Media Managers"]
+    title: "Finance",
+    description: "Finance professionals including investment bankers, financial advisors, analysts, and portfolio managers",
+    href: "/industries/finance",
+    roles: ["Investment Bankers", "Financial Advisors", "Analysts", "Portfolio Managers"]
   },
   {
-    icon: <Settings className="w-8 h-8" />,
-    title: "Engineering",
-    description: "Engineering professionals across mechanical, electrical, civil, and other engineering disciplines",
-    href: "/industries/engineering",
-    roles: ["Mechanical Engineers", "Electrical Engineers", "Civil Engineers", "Project Engineers"]
-  },
-  {
-    icon: <Users className="w-8 h-8" />,
-    title: "Human Resources (HR)",
-    description: "HR professionals including talent acquisition specialists, HR managers, and organizational development",
-    href: "/industries/human-resources",
-    roles: ["HR Managers", "Talent Acquisition", "HR Business Partners", "Compensation Analysts"]
-  },
-  {
-    icon: <DollarSign className="w-8 h-8" />,
-    title: "Sales",
-    description: "Sales professionals from account executives to sales directors and business development roles",
-    href: "/industries/sales",
-    roles: ["Account Executives", "Sales Directors", "Business Development", "Sales Engineers"]
-  },
-  {
-    icon: <Calculator className="w-8 h-8" />,
-    title: "Accounting",
-    description: "Accounting and finance professionals including CPAs, financial analysts, and accounting managers",
-    href: "/industries/accounting",
-    roles: ["CPAs", "Financial Analysts", "Accounting Managers", "Tax Specialists"]
+    icon: <Heart className="w-8 h-8" />,
+    title: "Healthcare",
+    description: "Medical professionals, administrators, technicians, and healthcare support staff",
+    href: "/industries/healthcare",
+    roles: ["Medical Professionals", "Healthcare Admins", "Technicians", "Support Staff"]
   },
   {
     icon: <Scale className="w-8 h-8" />,
@@ -62,6 +41,27 @@ const industries = [
     description: "Manufacturing professionals from operations to supply chain management and quality control",
     href: "/industries/manufacturing",
     roles: ["Operations Managers", "Quality Engineers", "Supply Chain", "Plant Managers"]
+  },
+  {
+    icon: <Calculator className="w-8 h-8" />,
+    title: "Sales & Marketing",
+    description: "Sales executives, marketing managers, business development professionals, and revenue drivers",
+    href: "/industries/sales-marketing",
+    roles: ["Sales Executives", "Marketing Managers", "Business Development", "Revenue Specialists"]
+  },
+  {
+    icon: <Crown className="w-8 h-8" />,
+    title: "Leadership",
+    description: "C-Suite executives, VPs, directors, and senior management professionals",
+    href: "/industries/leadership",
+    roles: ["C-Suite Executives", "VPs", "Directors", "Senior Management"]
+  },
+  {
+    icon: <Users className="w-8 h-8" />,
+    title: "Operations",
+    description: "Operations managers, business analysts, project coordinators, and process specialists",
+    href: "/industries/operations",
+    roles: ["Operations Managers", "Business Analysts", "Project Coordinators", "Process Specialists"]
   }
 ];
 

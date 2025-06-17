@@ -1,4 +1,3 @@
-
 import Index from "./pages/Index";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
@@ -22,6 +21,12 @@ import Glossary from "./pages/Glossary";
 
 // Blog post imports
 import SideHustlesGigEconomy from "./pages/blog/SideHustlesGigEconomy";
+
+// Tool page imports
+import AISourcingAgent from "./pages/tools/AISourcingAgent";
+import AIOutreachAgent from "./pages/tools/AIOutreachAgent";
+import AISubmissionAgent from "./pages/tools/AISubmissionAgent";
+import ATSBypassEngine from "./pages/tools/ATSBypassEngine";
 
 export const navItems = [
   {
@@ -108,5 +113,22 @@ export const navItems = [
   {
     to: "/blog/side-hustles-gig-economy",
     page: <SideHustlesGigEconomy />,
+  },
+  // Tool routes
+  {
+    to: "/tools/ai-sourcing-agent",
+    page: <AISourcingAgent />,
+  },
+  {
+    to: "/tools/ai-outreach-agent",
+    page: <AIOutreachAgent />,
+  },
+  {
+    to: "/tools/ai-submission-agent",
+    page: <AISubmissionAgent />,
+  },
+  {
+    to: "/tools/ats-bypass-engine",
+    page: <ATSBypassEngine />,
   },
 ];
