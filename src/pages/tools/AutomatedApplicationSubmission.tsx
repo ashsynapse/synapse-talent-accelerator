@@ -1,50 +1,50 @@
 
 import React from "react";
 import SolutionPageTemplate from "../../components/SolutionPageTemplate";
-import { Send, CheckCircle, Zap, Clock, TrendingUp, Users } from "lucide-react";
+import { Send, CheckCircle, Zap, Clock, Calendar, Users } from "lucide-react";
 
 const AutomatedApplicationSubmission = () => {
   const features = [
-    "Intelligent application routing and submission",
-    "Automated candidate qualification checks",
-    "Multi-platform application management",
-    "Real-time application status tracking",
-    "Customizable submission workflows",
-    "Integration with major job boards",
-    "Automated follow-up sequences",
-    "Compliance and audit trail maintenance"
+    "End-to-end candidate submission coordination",
+    "Personalized outreach message automation",
+    "Intelligent interview scheduling system",
+    "Automated post-interview follow-ups",
+    "Seamless engagement tracking",
+    "Smart reminder notifications",
+    "Multi-stage process management",
+    "Real-time submission status updates"
   ];
 
   const benefits = [
     {
-      title: "Instant Submissions",
-      description: "Automatically submit qualified candidates to relevant positions within minutes",
+      title: "Complete Automation",
+      description: "Handles the entire submission process from initial outreach to final follow-up",
       icon: <Zap className="w-8 h-8 text-white" />
     },
     {
-      title: "Quality Control",
-      description: "Built-in qualification checks ensure only suitable candidates are submitted",
-      icon: <CheckCircle className="w-8 h-8 text-white" />
+      title: "Smart Coordination",
+      description: "Intelligently coordinates interview scheduling and manages all communication",
+      icon: <Calendar className="w-8 h-8 text-white" />
     },
     {
-      title: "Streamlined Process",
-      description: "Eliminate manual application processes and reduce time-to-submission",
-      icon: <Clock className="w-8 h-8 text-white" />
+      title: "Seamless Engagement",
+      description: "Ensures continuous candidate engagement with automated reminders and updates",
+      icon: <CheckCircle className="w-8 h-8 text-white" />
     }
   ];
 
   const caseStudy = {
-    title: "Recruitment Agency Automates Applications",
-    description: "A recruitment agency was spending 40 hours per week manually submitting applications. Our Automated Application Submission system reduced this to 2 hours while increasing submission accuracy by 85%.",
-    results: ["40 hours reduced to 2 hours", "85% accuracy improvement", "500+ weekly submissions"]
+    title: "Recruitment Agency Streamlines Operations",
+    description: "A busy recruitment agency was manually managing 200+ candidate submissions weekly. Our AI Submission Agent automated their entire process, reducing manual work by 85% while improving candidate response rates and interview completion rates.",
+    results: ["85% manual work reduction", "200+ weekly submissions", "Higher completion rates"]
   };
 
   return (
     <SolutionPageTemplate
       title="Automated Application Submission"
-      description="Streamlined application process that automatically submits qualified candidates to relevant positions"
+      description="AI submission agent that handles end-to-end candidate coordination with personalized outreach and scheduling"
       heroTitle="Automated Application Submission"
-      heroDescription="Eliminate manual application processes with intelligent automation. Our system automatically submits qualified candidates to the right positions, ensuring faster placements and higher success rates."
+      heroDescription="Handles end-to-end candidate submission by coordinating personalized outreach, interview scheduling, and post-interview follow-ups, ensuring seamless engagement and reminders throughout the process."
       features={features}
       benefits={benefits}
       caseStudy={caseStudy}

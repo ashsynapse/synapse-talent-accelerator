@@ -5,14 +5,14 @@ import { Search, Target, Zap, Clock, TrendingUp, Users } from "lucide-react";
 
 const SmartCandidateSourcing = () => {
   const features = [
-    "Real-time candidate polling and fit score analysis",
-    "Automated background talent discovery",
-    "Multi-platform candidate aggregation",
-    "Intelligent matching algorithms",
-    "Continuous candidate pool monitoring",
-    "Advanced filtering and ranking systems",
-    "Behavioral pattern recognition",
-    "Skills gap analysis and recommendations"
+    "Automatic job posting scanning and analysis",
+    "Continuous background candidate sourcing",
+    "Real-time candidate fit scoring and ranking",
+    "Top-matching candidate identification",
+    "Automated candidate discovery pipeline",
+    "Smart talent pool monitoring",
+    "Intelligent candidate shortlisting",
+    "Live status updates from discovery to selection"
   ];
 
   const benefits = [
@@ -27,24 +27,24 @@ const SmartCandidateSourcing = () => {
       icon: <Target className="w-8 h-8 text-white" />
     },
     {
-      title: "Continuous Polling",
-      description: "Background system continuously polls candidate pools for the best matches",
+      title: "Continuous Sourcing",
+      description: "Background system continuously sources the best talent while you focus on other tasks",
       icon: <Zap className="w-8 h-8 text-white" />
     }
   ];
 
   const caseStudy = {
-    title: "Tech Startup Finds Perfect Developers",
-    description: "A fast-growing startup posted 5 developer positions. Our Smart Candidate Sourcing system automatically identified and scored 150 candidates within the first hour, delivering the top 20 matches with 95%+ fit scores.",
-    results: ["150 candidates sourced", "20 top matches identified", "1 hour response time"]
+    title: "Tech Company Accelerates Hiring Process",
+    description: "A growing technology company needed to fill 15 developer positions quickly. Our Smart Candidate Sourcing automatically scanned job postings and sourced 300+ qualified candidates within 48 hours, delivering the top 50 matches with detailed fit scores.",
+    results: ["300+ candidates sourced", "Top 50 matches delivered", "48-hour turnaround"]
   };
 
   return (
     <SolutionPageTemplate
       title="Smart Candidate Sourcing"
-      description="Automated talent discovery system that works in the background to identify and score candidates in real-time"
+      description="AI-powered sourcing agent that automatically scans job postings and continuously sources top-matching candidates"
       heroTitle="Smart Candidate Sourcing"
-      heroDescription="Transform your recruitment with automated candidate discovery. Our intelligent system works in the background, continuously polling candidate pools and delivering real-time fit scores for every job posting."
+      heroDescription="Automatically scans job postings and continuously sources top-matching candidates in the background, offering real-time status updates from discovery to shortlisting."
       features={features}
       benefits={benefits}
       caseStudy={caseStudy}

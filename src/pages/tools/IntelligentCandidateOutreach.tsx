@@ -5,46 +5,46 @@ import { Users, MessageCircle, Target, Clock, TrendingUp, Heart } from "lucide-r
 
 const IntelligentCandidateOutreach = () => {
   const features = [
-    "Personalized outreach message generation",
-    "Behavioral pattern analysis for timing",
+    "Hyper-personalized outreach campaign creation",
+    "Automated candidate engagement sequences",
+    "Intelligent follow-up message timing",
+    "Smart interview coordination system",
+    "Real-time engagement tracking",
+    "Behavioral pattern analysis",
     "Multi-channel communication management",
-    "Response tracking and optimization",
-    "Automated follow-up sequences",
-    "Candidate preference learning",
-    "A/B testing for message effectiveness",
-    "Integration with communication platforms"
+    "Continuous candidate relationship nurturing"
   ];
 
   const benefits = [
     {
-      title: "Personalized Engagement",
-      description: "Smart personalization based on candidate preferences and behavior patterns",
+      title: "Hyper-Personalization",
+      description: "Delivers highly personalized outreach campaigns tailored to each candidate's profile",
       icon: <Heart className="w-8 h-8 text-white" />
     },
     {
-      title: "Optimal Timing",
-      description: "Intelligent timing optimization for maximum candidate response rates",
-      icon: <Clock className="w-8 h-8 text-white" />
+      title: "Smart Automation",
+      description: "Automated follow-ups and interview coordination keep candidates engaged effortlessly",
+      icon: <Target className="w-8 h-8 text-white" />
     },
     {
-      title: "Higher Response Rates",
-      description: "Achieve 3x higher response rates with personalized, intelligent outreach",
-      icon: <TrendingUp className="w-8 h-8 text-white" />
+      title: "Real-Time Updates",
+      description: "Stay informed with live status updates throughout the entire engagement process",
+      icon: <Clock className="w-8 h-8 text-white" />
     }
   ];
 
   const caseStudy = {
     title: "Executive Search Firm Improves Engagement",
-    description: "An executive search firm was struggling with low candidate response rates. Our Intelligent Candidate Outreach system increased their response rates from 15% to 45% while reducing outreach time by 60%.",
-    results: ["45% response rate", "60% time reduction", "3x engagement improvement"]
+    description: "An executive search firm struggled with low candidate response rates for senior positions. Our AI Outreach Agent implemented hyper-personalized campaigns that increased response rates from 12% to 58% while maintaining high-quality candidate interactions.",
+    results: ["58% response rate achieved", "400% engagement improvement", "Premium candidate quality"]
   };
 
   return (
     <SolutionPageTemplate
       title="Intelligent Candidate Outreach"
-      description="Smart candidate engagement system that personalizes outreach based on candidate preferences and behavior"
+      description="AI outreach agent that delivers hyper-personalized campaigns with intelligent follow-ups and coordination"
       heroTitle="Intelligent Candidate Outreach"
-      heroDescription="Revolutionize your candidate engagement with intelligent, personalized outreach. Our system learns from candidate behavior to deliver the right message at the right time through the right channel."
+      heroDescription="Delivers hyper-personalized, automated outreach campaigns to prospective candidates and keeps them engaged with intelligent follow-ups and interview coordination, all while you stay updated in real time."
       features={features}
       benefits={benefits}
       caseStudy={caseStudy}

@@ -26,7 +26,7 @@ import SideHustlesGigEconomy from "./pages/blog/SideHustlesGigEconomy";
 import SmartCandidateSourcing from "./pages/tools/SmartCandidateSourcing";
 import AutomatedApplicationSubmission from "./pages/tools/AutomatedApplicationSubmission";
 import IntelligentCandidateOutreach from "./pages/tools/IntelligentCandidateOutreach";
-import SmartATSIntegration from "./pages/tools/SmartATSIntegration";
+import ATSBypassEngine from "./pages/tools/ATSBypassEngine";
 
 export const navItems = [
   {
@@ -128,7 +128,7 @@ export const navItems = [
     page: <IntelligentCandidateOutreach />,
   },
   {
-    to: "/tools/smart-ats-integration",
-    page: <SmartATSIntegration />,
+    to: "/tools/ats-bypass-engine",
+    page: <ATSBypassEngine />,
   },
 ];
