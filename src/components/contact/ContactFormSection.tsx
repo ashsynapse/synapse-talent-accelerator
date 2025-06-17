@@ -8,9 +8,9 @@ const ContactFormSection = () => {
   const { addToRefs } = useScrollAnimation();
 
   return (
-    <section className="py-8 bg-white">
+    <section className="pt-24 pb-8 bg-white">
       <div className="container-wide">
-        <div className="grid lg:grid-cols-12 gap-6 items-start">
+        <div className="grid lg:grid-cols-12 gap-8 items-start">
           {/* Left Column - Hero Text + Feature Cards */}
           <div className="lg:col-span-4 space-y-4">
             {/* Hero Text */}

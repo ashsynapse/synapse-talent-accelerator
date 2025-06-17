@@ -55,8 +55,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-5 shadow-medium">
-      <div className="mb-5">
+    <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-medium h-fit">
+      <div className="mb-4">
         <h2 className="text-xl font-bold text-synapse-dark mb-2">
           Get in Touch
         </h2>
@@ -65,8 +65,8 @@ const ContactForm = () => {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <div className="grid md:grid-cols-2 gap-3">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid md:grid-cols-2 gap-4">
           <div className="space-y-1.5">
             <Label htmlFor="fullName" className="text-sm font-medium">Full Name *</Label>
             <Input
@@ -75,7 +75,7 @@ const ContactForm = () => {
               onChange={(e) => handleInputChange("fullName", e.target.value)}
               placeholder="John Smith"
               required
-              className="h-9 text-sm"
+              className="h-10 text-sm"
             />
           </div>
           
@@ -88,12 +88,12 @@ const ContactForm = () => {
               onChange={(e) => handleInputChange("email", e.target.value)}
               placeholder="john@company.com"
               required
-              className="h-9 text-sm"
+              className="h-10 text-sm"
             />
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-3">
+        <div className="grid md:grid-cols-2 gap-4">
           <div className="space-y-1.5">
             <Label htmlFor="phoneNumber" className="text-sm font-medium">Phone Number</Label>
             <Input
@@ -102,7 +102,7 @@ const ContactForm = () => {
               value={formData.phoneNumber}
               onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
               placeholder="+1 (555) 123-4567"
-              className="h-9 text-sm"
+              className="h-10 text-sm"
             />
           </div>
           
@@ -113,7 +113,7 @@ const ContactForm = () => {
               value={formData.companyName}
               onChange={(e) => handleInputChange("companyName", e.target.value)}
               placeholder="Acme Corp"
-              className="h-9 text-sm"
+              className="h-10 text-sm"
             />
           </div>
         </div>
@@ -121,7 +121,7 @@ const ContactForm = () => {
         <div className="space-y-1.5">
           <Label htmlFor="reasonForContact" className="text-sm font-medium">Reason for Contact *</Label>
           <Select value={formData.reasonForContact} onValueChange={(value) => handleInputChange("reasonForContact", value)}>
-            <SelectTrigger className="h-9 text-sm">
+            <SelectTrigger className="h-10 text-sm">
               <SelectValue placeholder="Select reason for contact" />
             </SelectTrigger>
             <SelectContent>
@@ -140,7 +140,7 @@ const ContactForm = () => {
             value={formData.message}
             onChange={(e) => handleInputChange("message", e.target.value)}
             placeholder="Please provide details about your inquiry..."
-            rows={3}
+            rows={4}
             required
             className="resize-none text-sm"
           />
@@ -148,7 +148,7 @@ const ContactForm = () => {
 
         <Button 
           type="submit" 
-          className="w-full btn-primary text-sm py-2 h-10 mt-4"
+          className="w-full btn-primary text-sm py-2.5 h-11 mt-4"
         >
           Submit Request
         </Button>
