@@ -118,7 +118,7 @@ const MainHeader = () => {
       ]
     },
     { 
-      label: "Products", 
+      label: "Tools", 
       href: "/recruitment-tools",
       submenu: [
         { label: "Intelligent Candidate Sourcing", href: "/recruitment-tools" },
@@ -208,7 +208,7 @@ const MainHeader = () => {
               {item.submenu && (
                 <div className="absolute top-full left-1/2 transform -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pt-2">
                   <div className="bg-white/95 backdrop-blur-lg shadow-medium border border-white/30 rounded-xl p-6">
-                    <div className="grid grid-cols-2 gap-4 min-w-[500px]">
+                    <div className="grid grid-cols-3 gap-4 min-w-[750px]">
                       {item.submenu.map((subItem) => {
                         const IconComponent = getIconForSubmenu(subItem.label);
                         const description = getDescriptionForSubmenu(subItem.label);

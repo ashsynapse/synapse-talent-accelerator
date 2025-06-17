@@ -30,14 +30,14 @@ const products = [
 const Products = () => {
   return (
     <PageTemplate 
-      title="Recruitment Products"
+      title="Recruitment Tools"
       description="Intelligent recruitment tools and products for modern hiring needs"
     >
       <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Recruitment Products
+              Recruitment Tools
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
               Cutting-edge intelligent tools designed to streamline your recruitment process and deliver exceptional results for your hiring needs.
