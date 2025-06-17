@@ -1,4 +1,3 @@
-
 import Index from "./pages/Index";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
@@ -22,6 +21,12 @@ import Glossary from "./pages/Glossary";
 
 // Blog post imports
 import SideHustlesGigEconomy from "./pages/blog/SideHustlesGigEconomy";
+
+// Tool pages imports
+import SmartCandidateSourcing from "./pages/tools/SmartCandidateSourcing";
+import AutomatedApplicationSubmission from "./pages/tools/AutomatedApplicationSubmission";
+import IntelligentCandidateOutreach from "./pages/tools/IntelligentCandidateOutreach";
+import SmartATSIntegration from "./pages/tools/SmartATSIntegration";
 
 export const navItems = [
   {
@@ -108,5 +113,22 @@ export const navItems = [
   {
     to: "/blog/side-hustles-gig-economy",
     page: <SideHustlesGigEconomy />,
+  },
+  // Tool page routes
+  {
+    to: "/tools/smart-candidate-sourcing",
+    page: <SmartCandidateSourcing />,
+  },
+  {
+    to: "/tools/automated-application-submission",
+    page: <AutomatedApplicationSubmission />,
+  },
+  {
+    to: "/tools/intelligent-candidate-outreach",
+    page: <IntelligentCandidateOutreach />,
+  },
+  {
+    to: "/tools/smart-ats-integration",
+    page: <SmartATSIntegration />,
   },
 ];
