@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Plus, Minus, 
@@ -215,25 +214,21 @@ const MainHeader = () => {
                 <div className="absolute top-full left-1/2 transform -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pt-2">
                   {item.label === "Industries" ? (
                     <div className="bg-white/95 backdrop-blur-lg shadow-medium border border-white/30 rounded-xl p-8">
-                      <div className="grid grid-cols-3 gap-6 min-w-[900px]">
+                      <div className="grid grid-cols-3 gap-8 min-w-[600px]">
                         {item.submenu.map((subItem) => {
                           const IconComponent = getIconForSubmenu(subItem.label);
-                          const description = getDescriptionForSubmenu(subItem.label);
                           return (
                             <a
                               key={subItem.label}
                               href={subItem.href}
-                              className="group/item flex flex-col items-center p-6 rounded-xl hover:bg-white/80 hover:shadow-soft transition-all duration-300 border border-transparent hover:border-synapse-primary/20 text-center h-[140px]"
+                              className="group/item flex flex-col items-center p-4 rounded-xl hover:bg-white/80 hover:shadow-soft transition-all duration-300 border border-transparent hover:border-synapse-primary/20 text-center"
                             >
-                              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-synapse-primary to-synapse-secondary flex items-center justify-center mb-4 group-hover/item:scale-110 transition-transform duration-300">
-                                <IconComponent className="h-8 w-8 text-white" />
+                              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-synapse-primary to-synapse-secondary flex items-center justify-center mb-3 group-hover/item:scale-110 transition-transform duration-300">
+                                <IconComponent className="h-6 w-6 text-white" />
                               </div>
-                              <h3 className="font-bold text-synapse-dark group-hover/item:text-synapse-primary transition-colors text-lg mb-2 leading-tight">
+                              <h3 className="font-semibold text-synapse-dark group-hover/item:text-synapse-primary transition-colors text-sm leading-tight">
                                 {subItem.label}
                               </h3>
-                              <p className="text-sm text-synapse-gray leading-relaxed opacity-0 group-hover/item:opacity-100 transition-opacity duration-200 overflow-hidden">
-                                {description}
-                              </p>
                             </a>
                           );
                         })}

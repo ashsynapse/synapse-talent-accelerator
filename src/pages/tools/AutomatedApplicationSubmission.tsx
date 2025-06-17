@@ -33,12 +33,6 @@ const AutomatedApplicationSubmission = () => {
     }
   ];
 
-  const caseStudy = {
-    title: "Recruitment Agency Streamlines Operations",
-    description: "A busy recruitment agency was manually managing 200+ candidate submissions weekly. Our AI Submission Agent automated their entire process, reducing manual work by 85% while improving candidate response rates and interview completion rates.",
-    results: ["85% manual work reduction", "200+ weekly submissions", "Higher completion rates"]
-  };
-
   return (
     <SolutionPageTemplate
       title="Automated Application Submission"
@@ -47,7 +41,6 @@ const AutomatedApplicationSubmission = () => {
       heroDescription="Handles end-to-end candidate submission by coordinating personalized outreach, interview scheduling, and post-interview follow-ups, ensuring seamless engagement and reminders throughout the process."
       features={features}
       benefits={benefits}
-      caseStudy={caseStudy}
     />
   );
 };

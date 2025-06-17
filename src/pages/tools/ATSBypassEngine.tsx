@@ -33,12 +33,6 @@ const ATSBypassEngine = () => {
     }
   ];
 
-  const caseStudy = {
-    title: "Professional Services Firm Increases Pass Rates",
-    description: "A professional services firm's candidates were struggling with ATS screening failures. Our ATS Bypass Engine analyzed their target companies' systems and optimized candidate resumes, resulting in a 340% increase in initial screening pass rates.",
-    results: ["340% screening pass rate increase", "85% ATS compatibility", "Zero manual optimization needed"]
-  };
-
   return (
     <SolutionPageTemplate
       title="ATS Bypass Engine"
@@ -47,7 +41,6 @@ const ATSBypassEngine = () => {
       heroDescription="This smart resume optimizer reverse-engineers applicant tracking systems (ATS) to instantly generate a stealth-enhanced resume with invisible keyword embedding, a personalized screening failure report, and a data-driven success score to outmaneuver digital hiring filters."
       features={features}
       benefits={benefits}
-      caseStudy={caseStudy}
     />
   );
 };

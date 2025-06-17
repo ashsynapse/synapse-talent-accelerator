@@ -31,13 +31,12 @@ const SolutionPageTemplate = ({
   heroTitle,
   heroDescription,
   features,
-  benefits,
-  caseStudy
+  benefits
 }: SolutionPageTemplateProps) => {
   return (
     <PageTemplate title={title} description={description}>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-12 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
@@ -60,7 +59,7 @@ const SolutionPageTemplate = ({
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container-wide">
           <h2 className="text-3xl font-bold text-center mb-12 text-synapse-dark">
             Key Features
@@ -79,7 +78,7 @@ const SolutionPageTemplate = ({
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-synapse-lighter/30">
+      <section className="py-12 bg-synapse-lighter/30">
         <div className="container-wide">
           <h2 className="text-3xl font-bold text-center mb-12 text-synapse-dark">
             Benefits
@@ -103,38 +102,6 @@ const SolutionPageTemplate = ({
           </div>
         </div>
       </section>
-
-      {/* Case Study Section */}
-      {caseStudy && (
-        <section className="py-16 bg-white">
-          <div className="container-wide">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12 text-synapse-dark">
-                Success Story
-              </h2>
-              <Card className="border-0 shadow-medium">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-synapse-dark">
-                    {caseStudy.title}
-                  </h3>
-                  <p className="text-synapse-gray mb-6 text-lg">
-                    {caseStudy.description}
-                  </p>
-                  <div className="grid md:grid-cols-3 gap-6">
-                    {caseStudy.results.map((result, index) => (
-                      <div key={index} className="text-center">
-                        <div className="text-2xl font-bold text-synapse-primary mb-2">
-                          {result}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-      )}
 
       <FinalCtaSection />
     </PageTemplate>

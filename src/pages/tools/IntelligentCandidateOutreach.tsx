@@ -33,12 +33,6 @@ const IntelligentCandidateOutreach = () => {
     }
   ];
 
-  const caseStudy = {
-    title: "Executive Search Firm Improves Engagement",
-    description: "An executive search firm struggled with low candidate response rates for senior positions. Our AI Outreach Agent implemented hyper-personalized campaigns that increased response rates from 12% to 58% while maintaining high-quality candidate interactions.",
-    results: ["58% response rate achieved", "400% engagement improvement", "Premium candidate quality"]
-  };
-
   return (
     <SolutionPageTemplate
       title="Intelligent Candidate Outreach"
@@ -47,7 +41,6 @@ const IntelligentCandidateOutreach = () => {
       heroDescription="Delivers hyper-personalized, automated outreach campaigns to prospective candidates and keeps them engaged with intelligent follow-ups and interview coordination, all while you stay updated in real time."
       features={features}
       benefits={benefits}
-      caseStudy={caseStudy}
     />
   );
 };

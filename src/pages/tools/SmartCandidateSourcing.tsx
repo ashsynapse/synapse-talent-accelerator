@@ -33,12 +33,6 @@ const SmartCandidateSourcing = () => {
     }
   ];
 
-  const caseStudy = {
-    title: "Tech Company Accelerates Hiring Process",
-    description: "A growing technology company needed to fill 15 developer positions quickly. Our Smart Candidate Sourcing automatically scanned job postings and sourced 300+ qualified candidates within 48 hours, delivering the top 50 matches with detailed fit scores.",
-    results: ["300+ candidates sourced", "Top 50 matches delivered", "48-hour turnaround"]
-  };
-
   return (
     <SolutionPageTemplate
       title="Smart Candidate Sourcing"
@@ -47,7 +41,6 @@ const SmartCandidateSourcing = () => {
       heroDescription="Automatically scans job postings and continuously sources top-matching candidates in the background, offering real-time status updates from discovery to shortlisting."
       features={features}
       benefits={benefits}
-      caseStudy={caseStudy}
     />
   );
 };
