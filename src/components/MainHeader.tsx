@@ -219,13 +219,13 @@ const MainHeader = () => {
                 <NavigationMenuItem key={item.title}>
                   <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[500px] gap-3 p-4 md:w-[450px] md:grid-cols-2 lg:w-[500px]">
+                    <div className="grid w-[600px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                       {item.children?.map((child) => (
                         <div key={child.to} className="group">
                           <NavigationMenuLink asChild>
                             <a
                               href={child.to}
-                              className="flex h-full w-full select-none flex-col justify-start rounded-md bg-gradient-to-b from-muted/50 to-muted p-3 no-underline outline-none focus:shadow-md hover:bg-accent transition-colors"
+                              className="flex h-full w-full select-none flex-col justify-start rounded-md bg-gradient-to-b from-muted/50 to-muted p-4 no-underline outline-none focus:shadow-md hover:bg-accent transition-colors"
                             >
                               <div className="mb-2 flex items-center gap-2">
                                 {child.icon && <child.icon className="h-4 w-4 text-synapse-primary" />}
@@ -248,6 +248,7 @@ const MainHeader = () => {
           </NavigationMenu>
 
           <Button variant="secondary">Book a Demo</Button>
+          <ModeToggle />
         </div>
 
         <Sheet>
@@ -279,6 +280,9 @@ const MainHeader = () => {
             </div>
             <div className="p-6">
               <Button variant="secondary" className="w-full">Book a Demo</Button>
+            </div>
+            <div className="p-6 border-t">
+              <ModeToggle />
             </div>
           </SheetContent>
         </Sheet>
