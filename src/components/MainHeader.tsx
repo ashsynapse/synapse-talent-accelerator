@@ -6,7 +6,7 @@ import { Menu, X, ChevronDown, Plus, Minus,
          Briefcase, Code, TrendingUp, Heart, Scale,
          Factory, Calculator, Crown, FileText, 
          Calendar, Phone, Info, HelpCircle, Target,
-         Globe, Clock, GraduationCap, Shield, Brain, Send, Database } from "lucide-react";
+         Globe, Clock, GraduationCap, Shield, Brain } from "lucide-react";
 
 const MainHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,10 +45,6 @@ const MainHeader = () => {
       "Intelligent Candidate Sourcing": Bot,
       "Pre-Employment Smart Screening": Shield,
       "Intelligent Resume Analysis": Brain,
-      "Smart Candidate Sourcing": Search,
-      "Automated Application Submission": Send,
-      "Intelligent Candidate Outreach": Users,
-      "Smart ATS Integration": Database,
       "Technology": Code,
       "Finance": TrendingUp,
       "Healthcare": Heart,
@@ -81,10 +77,9 @@ const MainHeader = () => {
       "Permanent Placement": "Long-term hires",
       "Contingent Staffing": "Temporary workforce",
       "Apprenticeship Smart Sourcing": "Entry-level talent",
-      "Smart Candidate Sourcing": "Automated talent discovery",
-      "Automated Application Submission": "Streamlined application process",
-      "Intelligent Candidate Outreach": "Smart candidate engagement",
-      "Smart ATS Integration": "Seamless system connectivity",
+      "Intelligent Candidate Sourcing": "Automated talent search",
+      "Pre-Employment Smart Screening": "Advanced candidate assessment",
+      "Intelligent Resume Analysis": "Smart resume parsing",
       "Technology": "Tech talent solutions",
       "Finance": "Financial sector expertise",
       "Healthcare": "Medical professionals",
@@ -126,10 +121,9 @@ const MainHeader = () => {
       label: "Tools", 
       href: "/recruitment-tools",
       submenu: [
-        { label: "Smart Candidate Sourcing", href: "/tools/smart-candidate-sourcing" },
-        { label: "Automated Application Submission", href: "/tools/automated-application-submission" },
-        { label: "Intelligent Candidate Outreach", href: "/tools/intelligent-candidate-outreach" },
-        { label: "Smart ATS Integration", href: "/tools/smart-ats-integration" }
+        { label: "Intelligent Candidate Sourcing", href: "/recruitment-tools" },
+        { label: "Pre-Employment Smart Screening", href: "/recruitment-tools" },
+        { label: "Intelligent Resume Analysis", href: "/recruitment-tools" }
       ]
     },
     { 
@@ -213,61 +207,33 @@ const MainHeader = () => {
               
               {item.submenu && (
                 <div className="absolute top-full left-1/2 transform -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pt-2">
-                  {item.label === "Industries" ? (
-                    <div className="bg-white/95 backdrop-blur-lg shadow-medium border border-white/30 rounded-xl p-8">
-                      <div className="grid grid-cols-4 gap-6 min-w-[900px]">
-                        {item.submenu.map((subItem) => {
-                          const IconComponent = getIconForSubmenu(subItem.label);
-                          const description = getDescriptionForSubmenu(subItem.label);
-                          return (
-                            <a
-                              key={subItem.label}
-                              href={subItem.href}
-                              className="group/item flex flex-col items-center p-6 rounded-xl hover:bg-white/80 hover:shadow-soft transition-all duration-300 border border-transparent hover:border-synapse-primary/20 text-center"
-                            >
-                              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-synapse-primary to-synapse-secondary flex items-center justify-center mb-4 group-hover/item:scale-110 transition-transform duration-300">
-                                <IconComponent className="h-8 w-8 text-white" />
-                              </div>
-                              <h3 className="font-bold text-synapse-dark group-hover/item:text-synapse-primary transition-colors text-lg mb-3">
+                  <div className="bg-white/95 backdrop-blur-lg shadow-medium border border-white/30 rounded-xl p-6">
+                    <div className="grid grid-cols-3 gap-4 min-w-[750px]">
+                      {item.submenu.map((subItem) => {
+                        const IconComponent = getIconForSubmenu(subItem.label);
+                        const description = getDescriptionForSubmenu(subItem.label);
+                        return (
+                          <a
+                            key={subItem.label}
+                            href={subItem.href}
+                            className="group/item flex items-start p-3 rounded-lg hover:bg-white/80 hover:shadow-soft transition-all duration-200 border border-transparent hover:border-synapse-primary/20 h-[72px]"
+                          >
+                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-synapse-primary to-synapse-secondary flex items-center justify-center mr-3 group-hover/item:scale-110 transition-transform duration-200 flex-shrink-0">
+                              <IconComponent className="h-5 w-5 text-white" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <h3 className="font-semibold text-synapse-dark group-hover/item:text-synapse-primary transition-colors text-sm leading-tight mb-1">
                                 {subItem.label}
                               </h3>
-                              <p className="text-sm text-synapse-gray leading-relaxed opacity-0 group-hover/item:opacity-100 transition-opacity duration-200">
+                              <p className="text-xs text-synapse-gray opacity-0 group-hover/item:opacity-100 transition-opacity duration-200 leading-tight">
                                 {description}
                               </p>
-                            </a>
-                          );
-                        })}
-                      </div>
+                            </div>
+                          </a>
+                        );
+                      })}
                     </div>
-                  ) : (
-                    <div className="bg-white/95 backdrop-blur-lg shadow-medium border border-white/30 rounded-xl p-6">
-                      <div className="grid grid-cols-3 gap-4 min-w-[750px]">
-                        {item.submenu.map((subItem) => {
-                          const IconComponent = getIconForSubmenu(subItem.label);
-                          const description = getDescriptionForSubmenu(subItem.label);
-                          return (
-                            <a
-                              key={subItem.label}
-                              href={subItem.href}
-                              className="group/item flex items-start p-3 rounded-lg hover:bg-white/80 hover:shadow-soft transition-all duration-200 border border-transparent hover:border-synapse-primary/20 h-[72px]"
-                            >
-                              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-synapse-primary to-synapse-secondary flex items-center justify-center mr-3 group-hover/item:scale-110 transition-transform duration-200 flex-shrink-0">
-                                <IconComponent className="h-5 w-5 text-white" />
-                              </div>
-                              <div className="flex-1 min-w-0">
-                                <h3 className="font-semibold text-synapse-dark group-hover/item:text-synapse-primary transition-colors text-sm leading-tight mb-1">
-                                  {subItem.label}
-                                </h3>
-                                <p className="text-xs text-synapse-gray opacity-0 group-hover/item:opacity-100 transition-opacity duration-200 leading-tight">
-                                  {description}
-                                </p>
-                              </div>
-                            </a>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  )}
+                  </div>
                 </div>
               )}
             </div>

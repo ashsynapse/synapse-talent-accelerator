@@ -3,33 +3,27 @@ import React from "react";
 import PageTemplate from "../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Search, Send, Users, Database } from "lucide-react";
+import { Brain, Shield, FileSearch } from "lucide-react";
 import FinalCtaSection from "../components/FinalCtaSection";
 
 const products = [
   {
-    icon: <Search className="w-8 h-8" />,
-    title: "Smart Candidate Sourcing",
-    description: "Automated talent discovery system that works in the background to identify and score candidates in real-time",
-    href: "/tools/smart-candidate-sourcing"
+    icon: <Brain className="w-8 h-8" />,
+    title: "Intelligent Candidate Sourcing",
+    description: "Advanced algorithms to identify and source the best candidates from our global talent network",
+    href: "/recruitment-tools"
   },
   {
-    icon: <Send className="w-8 h-8" />,
-    title: "Automated Application Submission",
-    description: "Streamlined application process that automatically submits qualified candidates to relevant positions",
-    href: "/tools/automated-application-submission"
+    icon: <Shield className="w-8 h-8" />,
+    title: "Pre-Employment Smart Screening",
+    description: "Comprehensive background checks and pre-employment screening to ensure quality hires",
+    href: "/recruitment-tools"
   },
   {
-    icon: <Users className="w-8 h-8" />,
-    title: "Intelligent Candidate Outreach",
-    description: "Smart candidate engagement system that personalizes outreach based on candidate preferences and behavior",
-    href: "/tools/intelligent-candidate-outreach"
-  },
-  {
-    icon: <Database className="w-8 h-8" />,
-    title: "Smart ATS Integration",
-    description: "Seamless integration with existing ATS systems for unified candidate management and workflow automation",
-    href: "/tools/smart-ats-integration"
+    icon: <FileSearch className="w-8 h-8" />,
+    title: "Intelligent Resume Analysis",
+    description: "Smart resume parsing and screening to quickly identify qualified candidates",
+    href: "/recruitment-tools"
   }
 ];
 
@@ -50,7 +44,7 @@ const Products = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
               <Card key={index} className="border border-gray-100 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 group h-full">
                 <CardContent className="p-8 flex flex-col h-full">
