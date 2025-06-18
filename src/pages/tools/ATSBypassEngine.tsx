@@ -1,10 +1,9 @@
-
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Ar­rowRight, Zap, FileText, TrendingUp, Shield, Lock, Brain, CheckCircle } from "lucide-react";
+import { ArrowRight, Zap, FileText, TrendingUp, Shield, Lock, Brain, CheckCircle } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const ATSBypassEngine = () => {
