@@ -17,6 +17,16 @@ const ContactForm = () => {
     message: ""
   });
 
+  const validateEmail = (email: string) => {
+    const consumerEmailDomains = [
+      'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'aol.com',
+      'icloud.com', 'live.com', 'msn.com', 'ymail.com', 'mail.com'
+    ];
+    
+    const emailDomain = email.split('@')[1]?.toLowerCase();
+    return !consumerEmailDomains.includes(emailDomain);
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -25,6 +35,16 @@ const ContactForm = () => {
       toast({
         title: "Required fields missing",
         description: "Please fill in all required fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Email validation
+    if (!validateEmail(formData.email)) {
+      toast({
+        title: "Invalid email address",
+        description: "Please use a company email address (not Gmail, Yahoo, Hotmail, etc.)",
         variant: "destructive",
       });
       return;
@@ -54,7 +74,7 @@ const ContactForm = () => {
 
   return (
     <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-medium h-fit sticky top-8">
-      <div className="mb-8">
+      <div className="mb-6">
         <h2 className="text-2xl font-bold text-synapse-dark mb-3">
           Get in Touch
         </h2>
@@ -63,9 +83,9 @@ const ContactForm = () => {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-5">
-        <div className="grid grid-cols-1 gap-5">
-          <div className="space-y-2">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid grid-cols-1 gap-4">
+          <div className="space-y-1.5">
             <Label htmlFor="fullName" className="text-sm font-medium">Full Name *</Label>
             <Input
               id="fullName"
@@ -77,8 +97,8 @@ const ContactForm = () => {
             />
           </div>
           
-          <div className="space-y-2">
-            <Label htmlFor="email" className="text-sm font-medium">Email Address *</Label>
+          <div className="space-y-1.5">
+            <Label htmlFor="email" className="text-sm font-medium">Company Email Address *</Label>
             <Input
               id="email"
               type="email"
@@ -90,7 +110,7 @@ const ContactForm = () => {
             />
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-1.5">
             <Label htmlFor="linkedin" className="text-sm font-medium">LinkedIn Profile *</Label>
             <Input
               id="linkedin"
@@ -103,7 +123,7 @@ const ContactForm = () => {
             />
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-1.5">
             <Label htmlFor="reasonForContact" className="text-sm font-medium">Reason for Contact *</Label>
             <Select value={formData.reasonForContact} onValueChange={(value) => handleInputChange("reasonForContact", value)}>
               <SelectTrigger className="h-11 text-sm">
@@ -118,7 +138,7 @@ const ContactForm = () => {
             </Select>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-1.5">
             <Label htmlFor="message" className="text-sm font-medium">Message *</Label>
             <Textarea
               id="message"
@@ -134,12 +154,12 @@ const ContactForm = () => {
 
         <Button 
           type="submit" 
-          className="w-full btn-primary text-sm py-3 h-12 mt-6"
+          className="w-full btn-primary text-sm py-3 h-12 mt-5"
         >
           Submit Request
         </Button>
         
-        <p className="text-xs text-synapse-gray text-center mt-4">
+        <p className="text-xs text-synapse-gray text-center mt-3">
           By submitting this form, you agree to our privacy policy. We'll never share your information.
         </p>
       </form>
