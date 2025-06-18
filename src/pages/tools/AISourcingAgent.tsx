@@ -1,4 +1,3 @@
-
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -71,84 +70,61 @@ const AISourcingAgent = () => {
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Revolutionize your talent acquisition with an AI agent that automatically scans job postings and continuously sources top-matching candidates in the background, delivering real-time status updates from discovery to shortlisting.
             </p>
-            <Button 
-              className="btn-primary"
-              onClick={() => window.location.href = "/contact"}
-            >
-              Start AI Sourcing <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Challenge Section */}
-      <section className="py-16 bg-white">
-        <div className="container-wide">
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-0 shadow-medium bg-gradient-to-r from-synapse-primary/5 to-synapse-secondary/5">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Search className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h2 className="text-2xl font-bold text-synapse-dark mb-4">
-                      Transform Manual Sourcing Into Intelligent Automation
-                    </h2>
-                    <p className="text-lg text-synapse-gray">
-                      Traditional talent sourcing is time-consuming, inconsistent, and often misses top candidates. Our AI Sourcing Agent revolutionizes recruitment by automatically analyzing job requirements and continuously discovering qualified candidates across multiple platforms, delivering precise matches while you focus on building relationships and closing deals.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Solution Overview Section */}
-      <section className="py-16 bg-synapse-lighter/30">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div>
-              <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-                Intelligent Sourcing That Never Sleeps
-              </h2>
-              <p className="text-lg text-synapse-gray mb-8">
-                Our AI agent continuously monitors job requirements, scans multiple talent databases, and identifies candidates who perfectly match your criteria. With advanced machine learning algorithms, it gets smarter with every search, delivering increasingly precise results.
-              </p>
-              <div className="space-y-3 mb-8">
-                {keyFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
-                    <span className="text-synapse-gray">{feature}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 className="btn-primary"
+                onClick={() => window.location.href = "/contact"}
+              >
+                Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button 
+                variant="outline" 
+                className="border-2 border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white"
                 onClick={() => window.location.href = "/recruitment-tools"}
               >
-                Explore All Tools <ArrowRight className="ml-2 h-4 w-4" />
+                View All Tools <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
-            <div className="bg-white rounded-xl shadow-soft p-8">
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-gradient-to-br from-synapse-primary/10 to-synapse-primary/5 rounded-lg p-4 text-center">
-                  <Users className="w-8 h-8 text-synapse-primary mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-synapse-dark">10x</div>
-                  <div className="text-sm text-synapse-gray">More Candidates</div>
-                </div>
-                <div className="bg-gradient-to-br from-synapse-secondary/10 to-synapse-secondary/5 rounded-lg p-4 text-center">
-                  <Zap className="w-8 h-8 text-synapse-secondary mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-synapse-dark">90%</div>
-                  <div className="text-sm text-synapse-gray">Time Reduction</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Value Proposition */}
+      <section className="py-16 bg-white">
+        <div className="container-wide">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-synapse-dark mb-6">
+                  Intelligent Sourcing That Never Sleeps
+                </h2>
+                <p className="text-synapse-gray mb-6">
+                  Our AI agent continuously monitors job requirements, scans multiple talent databases, and identifies candidates who perfectly match your criteria. With advanced machine learning algorithms, it gets smarter with every search, delivering increasingly precise results.
+                </p>
+                <div className="space-y-4">
+                  {keyFeatures.map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
+                      <span className="text-synapse-gray">{feature}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-synapse-tertiary/10 to-synapse-tertiary/5 rounded-lg p-4 text-center">
-                <Target className="w-8 h-8 text-synapse-tertiary mx-auto mb-2" />
-                <div className="text-2xl font-bold text-synapse-dark">24/7</div>
-                <div className="text-sm text-synapse-gray">Continuous Sourcing</div>
+              
+              <div className="bg-gradient-to-br from-synapse-primary/5 to-synapse-secondary/5 rounded-2xl p-8">
+                <div className="grid grid-cols-1 gap-6">
+                  {coreCapabilities.map((capability, index) => (
+                    <div key={index} className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                        {capability.icon}
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-synapse-dark mb-2">{capability.title}</h4>
+                        <p className="text-sm text-synapse-gray">{capability.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -156,7 +132,7 @@ const AISourcingAgent = () => {
       </section>
 
       {/* Business Impact Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -184,11 +160,27 @@ const AISourcingAgent = () => {
               </Card>
             ))}
           </div>
+          
+          {/* CTA Section - Similar to Solutions Pages */}
+          <div className="max-w-4xl mx-auto text-center mt-16">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-6">
+              Ready to Transform Your Talent Sourcing?
+            </h2>
+            <p className="text-lg text-synapse-gray mb-8 max-w-2xl mx-auto">
+              Join leading companies who are already using AI Sourcing Agent to discover top talent faster and more efficiently than ever before.
+            </p>
+            <Button 
+              className="btn-primary text-lg px-8 py-3"
+              onClick={() => window.location.href = "/contact"}
+            >
+              Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* How It Works Process */}
-      <section className="py-16 bg-synapse-lighter/30">
+      <section className="py-16 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -259,38 +251,6 @@ const AISourcingAgent = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Product Tour Section */}
-      <section className="py-16 bg-white">
-        <div className="container-wide">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              Product Tour: See AI Sourcing in Action
-            </h2>
-            <h3 className="text-xl font-semibold text-synapse-primary mb-6">
-              Intelligent candidate sourcing starts here
-            </h3>
-            <p className="text-lg text-synapse-gray mb-8">
-              With our platform, you can automatically analyze job requirements, continuously source qualified candidates, and receive real-time updates on your talent pipeline. Experience our world-class AI sourcing agent in action.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                className="btn-primary"
-                onClick={() => window.location.href = "/contact"}
-              >
-                Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white"
-                onClick={() => window.location.href = "/recruitment-tools"}
-              >
-                Explore All Tools <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
             </div>
           </div>
         </div>
