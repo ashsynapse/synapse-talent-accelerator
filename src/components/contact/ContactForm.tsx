@@ -1,4 +1,5 @@
 
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -74,7 +75,7 @@ const ContactForm = () => {
 
   return (
     <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-medium h-fit sticky top-8">
-      <div className="mb-8">
+      <div className="mb-10">
         <h2 className="text-2xl lg:text-3xl font-bold text-synapse-dark mb-4 leading-tight">
           Get in Touch
         </h2>
