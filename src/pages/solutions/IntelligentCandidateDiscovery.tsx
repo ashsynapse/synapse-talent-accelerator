@@ -98,9 +98,9 @@ const IntelligentCandidateDiscovery = () => {
                         {feature.icon}
                       </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2 text-synapse-dark">{feature.title}</h3>
-                      <p className="text-synapse-gray">{feature.description}</p>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-xl font-bold mb-2 text-synapse-dark break-words">{feature.title}</h3>
+                      <p className="text-synapse-gray break-words">{feature.description}</p>
                     </div>
                   </div>
                 </CardContent>

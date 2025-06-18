@@ -12,7 +12,7 @@ const ContactFormSection = () => {
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
           {/* Mobile: Header Section - Shows first on mobile */}
-          <div className="lg:hidden mb-8">
+          <div className="lg:hidden mb-6">
             <h1 className="text-3xl lg:text-4xl font-bold text-synapse-dark mb-4">
               Ready to Transform Your Hiring?
             </h1>
