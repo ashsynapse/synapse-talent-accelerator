@@ -1,180 +1,88 @@
 
 import React from "react";
-import PageTemplate from "../../components/PageTemplate";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplate";
 import { Clock, Zap, Users, Settings, Briefcase, Target, Calendar, TrendingUp } from "lucide-react";
-import FinalCtaSection from "../../components/FinalCtaSection";
 
 const ContingentStaffing = () => {
-  const keyFeatures = [
+  const mainChallenge = {
+    title: "Reduce Workforce Flexibility Challenges and Control Costs",
+    description: "Traditional staffing approaches struggle with fluctuating demands, seasonal peaks, and urgent project needs. Our AI-powered contingent staffing platform transforms how you access skilled professionals, providing the flexibility to scale your workforce up or down while maintaining quality and cost control.",
+    icon: <Clock className="w-8 h-8 text-white" />
+  };
+
+  const solutionOverview = {
+    title: "Access Flexible Talent When You Need It",
+    description: "Built specifically for dynamic business environments, our Contingent Staffing solution offers rapid deployment of skilled professionals for temporary, contract, and project-based roles. Leverage AI-powered matching and streamlined processes to get the right talent working for you faster than ever.",
+    features: [
+      "Rapid placement of skilled professionals within 24-48 hours",
+      "Flexible contract terms from short-term to extended projects",
+      "Pre-vetted talent pools across all skill levels and industries",
+      "Automated compliance and risk management",
+      "Seamless onboarding and integration processes"
+    ],
+    ctaText: "Learn More"
+  };
+
+  const keyBenefits = {
+    title: "Transform Your Workforce Strategy & Maximize Efficiency",
+    subtitle: "Eliminate the constraints of traditional hiring while accessing top-tier talent. Our contingent staffing solutions provide the agility and cost-effectiveness modern businesses need to thrive.",
+    benefits: [
+      {
+        title: "Cost Control",
+        description: "Manage labor costs effectively with flexible staffing arrangements that scale with your business needs.",
+        icon: <Briefcase className="w-8 h-8 text-white" />
+      },
+      {
+        title: "Agile Workforce",
+        description: "Quickly adapt to changing business requirements and market conditions with on-demand talent access.",
+        icon: <Calendar className="w-8 h-8 text-white" />
+      },
+      {
+        title: "Risk Mitigation",
+        description: "Reduce employment risks while maintaining operational flexibility and compliance with local regulations.",
+        icon: <Users className="w-8 h-8 text-white" />
+      }
+    ]
+  };
+
+  const productTour = {
+    title: "Product Tour: See Contingent Staffing in Action",
+    subtitle: "Flexible workforce solutions start here",
+    description: "With our platform, businesses can access, evaluate, and deploy contingent talent — all while maintaining quality and compliance. Experience our world-class contingent staffing suite in action."
+  };
+
+  const additionalSections = [
     {
       title: "Rapid Deployment",
-      description: "Quick placement of skilled professionals for immediate workforce needs",
+      description: "Get skilled professionals working for you within hours, not weeks. Our pre-vetted talent pools ensure quality matches for urgent staffing needs.",
       icon: <Zap className="w-6 h-6" />
     },
     {
-      title: "Flexible Terms",
-      description: "Short-term, long-term, and project-based staffing arrangements",
-      icon: <Settings className="w-6 h-6" />
-    },
-    {
-      title: "Specialized Skills",
-      description: "Access to niche expertise and specialized skill sets on-demand",
-      icon: <Target className="w-6 h-6" />
-    },
-    {
       title: "Scalable Solutions",
-      description: "Easy scaling of workforce based on business demands and seasonal needs",
+      description: "Easily scale your workforce based on business demands, seasonal fluctuations, and project requirements without long-term commitments.",
       icon: <TrendingUp className="w-6 h-6" />
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "Cost Control",
-      description: "Manage labor costs effectively with flexible staffing arrangements",
-      icon: <Briefcase className="w-6 h-6 text-white" />
     },
     {
-      title: "Agile Workforce",
-      description: "Quickly adapt to changing business requirements and market conditions",
-      icon: <Calendar className="w-6 h-6 text-white" />
-    },
-    {
-      title: "Risk Mitigation",
-      description: "Reduce employment risks while maintaining operational flexibility",
-      icon: <Users className="w-6 h-6 text-white" />
-    },
-    {
-      title: "Time Efficiency",
-      description: "Faster hiring process for urgent staffing needs and temporary gaps",
-      icon: <Clock className="w-6 h-6 text-white" />
+      title: "Flexible Terms",
+      description: "Customize contract terms and arrangements to match your specific business requirements and budget constraints.",
+      icon: <Settings className="w-6 h-6" />
     }
   ];
 
   return (
-    <PageTemplate 
-      title="Contingent Staffing Solutions" 
+    <SolutionStorylineTemplate
+      title="Contingent Staffing Solutions"
       description="Flexible staffing solutions for temporary and contract positions"
-    >
-      {/* Hero Section */}
-      <section className="pt-32 pb-12 bg-gradient-to-br from-white to-synapse-lighter/30">
-        <div className="container-wide">
-          <div className="text-center mb-12">
-            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
-              Recruitment Solution
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Contingent Staffing Solutions
-            </h1>
-            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Meet your immediate workforce needs with flexible contingent staffing. Our AI-powered platform delivers skilled professionals for temporary, contract, and project-based roles with speed and precision.
-            </p>
-            <Button 
-              className="btn-primary"
-              onClick={() => window.location.href = "/contact"}
-            >
-              Get Contingent Staff
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Features Section */}
-      <section className="py-12 bg-white">
-        <div className="container-wide">
-          <h2 className="text-3xl font-bold text-center mb-8 text-synapse-dark">
-            Contingent Staffing Features
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {keyFeatures.map((feature, index) => (
-              <Card key={index} className="border border-gray-100 shadow-soft hover:shadow-medium transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center flex-shrink-0">
-                      <div className="text-white">
-                        {feature.icon}
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2 text-synapse-dark">{feature.title}</h3>
-                      <p className="text-synapse-gray">{feature.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-12 bg-synapse-lighter/30">
-        <div className="container-wide">
-          <h2 className="text-3xl font-bold text-center mb-8 text-synapse-dark">
-            Contingent Staffing Benefits
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="border-0 shadow-soft hover:shadow-medium transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-lg font-bold mb-3 text-synapse-dark">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-synapse-gray text-sm">
-                    {benefit.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-12 bg-white">
-        <div className="container-wide">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-synapse-dark">
-              Flexibility Meets Excellence
-            </h2>
-            <p className="text-lg text-synapse-gray mb-8">
-              Our contingent staffing solutions provide the perfect balance of flexibility and quality. Whether you need immediate coverage for unexpected departures or specialized expertise for specific projects, we deliver professionals who hit the ground running.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8 text-left">
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
-                  <Clock className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Speed & Agility</h3>
-                <p className="text-synapse-gray">Rapid response to urgent staffing needs with pre-vetted talent pools.</p>
-              </div>
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
-                  <Settings className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Flexible Arrangements</h3>
-                <p className="text-synapse-gray">Customizable terms and conditions to match your specific business requirements.</p>
-              </div>
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Quality Professionals</h3>
-                <p className="text-synapse-gray">Skilled contingent workers who integrate seamlessly with your existing teams.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <FinalCtaSection />
-    </PageTemplate>
+      badge="Recruitment Solution"
+      heroTitle="Contingent Staffing Solutions"
+      heroDescription="Access skilled professionals on-demand with flexible contingent staffing. Our AI-powered platform delivers quality talent for temporary, contract, and project-based roles with speed, flexibility, and cost control."
+      ctaText="Get Contingent Staff"
+      mainChallenge={mainChallenge}
+      solutionOverview={solutionOverview}
+      keyBenefits={keyBenefits}
+      productTour={productTour}
+      additionalSections={additionalSections}
+    />
   );
 };
 

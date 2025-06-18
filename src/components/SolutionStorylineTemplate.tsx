@@ -128,7 +128,10 @@ const SolutionStorylineTemplate = ({
                   </div>
                 ))}
               </div>
-              <Button className="btn-primary">
+              <Button 
+                className="btn-primary"
+                onClick={() => window.location.href = "/tools/ai-sourcing-agent"}
+              >
                 {solutionOverview.ctaText} <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -201,10 +204,17 @@ const SolutionStorylineTemplate = ({
                 {productTour.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="btn-primary">
+                <Button 
+                  className="btn-primary"
+                  onClick={() => window.location.href = "/contact"}
+                >
                   Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-                <Button variant="outline" className="border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white">
+                <Button 
+                  variant="outline" 
+                  className="border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white"
+                  onClick={() => window.location.href = "/tools/ai-sourcing-agent"}
+                >
                   Learn More <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
