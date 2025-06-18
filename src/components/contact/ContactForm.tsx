@@ -97,7 +97,7 @@ const ContactForm = () => {
               type="url"
               value={formData.linkedin}
               onChange={(e) => handleInputChange("linkedin", e.target.value)}
-              placeholder="Personal LinkedIn URL (or company LinkedIn if personal not available)"
+              placeholder="linkedin.com/in/johnsmith or /company/xyz"
               required
               className="h-11 text-sm"
             />
