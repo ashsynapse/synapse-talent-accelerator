@@ -55,18 +55,18 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-medium h-fit">
-      <div className="mb-6">
-        <h2 className="text-xl font-bold text-synapse-dark mb-2">
+    <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-medium h-fit sticky top-8">
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-synapse-dark mb-3">
           Get in Touch
         </h2>
-        <p className="text-base text-synapse-gray">
+        <p className="text-synapse-gray">
           Fill out the form below and our team will get back to you within 24 hours.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid md:grid-cols-2 gap-6">
+      <form onSubmit={handleSubmit} className="space-y-5">
+        <div className="grid grid-cols-1 gap-5">
           <div className="space-y-2">
             <Label htmlFor="fullName" className="text-sm font-medium">Full Name *</Label>
             <Input
@@ -75,7 +75,7 @@ const ContactForm = () => {
               onChange={(e) => handleInputChange("fullName", e.target.value)}
               placeholder="John Smith"
               required
-              className="h-12 text-sm"
+              className="h-11 text-sm"
             />
           </div>
           
@@ -88,12 +88,10 @@ const ContactForm = () => {
               onChange={(e) => handleInputChange("email", e.target.value)}
               placeholder="john@company.com"
               required
-              className="h-12 text-sm"
+              className="h-11 text-sm"
             />
           </div>
-        </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
           <div className="space-y-2">
             <Label htmlFor="phoneNumber" className="text-sm font-medium">Phone Number</Label>
             <Input
@@ -102,7 +100,7 @@ const ContactForm = () => {
               value={formData.phoneNumber}
               onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
               placeholder="+1 (555) 123-4567"
-              className="h-12 text-sm"
+              className="h-11 text-sm"
             />
           </div>
           
@@ -113,37 +111,37 @@ const ContactForm = () => {
               value={formData.companyName}
               onChange={(e) => handleInputChange("companyName", e.target.value)}
               placeholder="Acme Corp"
-              className="h-12 text-sm"
+              className="h-11 text-sm"
             />
           </div>
-        </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="reasonForContact" className="text-sm font-medium">Reason for Contact *</Label>
-          <Select value={formData.reasonForContact} onValueChange={(value) => handleInputChange("reasonForContact", value)}>
-            <SelectTrigger className="h-12 text-sm">
-              <SelectValue placeholder="Select reason for contact" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="hiring-needs">Hiring Needs</SelectItem>
-              <SelectItem value="join-recruiter-network">Join Our Recruiter Network</SelectItem>
-              <SelectItem value="talent-inquiry">Talent Inquiry (Looking for Job)</SelectItem>
-              <SelectItem value="general-query">General Query</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
+          <div className="space-y-2">
+            <Label htmlFor="reasonForContact" className="text-sm font-medium">Reason for Contact *</Label>
+            <Select value={formData.reasonForContact} onValueChange={(value) => handleInputChange("reasonForContact", value)}>
+              <SelectTrigger className="h-11 text-sm">
+                <SelectValue placeholder="Select reason for contact" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="hiring-needs">Hiring Needs</SelectItem>
+                <SelectItem value="join-recruiter-network">Join Our Recruiter Network</SelectItem>
+                <SelectItem value="talent-inquiry">Talent Inquiry (Looking for Job)</SelectItem>
+                <SelectItem value="general-query">General Query</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="message" className="text-sm font-medium">Message *</Label>
-          <Textarea
-            id="message"
-            value={formData.message}
-            onChange={(e) => handleInputChange("message", e.target.value)}
-            placeholder="Please provide details about your inquiry..."
-            rows={5}
-            required
-            className="resize-none text-sm"
-          />
+          <div className="space-y-2">
+            <Label htmlFor="message" className="text-sm font-medium">Message *</Label>
+            <Textarea
+              id="message"
+              value={formData.message}
+              onChange={(e) => handleInputChange("message", e.target.value)}
+              placeholder="Please provide details about your inquiry..."
+              rows={4}
+              required
+              className="resize-none text-sm"
+            />
+          </div>
         </div>
 
         <Button 
