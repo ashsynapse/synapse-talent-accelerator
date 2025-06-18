@@ -1,180 +1,88 @@
 
 import React from "react";
-import PageTemplate from "../../components/PageTemplate";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Search, Database, Filter, Target, Zap, Users, Brain, Globe } from "lucide-react";
-import FinalCtaSection from "../../components/FinalCtaSection";
+import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplate";
+import { Search, Target, Brain, Users, Zap, Database, Globe, Filter, Clock, Shield } from "lucide-react";
 
 const IntelligentCandidateDiscovery = () => {
-  const keyFeatures = [
-    {
-      title: "Multi-Platform Sourcing",
-      description: "Comprehensive candidate discovery across professional networks, databases, and platforms",
-      icon: <Globe className="w-6 h-6" />
-    },
-    {
-      title: "AI-Powered Matching",
-      description: "Advanced algorithms analyze skills, experience, and cultural fit indicators",
-      icon: <Brain className="w-6 h-6" />
-    },
-    {
-      title: "Smart Filtering",
-      description: "Intelligent filters that go beyond keywords to understand candidate potential",
-      icon: <Filter className="w-6 h-6" />
-    },
-    {
-      title: "Real-Time Discovery",
-      description: "Continuous candidate discovery with instant notifications for perfect matches",
-      icon: <Zap className="w-6 h-6" />
-    }
-  ];
+  const mainChallenge = {
+    title: "Reduce Talent Discovery Time and Expand Your Reach",
+    description: "Traditional candidate sourcing methods leave you searching through limited talent pools, missing qualified candidates, and spending weeks on manual discovery processes. Our AI-powered platform transforms how you find and connect with the perfect candidates.",
+    icon: <Search className="w-8 h-8 text-white" />
+  };
 
-  const benefits = [
+  const solutionOverview = {
+    title: "Connect with Quality Candidates in Real Time",
+    description: "Built specifically for modern recruitment challenges, our Intelligent Candidate Discovery offers advanced AI algorithms to find candidates across multiple platforms instantly. Leverage automation and deliver a streamlined discovery experience that engages the right talent faster.",
+    features: [
+      "Multi-platform candidate sourcing across professional networks",
+      "AI-powered matching with cultural fit indicators",
+      "Real-time discovery with instant notifications",
+      "Smart filtering beyond traditional keyword searches",
+      "Automated candidate profiling and assessment"
+    ],
+    ctaText: "Learn More"
+  };
+
+  const keyBenefits = {
+    title: "Remove Discovery Roadblocks & Streamline Efficiency",
+    subtitle: "Pinpoint where bottlenecks exist in finding quality candidates. Streamline discovery, engagement, and conversion by leveraging AI to eliminate manual searches and increase recruiter capacity.",
+    benefits: [
+      {
+        title: "Expanded Talent Access",
+        description: "Access comprehensive talent pools from multiple sources in a unified search experience, reaching candidates you never knew existed.",
+        icon: <Globe className="w-8 h-8 text-white" />
+      },
+      {
+        title: "Intelligent Matching",
+        description: "Advanced AI analyzes skills, experience, and cultural compatibility to surface the most relevant candidates for your roles.",
+        icon: <Brain className="w-8 h-8 text-white" />
+      },
+      {
+        title: "Instant Discovery",
+        description: "Reduce discovery time from weeks to hours with automated candidate identification and real-time matching alerts.",
+        icon: <Zap className="w-8 h-8 text-white" />
+      }
+    ]
+  };
+
+  const productTour = {
+    title: "Product Tour: See Intelligent Discovery in Action",
+    subtitle: "Smarter candidate discovery starts here",
+    description: "With our platform, recruiters can discover, analyze, and engage the right talent — all while maintaining quality and delivering great candidate experiences. Watch the product tour to see our world-class discovery suite in action."
+  };
+
+  const additionalSections = [
     {
-      title: "Expanded Reach",
-      description: "Access talent from multiple sources in a single, unified search experience",
-      icon: <Database className="w-6 h-6 text-white" />
+      title: "Build a Robust Talent Pipeline",
+      description: "Find, attract, and engage with active and passive job seekers to build a strong pool of quality candidates. Tap into AI-powered insights to develop personalized outreach campaigns.",
+      icon: <Database className="w-6 h-6" />
     },
     {
-      title: "Intelligent Insights",
-      description: "Deep candidate analysis including skills assessment and career trajectory",
-      icon: <Target className="w-6 h-6 text-white" />
+      title: "Showcase Your Employer Brand",
+      description: "Build a strong, visible employer brand during the discovery process. Provide candidates with an authentic expression of what it's like to work at your company.",
+      icon: <Shield className="w-6 h-6" />
     },
     {
-      title: "Faster Discovery",
-      description: "Reduce time-to-find from weeks to hours with automated candidate identification",
-      icon: <Zap className="w-6 h-6 text-white" />
-    },
-    {
-      title: "Quality Matching",
-      description: "Higher success rates through AI-driven candidate-role compatibility analysis",
-      icon: <Users className="w-6 h-6 text-white" />
+      title: "Automate Discovery Tasks",
+      description: "Discover the best talent faster, smarter, and with confidence. Lean on the power of automation to streamline sourcing and screening processes.",
+      icon: <Clock className="w-6 h-6" />
     }
   ];
 
   return (
-    <PageTemplate 
-      title="Intelligent Candidate Discovery" 
+    <SolutionStorylineTemplate
+      title="Intelligent Candidate Discovery"
       description="AI-powered candidate discovery and matching platform"
-    >
-      {/* Hero Section */}
-      <section className="pt-32 pb-12 bg-gradient-to-br from-white to-synapse-lighter/30">
-        <div className="container-wide">
-          <div className="text-center mb-12">
-            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
-              Recruitment Solution
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Intelligent Candidate Discovery
-            </h1>
-            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Transform your candidate sourcing with AI-powered discovery that finds the perfect match faster than ever. Our intelligent platform searches, analyzes, and ranks candidates across multiple channels in real-time.
-            </p>
-            <Button 
-              className="btn-primary"
-              onClick={() => window.location.href = "/contact"}
-            >
-              Discover Candidates
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Features Section */}
-      <section className="py-12 bg-white">
-        <div className="container-wide">
-          <h2 className="text-3xl font-bold text-center mb-8 text-synapse-dark">
-            Discovery Features
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {keyFeatures.map((feature, index) => (
-              <Card key={index} className="border border-gray-100 shadow-soft hover:shadow-medium transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center flex-shrink-0">
-                      <div className="text-white">
-                        {feature.icon}
-                      </div>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-xl font-bold mb-2 text-synapse-dark break-words">{feature.title}</h3>
-                      <p className="text-synapse-gray break-words">{feature.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-12 bg-synapse-lighter/30">
-        <div className="container-wide">
-          <h2 className="text-3xl font-bold text-center mb-8 text-synapse-dark">
-            Discovery Advantages
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="border-0 shadow-soft hover:shadow-medium transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-lg font-bold mb-3 text-synapse-dark">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-synapse-gray text-sm">
-                    {benefit.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-12 bg-white">
-        <div className="container-wide">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-synapse-dark">
-              Next-Generation Candidate Discovery
-            </h2>
-            <p className="text-lg text-synapse-gray mb-8">
-              Our intelligent discovery platform combines the power of AI with comprehensive talent mapping to revolutionize how you find and engage candidates. Experience the future of recruitment with smart, efficient, and precise candidate discovery.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8 text-left">
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
-                  <Search className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Advanced Search</h3>
-                <p className="text-synapse-gray">Sophisticated search algorithms that understand context, skills, and career patterns.</p>
-              </div>
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
-                  <Brain className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">AI Intelligence</h3>
-                <p className="text-synapse-gray">Machine learning models that improve matching accuracy with every search.</p>
-              </div>
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
-                  <Target className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Precision Results</h3>
-                <p className="text-synapse-gray">Highly accurate candidate recommendations that save time and improve hiring outcomes.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <FinalCtaSection />
-    </PageTemplate>
+      badge="Recruitment Solution"
+      heroTitle="Intelligent Candidate Discovery"
+      heroDescription="Transform your candidate sourcing with AI-powered discovery that finds the perfect match faster than ever. Our intelligent platform searches, analyzes, and ranks candidates across multiple channels in real-time."
+      ctaText="Request a Demo"
+      mainChallenge={mainChallenge}
+      solutionOverview={solutionOverview}
+      keyBenefits={keyBenefits}
+      productTour={productTour}
+      additionalSections={additionalSections}
+    />
   );
 };
 
