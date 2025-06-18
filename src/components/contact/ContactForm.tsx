@@ -84,7 +84,8 @@ const ContactForm = () => {
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="grid grid-cols-1 gap-4">
+        {/* First Row - Full Name and Company Email */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1.5">
             <Label htmlFor="fullName" className="text-sm font-medium">Full Name *</Label>
             <Input
@@ -109,7 +110,10 @@ const ContactForm = () => {
               className="h-11 text-sm"
             />
           </div>
+        </div>
 
+        {/* Second Row - LinkedIn and Reason for Contact */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1.5">
             <Label htmlFor="linkedin" className="text-sm font-medium">LinkedIn Profile *</Label>
             <Input
@@ -137,19 +141,20 @@ const ContactForm = () => {
               </SelectContent>
             </Select>
           </div>
+        </div>
 
-          <div className="space-y-1.5">
-            <Label htmlFor="message" className="text-sm font-medium">Message *</Label>
-            <Textarea
-              id="message"
-              value={formData.message}
-              onChange={(e) => handleInputChange("message", e.target.value)}
-              placeholder="Please provide details about your inquiry..."
-              rows={4}
-              required
-              className="resize-none text-sm"
-            />
-          </div>
+        {/* Third Row - Message (Full Width) */}
+        <div className="space-y-1.5">
+          <Label htmlFor="message" className="text-sm font-medium">Message *</Label>
+          <Textarea
+            id="message"
+            value={formData.message}
+            onChange={(e) => handleInputChange("message", e.target.value)}
+            placeholder="Please provide details about your inquiry..."
+            rows={4}
+            required
+            className="resize-none text-sm"
+          />
         </div>
 
         <Button 
