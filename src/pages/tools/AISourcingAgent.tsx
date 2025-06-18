@@ -58,7 +58,7 @@ const AISourcingAgent = () => {
       title="AI Sourcing Agent" 
       description="Automatically scans job postings and continuously sources top-matching candidates"
     >
-      {/* Hero Section - Keep Same */}
+      {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -71,12 +71,21 @@ const AISourcingAgent = () => {
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Revolutionize your talent acquisition with an AI agent that automatically scans job postings and continuously sources top-matching candidates in the background, delivering real-time status updates from discovery to shortlisting.
             </p>
-            <Button 
-              className="btn-primary"
-              onClick={() => window.location.href = "/contact"}
-            >
-              Get Started <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                className="btn-primary"
+                onClick={() => window.location.href = "/contact"}
+              >
+                Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button 
+                variant="outline" 
+                className="border-2 border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white"
+                onClick={() => window.location.href = "/recruitment-tools"}
+              >
+                View All Tools <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -85,20 +94,11 @@ const AISourcingAgent = () => {
       <section className="py-16 bg-white">
         <div className="container-wide">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-synapse-dark mb-6">
-                Transform Your Talent Sourcing Strategy
-              </h2>
-              <p className="text-lg text-synapse-gray max-w-3xl mx-auto">
-                Stop relying on manual processes that miss top talent. Our AI Sourcing Agent works tirelessly to identify, evaluate, and deliver the best candidates for your roles while you focus on what matters most - building relationships and closing deals.
-              </p>
-            </div>
-            
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-2xl font-bold text-synapse-dark mb-6">
+                <h2 className="text-3xl font-bold text-synapse-dark mb-6">
                   Intelligent Sourcing That Never Sleeps
-                </h3>
+                </h2>
                 <p className="text-synapse-gray mb-6">
                   Our AI agent continuously monitors job requirements, scans multiple talent databases, and identifies candidates who perfectly match your criteria. With advanced machine learning algorithms, it gets smarter with every search, delivering increasingly precise results.
                 </p>
@@ -161,6 +161,31 @@ const AISourcingAgent = () => {
               </Card>
             ))}
           </div>
+          
+          {/* CTA Section after Business Impact */}
+          <div className="max-w-4xl mx-auto text-center mt-16">
+            <h3 className="text-2xl font-bold text-synapse-dark mb-4">
+              Ready to Scale Your Sourcing Operations?
+            </h3>
+            <p className="text-lg text-synapse-gray mb-8 max-w-2xl mx-auto">
+              Join leading companies who are already using AI Sourcing Agent to build stronger talent pipelines and hire faster than ever before.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                className="btn-primary"
+                onClick={() => window.location.href = "/contact"}
+              >
+                Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button 
+                variant="outline" 
+                className="border-2 border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white"
+                onClick={() => window.location.href = "/recruitment-tools"}
+              >
+                View All Tools <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -176,8 +201,8 @@ const AISourcingAgent = () => {
             </p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-10 h-10 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
@@ -190,7 +215,7 @@ const AISourcingAgent = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-synapse-secondary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                  <div className="w-10 h-10 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                     2
                   </div>
                   <div>
@@ -200,7 +225,7 @@ const AISourcingAgent = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-synapse-tertiary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                  <div className="w-10 h-10 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                     3
                   </div>
                   <div>
@@ -210,7 +235,7 @@ const AISourcingAgent = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                  <div className="w-10 h-10 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                     4
                   </div>
                   <div>
@@ -220,11 +245,20 @@ const AISourcingAgent = () => {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-synapse-primary/10 to-synapse-secondary/10 rounded-xl p-8 flex items-center justify-center">
-                <div className="text-center">
-                  <Bot className="w-24 h-24 text-synapse-primary mx-auto mb-4" />
-                  <h3 className="text-lg font-bold text-synapse-dark mb-2">AI Agent Active</h3>
-                  <p className="text-synapse-gray text-sm">Working 24/7 to find your ideal candidates</p>
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/1518770660439-4636190af475.jpg" 
+                  alt="AI Technology" 
+                  className="w-full h-80 object-cover rounded-xl shadow-soft"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-synapse-primary rounded-full p-6 shadow-lg">
+                    <div className="text-center text-white">
+                      <Bot className="w-8 h-8 mx-auto mb-2" />
+                      <h3 className="text-lg font-bold mb-1">Agent is Active</h3>
+                      <p className="text-sm opacity-90">Working 24/7</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -268,35 +302,6 @@ const AISourcingAgent = () => {
                 <p className="text-synapse-gray text-sm">Continuously improves matching accuracy based on your hiring decisions</p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-white">
-        <div className="container-wide">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-              Ready to Scale Your Sourcing Operations?
-            </h2>
-            <p className="text-lg text-synapse-gray mb-8 max-w-2xl mx-auto">
-              Join leading companies who are already using AI Sourcing Agent to build stronger talent pipelines and hire faster than ever before.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                className="btn-primary text-lg py-4 px-8"
-                onClick={() => window.location.href = "/contact"}
-              >
-                Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-2 border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white text-lg py-4 px-8"
-                onClick={() => window.location.href = "/recruitment-tools"}
-              >
-                View All Tools <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
           </div>
         </div>
       </section>
