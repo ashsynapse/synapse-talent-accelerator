@@ -130,7 +130,7 @@ const SolutionStorylineTemplate = ({
               </div>
               <Button 
                 className="btn-primary"
-                onClick={() => window.location.href = "/tools"}
+                onClick={() => window.location.href = "/recruitment-tools"}
               >
                 {solutionOverview.ctaText} <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -213,7 +213,7 @@ const SolutionStorylineTemplate = ({
                 <Button 
                   variant="outline" 
                   className="border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white"
-                  onClick={() => window.location.href = "/tools"}
+                  onClick={() => window.location.href = "/recruitment-tools"}
                 >
                   Learn More <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>

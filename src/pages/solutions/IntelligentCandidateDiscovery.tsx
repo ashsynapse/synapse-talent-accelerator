@@ -72,7 +72,7 @@ const IntelligentCandidateDiscovery = () => {
   return (
     <SolutionStorylineTemplate
       title="Intelligent Candidate Discovery"
-      description="AI-powered candidate discovery and matching platform"
+      description="Advanced talent fit"
       badge="Recruitment Solution"
       heroTitle="Intelligent Candidate Discovery"
       heroDescription="Transform your candidate sourcing with AI-powered discovery that finds the perfect match faster than ever. Our intelligent platform searches, analyzes, and ranks candidates across multiple channels in real-time."
