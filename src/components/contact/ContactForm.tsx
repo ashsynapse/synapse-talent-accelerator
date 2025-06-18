@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -173,7 +174,7 @@ const ContactForm = () => {
           </Button>
         </div>
         
-        <p className="text-xs text-synapse-gray text-center pt-2">
+        <p className="text-xs text-synapse-gray pt-2">
           By submitting this form, you agree to our privacy policy. We'll never share your information.
         </p>
       </form>
