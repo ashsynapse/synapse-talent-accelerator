@@ -12,8 +12,7 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    phoneNumber: "",
-    companyName: "",
+    linkedin: "",
     reasonForContact: "",
     message: ""
   });
@@ -22,7 +21,7 @@ const ContactForm = () => {
     e.preventDefault();
     
     // Basic validation
-    if (!formData.fullName || !formData.email || !formData.reasonForContact || !formData.message) {
+    if (!formData.fullName || !formData.email || !formData.linkedin || !formData.reasonForContact || !formData.message) {
       toast({
         title: "Required fields missing",
         description: "Please fill in all required fields.",
@@ -43,8 +42,7 @@ const ContactForm = () => {
     setFormData({
       fullName: "",
       email: "",
-      phoneNumber: "",
-      companyName: "",
+      linkedin: "",
       reasonForContact: "",
       message: ""
     });
@@ -93,24 +91,14 @@ const ContactForm = () => {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="phoneNumber" className="text-sm font-medium">Phone Number</Label>
+            <Label htmlFor="linkedin" className="text-sm font-medium">LinkedIn Profile *</Label>
             <Input
-              id="phoneNumber"
-              type="tel"
-              value={formData.phoneNumber}
-              onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
-              placeholder="+1 (555) 123-4567"
-              className="h-11 text-sm"
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="companyName" className="text-sm font-medium">Company Name</Label>
-            <Input
-              id="companyName"
-              value={formData.companyName}
-              onChange={(e) => handleInputChange("companyName", e.target.value)}
-              placeholder="Acme Corp"
+              id="linkedin"
+              type="url"
+              value={formData.linkedin}
+              onChange={(e) => handleInputChange("linkedin", e.target.value)}
+              placeholder="Personal LinkedIn URL (or company LinkedIn if personal not available)"
+              required
               className="h-11 text-sm"
             />
           </div>
