@@ -87,7 +87,7 @@ const AIOutreachAgent = () => {
             </p>
             <div className="flex justify-center">
               <Button 
-                className="bg-synapse-dark text-white hover:bg-synapse-dark/90 font-semibold text-lg py-6 px-10 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                className="bg-synapse-dark text-white hover:bg-synapse-dark font-semibold text-lg py-6 px-10 rounded-xl shadow-xl"
                 onClick={() => window.location.href = "/contact"}
               >
                 <span className="flex items-center gap-2">
@@ -121,7 +121,7 @@ const AIOutreachAgent = () => {
                   ))}
                 </div>
                 <Button 
-                  className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-6 py-3"
+                  className="bg-synapse-dark text-white hover:bg-synapse-dark px-6 py-3"
                   onClick={() => window.location.href = "/recruitment-tools"}
                 >
                   Explore All Tools <ArrowRight className="ml-2 h-4 w-4" />
@@ -183,7 +183,7 @@ const AIOutreachAgent = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                className="bg-synapse-dark text-white hover:bg-synapse-dark/90 text-lg px-8 py-3"
+                className="bg-synapse-dark text-white hover:bg-synapse-dark text-lg px-8 py-3"
                 onClick={() => window.location.href = "/contact"}
               >
                 Get a Demo <ArrowRight className="ml-2 h-5 w-5" />
