@@ -1,4 +1,3 @@
-
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -73,7 +72,7 @@ const AISourcingAgent = () => {
             </p>
             <div className="flex justify-center">
               <Button 
-                className="bg-gradient-to-r from-synapse-primary to-synapse-secondary text-white font-semibold text-lg py-6 px-10 rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                className="btn-primary"
                 onClick={() => window.location.href = "/contact"}
               >
                 <span className="flex items-center gap-2">
@@ -107,7 +106,7 @@ const AISourcingAgent = () => {
                   ))}
                 </div>
                 <Button 
-                  className="bg-gradient-to-r from-synapse-primary to-synapse-secondary text-white font-semibold px-6 py-3 rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                  className="btn-primary"
                   onClick={() => window.location.href = "/recruitment-tools"}
                 >
                   Explore All Tools <ArrowRight className="ml-2 h-4 w-4" />
@@ -174,7 +173,7 @@ const AISourcingAgent = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                className="bg-gradient-to-r from-synapse-primary to-synapse-secondary text-white font-semibold text-lg px-8 py-3 rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                className="btn-primary"
                 onClick={() => window.location.href = "/contact"}
               >
                 Get a Demo <ArrowRight className="ml-2 h-5 w-5" />
