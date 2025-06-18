@@ -1,4 +1,3 @@
-
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -162,13 +161,19 @@ const AISourcingAgent = () => {
             ))}
           </div>
           
-          {/* CTA Section after Business Impact */}
+          {/* CTA Section - Similar to Solutions Pages */}
           <div className="max-w-4xl mx-auto text-center mt-16">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-6">
+              Ready to Transform Your Talent Sourcing?
+            </h2>
+            <p className="text-lg text-synapse-gray mb-8 max-w-2xl mx-auto">
+              Join leading companies who are already using AI Sourcing Agent to discover top talent faster and more efficiently than ever before.
+            </p>
             <Button 
-              className="btn-primary"
+              className="btn-primary text-lg px-8 py-3"
               onClick={() => window.location.href = "/contact"}
             >
-              Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
+              Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>
@@ -237,7 +242,7 @@ const AISourcingAgent = () => {
                   className="w-full h-80 object-cover rounded-xl shadow-soft"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center shadow-lg">
+                  <div className="w-40 h-40 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center shadow-lg">
                     <div className="text-center text-white">
                       <Bot className="w-8 h-8 mx-auto mb-2" />
                       <h3 className="text-lg font-bold mb-1">Agent is Active</h3>
