@@ -4,7 +4,7 @@ import PageTemplate from "./PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Play, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Users, Zap, Target } from "lucide-react";
 import FinalCtaSection from "./FinalCtaSection";
 
 interface SolutionStorylineTemplateProps {
@@ -38,7 +38,6 @@ interface SolutionStorylineTemplateProps {
     title: string;
     subtitle: string;
     description: string;
-    videoThumbnail?: string;
   };
   additionalSections?: {
     title: string;
@@ -133,14 +132,24 @@ const SolutionStorylineTemplate = ({
                 {solutionOverview.ctaText} <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
-            <div className="bg-white rounded-xl shadow-soft p-8 text-center">
-              <div className="w-24 h-24 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                  <Play className="w-6 h-6 text-synapse-primary" />
+            <div className="bg-white rounded-xl shadow-soft p-8">
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-gradient-to-br from-synapse-primary/10 to-synapse-primary/5 rounded-lg p-4 text-center">
+                  <Users className="w-8 h-8 text-synapse-primary mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-synapse-dark">95%</div>
+                  <div className="text-sm text-synapse-gray">Match Accuracy</div>
+                </div>
+                <div className="bg-gradient-to-br from-synapse-secondary/10 to-synapse-secondary/5 rounded-lg p-4 text-center">
+                  <Zap className="w-8 h-8 text-synapse-secondary mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-synapse-dark">70%</div>
+                  <div className="text-sm text-synapse-gray">Faster Discovery</div>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-synapse-dark mb-2">See It In Action</h3>
-              <p className="text-synapse-gray">Watch how our solution transforms your hiring process</p>
+              <div className="bg-gradient-to-br from-synapse-tertiary/10 to-synapse-tertiary/5 rounded-lg p-4 text-center">
+                <Target className="w-8 h-8 text-synapse-tertiary mx-auto mb-2" />
+                <div className="text-2xl font-bold text-synapse-dark">24/7</div>
+                <div className="text-sm text-synapse-gray">Intelligent Sourcing</div>
+              </div>
             </div>
           </div>
         </div>
@@ -196,8 +205,7 @@ const SolutionStorylineTemplate = ({
                   Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
                 <Button variant="outline" className="border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white">
-                  <Play className="mr-2 h-4 w-4" />
-                  Watch the Tour
+                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
             </div>
