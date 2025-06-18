@@ -74,19 +74,19 @@ const ContactForm = () => {
 
   return (
     <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-medium h-fit sticky top-8">
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold text-synapse-dark mb-3">
+      <div className="mb-8">
+        <h2 className="text-2xl lg:text-3xl font-bold text-synapse-dark mb-4 leading-tight">
           Get in Touch
         </h2>
-        <p className="text-synapse-gray">
+        <p className="text-synapse-gray text-base">
           Fill out the form below and our team will get back to you within 24 hours.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-5">
         {/* First Row - Full Name and Company Email */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="space-y-1.5">
+          <div className="space-y-2">
             <Label htmlFor="fullName" className="text-sm font-medium">Full Name *</Label>
             <Input
               id="fullName"
@@ -98,7 +98,7 @@ const ContactForm = () => {
             />
           </div>
           
-          <div className="space-y-1.5">
+          <div className="space-y-2">
             <Label htmlFor="email" className="text-sm font-medium">Company Email Address *</Label>
             <Input
               id="email"
@@ -114,7 +114,7 @@ const ContactForm = () => {
 
         {/* Second Row - LinkedIn and Reason for Contact */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="space-y-1.5">
+          <div className="space-y-2">
             <Label htmlFor="linkedin" className="text-sm font-medium">LinkedIn Profile *</Label>
             <Input
               id="linkedin"
@@ -127,7 +127,7 @@ const ContactForm = () => {
             />
           </div>
 
-          <div className="space-y-1.5">
+          <div className="space-y-2">
             <Label htmlFor="reasonForContact" className="text-sm font-medium">Reason for Contact *</Label>
             <Select value={formData.reasonForContact} onValueChange={(value) => handleInputChange("reasonForContact", value)}>
               <SelectTrigger className="h-11 text-sm">
@@ -144,7 +144,7 @@ const ContactForm = () => {
         </div>
 
         {/* Third Row - Message (Full Width) */}
-        <div className="space-y-1.5">
+        <div className="space-y-2">
           <Label htmlFor="message" className="text-sm font-medium">Message *</Label>
           <Textarea
             id="message"
@@ -157,14 +157,16 @@ const ContactForm = () => {
           />
         </div>
 
-        <Button 
-          type="submit" 
-          className="w-full btn-primary text-sm py-3 h-12 mt-5"
-        >
-          Submit Request
-        </Button>
+        <div className="flex justify-center pt-2">
+          <Button 
+            type="submit" 
+            className="bg-synapse-primary hover:bg-synapse-primary/90 text-white font-medium px-8 py-2.5 h-10 rounded-lg transition-all duration-200 text-sm"
+          >
+            Submit Request
+          </Button>
+        </div>
         
-        <p className="text-xs text-synapse-gray text-center mt-3">
+        <p className="text-xs text-synapse-gray text-center pt-2">
           By submitting this form, you agree to our privacy policy. We'll never share your information.
         </p>
       </form>
