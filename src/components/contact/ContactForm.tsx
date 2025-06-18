@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -157,12 +156,20 @@ const ContactForm = () => {
           />
         </div>
 
-        <div className="flex justify-center pt-2">
+        <div className="pt-2">
           <Button 
             type="submit" 
-            className="bg-synapse-primary hover:bg-synapse-primary/90 text-white font-medium px-8 py-2.5 h-10 rounded-lg transition-all duration-200 text-sm"
+            className="relative overflow-hidden bg-gradient-to-r from-synapse-primary to-synapse-secondary hover:from-synapse-secondary hover:to-synapse-primary text-white font-semibold px-8 py-3 h-12 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group"
           >
-            Submit Request
+            {/* Animated shimmer effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
+            
+            {/* Subtle glow animation */}
+            <div className="absolute inset-0 bg-gradient-to-r from-synapse-primary/50 to-synapse-secondary/50 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+            
+            <span className="relative z-10">
+              Submit Request
+            </span>
           </Button>
         </div>
         
