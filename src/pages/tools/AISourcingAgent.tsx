@@ -164,27 +164,12 @@ const AISourcingAgent = () => {
           
           {/* CTA Section after Business Impact */}
           <div className="max-w-4xl mx-auto text-center mt-16">
-            <h3 className="text-2xl font-bold text-synapse-dark mb-4">
-              Ready to Scale Your Sourcing Operations?
-            </h3>
-            <p className="text-lg text-synapse-gray mb-8 max-w-2xl mx-auto">
-              Join leading companies who are already using AI Sourcing Agent to build stronger talent pipelines and hire faster than ever before.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                className="btn-primary"
-                onClick={() => window.location.href = "/contact"}
-              >
-                Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-2 border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white"
-                onClick={() => window.location.href = "/recruitment-tools"}
-              >
-                View All Tools <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
+            <Button 
+              className="btn-primary"
+              onClick={() => window.location.href = "/contact"}
+            >
+              Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
           </div>
         </div>
       </section>
@@ -247,12 +232,12 @@ const AISourcingAgent = () => {
               
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/1518770660439-4636190af475.jpg" 
+                  src="/lovable-uploads/8445fbb5-892b-4cdc-9ee4-54e42033a268.png" 
                   alt="AI Technology" 
                   className="w-full h-80 object-cover rounded-xl shadow-soft"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-synapse-primary rounded-full p-6 shadow-lg">
+                  <div className="w-32 h-32 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center shadow-lg">
                     <div className="text-center text-white">
                       <Bot className="w-8 h-8 mx-auto mb-2" />
                       <h3 className="text-lg font-bold mb-1">Agent is Active</h3>
