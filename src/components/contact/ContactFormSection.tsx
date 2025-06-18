@@ -11,9 +11,20 @@ const ContactFormSection = () => {
     <section className="pt-32 pb-12 bg-white min-h-screen">
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+          {/* Mobile: Header Section - Shows first on mobile */}
+          <div className="lg:hidden mb-8">
+            <h1 className="text-3xl lg:text-4xl font-bold text-synapse-dark mb-4">
+              Ready to Transform Your Hiring?
+            </h1>
+            <p className="text-lg text-synapse-gray">
+              Let's discuss how our AI-powered solutions can revolutionize your talent acquisition process.
+            </p>
+          </div>
+
           {/* Left Column - Feature Cards */}
           <div className="order-2 lg:order-1 space-y-6">
-            <div className="mb-8">
+            {/* Desktop: Header Section - Shows in left column on desktop */}
+            <div className="mb-8 hidden lg:block">
               <h1 className="text-3xl lg:text-4xl font-bold text-synapse-dark mb-4">
                 Ready to Transform Your Hiring?
               </h1>
