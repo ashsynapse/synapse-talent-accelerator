@@ -1,3 +1,4 @@
+
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -84,95 +85,69 @@ const ATSBypassEngine = () => {
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Outsmart applicant tracking systems with intelligent resume optimization that reverse-engineers ATS algorithms, delivering stealth-enhanced resumes with invisible keyword embedding and data-driven success predictions.
             </p>
-            <Button 
-              className="btn-primary"
-              onClick={() => window.location.href = "/contact"}
-            >
-              Get Started <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <div className="flex justify-center">
+              <Button 
+                className="bg-synapse-dark text-white hover:bg-synapse-dark/90 font-semibold text-lg py-6 px-10 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                onClick={() => window.location.href = "/contact"}
+              >
+                <span className="flex items-center gap-2">
+                  Start ATS Bypass Now
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </span>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Engine Capabilities Section */}
+      {/* Main Value Proposition */}
       <section className="py-16 bg-white">
         <div className="container-wide">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              Advanced ATS Bypass Technology
-            </h2>
-            <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              Four core engines working together to ensure your resume beats every digital filter
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {engineFeatures.map((feature, index) => (
-              <Card key={index} className="border-0 shadow-soft hover:shadow-medium transition-all duration-300 group">
-                <CardContent className="p-6 text-center">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${feature.gradient} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform text-white`}>
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-lg font-bold mb-3 text-synapse-dark">
-                    {feature.title}
-                  </h3>
-                  <p className="text-synapse-gray text-sm">
-                    {feature.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-synapse-dark mb-6">
+                  Precision Engineering Meets Stealth Technology
+                </h2>
+                <p className="text-synapse-gray mb-6">
+                  Our ATS Bypass Engine combines advanced reverse-engineering with invisible optimization techniques to create resumes that pass through digital filters while maintaining authenticity.
+                </p>
+                <div className="space-y-4 mb-8">
+                  {bypassTechniques.map((technique, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
+                      <span className="text-synapse-gray">{technique}</span>
+                    </div>
+                  ))}
+                </div>
+                <Button 
+                  className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-6 py-3"
+                  onClick={() => window.location.href = "/recruitment-tools"}
+                >
+                  Explore All Tools <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+              
+              <div className="bg-gradient-to-br from-synapse-primary/5 to-synapse-secondary/5 rounded-2xl p-8">
+                <div className="grid grid-cols-2 gap-6">
+                  {engineFeatures.map((feature, index) => (
+                    <div key={index} className="text-center">
+                      <div className={`w-16 h-16 bg-gradient-to-r ${feature.gradient} rounded-xl flex items-center justify-center mx-auto mb-4 text-white`}>
+                        {feature.icon}
+                      </div>
+                      <h4 className="font-semibold text-synapse-dark mb-2">{feature.title}</h4>
+                      <p className="text-xs text-synapse-gray">{feature.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Technique Overview Section */}
+      {/* Business Impact Section */}
       <section className="py-16 bg-synapse-lighter/30">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-                Precision Engineering Meets Stealth Technology
-              </h2>
-              <p className="text-lg text-synapse-gray mb-8">
-                Our ATS Bypass Engine combines advanced reverse-engineering with invisible optimization techniques to create resumes that pass through digital filters while maintaining authenticity.
-              </p>
-              <div className="grid grid-cols-1 gap-3">
-                {bypassTechniques.map((technique, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-soft">
-                    <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
-                    <span className="text-synapse-gray">{technique}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative">
-              <div className="bg-white rounded-xl shadow-soft p-8">
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-synapse-dark mb-2">Live Bypass Analysis</h3>
-                  <p className="text-synapse-gray text-sm">Real-time ATS compatibility scoring</p>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200">
-                    <span className="text-sm font-medium text-gray-700">Keyword Density</span>
-                    <span className="text-green-600 font-bold">Optimal</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg border border-blue-200">
-                    <span className="text-sm font-medium text-gray-700">Format Compatibility</span>
-                    <span className="text-blue-600 font-bold">Perfect</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-lg border border-purple-200">
-                    <span className="text-sm font-medium text-gray-700">ATS Score</span>
-                    <span className="text-purple-600 font-bold">98/100</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Success Metrics Section */}
-      <section className="py-16 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -182,11 +157,12 @@ const ATSBypassEngine = () => {
               See the measurable impact of our ATS bypass technology on candidate success rates
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {successMetrics.map((metric, index) => (
               <Card key={index} className="border-0 shadow-soft hover:shadow-medium transition-all duration-300 group">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform text-white">
+                  <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-soft text-synapse-primary">
                     {metric.icon}
                   </div>
                   <div className="text-4xl font-bold text-synapse-primary mb-2">{metric.metric}</div>
@@ -196,45 +172,113 @@ const ATSBypassEngine = () => {
               </Card>
             ))}
           </div>
+          
+          {/* CTA Section */}
+          <div className="max-w-4xl mx-auto text-center mt-16">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-6">
+              Ready to Beat Every ATS Filter?
+            </h2>
+            <p className="text-lg text-synapse-gray mb-8 max-w-2xl mx-auto">
+              Join thousands of professionals who have successfully bypassed ATS systems and landed more interviews with our intelligent optimization technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                className="bg-synapse-dark text-white hover:bg-synapse-dark/90 text-lg px-8 py-3"
+                onClick={() => window.location.href = "/contact"}
+              >
+                Get a Demo <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button 
+                variant="outline" 
+                className="border-2 border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white text-lg px-8 py-3"
+                onClick={() => window.location.href = "/recruitment-tools"}
+              >
+                Explore All Tools <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Challenge Solution Section */}
-      <section className="py-16 bg-gradient-to-r from-synapse-primary/5 to-synapse-secondary/5">
+      {/* Live Analysis Section */}
+      <section className="py-16 bg-white">
         <div className="container-wide">
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-0 shadow-medium">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-8 h-8 text-white" />
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-4">
+              Live ATS Bypass Analysis
+            </h2>
+            <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
+              See how our engine analyzes and optimizes resumes in real-time
+            </p>
+          </div>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                    1
                   </div>
-                  <div className="flex-1">
-                    <h2 className="text-2xl font-bold text-synapse-dark mb-4">
-                      Break Through Digital Hiring Barriers
-                    </h2>
-                    <p className="text-lg text-synapse-gray mb-6">
-                      Over 98% of Fortune 500 companies use ATS systems that automatically filter out qualified candidates based on keyword matching and formatting. Our ATS Bypass Engine levels the playing field by understanding and outsmarting these digital gatekeepers.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Button 
-                        className="btn-primary"
-                        onClick={() => window.location.href = "/contact"}
-                      >
-                        Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                      <Button 
-                        variant="outline" 
-                        className="border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white"
-                        onClick={() => window.location.href = "/recruitment-tools"}
-                      >
-                        View All Tools <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                  <div>
+                    <h3 className="font-semibold text-synapse-dark mb-2">ATS System Analysis</h3>
+                    <p className="text-synapse-gray text-sm">Reverse-engineer target ATS systems to understand parsing algorithms</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                    2
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-synapse-dark mb-2">Invisible Optimization</h3>
+                    <p className="text-synapse-gray text-sm">Embed keywords and optimize formatting without compromising readability</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                    3
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-synapse-dark mb-2">Success Prediction</h3>
+                    <p className="text-synapse-gray text-sm">Calculate probability scores for successful ATS screening</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                    4
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-synapse-dark mb-2">Deliver Enhanced Resume</h3>
+                    <p className="text-synapse-gray text-sm">Provide optimized resume with detailed compatibility report</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="relative">
+                <div className="bg-white rounded-xl shadow-soft p-8">
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-bold text-synapse-dark mb-2">Live Bypass Analysis</h3>
+                    <p className="text-synapse-gray text-sm">Real-time ATS compatibility scoring</p>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between p-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200">
+                      <span className="text-sm font-medium text-gray-700">Keyword Density</span>
+                      <span className="text-green-600 font-bold">Optimal</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg border border-blue-200">
+                      <span className="text-sm font-medium text-gray-700">Format Compatibility</span>
+                      <span className="text-blue-600 font-bold">Perfect</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-lg border border-purple-200">
+                      <span className="text-sm font-medium text-gray-700">ATS Score</span>
+                      <span className="text-purple-600 font-bold">98/100</span>
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>

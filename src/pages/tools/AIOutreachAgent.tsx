@@ -12,25 +12,25 @@ const AIOutreachAgent = () => {
     {
       title: "Smart Personalization",
       description: "AI analyzes candidate profiles to create authentic, personalized messages",
-      icon: <User className="w-8 h-8" />,
+      icon: <User className="w-6 h-6 text-white" />,
       color: "from-blue-500 to-blue-600"
     },
     {
       title: "Multi-Channel Reach",
       description: "Coordinate outreach across email, LinkedIn, and other platforms",
-      icon: <Mail className="w-8 h-8" />,
+      icon: <Mail className="w-6 h-6 text-white" />,
       color: "from-green-500 to-green-600"
     },
     {
       title: "Perfect Timing",
       description: "Intelligent scheduling ensures messages are sent at optimal times",
-      icon: <Clock className="w-8 h-8" />,
+      icon: <Clock className="w-6 h-6 text-white" />,
       color: "from-purple-500 to-purple-600"
     },
     {
       title: "Response Tracking",
       description: "Real-time analytics on engagement and response rates",
-      icon: <Target className="w-8 h-8" />,
+      icon: <Target className="w-6 h-6 text-white" />,
       color: "from-orange-500 to-orange-600"
     }
   ];
@@ -44,6 +44,27 @@ const AIOutreachAgent = () => {
     "Candidate response tracking and analytics",
     "Dynamic message customization",
     "Engagement optimization algorithms"
+  ];
+
+  const successMetrics = [
+    {
+      metric: "85%",
+      label: "Response Rate",
+      description: "Average response rate from personalized outreach campaigns",
+      icon: <TrendingUp className="w-6 h-6" />
+    },
+    {
+      metric: "5x",
+      label: "More Engagement",
+      description: "Increase in candidate engagement compared to generic messaging",
+      icon: <MessageCircle className="w-6 h-6" />
+    },
+    {
+      metric: "Auto",
+      label: "Coordination",
+      description: "Fully automated interview scheduling and follow-up management",
+      icon: <Calendar className="w-6 h-6" />
+    }
   ];
 
   return (
@@ -64,91 +85,60 @@ const AIOutreachAgent = () => {
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Transform candidate engagement with hyper-personalized, automated outreach campaigns that keep prospects engaged through intelligent follow-ups and seamless interview coordination, all while providing real-time updates.
             </p>
-            <Button 
-              className="btn-primary"
-              onClick={() => window.location.href = "/contact"}
-            >
-              Get Started <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <div className="flex justify-center">
+              <Button 
+                className="bg-synapse-dark text-white hover:bg-synapse-dark/90 font-semibold text-lg py-6 px-10 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                onClick={() => window.location.href = "/contact"}
+              >
+                <span className="flex items-center gap-2">
+                  Launch Outreach Agent
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </span>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Core Capabilities Section */}
+      {/* Main Value Proposition */}
       <section className="py-16 bg-white">
         <div className="container-wide">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              AI-Powered Outreach Capabilities
-            </h2>
-            <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              Transform your candidate engagement with intelligent automation that feels personal
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {capabilities.map((capability, index) => (
-              <Card key={index} className="border-0 shadow-soft hover:shadow-medium transition-all duration-300 group">
-                <CardContent className="p-6 text-center">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${capability.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform text-white`}>
-                    {capability.icon}
-                  </div>
-                  <h3 className="text-lg font-bold mb-3 text-synapse-dark">
-                    {capability.title}
-                  </h3>
-                  <p className="text-synapse-gray text-sm">
-                    {capability.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Feature Showcase Section */}
-      <section className="py-16 bg-synapse-lighter/30">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-                Personalization at Scale, Automation at Speed
-              </h2>
-              <p className="text-lg text-synapse-gray mb-8">
-                Our AI Outreach Agent combines deep personalization with intelligent automation to create meaningful candidate relationships that drive results.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                {features.map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-synapse-gray text-sm">{feature}</span>
-                  </div>
-                ))}
+          <div className="max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-synapse-dark mb-6">
+                  Personalization at Scale, Automation at Speed
+                </h2>
+                <p className="text-synapse-gray mb-6">
+                  Our AI Outreach Agent combines deep personalization with intelligent automation to create meaningful candidate relationships that drive results.
+                </p>
+                <div className="space-y-4 mb-8">
+                  {features.map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
+                      <span className="text-synapse-gray">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <Button 
+                  className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-6 py-3"
+                  onClick={() => window.location.href = "/recruitment-tools"}
+                >
+                  Explore All Tools <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
               </div>
-            </div>
-            <div className="relative">
-              <div className="bg-white rounded-xl shadow-soft p-8">
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-synapse-primary/10 to-synapse-secondary/10 rounded-lg">
-                    <div className="flex items-center space-x-3">
-                      <TrendingUp className="w-6 h-6 text-synapse-primary" />
-                      <span className="font-semibold text-synapse-dark">Response Rate</span>
+              
+              <div className="bg-gradient-to-br from-synapse-primary/5 to-synapse-secondary/5 rounded-2xl p-8">
+                <div className="grid grid-cols-2 gap-6">
+                  {capabilities.map((capability, index) => (
+                    <div key={index} className="text-center">
+                      <div className={`w-12 h-12 bg-gradient-to-r ${capability.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                        {capability.icon}
+                      </div>
+                      <h4 className="font-semibold text-synapse-dark mb-2 text-sm">{capability.title}</h4>
+                      <p className="text-xs text-synapse-gray">{capability.description}</p>
                     </div>
-                    <span className="text-2xl font-bold text-synapse-primary">85%</span>
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-synapse-secondary/10 to-synapse-tertiary/10 rounded-lg">
-                    <div className="flex items-center space-x-3">
-                      <MessageCircle className="w-6 h-6 text-synapse-secondary" />
-                      <span className="font-semibold text-synapse-dark">Engagement</span>
-                    </div>
-                    <span className="text-2xl font-bold text-synapse-secondary">5x More</span>
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-synapse-tertiary/10 to-synapse-primary/10 rounded-lg">
-                    <div className="flex items-center space-x-3">
-                      <Calendar className="w-6 h-6 text-synapse-tertiary" />
-                      <span className="font-semibold text-synapse-dark">Coordination</span>
-                    </div>
-                    <span className="text-2xl font-bold text-synapse-tertiary">Auto</span>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -156,8 +146,8 @@ const AIOutreachAgent = () => {
         </div>
       </section>
 
-      {/* Success Stories Section */}
-      <section className="py-16 bg-white">
+      {/* Business Impact Section */}
+      <section className="py-16 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -167,80 +157,132 @@ const AIOutreachAgent = () => {
               See how companies are transforming their outreach with AI-powered personalization
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-soft">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">
-                  Personal Connection
-                </h3>
-                <p className="text-synapse-gray mb-4">
-                  Create authentic, personalized messages that resonate with each candidate's unique background
-                </p>
-                <div className="text-2xl font-bold text-synapse-primary">92%</div>
-                <div className="text-sm text-synapse-gray">Feel It's Personal</div>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-soft">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-synapse-secondary to-synapse-tertiary rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <MessageCircle className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">
-                  Smart Automation
-                </h3>
-                <p className="text-synapse-gray mb-4">
-                  Never miss a follow-up with intelligent scheduling that maintains perfect timing
-                </p>
-                <div className="text-2xl font-bold text-synapse-secondary">0</div>
-                <div className="text-sm text-synapse-gray">Missed Follow-ups</div>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-soft">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-synapse-tertiary to-synapse-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">
-                  Seamless Coordination
-                </h3>
-                <p className="text-synapse-gray mb-4">
-                  Effortlessly coordinate interviews and keep all stakeholders informed in real-time
-                </p>
-                <div className="text-2xl font-bold text-synapse-tertiary">100%</div>
-                <div className="text-sm text-synapse-gray">Coordination Rate</div>
-              </CardContent>
-            </Card>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {successMetrics.map((metric, index) => (
+              <Card key={index} className="border-0 shadow-soft hover:shadow-medium transition-all duration-300 group">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-soft text-synapse-primary">
+                    {metric.icon}
+                  </div>
+                  <div className="text-4xl font-bold text-synapse-primary mb-2">{metric.metric}</div>
+                  <h3 className="text-xl font-bold mb-3 text-synapse-dark">{metric.label}</h3>
+                  <p className="text-synapse-gray text-sm">{metric.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-synapse-primary/5 to-synapse-secondary/5">
-        <div className="container-wide">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-synapse-dark mb-4">
+          
+          {/* CTA Section */}
+          <div className="max-w-4xl mx-auto text-center mt-16">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-6">
               Ready to Transform Your Outreach?
             </h2>
-            <p className="text-lg text-synapse-gray mb-8">
+            <p className="text-lg text-synapse-gray mb-8 max-w-2xl mx-auto">
               Start building meaningful candidate relationships with AI-powered personalization that actually works. Experience higher engagement and better results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                className="btn-primary"
+                className="bg-synapse-dark text-white hover:bg-synapse-dark/90 text-lg px-8 py-3"
                 onClick={() => window.location.href = "/contact"}
               >
-                Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
+                Get a Demo <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button 
                 variant="outline" 
-                className="border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white"
+                className="border-2 border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white text-lg px-8 py-3"
                 onClick={() => window.location.href = "/recruitment-tools"}
               >
-                View All Tools <ArrowRight className="ml-2 h-4 w-4" />
+                Explore All Tools <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Campaign Process Section */}
+      <section className="py-16 bg-white">
+        <div className="container-wide">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-4">
+              Your Outreach Agent in Action
+            </h2>
+            <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
+              See how our intelligent outreach process creates meaningful candidate connections
+            </p>
+          </div>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                    1
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-synapse-dark mb-2">Analyze Candidate Profile</h3>
+                    <p className="text-synapse-gray text-sm">AI studies candidate background, interests, and career trajectory for personalization</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                    2
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-synapse-dark mb-2">Craft Personal Message</h3>
+                    <p className="text-synapse-gray text-sm">Generate authentic, personalized outreach that resonates with each individual</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                    3
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-synapse-dark mb-2">Optimize Timing</h3>
+                    <p className="text-synapse-gray text-sm">Send messages at optimal times for maximum engagement and response rates</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                    4
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-synapse-dark mb-2">Manage Follow-ups</h3>
+                    <p className="text-synapse-gray text-sm">Intelligent follow-up sequences and interview coordination automation</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="relative">
+                <div className="bg-white rounded-xl shadow-soft p-8">
+                  <div className="space-y-6">
+                    <div className="flex items-center justify-between p-4 bg-gradient-to-r from-synapse-primary/10 to-synapse-secondary/10 rounded-lg">
+                      <div className="flex items-center space-x-3">
+                        <TrendingUp className="w-6 h-6 text-synapse-primary" />
+                        <span className="font-semibold text-synapse-dark">Response Rate</span>
+                      </div>
+                      <span className="text-2xl font-bold text-synapse-primary">85%</span>
+                    </div>
+                    <div className="flex items-center justify-between p-4 bg-gradient-to-r from-synapse-secondary/10 to-synapse-tertiary/10 rounded-lg">
+                      <div className="flex items-center space-x-3">
+                        <MessageCircle className="w-6 h-6 text-synapse-secondary" />
+                        <span className="font-semibold text-synapse-dark">Engagement</span>
+                      </div>
+                      <span className="text-2xl font-bold text-synapse-secondary">5x More</span>
+                    </div>
+                    <div className="flex items-center justify-between p-4 bg-gradient-to-r from-synapse-tertiary/10 to-synapse-primary/10 rounded-lg">
+                      <div className="flex items-center space-x-3">
+                        <Calendar className="w-6 h-6 text-synapse-tertiary" />
+                        <span className="font-semibold text-synapse-dark">Coordination</span>
+                      </div>
+                      <span className="text-2xl font-bold text-synapse-tertiary">Auto</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

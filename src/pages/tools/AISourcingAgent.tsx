@@ -73,16 +73,10 @@ const AISourcingAgent = () => {
             </p>
             <div className="flex justify-center">
               <Button 
-                className="relative overflow-hidden bg-gradient-to-r from-synapse-primary to-synapse-secondary hover:from-synapse-secondary hover:to-synapse-primary text-white font-semibold text-lg py-6 px-10 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group border-2 border-transparent"
+                className="bg-synapse-dark text-white hover:bg-synapse-dark/90 font-semibold text-lg py-6 px-10 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                 onClick={() => window.location.href = "/contact"}
               >
-                {/* Animated shimmer effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
-                
-                {/* Subtle glow animation */}
-                <div className="absolute inset-0 bg-gradient-to-r from-synapse-primary/50 to-synapse-secondary/50 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-                
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="flex items-center gap-2">
                   Deploy AI Agent Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </span>
@@ -260,10 +254,10 @@ const AISourcingAgent = () => {
                   className="w-full h-80 object-cover rounded-xl shadow-soft"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-48 h-48 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center shadow-lg">
+                  <div className="w-56 h-56 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center shadow-lg">
                     <div className="text-center text-white">
-                      <Bot className="w-8 h-8 mx-auto mb-2" />
-                      <h3 className="text-lg font-bold mb-1">Agent is Active</h3>
+                      <Bot className="w-10 h-10 mx-auto mb-3" />
+                      <h3 className="text-xl font-bold mb-2">Agent is Active</h3>
                       <p className="text-sm opacity-90">Working 24/7</p>
                     </div>
                   </div>
