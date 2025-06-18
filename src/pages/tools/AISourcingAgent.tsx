@@ -58,7 +58,7 @@ const AISourcingAgent = () => {
       title="AI Sourcing Agent" 
       description="Automatically scans job postings and continuously sources top-matching candidates"
     >
-      {/* Hero Section */}
+      {/* Hero Section - Keep Same */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -71,21 +71,12 @@ const AISourcingAgent = () => {
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Revolutionize your talent acquisition with an AI agent that automatically scans job postings and continuously sources top-matching candidates in the background, delivering real-time status updates from discovery to shortlisting.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                className="btn-primary text-lg py-4 px-8"
-                onClick={() => window.location.href = "/contact"}
-              >
-                Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-2 border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white text-lg py-4 px-8"
-                onClick={() => window.location.href = "/recruitment-tools"}
-              >
-                View All Tools <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
+            <Button 
+              className="btn-primary"
+              onClick={() => window.location.href = "/contact"}
+            >
+              Get Started <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
           </div>
         </div>
       </section>
@@ -173,7 +164,7 @@ const AISourcingAgent = () => {
         </div>
       </section>
 
-      {/* Your AI Agent at Work Process */}
+      {/* How It Works Process */}
       <section className="py-16 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
@@ -185,74 +176,55 @@ const AISourcingAgent = () => {
             </p>
           </div>
           
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                  <div className="w-10 h-10 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                     1
                   </div>
                   <div>
-                    <h3 className="font-semibold text-synapse-dark mb-2 text-lg">Analyze Job Requirements</h3>
-                    <p className="text-synapse-gray">AI scans and understands job posting requirements, skills, and qualifications with precision</p>
+                    <h3 className="font-semibold text-synapse-dark mb-2">Analyze Job Requirements</h3>
+                    <p className="text-synapse-gray text-sm">AI scans and understands job posting requirements, skills, and qualifications</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                  <div className="w-10 h-10 bg-synapse-secondary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                     2
                   </div>
                   <div>
-                    <h3 className="font-semibold text-synapse-dark mb-2 text-lg">Search & Discover</h3>
-                    <p className="text-synapse-gray">Continuous searching across multiple platforms and talent databases to find perfect matches</p>
+                    <h3 className="font-semibold text-synapse-dark mb-2">Search & Discover</h3>
+                    <p className="text-synapse-gray text-sm">Continuous searching across multiple platforms and talent databases</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                  <div className="w-10 h-10 bg-synapse-tertiary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                     3
                   </div>
                   <div>
-                    <h3 className="font-semibold text-synapse-dark mb-2 text-lg">Evaluate & Score</h3>
-                    <p className="text-synapse-gray">Advanced algorithms score candidates based on fit, experience, and cultural alignment</p>
+                    <h3 className="font-semibold text-synapse-dark mb-2">Evaluate & Score</h3>
+                    <p className="text-synapse-gray text-sm">Advanced algorithms score candidates based on fit and experience</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                  <div className="w-10 h-10 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                     4
                   </div>
                   <div>
-                    <h3 className="font-semibold text-synapse-dark mb-2 text-lg">Deliver Results</h3>
-                    <p className="text-synapse-gray">Real-time pipeline updates with qualified candidate profiles and detailed insights</p>
+                    <h3 className="font-semibold text-synapse-dark mb-2">Deliver Results</h3>
+                    <p className="text-synapse-gray text-sm">Real-time pipeline updates with qualified candidate profiles</p>
                   </div>
                 </div>
               </div>
               
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <img 
-                    src="/lovable-uploads/photo-1488590528505-98d2b5aba04b.png" 
-                    alt="AI technology at work" 
-                    className="w-full h-48 object-cover rounded-lg shadow-soft"
-                  />
-                  <img 
-                    src="/lovable-uploads/photo-1461749280684-dccba630e2f6.png" 
-                    alt="Data analysis and monitoring" 
-                    className="w-full h-32 object-cover rounded-lg shadow-soft"
-                  />
-                </div>
-                <div className="space-y-4 pt-8">
-                  <img 
-                    src="/lovable-uploads/photo-1531297484001-80022131f5a1.png" 
-                    alt="Intelligent candidate sourcing" 
-                    className="w-full h-32 object-cover rounded-lg shadow-soft"
-                  />
-                  <div className="bg-gradient-to-br from-synapse-primary/10 to-synapse-secondary/10 rounded-lg p-6 text-center">
-                    <Bot className="w-16 h-16 text-synapse-primary mx-auto mb-3" />
-                    <h3 className="text-lg font-bold text-synapse-dark mb-2">AI Agent Active</h3>
-                    <p className="text-synapse-gray text-sm">Working 24/7 to find your ideal candidates</p>
-                  </div>
+              <div className="bg-gradient-to-br from-synapse-primary/10 to-synapse-secondary/10 rounded-xl p-8 flex items-center justify-center">
+                <div className="text-center">
+                  <Bot className="w-24 h-24 text-synapse-primary mx-auto mb-4" />
+                  <h3 className="text-lg font-bold text-synapse-dark mb-2">AI Agent Active</h3>
+                  <p className="text-synapse-gray text-sm">Working 24/7 to find your ideal candidates</p>
                 </div>
               </div>
             </div>
@@ -296,6 +268,35 @@ const AISourcingAgent = () => {
                 <p className="text-synapse-gray text-sm">Continuously improves matching accuracy based on your hiring decisions</p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-white">
+        <div className="container-wide">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-6">
+              Ready to Scale Your Sourcing Operations?
+            </h2>
+            <p className="text-lg text-synapse-gray mb-8 max-w-2xl mx-auto">
+              Join leading companies who are already using AI Sourcing Agent to build stronger talent pipelines and hire faster than ever before.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                className="btn-primary text-lg py-4 px-8"
+                onClick={() => window.location.href = "/contact"}
+              >
+                Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button 
+                variant="outline" 
+                className="border-2 border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white text-lg py-4 px-8"
+                onClick={() => window.location.href = "/recruitment-tools"}
+              >
+                View All Tools <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
