@@ -1,3 +1,4 @@
+
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -70,19 +71,21 @@ const AISourcingAgent = () => {
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Revolutionize your talent acquisition with an AI agent that automatically scans job postings and continuously sources top-matching candidates in the background, delivering real-time status updates from discovery to shortlisting.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Button 
-                className="btn-primary"
+                className="relative overflow-hidden bg-gradient-to-r from-synapse-primary to-synapse-secondary hover:from-synapse-secondary hover:to-synapse-primary text-white font-semibold text-lg py-6 px-10 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group border-2 border-transparent"
                 onClick={() => window.location.href = "/contact"}
               >
-                Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-2 border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white"
-                onClick={() => window.location.href = "/recruitment-tools"}
-              >
-                View All Tools <ArrowRight className="ml-2 h-4 w-4" />
+                {/* Animated shimmer effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
+                
+                {/* Subtle glow animation */}
+                <div className="absolute inset-0 bg-gradient-to-r from-synapse-primary/50 to-synapse-secondary/50 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                
+                <span className="relative z-10 flex items-center gap-2">
+                  Deploy AI Agent Now
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </span>
               </Button>
             </div>
           </div>
@@ -101,7 +104,7 @@ const AISourcingAgent = () => {
                 <p className="text-synapse-gray mb-6">
                   Our AI agent continuously monitors job requirements, scans multiple talent databases, and identifies candidates who perfectly match your criteria. With advanced machine learning algorithms, it gets smarter with every search, delivering increasingly precise results.
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-4 mb-8">
                   {keyFeatures.map((feature, index) => (
                     <div key={index} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
@@ -109,6 +112,12 @@ const AISourcingAgent = () => {
                     </div>
                   ))}
                 </div>
+                <Button 
+                  className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-6 py-3"
+                  onClick={() => window.location.href = "/recruitment-tools"}
+                >
+                  Explore All Tools <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
               </div>
               
               <div className="bg-gradient-to-br from-synapse-primary/5 to-synapse-secondary/5 rounded-2xl p-8">
@@ -161,7 +170,7 @@ const AISourcingAgent = () => {
             ))}
           </div>
           
-          {/* CTA Section - Similar to Solutions Pages */}
+          {/* Updated CTA Section */}
           <div className="max-w-4xl mx-auto text-center mt-16">
             <h2 className="text-3xl font-bold text-synapse-dark mb-6">
               Ready to Transform Your Talent Sourcing?
@@ -169,12 +178,21 @@ const AISourcingAgent = () => {
             <p className="text-lg text-synapse-gray mb-8 max-w-2xl mx-auto">
               Join leading companies who are already using AI Sourcing Agent to discover top talent faster and more efficiently than ever before.
             </p>
-            <Button 
-              className="btn-primary text-lg px-8 py-3"
-              onClick={() => window.location.href = "/contact"}
-            >
-              Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                className="bg-synapse-dark text-white hover:bg-synapse-dark/90 text-lg px-8 py-3"
+                onClick={() => window.location.href = "/contact"}
+              >
+                Get a Demo <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button 
+                variant="outline" 
+                className="border-2 border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white text-lg px-8 py-3"
+                onClick={() => window.location.href = "/recruitment-tools"}
+              >
+                Explore All Tools <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -242,7 +260,7 @@ const AISourcingAgent = () => {
                   className="w-full h-80 object-cover rounded-xl shadow-soft"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-40 h-40 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center shadow-lg">
+                  <div className="w-48 h-48 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center shadow-lg">
                     <div className="text-center text-white">
                       <Bot className="w-8 h-8 mx-auto mb-2" />
                       <h3 className="text-lg font-bold mb-1">Agent is Active</h3>
