@@ -103,7 +103,7 @@ const Technology = () => {
             </p>
             <div className="flex justify-center">
               <Button 
-                className="bg-synapse-primary hover:bg-synapse-primary/90 text-white font-medium py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="bg-black hover:bg-gray-800 text-white font-medium py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
                 onClick={() => window.location.href = "/contact"}
               >
                 <span className="flex items-center gap-2">
@@ -283,7 +283,7 @@ const Technology = () => {
                   </div>
                 </div>
                 <Button 
-                  className="bg-synapse-primary hover:bg-synapse-primary/90 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200"
+                  className="bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200"
                   onClick={() => window.location.href = "/contact"}
                 >
                   Discover Our Tech Expertise <ArrowRight className="ml-2 h-4 w-4" />

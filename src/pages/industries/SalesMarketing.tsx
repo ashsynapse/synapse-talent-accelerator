@@ -4,54 +4,83 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp, Target, Users, Megaphone, BarChart3, PieChart, Zap, Award } from "lucide-react";
+import { TrendingUp, Target, Users, Megaphone, BarChart3, PieChart, Zap, Award, CheckCircle, ArrowRight } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const SalesMarketing = () => {
+  const salesMarketingChallenges = [
+    {
+      title: "Find Revenue-Driving Talent",
+      description: "Locate sales and marketing professionals with proven track records of driving business growth",
+      icon: <TrendingUp className="w-6 h-6" />
+    },
+    {
+      title: "Assess Performance Potential",
+      description: "Evaluate sales capabilities, marketing creativity, and customer relationship skills beyond interviews",
+      icon: <Target className="w-6 h-6" />
+    },
+    {
+      title: "Scale Revenue Teams Fast",
+      description: "Rapidly build sales and marketing teams to capture market opportunities and drive growth",
+      icon: <BarChart3 className="w-6 h-6" />
+    },
+    {
+      title: "Retain Top Performers",
+      description: "Keep your best sales and marketing talent engaged in a competitive market full of opportunities",
+      icon: <Award className="w-6 h-6" />
+    }
+  ];
+
   const keyRoles = [
     {
       title: "Sales Executives",
       description: "Account executives, sales managers, business development representatives, and enterprise sales professionals",
-      icon: <TrendingUp className="w-6 h-6" />
+      icon: <TrendingUp className="w-6 h-6" />,
+      skills: ["Sales Strategy", "Account Management", "Lead Generation", "Revenue Growth"]
     },
     {
-      title: "Marketing Managers",
-      description: "Digital marketing managers, brand managers, content marketers, and marketing directors",
-      icon: <Megaphone className="w-6 h-6" />
+      title: "Digital Marketing",
+      description: "Digital marketing managers, SEO specialists, PPC experts, and marketing automation professionals",
+      icon: <Zap className="w-6 h-6" />,
+      skills: ["Digital Marketing", "SEO/SEM", "Marketing Automation", "Analytics"]
     },
     {
-      title: "Business Development",
-      description: "BD managers, partnership specialists, channel managers, and strategic alliance professionals",
-      icon: <Target className="w-6 h-6" />
+      title: "Marketing Strategy",
+      description: "Brand managers, content marketers, product marketers, and marketing directors",
+      icon: <Megaphone className="w-6 h-6" />,
+      skills: ["Brand Management", "Content Marketing", "Product Marketing", "Strategy"]
     },
     {
       title: "Revenue Operations",
-      description: "Revenue operations specialists, sales analysts, CRM managers, and sales enablement professionals",
-      icon: <BarChart3 className="w-6 h-6" />
+      description: "Revenue operations specialists, sales enablement professionals, and CRM managers",
+      icon: <PieChart className="w-6 h-6" />,
+      skills: ["RevOps", "Sales Enablement", "CRM Management", "Data Analysis"]
     }
   ];
 
-  const specializations = [
+  const solutionBenefits = [
     {
-      title: "Digital Marketing",
-      description: "SEO specialists, PPC managers, social media experts, and marketing automation professionals",
-      icon: <Zap className="w-6 h-6 text-white" />
+      title: "Showcase Your Growth Culture",
+      description: "Highlight your market success, growth opportunities, and performance-driven culture to attract top sales and marketing talent who want to drive business results.",
+      icon: <TrendingUp className="w-8 h-8 text-synapse-primary" />
     },
     {
-      title: "Enterprise Sales",
-      description: "Enterprise account managers, solution consultants, technical sales engineers, and key account directors",
-      icon: <Award className="w-6 h-6 text-white" />
+      title: "Build Performance-Driven Networks",
+      description: "Create targeted connections with sales and marketing professionals across different specializations, nurturing relationships before opportunities arise.",
+      icon: <Target className="w-8 h-8 text-synapse-secondary" />
     },
     {
-      title: "Growth Marketing",
-      description: "Growth hackers, conversion specialists, product marketers, and performance marketing experts",
-      icon: <TrendingUp className="w-6 h-6 text-white" />
-    },
-    {
-      title: "Sales Analytics",
-      description: "Sales analysts, revenue forecasting specialists, CRM experts, and sales intelligence professionals",
-      icon: <PieChart className="w-6 h-6 text-white" />
+      title: "Deliver Results-Focused Experience",
+      description: "Provide dynamic, engaging recruitment experiences that emphasize performance metrics and growth potential, matching the energy expected by sales and marketing professionals.",
+      icon: <Users className="w-8 h-8 text-synapse-tertiary" />
     }
+  ];
+
+  const successMetrics = [
+    { metric: "65%", description: "faster time-to-hire for sales & marketing roles" },
+    { metric: "87%", description: "candidate satisfaction with recruitment process" },
+    { metric: "50%", description: "increase in qualified sales & marketing applicants" },
+    { metric: "74%", description: "improvement in sales & marketing hire retention rates" }
   ];
 
   return (
@@ -60,74 +89,57 @@ const SalesMarketing = () => {
       description="AI-powered recruitment for sales and marketing professionals"
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-12 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
-              Industry Focus
+              Sales & Marketing
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Sales & Marketing Recruitment
+              Exceptional Experiences for Sales & Marketing Talent
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Access top sales and marketing talent through our AI-powered recruitment platform. From revenue-driving sales professionals to innovative marketing experts, we connect you with candidates who fuel business growth.
+              Compete for top revenue-driving positions by revolutionizing how you attract, hire, onboard, and retain highly skilled sales and marketing professionals. Our AI-powered platform understands the unique demands of revenue-focused recruiting.
             </p>
-            <Button 
-              className="btn-primary"
-              onClick={() => window.location.href = "/contact"}
-            >
-              Find Sales & Marketing Talent
-            </Button>
+            <div className="flex justify-center">
+              <Button 
+                className="bg-black hover:bg-gray-800 text-white font-medium py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                onClick={() => window.location.href = "/contact"}
+              >
+                <span className="flex items-center gap-2">
+                  Find Sales & Marketing Talent
+                  <ArrowRight className="h-5 w-5" />
+                </span>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Key Roles Section */}
-      <section className="py-12 bg-white">
+      {/* Story Section */}
+      <section className="py-16 bg-white">
         <div className="container-wide">
-          <h2 className="text-3xl font-bold text-center mb-8 text-synapse-dark">
-            Key Sales & Marketing Roles We Fill
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {keyRoles.map((role, index) => (
-              <Card key={index} className="border border-gray-100 shadow-soft hover:shadow-medium transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center flex-shrink-0">
-                      <div className="text-white">
-                        {role.icon}
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2 text-synapse-dark">{role.title}</h3>
-                      <p className="text-synapse-gray">{role.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-6">
+              Hire the Best Sales & Marketing Talent for Your Business
+            </h2>
+            <p className="text-lg text-synapse-gray leading-relaxed">
+              Whether you operate a sales-driven organization or are looking to fill specific revenue roles in your company, you need to attract highly skilled, top-tier sales and marketing professionals by showc asing your employer brand and delivering an outstanding candidate experience. Synapse's AI-powered recruitment platform empowers companies to deliver higher quality sales and marketing talent and drive hiring results to stay competitive.
+            </p>
           </div>
-        </div>
-      </section>
 
-      {/* Specializations Section */}
-      <section className="py-12 bg-synapse-lighter/30">
-        <div className="container-wide">
-          <h2 className="text-3xl font-bold text-center mb-8 text-synapse-dark">
-            Sales & Marketing Specializations
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {specializations.map((spec, index) => (
-              <Card key={index} className="border-0 shadow-soft hover:shadow-medium transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
-                    {spec.icon}
+          <div className="grid lg:grid-cols-3 gap-8">
+            {solutionBenefits.map((benefit, index) => (
+              <Card key={index} className="border border-gray-100 shadow-soft hover:shadow-medium transition-all duration-300 group">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-6 shadow-soft group-hover:scale-110 transition-transform">
+                    {benefit.icon}
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-synapse-dark">
-                    {spec.title}
+                  <h3 className="text-xl font-bold mb-4 text-synapse-dark">
+                    {benefit.title}
                   </h3>
-                  <p className="text-synapse-gray text-sm">
-                    {spec.description}
+                  <p className="text-synapse-gray">
+                    {benefit.description}
                   </p>
                 </CardContent>
               </Card>
@@ -136,37 +148,179 @@ const SalesMarketing = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-12 bg-white">
+      {/* Sales Marketing Challenges Section */}
+      <section className="py-16 bg-synapse-lighter/30">
         <div className="container-wide">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-synapse-dark">
-              Why Companies Choose Synapse for Sales & Marketing
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-4">
+              Solve the Biggest Sales & Marketing Talent Hiring Challenges
             </h2>
-            <p className="text-lg text-synapse-gray mb-8">
-              Our AI-driven approach identifies sales and marketing professionals who don't just meet quotas, but drive sustainable growth. We match candidates based on performance metrics, cultural fit, and growth potential.
+            <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
+              Sales and marketing organizations face unique recruitment challenges. Our AI platform addresses each one with precision.
             </p>
-            <div className="grid md:grid-cols-3 gap-8 text-left">
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
-                  <Target className="w-6 h-6 text-white" />
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {salesMarketingChallenges.map((challenge, index) => (
+              <Card key={index} className="border-0 shadow-soft hover:shadow-medium transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="text-white">
+                        {challenge.icon}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-synapse-dark">{challenge.title}</h3>
+                      <p className="text-synapse-gray">{challenge.description}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Key Roles Section */}
+      <section className="py-16 bg-white">
+        <div className="container-wide">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-4">
+              Critical Sales & Marketing Roles We Fill
+            </h2>
+            <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
+              From revenue generation to brand building, we understand the full spectrum of sales and marketing talent your organization needs.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8">
+            {keyRoles.map((role, index) => (
+              <Card key={index} className="border border-gray-100 shadow-soft hover:shadow-medium transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-start space-x-4 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="text-white">
+                        {role.icon}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-synapse-dark">{role.title}</h3>
+                      <p className="text-synapse-gray mb-4">{role.description}</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {role.skills.map((skill, skillIndex) => (
+                      <Badge key={skillIndex} variant="secondary" className="bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Success Metrics Section */}
+      <section className="py-16 bg-synapse-lighter/30">
+        <div className="container-wide">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-4">
+              Proven Results for Sales & Marketing Organizations
+            </h2>
+            <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
+              See how our AI-powered approach delivers measurable improvements for sales and marketing recruitment.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {successMetrics.map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">{item.metric}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Performance Focus</h3>
-                <p className="text-synapse-gray">Data-driven assessment of sales performance, marketing ROI, and revenue impact.</p>
+                <p className="text-synapse-gray font-medium">{item.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sales Marketing Expertise */}
+      <section className="py-16 bg-white">
+        <div className="container-wide">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-white" />
+                <h2 className="text-3xl font-bold text-synapse-dark mb-6">
+                  Deep Sales & Marketing Understanding
+                </h2>
+                <p className="text-synapse-gray mb-6">
+                  Our AI platform doesn't just match keywords—it understands sales methodologies, marketing channels, and career progression paths in revenue-focused roles.
+                </p>
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
+                    <span className="text-synapse-gray">Sales Strategy & Account Management</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
+                    <span className="text-synapse-gray">Digital Marketing & SEO/SEM</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
+                    <span className="text-synapse-gray">Brand Management & Content Marketing</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
+                    <span className="text-synapse-gray">Revenue Operations & Analytics</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
+                    <span className="text-synapse-gray">Growth Marketing & Performance</span>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Cultural Alignment</h3>
-                <p className="text-synapse-gray">Matching professionals who align with your company culture and values.</p>
+                <Button 
+                  className="bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200"
+                  onClick={() => window.location.href = "/contact"}
+                >
+                  Discover Our Sales & Marketing Expertise <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
               </div>
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mb-4">
-                  <BarChart3 className="w-6 h-6 text-white" />
+              
+              <div className="bg-gradient-to-br from-synapse-primary/5 to-synapse-secondary/5 rounded-2xl p-8">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <TrendingUp className="w-8 h-8 text-white" />
+                    </div>
+                    <h4 className="font-semibold text-synapse-dark mb-2">Sales Excellence</h4>
+                    <p className="text-sm text-synapse-gray">Account management, business development</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Zap className="w-8 h-8 text-white" />
+                    </div>
+                    <h4 className="font-semibold text-synapse-dark mb-2">Digital Marketing</h4>
+                    <p className="text-sm text-synapse-gray">SEO, PPC, marketing automation</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Megaphone className="w-8 h-8 text-white" />
+                    </div>
+                    <h4 className="font-semibold text-synapse-dark mb-2">Brand Strategy</h4>
+                    <p className="text-sm text-synapse-gray">Content marketing, brand management</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <PieChart className="w-8 h-8 text-white" />
+                    </div>
+                    <h4 className="font-semibold text-synapse-dark mb-2">Revenue Ops</h4>
+                    <p className="text-sm text-synapse-gray">Sales enablement, analytics</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-synapse-dark">Growth Potential</h3>
-                <p className="text-synapse-gray">Identifying candidates with proven ability to scale and drive business growth.</p>
               </div>
             </div>
           </div>
