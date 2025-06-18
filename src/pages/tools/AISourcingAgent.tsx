@@ -73,7 +73,7 @@ const AISourcingAgent = () => {
             </p>
             <div className="flex justify-center">
               <Button 
-                className="bg-synapse-dark text-white hover:bg-gray-600 font-semibold text-lg py-6 px-10 rounded-xl shadow-xl"
+                className="bg-gradient-to-r from-synapse-primary to-synapse-secondary text-white hover:from-synapse-primary/90 hover:to-synapse-secondary/90 font-semibold text-lg py-6 px-10 rounded-xl shadow-xl transform transition-all duration-300 hover:scale-105"
                 onClick={() => window.location.href = "/contact"}
               >
                 <span className="flex items-center gap-2">
