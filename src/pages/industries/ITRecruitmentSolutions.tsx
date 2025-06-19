@@ -93,6 +93,7 @@ const ITRecruitmentSolutions = () => {
       title="IT Recruitment Solutions" 
       description="AI-powered recruitment solutions for information technology professionals and technical teams"
     >
+      {/* Hero Section */}
       <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -117,62 +118,64 @@ const ITRecruitmentSolutions = () => {
       </section>
 
       {/* Advanced IT Recruitment Capabilities Section */}
-      <section className="py-10 bg-synapse-lighter/30">
+      <section className="py-16 bg-synapse-lighter/30">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
-            <div>
-              <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-                Discover World-Class IT Talent Effortlessly
-              </h2>
-              <p className="text-lg text-synapse-gray mb-8">
-                Built specifically for accessing the IT talent market, our IT Recruitment Solutions offer advanced AI algorithms to identify and engage top technology professionals across all domains.
-              </p>
-              <div className="space-y-3 mb-8">
-                {[
-                  "AI-powered identification of IT candidates across all platforms",
-                  "Discreet engagement strategies that respect candidate privacy",
-                  "Comprehensive talent mapping across industries and skill sets",
-                  "Long-term relationship building for future opportunities",
-                  "Advanced behavioral analysis and engagement optimization",
-                  "Global IT talent network access and engagement",
-                  "Specialized recruitment for emerging technologies",
-                  "Executive IT leadership and CTO placement"
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
-                    <span className="text-synapse-gray">{feature}</span>
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-12">
+              Discover World-Class IT Talent Effortlessly
+            </h2>
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <div>
+                <p className="text-lg text-synapse-gray mb-8">
+                  Built specifically for accessing the IT talent market, our IT Recruitment Solutions offer advanced AI algorithms to identify and engage top technology professionals across all domains.
+                </p>
+                <div className="space-y-3 mb-8">
+                  {[
+                    "AI-powered identification of IT candidates across all platforms",
+                    "Discreet engagement strategies that respect candidate privacy",
+                    "Comprehensive talent mapping across industries and skill sets",
+                    "Long-term relationship building for future opportunities",
+                    "Advanced behavioral analysis and engagement optimization",
+                    "Global IT talent network access and engagement",
+                    "Specialized recruitment for emerging technologies",
+                    "Executive IT leadership and CTO placement"
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
+                      <span className="text-synapse-gray">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <Button 
+                  className="btn-primary"
+                  onClick={() => window.location.href = "/recruitment-solutions"}
+                >
+                  Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+              <div className="bg-white rounded-xl shadow-soft p-8">
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="bg-gradient-to-br from-synapse-primary/10 to-synapse-primary/5 rounded-lg p-4 text-center">
+                    <Code className="w-8 h-8 text-synapse-primary mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-synapse-dark">98%</div>
+                    <div className="text-sm text-synapse-gray">Technical Skills Match</div>
                   </div>
-                ))}
-              </div>
-              <Button 
-                className="btn-primary"
-                onClick={() => window.location.href = "/recruitment-solutions"}
-              >
-                Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-            <div className="bg-white rounded-xl shadow-soft p-8">
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-gradient-to-br from-synapse-primary/10 to-synapse-primary/5 rounded-lg p-4 text-center">
-                  <Code className="w-8 h-8 text-synapse-primary mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-synapse-dark">98%</div>
-                  <div className="text-sm text-synapse-gray">Technical Skills Match</div>
+                  <div className="bg-gradient-to-br from-synapse-secondary/10 to-synapse-secondary/5 rounded-lg p-4 text-center">
+                    <Clock className="w-8 h-8 text-synapse-secondary mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-synapse-dark">60%</div>
+                    <div className="text-sm text-synapse-gray">Faster IT Hiring</div>
+                  </div>
                 </div>
-                <div className="bg-gradient-to-br from-synapse-secondary/10 to-synapse-secondary/5 rounded-lg p-4 text-center">
-                  <Clock className="w-8 h-8 text-synapse-secondary mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-synapse-dark">60%</div>
-                  <div className="text-sm text-synapse-gray">Faster IT Hiring</div>
+                <div className="bg-gradient-to-br from-synapse-tertiary/10 to-synapse-tertiary/5 rounded-lg p-4 text-center mb-4">
+                  <DollarSign className="w-8 h-8 text-synapse-tertiary mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-synapse-dark">75%</div>
+                  <div className="text-sm text-synapse-gray">Cost Reduction</div>
                 </div>
-              </div>
-              <div className="bg-gradient-to-br from-synapse-tertiary/10 to-synapse-tertiary/5 rounded-lg p-4 text-center mb-4">
-                <DollarSign className="w-8 h-8 text-synapse-tertiary mx-auto mb-2" />
-                <div className="text-2xl font-bold text-synapse-dark">75%</div>
-                <div className="text-sm text-synapse-gray">Cost Reduction</div>
-              </div>
-              <div className="bg-gradient-to-br from-synapse-primary/10 to-synapse-secondary/10 rounded-lg p-4 text-center">
-                <Brain className="w-8 h-8 text-synapse-primary mx-auto mb-2" />
-                <div className="text-2xl font-bold text-synapse-dark">24/7</div>
-                <div className="text-sm text-synapse-gray">AI-Powered Sourcing</div>
+                <div className="bg-gradient-to-br from-synapse-primary/10 to-synapse-secondary/10 rounded-lg p-4 text-center">
+                  <Brain className="w-8 h-8 text-synapse-primary mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-synapse-dark">24/7</div>
+                  <div className="text-sm text-synapse-gray">AI-Powered Sourcing</div>
+                </div>
               </div>
             </div>
           </div>
