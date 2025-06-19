@@ -1,4 +1,3 @@
-
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -59,14 +58,15 @@ const OutreachAgent = () => {
       description="Hyper-personalized, automated outreach campaigns for candidate engagement"
     >
       {/* Hero Section */}
-      <section className="pt-20 pb-12 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
               Powered Tool
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Outreach Agent
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-synapse-dark">Outreach </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Agent</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Transform candidate engagement with intelligent Outreach Agent that creates hyper-personalized campaigns across multiple channels. Our agent crafts compelling messages, manages follow-ups, and optimizes communication strategies to maximize response rates and build meaningful connections.

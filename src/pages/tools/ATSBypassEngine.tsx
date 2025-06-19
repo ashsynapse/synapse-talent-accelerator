@@ -55,14 +55,14 @@ const ATSBypassEngine = () => {
   return (
     <PageTemplate 
       title="ATS Bypass Engine" 
-      description="Smart resume optimizer that reverse-engineers ATS systems for maximum compatibility"
+      description="Intelligent ATS optimization and application tracking bypass technology"
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
-              Powered Tool
+              Advanced Tool
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-synapse-dark">ATS Bypass </span>
