@@ -1,3 +1,4 @@
+
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -20,7 +21,7 @@ const AISourcingAgent = () => {
     },
     {
       icon: <Brain className="w-6 h-6 text-white" />,
-      title: "AI-Powered Matching",
+      title: "Advanced Matching",
       description: "Advanced algorithms evaluate and score candidates based on skills, experience, and cultural fit"
     }
   ];
@@ -54,7 +55,7 @@ const AISourcingAgent = () => {
 
   return (
     <PageTemplate 
-      title="AI Sourcing Agent" 
+      title="Sourcing Agent" 
       description="Automatically scans job postings and continuously sources top-matching candidates"
     >
       {/* Hero Section */}
@@ -62,13 +63,13 @@ const AISourcingAgent = () => {
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
-              AI-Powered Tool
+              Powered Tool
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              AI Sourcing Agent
+              Sourcing Agent
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Revolutionize your talent acquisition with an AI agent that automatically scans job postings and continuously sources top-matching candidates in the background, delivering real-time status updates from discovery to shortlisting.
+              Revolutionize your talent acquisition with an intelligent agent that automatically scans job postings and continuously sources top-matching candidates in the background, delivering real-time status updates from discovery to shortlisting.
             </p>
             <div className="flex justify-center">
               <Button 
@@ -95,7 +96,7 @@ const AISourcingAgent = () => {
                   Intelligent Sourcing That Never Sleeps
                 </h2>
                 <p className="text-synapse-gray mb-6">
-                  Our AI agent continuously monitors job requirements, scans multiple talent databases, and identifies candidates who perfectly match your criteria. With advanced machine learning algorithms, it gets smarter with every search, delivering increasingly precise results.
+                  Our agent continuously monitors job requirements, scans multiple talent databases, and identifies candidates who perfectly match your criteria. With advanced machine learning algorithms, it gets smarter with every search, delivering increasingly precise results.
                 </p>
                 <div className="space-y-4 mb-8">
                   {keyFeatures.map((feature, index) => (
@@ -141,7 +142,7 @@ const AISourcingAgent = () => {
               Measurable Impact on Your Hiring Performance
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              See how AI Sourcing Agent transforms your talent acquisition metrics
+              See how Sourcing Agent transforms your talent acquisition metrics
             </p>
           </div>
           
@@ -169,7 +170,7 @@ const AISourcingAgent = () => {
               Ready to Transform Your Talent Sourcing?
             </h2>
             <p className="text-lg text-synapse-gray mb-8 max-w-2xl mx-auto">
-              Join leading companies who are already using AI Sourcing Agent to discover top talent faster and more efficiently than ever before.
+              Join leading companies who are already using Sourcing Agent to discover top talent faster and more efficiently than ever before.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -195,7 +196,7 @@ const AISourcingAgent = () => {
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              Your AI Agent at Work
+              Your Sourcing Agent at Work
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
               See how our intelligent sourcing process delivers results automatically
@@ -211,7 +212,7 @@ const AISourcingAgent = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-synapse-dark mb-2">Analyze Job Requirements</h3>
-                    <p className="text-synapse-gray text-sm">AI scans and understands job posting requirements, skills, and qualifications</p>
+                    <p className="text-synapse-gray text-sm">Agent scans and understands job posting requirements, skills, and qualifications</p>
                   </div>
                 </div>
                 
@@ -249,15 +250,15 @@ const AISourcingAgent = () => {
               <div className="relative">
                 <img 
                   src="/lovable-uploads/8445fbb5-892b-4cdc-9ee4-54e42033a268.png" 
-                  alt="AI Technology" 
+                  alt="Sourcing Technology" 
                   className="w-full h-80 object-cover rounded-xl shadow-soft"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-56 h-56 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center shadow-lg">
                     <div className="text-center text-white">
-                      <Bot className="w-10 h-10 mx-auto mb-3" />
-                      <h3 className="text-xl font-bold mb-2">Agent is Active</h3>
-                      <p className="text-sm opacity-90">Working 24/7</p>
+                      <Search className="w-10 h-10 mx-auto mb-3" />
+                      <h3 className="text-xl font-bold mb-2">Sourcing Active</h3>
+                      <p className="text-sm opacity-90">Discovering 24/7</p>
                     </div>
                   </div>
                 </div>
@@ -272,7 +273,7 @@ const AISourcingAgent = () => {
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              Advanced AI Capabilities
+              Advanced Capabilities
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
               Powered by cutting-edge artificial intelligence and machine learning

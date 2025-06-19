@@ -21,7 +21,7 @@ const AIOutreachAgent = () => {
     },
     {
       icon: <Brain className="w-6 h-6 text-white" />,
-      title: "AI-Driven Optimization",
+      title: "Driven Optimization",
       description: "Continuously learns from response rates to improve messaging effectiveness and timing"
     }
   ];
@@ -55,7 +55,7 @@ const AIOutreachAgent = () => {
 
   return (
     <PageTemplate 
-      title="AI Outreach Agent" 
+      title="Outreach Agent" 
       description="Hyper-personalized, automated outreach campaigns for candidate engagement"
     >
       {/* Hero Section */}
@@ -63,13 +63,13 @@ const AIOutreachAgent = () => {
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
-              AI-Powered Tool
+              Powered Tool
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              AI Outreach Agent
+              Outreach Agent
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Transform candidate engagement with AI-powered outreach that creates hyper-personalized campaigns across multiple channels. Our intelligent agent crafts compelling messages, manages follow-ups, and optimizes communication strategies to maximize response rates and build meaningful connections.
+              Transform candidate engagement with intelligent outreach that creates hyper-personalized campaigns across multiple channels. Our agent crafts compelling messages, manages follow-ups, and optimizes communication strategies to maximize response rates and build meaningful connections.
             </p>
             <div className="flex justify-center">
               <Button 
@@ -96,7 +96,7 @@ const AIOutreachAgent = () => {
                   Personalized Outreach at Scale
                 </h2>
                 <p className="text-synapse-gray mb-6">
-                  Our AI agent analyzes candidate profiles, career trajectories, and interests to craft uniquely personalized messages that resonate. With advanced natural language processing, every outreach feels authentic and relevant, dramatically improving engagement rates.
+                  Our agent analyzes candidate profiles, career trajectories, and interests to craft uniquely personalized messages that resonate. With advanced natural language processing, every outreach feels authentic and relevant, dramatically improving engagement rates.
                 </p>
                 <div className="space-y-4 mb-8">
                   {keyFeatures.map((feature, index) => (
@@ -142,7 +142,7 @@ const AIOutreachAgent = () => {
               Measurable Impact on Your Outreach Performance
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              See how AI Outreach Agent transforms your candidate engagement metrics
+              See how Outreach Agent transforms your candidate engagement metrics
             </p>
           </div>
           
@@ -170,7 +170,7 @@ const AIOutreachAgent = () => {
               Ready to Transform Your Candidate Outreach?
             </h2>
             <p className="text-lg text-synapse-gray mb-8 max-w-2xl mx-auto">
-              Join leading companies who are already using AI Outreach Agent to engage top talent with personalized campaigns that get results.
+              Join leading companies who are already using Outreach Agent to engage top talent with personalized campaigns that get results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -196,7 +196,7 @@ const AIOutreachAgent = () => {
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              Your AI Agent at Work
+              Your Outreach Agent at Work
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
               See how our intelligent outreach process delivers personalized engagement automatically
@@ -212,7 +212,7 @@ const AIOutreachAgent = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-synapse-dark mb-2">Analyze Candidate Profiles</h3>
-                    <p className="text-synapse-gray text-sm">AI analyzes candidate backgrounds, interests, and career patterns for personalization</p>
+                    <p className="text-synapse-gray text-sm">Agent analyzes candidate backgrounds, interests, and career patterns for personalization</p>
                   </div>
                 </div>
                 
@@ -250,14 +250,14 @@ const AIOutreachAgent = () => {
               <div className="relative">
                 <img 
                   src="/lovable-uploads/8445fbb5-892b-4cdc-9ee4-54e42033a268.png" 
-                  alt="AI Technology" 
+                  alt="Outreach Technology" 
                   className="w-full h-80 object-cover rounded-xl shadow-soft"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-56 h-56 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center shadow-lg">
                     <div className="text-center text-white">
-                      <Bot className="w-10 h-10 mx-auto mb-3" />
-                      <h3 className="text-xl font-bold mb-2">Agent is Active</h3>
+                      <MessageSquare className="w-10 h-10 mx-auto mb-3" />
+                      <h3 className="text-xl font-bold mb-2">Outreach Active</h3>
                       <p className="text-sm opacity-90">Engaging 24/7</p>
                     </div>
                   </div>
@@ -273,7 +273,7 @@ const AIOutreachAgent = () => {
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              Advanced AI Capabilities
+              Advanced Capabilities
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
               Powered by cutting-edge artificial intelligence and machine learning

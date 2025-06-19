@@ -55,7 +55,7 @@ const AISubmissionAgent = () => {
 
   return (
     <PageTemplate 
-      title="AI Submission Agent" 
+      title="Submission Agent" 
       description="End-to-end candidate submission with automated coordination and follow-ups"
     >
       {/* Hero Section */}
@@ -63,13 +63,13 @@ const AISubmissionAgent = () => {
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
-              AI-Powered Tool
+              Powered Tool
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              AI Submission Agent
+              Submission Agent
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Streamline your entire candidate submission process with AI-powered automation that handles everything from profile matching to final coordination. Our intelligent agent ensures seamless communication, timely follow-ups, and successful placements.
+              Streamline your entire candidate submission process with intelligent automation that handles everything from profile matching to final coordination. Our agent ensures seamless communication, timely follow-ups, and successful placements.
             </p>
             <div className="flex justify-center">
               <Button 
@@ -96,7 +96,7 @@ const AISubmissionAgent = () => {
                   Seamless Submission Coordination
                 </h2>
                 <p className="text-synapse-gray mb-6">
-                  Our AI agent orchestrates the entire submission workflow, from initial candidate evaluation to final placement coordination. With intelligent matching algorithms and automated communication, every submission is handled with precision and professionalism.
+                  Our agent orchestrates the entire submission workflow, from initial candidate evaluation to final placement coordination. With intelligent matching algorithms and automated communication, every submission is handled with precision and professionalism.
                 </p>
                 <div className="space-y-4 mb-8">
                   {keyFeatures.map((feature, index) => (
@@ -142,7 +142,7 @@ const AISubmissionAgent = () => {
               Measurable Impact on Your Submission Process
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              See how AI Submission Agent transforms your placement coordination metrics
+              See how Submission Agent transforms your placement coordination metrics
             </p>
           </div>
           
@@ -170,7 +170,7 @@ const AISubmissionAgent = () => {
               Ready to Transform Your Submission Process?
             </h2>
             <p className="text-lg text-synapse-gray mb-8 max-w-2xl mx-auto">
-              Join leading companies who are already using AI Submission Agent to streamline placements and coordinate submissions with unprecedented efficiency.
+              Join leading companies who are already using Submission Agent to streamline placements and coordinate submissions with unprecedented efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -196,7 +196,7 @@ const AISubmissionAgent = () => {
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              Your AI Agent at Work
+              Your Submission Agent at Work
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
               See how our intelligent submission process delivers seamless coordination automatically
@@ -212,7 +212,7 @@ const AISubmissionAgent = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-synapse-dark mb-2">Match & Evaluate</h3>
-                    <p className="text-synapse-gray text-sm">AI analyzes candidate profiles against job requirements for optimal matching</p>
+                    <p className="text-synapse-gray text-sm">Agent analyzes candidate profiles against job requirements for optimal matching</p>
                   </div>
                 </div>
                 
@@ -250,14 +250,14 @@ const AISubmissionAgent = () => {
               <div className="relative">
                 <img 
                   src="/lovable-uploads/8445fbb5-892b-4cdc-9ee4-54e42033a268.png" 
-                  alt="AI Technology" 
+                  alt="Submission Technology" 
                   className="w-full h-80 object-cover rounded-xl shadow-soft"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-56 h-56 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center shadow-lg">
                     <div className="text-center text-white">
-                      <Bot className="w-10 h-10 mx-auto mb-3" />
-                      <h3 className="text-xl font-bold mb-2">Agent is Active</h3>
+                      <Send className="w-10 h-10 mx-auto mb-3" />
+                      <h3 className="text-xl font-bold mb-2">Submission Active</h3>
                       <p className="text-sm opacity-90">Coordinating 24/7</p>
                     </div>
                   </div>
@@ -273,7 +273,7 @@ const AISubmissionAgent = () => {
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              Advanced AI Capabilities
+              Advanced Capabilities
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
               Powered by cutting-edge artificial intelligence and machine learning

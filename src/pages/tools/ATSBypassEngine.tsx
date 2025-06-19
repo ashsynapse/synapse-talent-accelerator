@@ -63,13 +63,13 @@ const ATSBypassEngine = () => {
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
-              AI-Powered Tool
+              Powered Tool
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
               ATS Bypass Engine
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Unlock hidden talent with our intelligent ATS bypass technology that reverse-engineers applicant tracking systems. Our AI engine optimizes resumes for maximum compatibility, ensuring top candidates never get filtered out by algorithmic screening.
+              Unlock hidden talent with our intelligent ATS bypass technology that reverse-engineers applicant tracking systems. Our engine optimizes resumes for maximum compatibility, ensuring top candidates never get filtered out by algorithmic screening.
             </p>
             <div className="flex justify-center">
               <Button 
@@ -196,7 +196,7 @@ const ATSBypassEngine = () => {
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              Your AI Engine at Work
+              Your Engine at Work
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
               See how our intelligent optimization process delivers ATS-compatible resumes automatically
@@ -212,7 +212,7 @@ const ATSBypassEngine = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-synapse-dark mb-2">Analyze ATS Systems</h3>
-                    <p className="text-synapse-gray text-sm">AI reverse-engineers target ATS algorithms to understand scoring criteria</p>
+                    <p className="text-synapse-gray text-sm">Engine reverse-engineers target ATS algorithms to understand scoring criteria</p>
                   </div>
                 </div>
                 
@@ -250,14 +250,14 @@ const ATSBypassEngine = () => {
               <div className="relative">
                 <img 
                   src="/lovable-uploads/8445fbb5-892b-4cdc-9ee4-54e42033a268.png" 
-                  alt="AI Technology" 
+                  alt="ATS Technology" 
                   className="w-full h-80 object-cover rounded-xl shadow-soft"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-56 h-56 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center shadow-lg">
                     <div className="text-center text-white">
-                      <Bot className="w-10 h-10 mx-auto mb-3" />
-                      <h3 className="text-xl font-bold mb-2">Engine is Active</h3>
+                      <FileText className="w-10 h-10 mx-auto mb-3" />
+                      <h3 className="text-xl font-bold mb-2">Engine Active</h3>
                       <p className="text-sm opacity-90">Optimizing 24/7</p>
                     </div>
                   </div>
@@ -273,7 +273,7 @@ const ATSBypassEngine = () => {
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              Advanced AI Capabilities
+              Advanced Capabilities
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
               Powered by cutting-edge artificial intelligence and machine learning
