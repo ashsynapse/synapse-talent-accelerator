@@ -91,23 +91,23 @@ const ITRecruitmentSolutions = () => {
   return (
     <PageTemplate 
       title="IT Recruitment Solutions" 
-      description="AI-powered recruitment solutions for technology professionals and IT teams"
+      description="AI-powered recruitment solutions for information technology professionals and technical teams"
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-6 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary">
+      <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/30">
+            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
               Specialized IT Solutions
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
               IT Recruitment Solutions
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Transform your technology hiring with AI-powered IT recruitment solutions. We specialize in finding exceptional developers, engineers, and IT professionals who drive innovation and technical excellence.
+            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
+              Transform your technology hiring with AI-powered IT recruitment solutions. We specialize in finding exceptional information technology professionals who drive innovation and digital transformation.
             </p>
             <Button 
-              className="bg-white text-synapse-primary hover:bg-white/90 px-8 py-3 text-lg"
+              className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
               onClick={() => window.location.href = "/contact"}
             >
               Find IT Talent

@@ -170,7 +170,7 @@ export const navItems = [
     page: <HumanResourceRecruitmentSolutions />,
   },
   {
-    to: "/industries/sales-recruitment-solutions",
+    to: "/industries/human-sales-recruitment-solutions",
     page: <HumanSalesRecruitmentSolutions />,
   },
   {
