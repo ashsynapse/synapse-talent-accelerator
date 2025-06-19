@@ -4,12 +4,6 @@ import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplat
 import { Brain, Search, Target, Users, Eye, Zap, Shield, Clock } from "lucide-react";
 
 const PassiveIntelligentSourcing = () => {
-  const mainChallenge = {
-    title: "Access Hidden Talent Markets and Unlock Premium Candidates",
-    description: "Most top-tier professionals aren't actively job searching, creating a hidden talent market that traditional recruitment methods can't reach. Our AI-powered passive sourcing platform transforms how you discover and engage with exceptional talent who are content in their current roles but open to the right opportunity.",
-    icon: <Brain className="w-8 h-8 text-white" />
-  };
-
   const solutionOverview = {
     title: "Discover World-Class Passive Talent Effortlessly",
     description: "Built specifically for accessing the hidden talent market, our Passive Intelligent Sourcing solution offers advanced AI algorithms to identify and engage professionals who aren't actively seeking new roles. Leverage stealth engagement strategies and relationship building to attract top-tier talent.",
@@ -77,7 +71,6 @@ const PassiveIntelligentSourcing = () => {
       heroTitle="Passive Intelligent Sourcing"
       heroDescription="Unlock the hidden talent market with our AI-powered passive sourcing solution. Identify, engage, and attract top-tier professionals who aren't actively looking but are open to exceptional opportunities."
       ctaText="Start Passive Sourcing"
-      mainChallenge={mainChallenge}
       solutionOverview={solutionOverview}
       keyBenefits={keyBenefits}
       productTour={productTour}
