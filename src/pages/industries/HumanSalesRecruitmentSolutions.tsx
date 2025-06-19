@@ -1,3 +1,4 @@
+
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -99,8 +100,11 @@ const SalesRecruitmentSolutions = () => {
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
               Specialized Sales Solutions
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Sales Recruitment Solutions
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-synapse-dark">Sales </span>
+              <span className="bg-gradient-to-r from-synapse-primary via-synapse-secondary to-synapse-tertiary bg-clip-text text-transparent">
+                Recruitment Solutions
+              </span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Transform your revenue hiring with AI-powered sales recruitment solutions. We specialize in finding exceptional sales professionals who drive business growth and exceed targets consistently.

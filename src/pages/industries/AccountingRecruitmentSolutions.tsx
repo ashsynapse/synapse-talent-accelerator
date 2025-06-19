@@ -100,8 +100,11 @@ const AccountingRecruitmentSolutions = () => {
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
               Specialized Accounting Solutions
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Accounting Recruitment Solutions
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-synapse-dark">Accounting </span>
+              <span className="bg-gradient-to-r from-synapse-primary via-synapse-secondary to-synapse-tertiary bg-clip-text text-transparent">
+                Recruitment Solutions
+              </span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Transform your accounting hiring with AI-powered recruitment solutions. We specialize in finding exceptional accounting professionals who drive financial accuracy and business success.

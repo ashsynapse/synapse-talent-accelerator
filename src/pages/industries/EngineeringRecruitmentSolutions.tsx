@@ -1,3 +1,4 @@
+
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -99,11 +100,14 @@ const EngineeringRecruitmentSolutions = () => {
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
               Specialized Engineering Solutions
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Engineering Recruitment Solutions
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-synapse-dark">Engineering </span>
+              <span className="bg-gradient-to-r from-synapse-primary via-synapse-secondary to-synapse-tertiary bg-clip-text text-transparent">
+                Recruitment Solutions
+              </span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Transform your engineering hiring with AI-powered recruitment solutions. We specialize in finding exceptional engineering professionals who design, build, and innovate across all technical disciplines.
+              Transform your engineering hiring with AI-powered recruitment solutions. We specialize in finding exceptional engineering professionals who drive innovation and technical excellence.
             </p>
             <Button 
               className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"

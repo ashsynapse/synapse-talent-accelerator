@@ -1,9 +1,10 @@
+
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Factory, Settings, Wrench, Users, Shield, Zap, ArrowRight, CheckCircle, Target, Search, Brain, Cog, Clock } from "lucide-react";
+import { Factory, Settings, Wrench, Users, Award, Zap, ArrowRight, CheckCircle, Target, Search, Brain, Clock } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const ManufacturingRecruitmentSolutions = () => {
@@ -90,7 +91,7 @@ const ManufacturingRecruitmentSolutions = () => {
   return (
     <PageTemplate 
       title="Manufacturing Recruitment Solutions" 
-      description="AI-powered recruitment solutions for manufacturing professionals and production teams"
+      description="AI-powered recruitment solutions for manufacturing professionals and industrial teams"
     >
       {/* Hero Section */}
       <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
@@ -99,8 +100,11 @@ const ManufacturingRecruitmentSolutions = () => {
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
               Specialized Manufacturing Solutions
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Manufacturing Recruitment Solutions
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-synapse-dark">Manufacturing </span>
+              <span className="bg-gradient-to-r from-synapse-primary via-synapse-secondary to-synapse-tertiary bg-clip-text text-transparent">
+                Recruitment Solutions
+              </span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Transform your manufacturing hiring with AI-powered recruitment solutions. We specialize in finding exceptional manufacturing professionals who drive operational excellence and production efficiency.
