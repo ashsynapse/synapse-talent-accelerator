@@ -47,7 +47,7 @@ const Products = () => {
               Tools
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Recruitment Tools
+              Recruitment <span className="text-synapse-primary">Tools</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Cutting-edge agents designed to automate and optimize every aspect of your recruitment process, from sourcing to submission.
