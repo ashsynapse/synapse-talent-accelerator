@@ -1,4 +1,3 @@
-
 import React from "react";
 import PageTemplate from "./PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -11,7 +10,7 @@ interface SolutionStorylineTemplateProps {
   title: string;
   description: string;
   badge: string;
-  heroTitle: string;
+  heroTitle: string | React.ReactNode;
   heroDescription: string;
   ctaText: string;
   mainChallenge?: {
