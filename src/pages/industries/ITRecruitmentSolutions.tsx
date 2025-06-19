@@ -4,7 +4,7 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Server, Cloud, Database, Shield, Cpu, Brain, Zap, ArrowRight, CheckCircle, Users, Target, TrendingUp, Search } from "lucide-react";
+import { Code, Server, Cloud, Database, Shield, Cpu, Brain, Zap, ArrowRight, CheckCircle, Users, Target, TrendingUp, Search, Clock, DollarSign } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const ITRecruitmentSolutions = () => {
@@ -154,20 +154,25 @@ const ITRecruitmentSolutions = () => {
             <div className="bg-white rounded-xl shadow-soft p-8">
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-gradient-to-br from-synapse-primary/10 to-synapse-primary/5 rounded-lg p-4 text-center">
-                  <Users className="w-8 h-8 text-synapse-primary mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-synapse-dark">95%</div>
-                  <div className="text-sm text-synapse-gray">Match Accuracy</div>
+                  <Code className="w-8 h-8 text-synapse-primary mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-synapse-dark">98%</div>
+                  <div className="text-sm text-synapse-gray">Technical Skills Match</div>
                 </div>
                 <div className="bg-gradient-to-br from-synapse-secondary/10 to-synapse-secondary/5 rounded-lg p-4 text-center">
-                  <Zap className="w-8 h-8 text-synapse-secondary mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-synapse-dark">70%</div>
-                  <div className="text-sm text-synapse-gray">Faster Discovery</div>
+                  <Clock className="w-8 h-8 text-synapse-secondary mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-synapse-dark">60%</div>
+                  <div className="text-sm text-synapse-gray">Faster IT Hiring</div>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-synapse-tertiary/10 to-synapse-tertiary/5 rounded-lg p-4 text-center">
-                <Target className="w-8 h-8 text-synapse-tertiary mx-auto mb-2" />
+              <div className="bg-gradient-to-br from-synapse-tertiary/10 to-synapse-tertiary/5 rounded-lg p-4 text-center mb-4">
+                <DollarSign className="w-8 h-8 text-synapse-tertiary mx-auto mb-2" />
+                <div className="text-2xl font-bold text-synapse-dark">75%</div>
+                <div className="text-sm text-synapse-gray">Cost Reduction</div>
+              </div>
+              <div className="bg-gradient-to-br from-synapse-primary/10 to-synapse-secondary/10 rounded-lg p-4 text-center">
+                <Brain className="w-8 h-8 text-synapse-primary mx-auto mb-2" />
                 <div className="text-2xl font-bold text-synapse-dark">24/7</div>
-                <div className="text-sm text-synapse-gray">Intelligent Sourcing</div>
+                <div className="text-sm text-synapse-gray">AI-Powered Sourcing</div>
               </div>
             </div>
           </div>
