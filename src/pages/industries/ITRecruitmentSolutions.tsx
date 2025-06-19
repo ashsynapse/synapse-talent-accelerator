@@ -111,7 +111,7 @@ const ITRecruitmentSolutions = () => {
       title="IT Recruitment Solutions" 
       description="AI-powered recruitment solutions for information technology professionals and technical teams"
     >
-      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
@@ -135,7 +135,7 @@ const ITRecruitmentSolutions = () => {
       </section>
 
       {/* Core IT Challenges Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -168,9 +168,9 @@ const ITRecruitmentSolutions = () => {
       </section>
 
       {/* Key Features Section */}
-      <section className="py-16 bg-synapse-lighter/30">
+      <section className="py-10 bg-synapse-lighter/30">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
             <div>
               <h2 className="text-3xl font-bold text-synapse-dark mb-6">
                 Advanced IT Recruitment Capabilities
@@ -220,7 +220,7 @@ const ITRecruitmentSolutions = () => {
       </section>
 
       {/* Critical IT Roles Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -260,8 +260,8 @@ const ITRecruitmentSolutions = () => {
         </div>
       </section>
 
-      {/* Ready to Transform CTA Section - Moved here */}
-      <section className="py-16 bg-synapse-lighter/30">
+      {/* Ready to Transform CTA Section */}
+      <section className="py-10 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -293,7 +293,7 @@ const ITRecruitmentSolutions = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
