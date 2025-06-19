@@ -1,4 +1,3 @@
-
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -292,7 +291,7 @@ const ITRecruitmentSolutions = () => {
         </div>
       </section>
 
-      {/* Technology Stack Section */}
+      {/* Ready to Transform CTA Section - Moved from footer */}
       <section className="py-16 bg-white">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto text-center">
