@@ -1,9 +1,9 @@
 
-
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Target, Users, Globe, Award, TrendingUp, Heart, Sparkles, Brain, ArrowRight } from "lucide-react";
 
 const stats = [
@@ -68,13 +68,23 @@ const About = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
-          <div className="text-center mb-8">
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
+              About Us
+            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
               About Synapse International
             </h1>
-            <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
+            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               AI-first fully automated recruitment company founded in 2013, headquartered in Los Angeles, CA, operating globally. We're transforming how exceptional talent connects with outstanding opportunities.
             </p>
+            <Button 
+              className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
+              onClick={() => window.location.href = "/contact"}
+            >
+              Learn More About Us
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
 
           {/* Stats */}
@@ -250,4 +260,3 @@ const About = () => {
 };
 
 export default About;
-

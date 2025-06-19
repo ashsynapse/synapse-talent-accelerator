@@ -3,7 +3,8 @@ import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, MapPin, Users, Clock, ExternalLink, Star, CheckCircle } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, MapPin, Users, Clock, ExternalLink, Star, CheckCircle, ArrowRight } from "lucide-react";
 
 const Events = () => {
   const eventDetails = [
@@ -23,18 +24,32 @@ const Events = () => {
       title="Live Sourcing Deep Dive: Full-Funnel Focus"
       description="Join our exclusive live recruiting webinar focused on driving real results through the recruiting funnel"
     >
-      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
+              Live Events
+            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
               Live Sourcing Deep Dive: Full-Funnel Focus
             </h1>
-            <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
+            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Join us for a no-fluff, high-impact session focused on driving real results through the recruiting funnel
             </p>
+            <Button 
+              className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
+              onClick={() => window.open("https://meet.google.com/qcw-unwt-xrc", "_blank")}
+            >
+              Join Live Session
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
+        </div>
+      </section>
 
-          {/* Main Event Card */}
+      {/* Main Event Card */}
+      <section className="py-12 bg-white">
+        <div className="container-wide">
           <div className="max-w-4xl mx-auto mb-16">
             <Card className="border-2 border-synapse-primary shadow-xl">
               <CardContent className="p-8">

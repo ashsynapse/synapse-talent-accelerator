@@ -2,7 +2,8 @@ import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { TrendingUp, Users, Clock, Building, ArrowRight, MapPin, Calendar } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, MapPin, Users, Clock, ExternalLink, Star, CheckCircle, TrendingUp, Building, ArrowRight } from "lucide-react";
 
 const realCaseStudies = [
   {
@@ -217,18 +218,32 @@ const CaseStudies = () => {
       title="Case Studies"
       description="Real success stories showcasing how we've helped companies transform their recruitment and build exceptional teams"
     >
-      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
+              Success Stories
+            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
               Client Success Stories
             </h1>
-            <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
+            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Discover how we've helped leading companies across industries build exceptional teams and achieve their growth objectives through strategic talent acquisition
             </p>
+            <Button 
+              className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
+              onClick={() => window.location.href = "/contact"}
+            >
+              Start Your Success Story
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
+        </div>
+      </section>
 
-          {/* Real Case Studies */}
+      {/* Real Case Studies */}
+      <section className="py-12 bg-white">
+        <div className="container-wide">
           <div className="space-y-12 mb-16">
             {realCaseStudies.map((study, index) => (
               <Card key={index} className="border hover:border-synapse-primary transition-all duration-300 group overflow-hidden">

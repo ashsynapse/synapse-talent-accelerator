@@ -1,7 +1,9 @@
+
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Users, Target, Sparkles, Heart, ArrowRight } from "lucide-react";
 
 const Careers = () => {
@@ -13,13 +15,23 @@ const Careers = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
-          <div className="text-center mb-8">
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
+              Careers
+            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
               Are You in the Top 1%?
             </h1>
-            <p className="text-xl text-synapse-gray max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               We don't have a traditional job board. Our DNA is to reach out to the top 1% of exceptional talent only - not job hoppers or those actively seeking positions. If you truly believe you're in that elite category of professionals, we'd love to hear from you.
             </p>
+            <Button 
+              className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
+              onClick={() => window.location.href = "/contact"}
+            >
+              Contact Us - We'd Love to Hear From You
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
 
           {/* Key Message Cards */}
