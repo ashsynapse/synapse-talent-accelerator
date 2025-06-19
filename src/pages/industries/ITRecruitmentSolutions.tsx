@@ -154,50 +154,43 @@ const ITRecruitmentSolutions = () => {
                 </Button>
               </div>
               
-              <div className="bg-white rounded-xl shadow-soft p-8 space-y-6">
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-synapse-dark mb-2">IT Recruitment Performance</h3>
-                  <p className="text-sm text-synapse-gray">Proven results across all metrics</p>
+              <div className="space-y-4">
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-primary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Code className="w-8 h-8 text-synapse-primary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Technical Skills Match</div>
+                      <div className="text-2xl font-bold text-synapse-dark">98%</div>
+                    </div>
+                  </div>
                 </div>
                 
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-synapse-primary/5 to-synapse-primary/10 rounded-lg border-l-4 border-synapse-primary">
-                    <div className="flex items-center space-x-3">
-                      <Code className="w-8 h-8 text-synapse-primary" />
-                      <div>
-                        <div className="text-sm text-synapse-gray">Technical Skills Match</div>
-                        <div className="text-2xl font-bold text-synapse-dark">98%</div>
-                      </div>
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-secondary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Clock className="w-8 h-8 text-synapse-secondary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Faster IT Hiring</div>
+                      <div className="text-2xl font-bold text-synapse-dark">60%</div>
                     </div>
                   </div>
-                  
-                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-synapse-secondary/5 to-synapse-secondary/10 rounded-lg border-l-4 border-synapse-secondary">
-                    <div className="flex items-center space-x-3">
-                      <Clock className="w-8 h-8 text-synapse-secondary" />
-                      <div>
-                        <div className="text-sm text-synapse-gray">Faster IT Hiring</div>
-                        <div className="text-2xl font-bold text-synapse-dark">60%</div>
-                      </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-tertiary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <DollarSign className="w-8 h-8 text-synapse-tertiary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Cost Reduction</div>
+                      <div className="text-2xl font-bold text-synapse-dark">75%</div>
                     </div>
                   </div>
-                  
-                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-synapse-tertiary/5 to-synapse-tertiary/10 rounded-lg border-l-4 border-synapse-tertiary">
-                    <div className="flex items-center space-x-3">
-                      <DollarSign className="w-8 h-8 text-synapse-tertiary" />
-                      <div>
-                        <div className="text-sm text-synapse-gray">Cost Reduction</div>
-                        <div className="text-2xl font-bold text-synapse-dark">75%</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-synapse-primary/5 to-synapse-secondary/5 rounded-lg border-l-4 border-synapse-primary">
-                    <div className="flex items-center space-x-3">
-                      <Brain className="w-8 h-8 text-synapse-primary" />
-                      <div>
-                        <div className="text-sm text-synapse-gray">AI-Powered Sourcing</div>
-                        <div className="text-2xl font-bold text-synapse-dark">24/7</div>
-                      </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-primary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Brain className="w-8 h-8 text-synapse-primary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">AI-Powered Sourcing</div>
+                      <div className="text-2xl font-bold text-synapse-dark">24/7</div>
                     </div>
                   </div>
                 </div>
