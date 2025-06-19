@@ -40,7 +40,7 @@ const industries = [
     icon: <Factory className="w-8 h-8" />,
     title: "Sales",
     description: "Sales professionals from account executives to sales managers and business development specialists",
-    href: "/industries/human-sales-recruitment-solutions",
+    href: "/industries/sales-recruitment-solutions",
     roles: ["Sales Executives", "Sales Managers", "Business Development", "Account Managers"]
   },
   {
@@ -78,8 +78,9 @@ const Industries = () => {
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
               Industry Expertise
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Industry <span className="text-synapse-primary">Expertise</span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-synapse-dark">Industry </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Expertise</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Deep industry knowledge combined with AI-powered recruitment technology. We understand the unique challenges and requirements of each sector, delivering specialized talent acquisition solutions.

@@ -70,8 +70,9 @@ const RecruitmentSolutions = () => {
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
               Recruitment Solution
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Recruitment <span className="text-synapse-primary">Solutions</span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-synapse-dark">Recruitment </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Solutions</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               End-to-end recruitment solutions powered by intelligent technology and backed by global expertise. From passive recruitment to executive search, we deliver tailored strategies that transform your hiring process.
