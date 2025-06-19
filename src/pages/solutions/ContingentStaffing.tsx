@@ -4,12 +4,6 @@ import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplat
 import { Clock, Zap, Users, Settings, Briefcase, Target, Calendar, TrendingUp } from "lucide-react";
 
 const ContingentStaffing = () => {
-  const mainChallenge = {
-    title: "Reduce Workforce Flexibility Challenges and Control Costs",
-    description: "Traditional staffing approaches struggle with fluctuating demands, seasonal peaks, and urgent project needs. Our AI-powered contingent staffing platform transforms how you access skilled professionals, providing the flexibility to scale your workforce up or down while maintaining quality and cost control.",
-    icon: <Clock className="w-8 h-8 text-white" />
-  };
-
   const solutionOverview = {
     title: "Access Flexible Talent When You Need It",
     description: "Built specifically for dynamic business environments, our Contingent Staffing solution offers rapid deployment of skilled professionals for temporary, contract, and project-based roles. Leverage AI-powered matching and streamlined processes to get the right talent working for you faster than ever.",
@@ -77,7 +71,6 @@ const ContingentStaffing = () => {
       heroTitle="Contingent Staffing Solutions"
       heroDescription="Access skilled professionals on-demand with flexible contingent staffing. Our AI-powered platform delivers quality talent for temporary, contract, and project-based roles with speed, flexibility, and cost control."
       ctaText="Get Contingent Staff"
-      mainChallenge={mainChallenge}
       solutionOverview={solutionOverview}
       keyBenefits={keyBenefits}
       productTour={productTour}

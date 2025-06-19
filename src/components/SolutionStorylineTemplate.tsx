@@ -61,8 +61,8 @@ const SolutionStorylineTemplate = ({
 }: SolutionStorylineTemplateProps) => {
   return (
     <PageTemplate title={title} description={description}>
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      {/* Hero Section - Reduced bottom padding */}
+      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
@@ -86,7 +86,7 @@ const SolutionStorylineTemplate = ({
 
       {/* Main Challenge Section - Only render if mainChallenge is provided */}
       {mainChallenge && (
-        <section className="py-16 bg-white">
+        <section className="py-12 bg-white">
           <div className="container-wide">
             <div className="max-w-4xl mx-auto">
               <Card className="border-0 shadow-medium bg-gradient-to-r from-synapse-primary/5 to-synapse-secondary/5">
@@ -111,8 +111,8 @@ const SolutionStorylineTemplate = ({
         </section>
       )}
 
-      {/* Solution Overview Section */}
-      <section className="py-16 bg-synapse-lighter/30">
+      {/* Solution Overview Section - Reduced padding */}
+      <section className="py-12 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
@@ -161,7 +161,7 @@ const SolutionStorylineTemplate = ({
       </section>
 
       {/* Key Benefits Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -193,7 +193,7 @@ const SolutionStorylineTemplate = ({
 
       {/* Product Tour Section */}
       {productTour && (
-        <section className="py-16 bg-synapse-lighter/30">
+        <section className="py-12 bg-synapse-lighter/30">
           <div className="container-wide">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -227,7 +227,7 @@ const SolutionStorylineTemplate = ({
 
       {/* Additional Sections */}
       {additionalSections && (
-        <section className="py-16 bg-white">
+        <section className="py-12 bg-white">
           <div className="container-wide">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {additionalSections.map((section, index) => (

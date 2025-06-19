@@ -4,12 +4,6 @@ import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplat
 import { Crown, Target, Shield, Users, Brain, Search, CheckCircle, Zap } from "lucide-react";
 
 const ExecutiveSearch = () => {
-  const mainChallenge = {
-    title: "Find Transformational Leaders Who Drive Success",
-    description: "Executive hiring failures can cost organizations millions and derail strategic initiatives. Our AI-enhanced executive search combines traditional recruiting expertise with cutting-edge technology to identify and attract top-tier leadership talent who deliver measurable results.",
-    icon: <Crown className="w-8 h-8 text-white" />
-  };
-
   const solutionOverview = {
     title: "Connect with Executive Leaders Who Transform Organizations",
     description: "Built specifically for C-level and senior leadership recruitment, our Executive Search service offers comprehensive assessment and confidential processes. Leverage deep market intelligence and proven executive evaluation to secure leaders who align with your vision and drive growth.",
@@ -77,7 +71,6 @@ const ExecutiveSearch = () => {
       heroTitle="Executive Search Services"
       heroDescription="Find transformational leaders who drive success. Our AI-enhanced executive search combines traditional recruiting expertise with cutting-edge technology to identify and attract top-tier leadership talent."
       ctaText="Find Executive Talent"
-      mainChallenge={mainChallenge}
       solutionOverview={solutionOverview}
       keyBenefits={keyBenefits}
       productTour={productTour}

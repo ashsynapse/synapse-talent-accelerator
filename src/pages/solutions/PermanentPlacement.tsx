@@ -4,12 +4,6 @@ import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplat
 import { UserCheck, Heart, Target, Shield, Users, CheckCircle, TrendingUp, Clock } from "lucide-react";
 
 const PermanentPlacement = () => {
-  const mainChallenge = {
-    title: "Build Lasting Teams and Reduce Long-Term Hiring Costs",
-    description: "Poor permanent placement decisions cost organizations millions in turnover, lost productivity, and repeated hiring cycles. Our AI-enhanced permanent placement process ensures perfect matches between candidates and roles, creating foundations for sustained growth and long-term organizational success.",
-    icon: <UserCheck className="w-8 h-8 text-white" />
-  };
-
   const solutionOverview = {
     title: "Create Permanent Teams That Drive Long-Term Success",
     description: "Built specifically for organizations seeking lasting talent solutions, our Permanent Placement service combines cultural fit assessment with long-term potential evaluation. Leverage comprehensive vetting processes and retention-focused strategies to build teams that grow with your organization.",
@@ -77,7 +71,6 @@ const PermanentPlacement = () => {
       heroTitle="Permanent Placement Services"
       heroDescription="Build lasting teams with permanent placements that drive long-term success. Our AI-enhanced approach ensures perfect matches between candidates and roles, creating foundations for sustained growth and achievement."
       ctaText="Find Permanent Staff"
-      mainChallenge={mainChallenge}
       solutionOverview={solutionOverview}
       keyBenefits={keyBenefits}
       productTour={productTour}

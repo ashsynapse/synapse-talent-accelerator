@@ -4,12 +4,6 @@ import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplat
 import { Search, Target, Brain, Users, Zap, Database, Globe, Filter, Clock, Shield } from "lucide-react";
 
 const IntelligentCandidateDiscovery = () => {
-  const mainChallenge = {
-    title: "Reduce Talent Discovery Time and Expand Your Reach",
-    description: "Traditional candidate sourcing methods leave you searching through limited talent pools, missing qualified candidates, and spending weeks on manual discovery processes. Our AI-powered platform transforms how you find and connect with the perfect candidates.",
-    icon: <Search className="w-8 h-8 text-white" />
-  };
-
   const solutionOverview = {
     title: "Connect with Quality Candidates in Real Time",
     description: "Built specifically for modern recruitment challenges, our Intelligent Candidate Discovery offers advanced AI algorithms to find candidates across multiple platforms instantly. Leverage automation and deliver a streamlined discovery experience that engages the right talent faster.",
@@ -77,7 +71,6 @@ const IntelligentCandidateDiscovery = () => {
       heroTitle="Intelligent Candidate Discovery"
       heroDescription="Transform your candidate sourcing with AI-powered discovery that finds the perfect match faster than ever. Our intelligent platform searches, analyzes, and ranks candidates across multiple channels in real-time."
       ctaText="Request a Demo"
-      mainChallenge={mainChallenge}
       solutionOverview={solutionOverview}
       keyBenefits={keyBenefits}
       productTour={productTour}

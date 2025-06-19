@@ -4,12 +4,6 @@ import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplat
 import { Briefcase, Clock, Users, Target, Zap, Settings, Calendar, CheckCircle } from "lucide-react";
 
 const ProjectStaffing = () => {
-  const mainChallenge = {
-    title: "Eliminate Project Delays and Access Specialized Expertise",
-    description: "Project failures often stem from inadequate staffing and missing critical skills. Our AI-powered project staffing platform ensures you have the right talent with the right expertise at the right time, transforming project outcomes and delivery timelines.",
-    icon: <Target className="w-8 h-8 text-white" />
-  };
-
   const solutionOverview = {
     title: "Build High-Performance Project Teams Fast",
     description: "Built specifically for project-driven organizations, our Project Staffing solution offers rapid identification and deployment of specialized talent. Leverage AI-powered skill matching and proven team assembly processes to ensure project success from day one.",
@@ -77,7 +71,6 @@ const ProjectStaffing = () => {
       heroTitle="Project Staffing Solutions"
       heroDescription="Power your projects with specialized talent. Our AI-driven project staffing connects you with expert professionals who deliver results, ensuring project success from conception to completion."
       ctaText="Staff Your Project"
-      mainChallenge={mainChallenge}
       solutionOverview={solutionOverview}
       keyBenefits={keyBenefits}
       productTour={productTour}

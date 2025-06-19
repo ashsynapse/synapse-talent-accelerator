@@ -4,12 +4,6 @@ import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplat
 import { Globe, Users, Clock, Zap, Monitor, MapPin, Shield, Target } from "lucide-react";
 
 const RemoteStaffing = () => {
-  const mainChallenge = {
-    title: "Break Geographic Barriers and Access Global Talent",
-    description: "Traditional hiring limits you to local talent pools, often missing the world's best professionals. Our AI-powered remote staffing platform eliminates geographic constraints, connecting you with exceptional talent worldwide while ensuring seamless integration and productivity.",
-    icon: <Globe className="w-8 h-8 text-white" />
-  };
-
   const solutionOverview = {
     title: "Build World-Class Remote Teams Effortlessly",
     description: "Built specifically for the remote-first future, our Remote Staffing solution offers access to global talent with proven remote work capabilities. Leverage AI-powered cultural matching and time zone optimization to build distributed teams that outperform traditional setups.",
@@ -77,7 +71,6 @@ const RemoteStaffing = () => {
       heroTitle="Remote Staffing Solutions"
       heroDescription="Build exceptional remote teams with global talent. Our AI-powered remote staffing platform connects you with skilled professionals worldwide, ensuring seamless integration and productivity from day one."
       ctaText="Build Remote Team"
-      mainChallenge={mainChallenge}
       solutionOverview={solutionOverview}
       keyBenefits={keyBenefits}
       productTour={productTour}
