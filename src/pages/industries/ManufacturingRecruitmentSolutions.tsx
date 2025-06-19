@@ -4,24 +4,24 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Factory, Cog, Settings, Wrench, Users, Zap, ArrowRight, CheckCircle, Search, Target, TrendingUp, Cpu } from "lucide-react";
+import { Factory, Settings, Wrench, Users, Shield, Zap, ArrowRight, CheckCircle, Target, Search, Brain, Cog, Clock } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const ManufacturingRecruitmentSolutions = () => {
   const manufacturingChallenges = [
     {
       title: "AI-Powered Manufacturing Talent Discovery",
-      description: "Leverage advanced algorithms to identify and engage top manufacturing professionals with proven technical expertise and safety knowledge",
-      icon: <Factory className="w-6 h-6" />
+      description: "Leverage advanced algorithms to identify and engage top manufacturing professionals across all production and operations specializations",
+      icon: <Brain className="w-6 h-6" />
     },
     {
       title: "Technical Skills Assessment",
-      description: "Comprehensive evaluation of manufacturing capabilities, equipment operation knowledge, and quality control competencies",
-      icon: <Cog className="w-6 h-6" />
+      description: "Comprehensive evaluation of manufacturing expertise, safety knowledge, and operational excellence capabilities",
+      icon: <Settings className="w-6 h-6" />
     },
     {
-      title: "Rapid Production Team Scaling",
-      description: "Build robust manufacturing teams quickly to support growing production demands and operational excellence",
+      title: "Rapid Manufacturing Team Scaling",
+      description: "Build robust manufacturing teams quickly to support production growth and operational efficiency initiatives",
       icon: <Zap className="w-6 h-6" />
     }
   ];
@@ -29,57 +29,39 @@ const ManufacturingRecruitmentSolutions = () => {
   const keyRoles = [
     {
       title: "Production Workers",
-      description: "Machine operators, assembly line workers, production specialists, and quality control technicians",
+      description: "Assembly line workers, machine operators, quality inspectors, and production specialists",
       icon: <Factory className="w-6 h-6" />,
-      skills: ["Machine Operation", "Assembly Processes", "Quality Control", "Safety Protocols", "Production Planning", "Equipment Maintenance"]
+      skills: ["Machine Operation", "Quality Control", "Assembly", "Production Processes", "Safety Protocols", "Equipment Maintenance"]
     },
     {
-      title: "Maintenance Technicians",
-      description: "Equipment technicians, maintenance specialists, repair professionals, and preventive maintenance experts",
+      title: "Manufacturing Engineers",
+      description: "Process engineers, industrial engineers, quality engineers, and manufacturing systems specialists",
+      icon: <Cog className="w-6 h-6" />,
+      skills: ["Process Engineering", "Industrial Engineering", "Quality Systems", "Lean Manufacturing", "Six Sigma", "CAD/CAM"]
+    },
+    {
+      title: "Maintenance & Technicians",
+      description: "Maintenance technicians, equipment specialists, electrical technicians, and mechanical repair professionals",
       icon: <Wrench className="w-6 h-6" />,
-      skills: ["Equipment Repair", "Preventive Maintenance", "Troubleshooting", "Electrical Systems", "Mechanical Systems", "Safety Compliance"]
-    },
-    {
-      title: "Manufacturing Supervisors",
-      description: "Production supervisors, team leaders, shift managers, and manufacturing coordinators",
-      icon: <Settings className="w-6 h-6" />,
-      skills: ["Team Leadership", "Production Planning", "Process Improvement", "Quality Management", "Safety Management", "Performance Optimization"]
+      skills: ["Equipment Maintenance", "Troubleshooting", "Electrical Systems", "Mechanical Repair", "Preventive Maintenance", "HVAC"]
     },
     {
       title: "Quality Assurance",
-      description: "Quality inspectors, QA specialists, compliance officers, and testing professionals",
-      icon: <Cog className="w-6 h-6" />,
-      skills: ["Quality Inspection", "Testing Procedures", "Compliance Management", "Documentation", "Statistical Analysis", "Process Validation"]
+      description: "Quality managers, QA inspectors, compliance specialists, and quality control professionals",
+      icon: <Shield className="w-6 h-6" />,
+      skills: ["Quality Management", "ISO Standards", "Statistical Process Control", "Inspection", "Compliance", "Continuous Improvement"]
     },
     {
-      title: "Process Engineers",
-      description: "Manufacturing engineers, process improvement specialists, and operational efficiency experts",
-      icon: <Cpu className="w-6 h-6" />,
-      skills: ["Process Engineering", "Lean Manufacturing", "Six Sigma", "Automation", "CAD/CAM", "Project Management"]
+      title: "Operations Management",
+      description: "Plant managers, production supervisors, operations coordinators, and manufacturing team leaders",
+      icon: <Users className="w-6 h-6" />,
+      skills: ["Operations Management", "Team Leadership", "Production Planning", "Budget Management", "Process Improvement", "Safety Management"]
     },
     {
       title: "Manufacturing Leadership",
-      description: "Plant managers, manufacturing directors, and executive manufacturing leadership driving operational excellence",
-      icon: <Users className="w-6 h-6" />,
-      skills: ["Operations Management", "Executive Leadership", "Strategic Planning", "Team Building", "Manufacturing Transformation", "P&L Management"]
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "93% Manufacturing Match Accuracy",
-      description: "Our AI algorithms ensure precise matching of manufacturing skills with production requirements",
-      icon: <Target className="w-8 h-8 text-white" />
-    },
-    {
-      title: "69% Faster Manufacturing Hiring",
-      description: "Reduce time-to-hire for critical manufacturing positions with automated sourcing and screening",
-      icon: <Zap className="w-8 h-8 text-white" />
-    },
-    {
-      title: "24/7 Manufacturing Talent Discovery",
-      description: "Continuous AI-powered sourcing ensures you never miss top manufacturing talent opportunities",
-      icon: <Search className="w-8 h-8 text-white" />
+      description: "VP of Manufacturing, plant directors, operations executives, and strategic manufacturing leaders",
+      icon: <Factory className="w-6 h-6" />,
+      skills: ["Strategic Planning", "Executive Leadership", "Operations Excellence", "Supply Chain", "Capital Planning", "Organizational Development"]
     }
   ];
 
@@ -87,17 +69,17 @@ const ManufacturingRecruitmentSolutions = () => {
     {
       number: "1",
       title: "AI Manufacturing Talent Discovery",
-      description: "Advanced algorithms scan global networks to identify manufacturing professionals with specific technical expertise"
+      description: "Advanced algorithms scan global networks to identify manufacturing professionals with specific operational expertise"
     },
     {
       number: "2", 
       title: "Technical Skills Validation",
-      description: "Comprehensive assessment of manufacturing knowledge, equipment operation, and safety compliance"
+      description: "Comprehensive assessment of manufacturing capabilities, safety knowledge, and operational experience"
     },
     {
       number: "3",
-      title: "Cultural Fit Analysis", 
-      description: "Evaluate candidates for team dynamics, communication skills, and organizational alignment"
+      title: "Safety & Cultural Fit Analysis", 
+      description: "Evaluate candidates for safety mindset, teamwork abilities, and organizational alignment"
     },
     {
       number: "4",
@@ -111,7 +93,8 @@ const ManufacturingRecruitmentSolutions = () => {
       title="Manufacturing Recruitment Solutions" 
       description="AI-powered recruitment solutions for manufacturing professionals and production teams"
     >
-      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
+      {/* Hero Section */}
+      <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
@@ -121,7 +104,7 @@ const ManufacturingRecruitmentSolutions = () => {
               Manufacturing Recruitment Solutions
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Transform your production hiring with AI-powered manufacturing recruitment solutions. We specialize in finding exceptional manufacturing professionals who drive operational excellence and ensure quality production.
+              Transform your manufacturing hiring with AI-powered recruitment solutions. We specialize in finding exceptional manufacturing professionals who drive operational excellence and production efficiency.
             </p>
             <Button 
               className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
@@ -134,15 +117,98 @@ const ManufacturingRecruitmentSolutions = () => {
         </div>
       </section>
 
+      {/* Advanced Manufacturing Recruitment Capabilities Section */}
+      <section className="py-16 bg-synapse-lighter/30">
+        <div className="container-wide">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-12">
+              Discover World-Class Manufacturing Talent Effortlessly
+            </h2>
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <div className="space-y-8">
+                <p className="text-lg text-synapse-gray">
+                  Built specifically for accessing the manufacturing talent market, our Manufacturing Recruitment Solutions offer advanced AI algorithms to identify and engage top manufacturing professionals across all production disciplines.
+                </p>
+                <div className="space-y-3">
+                  {[
+                    "AI-powered identification of manufacturing candidates across all platforms",
+                    "Discreet engagement strategies that respect candidate privacy",
+                    "Comprehensive talent mapping across industries and specializations",
+                    "Long-term relationship building for future opportunities",
+                    "Advanced behavioral analysis and engagement optimization",
+                    "Global manufacturing talent network access and engagement",
+                    "Specialized recruitment for emerging manufacturing technologies",
+                    "Executive manufacturing leadership and VP placement"
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
+                      <span className="text-synapse-gray">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <Button 
+                  className="btn-primary"
+                  onClick={() => window.location.href = "/recruitment-solutions"}
+                >
+                  Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-primary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Target className="w-8 h-8 text-synapse-primary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Manufacturing Match Accuracy</div>
+                      <div className="text-2xl font-bold text-synapse-dark">94%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-secondary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Clock className="w-8 h-8 text-synapse-secondary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Faster Manufacturing Hiring</div>
+                      <div className="text-2xl font-bold text-synapse-dark">67%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-tertiary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Factory className="w-8 h-8 text-synapse-tertiary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Production Efficiency</div>
+                      <div className="text-2xl font-bold text-synapse-dark">85%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-primary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Search className="w-8 h-8 text-synapse-primary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">AI-Powered Sourcing</div>
+                      <div className="text-2xl font-bold text-synapse-dark">24/7</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Core Manufacturing Challenges Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
               Breakthrough Manufacturing Talent Acquisition
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              Our revolutionary approach to manufacturing recruitment combines AI intelligence with deep operational expertise to identify and engage the best manufacturing professionals.
+              Our revolutionary approach to manufacturing recruitment combines AI intelligence with deep operational expertise to identify and engage the best professionals.
             </p>
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
@@ -167,67 +233,15 @@ const ManufacturingRecruitmentSolutions = () => {
         </div>
       </section>
 
-      {/* Key Features Section */}
-      <section className="py-16 bg-synapse-lighter/30">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div>
-              <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-                Advanced Manufacturing Recruitment Capabilities
-              </h2>
-              <p className="text-lg text-synapse-gray mb-8">
-                Our AI-powered platform delivers comprehensive manufacturing recruitment solutions with unmatched precision and efficiency.
-              </p>
-              <div className="space-y-3 mb-8">
-                {[
-                  "Real-time technical skills assessment and validation",
-                  "Automated safety compliance and certification verification", 
-                  "Comprehensive equipment operation compatibility analysis",
-                  "AI-powered cultural fit and team dynamics assessment",
-                  "Global manufacturing talent network access and engagement",
-                  "Specialized recruitment for emerging manufacturing technologies",
-                  "Executive manufacturing leadership and plant manager placement",
-                  "Rapid scaling for production transformation projects"
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
-                    <span className="text-synapse-gray">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              <Button 
-                className="btn-primary"
-                onClick={() => window.location.href = "/recruitment-solutions"}
-              >
-                Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-            <div className="bg-white rounded-xl shadow-soft p-8">
-              <div className="grid grid-cols-1 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="bg-gradient-to-br from-synapse-primary/10 to-synapse-primary/5 rounded-lg p-6 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
-                      {benefit.icon}
-                    </div>
-                    <div className="text-2xl font-bold text-synapse-dark mb-2">{benefit.title}</div>
-                    <div className="text-sm text-synapse-gray">{benefit.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Critical Manufacturing Roles Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
               Critical Manufacturing Roles We Fill
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              From production workers to executive leadership, we understand the full spectrum of manufacturing talent your organization needs to drive operational excellence.
+              From production floor to executive suite, we understand the full spectrum of manufacturing talent your organization needs.
             </p>
           </div>
           
@@ -261,7 +275,7 @@ const ManufacturingRecruitmentSolutions = () => {
       </section>
 
       {/* Ready to Transform CTA Section */}
-      <section className="py-16 bg-synapse-lighter/30">
+      <section className="py-10 bg-white">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -271,7 +285,7 @@ const ManufacturingRecruitmentSolutions = () => {
               The Future of Manufacturing Recruitment is Here
             </h3>
             <p className="text-lg text-synapse-gray mb-8">
-              Join leading manufacturing companies who are already using our AI-powered manufacturing recruitment solutions to build world-class production teams and drive operational excellence.
+              Join leading manufacturers who are already using our AI-powered manufacturing recruitment solutions to build world-class production teams and drive operational excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -293,7 +307,7 @@ const ManufacturingRecruitmentSolutions = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">

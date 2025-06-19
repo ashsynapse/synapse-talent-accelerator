@@ -4,82 +4,64 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Scale, Gavel, FileText, Shield, Users, Zap, ArrowRight, CheckCircle, Search, Target, TrendingUp } from "lucide-react";
+import { Scale, FileText, Gavel, Users, Shield, Zap, ArrowRight, CheckCircle, Target, Search, Brain, BookOpen, Clock } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const LegalStaffingSolutions = () => {
   const legalChallenges = [
     {
       title: "AI-Powered Legal Talent Discovery",
-      description: "Leverage advanced algorithms to identify and engage top legal professionals with proven expertise and jurisdictional knowledge",
-      icon: <Scale className="w-6 h-6" />
+      description: "Leverage advanced algorithms to identify and engage top legal professionals across all practice areas and specializations",
+      icon: <Brain className="w-6 h-6" />
     },
     {
       title: "Legal Expertise Assessment",
-      description: "Comprehensive evaluation of legal knowledge, case management skills, and client service capabilities",
-      icon: <Gavel className="w-6 h-6" />
+      description: "Comprehensive evaluation of legal knowledge, case experience, and specialized practice area competencies",
+      icon: <Scale className="w-6 h-6" />
     },
     {
       title: "Rapid Legal Team Scaling",
-      description: "Build robust legal departments quickly to support growing compliance and litigation requirements",
+      description: "Build robust legal teams quickly to support growing litigation, compliance, and transactional needs",
       icon: <Zap className="w-6 h-6" />
     }
   ];
 
   const keyRoles = [
     {
-      title: "Attorneys & Lawyers",
-      description: "Corporate attorneys, litigation lawyers, transactional counsel, and specialized legal practitioners",
-      icon: <Scale className="w-6 h-6" />,
-      skills: ["Legal Research", "Case Management", "Client Relations", "Court Proceedings", "Contract Negotiation", "Legal Writing"]
+      title: "Associates & Junior Lawyers",
+      description: "Junior associates, law clerks, legal assistants, and entry-level attorneys across practice areas",
+      icon: <BookOpen className="w-6 h-6" />,
+      skills: ["Legal Research", "Case Analysis", "Document Review", "Legal Writing", "Client Communication", "Court Filing"]
     },
     {
-      title: "Paralegals",
-      description: "Legal assistants, case coordinators, document specialists, and litigation support professionals",
-      icon: <FileText className="w-6 h-6" />,
-      skills: ["Document Preparation", "Legal Research", "Case Support", "Client Communication", "Discovery Management", "File Organization"]
+      title: "Senior Associates",
+      description: "Senior attorneys, subject matter experts, and experienced legal professionals in specialized practice areas",
+      icon: <Scale className="w-6 h-6" />,
+      skills: ["Advanced Legal Analysis", "Case Management", "Client Relations", "Negotiation", "Legal Strategy", "Mentoring"]
+    },
+    {
+      title: "Partners & Senior Counsel",
+      description: "Law firm partners, senior counsel, managing attorneys, and legal department heads",
+      icon: <Gavel className="w-6 h-6" />,
+      skills: ["Business Development", "Practice Management", "Strategic Planning", "Client Relations", "Leadership", "Risk Management"]
+    },
+    {
+      title: "Corporate Counsel",
+      description: "In-house attorneys, compliance officers, corporate legal advisors, and general counsel",
+      icon: <Shield className="w-6 h-6" />,
+      skills: ["Corporate Law", "Compliance Management", "Contract Negotiation", "Risk Assessment", "Regulatory Affairs", "Business Advisory"]
     },
     {
       title: "Legal Support Staff",
-      description: "Legal secretaries, court reporters, legal administrators, and administrative specialists",
-      icon: <Shield className="w-6 h-6" />,
-      skills: ["Administrative Support", "Document Management", "Scheduling", "Client Services", "Court Filing", "Legal Technology"]
-    },
-    {
-      title: "Compliance Specialists",
-      description: "Regulatory compliance officers, legal analysts, and policy implementation professionals",
-      icon: <Gavel className="w-6 h-6" />,
-      skills: ["Regulatory Compliance", "Policy Development", "Risk Assessment", "Audit Support", "Legal Analysis", "Training & Education"]
-    },
-    {
-      title: "Contract Specialists",
-      description: "Contract managers, legal analysts, and agreement negotiation professionals",
+      description: "Paralegals, legal secretaries, court reporters, and legal administrative professionals",
       icon: <FileText className="w-6 h-6" />,
-      skills: ["Contract Management", "Legal Review", "Negotiation", "Risk Analysis", "Vendor Relations", "Agreement Drafting"]
+      skills: ["Document Preparation", "Case Management", "Client Support", "Legal Administration", "Court Procedures", "Legal Technology"]
     },
     {
       title: "Legal Leadership",
-      description: "General Counsel, legal directors, and executive legal leadership driving organizational protection",
+      description: "General counsel, chief legal officers, legal directors, and executive legal leadership",
       icon: <Users className="w-6 h-6" />,
-      skills: ["Legal Strategy", "Executive Leadership", "Risk Management", "Team Building", "Legal Transformation", "Corporate Governance"]
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "96% Legal Match Accuracy",
-      description: "Our AI algorithms ensure precise matching of legal skills with jurisdictional requirements",
-      icon: <Target className="w-8 h-8 text-white" />
-    },
-    {
-      title: "72% Faster Legal Hiring",
-      description: "Reduce time-to-hire for critical legal positions with automated sourcing and screening",
-      icon: <Zap className="w-8 h-8 text-white" />
-    },
-    {
-      title: "24/7 Legal Talent Discovery",
-      description: "Continuous AI-powered sourcing ensures you never miss top legal talent opportunities",
-      icon: <Search className="w-8 h-8 text-white" />
+      skills: ["Legal Strategy", "Executive Leadership", "Budget Management", "Team Building", "Corporate Governance", "Strategic Advisory"]
     }
   ];
 
@@ -87,31 +69,32 @@ const LegalStaffingSolutions = () => {
     {
       number: "1",
       title: "AI Legal Talent Discovery",
-      description: "Advanced algorithms scan global networks to identify legal professionals with specific jurisdictional expertise"
+      description: "Advanced algorithms scan global networks to identify legal professionals with specific practice area expertise"
     },
     {
       number: "2", 
-      title: "Legal Skills Validation",
-      description: "Comprehensive assessment of legal knowledge, case experience, and professional competencies"
+      title: "Legal Expertise Validation",
+      description: "Comprehensive assessment of legal knowledge, case experience, and professional qualifications"
     },
     {
       number: "3",
       title: "Cultural Fit Analysis", 
-      description: "Evaluate candidates for team dynamics, communication skills, and organizational alignment"
+      description: "Evaluate candidates for ethical standards, communication skills, and organizational alignment"
     },
     {
       number: "4",
       title: "Seamless Integration",
-      description: "Streamlined onboarding process ensuring new legal hires integrate quickly and maintain compliance"
+      description: "Streamlined onboarding process ensuring new legal hires integrate quickly and add immediate value"
     }
   ];
 
   return (
     <PageTemplate 
       title="Legal Staffing Solutions" 
-      description="AI-powered recruitment solutions for legal professionals and law departments"
+      description="AI-powered recruitment solutions for legal professionals and law firms"
     >
-      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
+      {/* Hero Section */}
+      <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
@@ -121,7 +104,7 @@ const LegalStaffingSolutions = () => {
               Legal Staffing Solutions
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Transform your legal hiring with AI-powered legal staffing solutions. We specialize in finding exceptional legal professionals who provide expert counsel, ensure compliance, and protect organizational interests.
+              Transform your legal hiring with AI-powered recruitment solutions. We specialize in finding exceptional legal professionals who provide expert counsel and drive successful outcomes.
             </p>
             <Button 
               className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
@@ -134,15 +117,98 @@ const LegalStaffingSolutions = () => {
         </div>
       </section>
 
+      {/* Advanced Legal Recruitment Capabilities Section */}
+      <section className="py-16 bg-synapse-lighter/30">
+        <div className="container-wide">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-12">
+              Discover World-Class Legal Talent Effortlessly
+            </h2>
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <div className="space-y-8">
+                <p className="text-lg text-synapse-gray">
+                  Built specifically for accessing the legal talent market, our Legal Staffing Solutions offer advanced AI algorithms to identify and engage top legal professionals across all practice areas.
+                </p>
+                <div className="space-y-3">
+                  {[
+                    "AI-powered identification of legal candidates across all platforms",
+                    "Discreet engagement strategies that respect candidate privacy",
+                    "Comprehensive talent mapping across practice areas and jurisdictions",
+                    "Long-term relationship building for future opportunities",
+                    "Advanced behavioral analysis and engagement optimization",
+                    "Global legal talent network access and engagement",
+                    "Specialized recruitment for emerging legal technologies",
+                    "Executive legal leadership and general counsel placement"
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
+                      <span className="text-synapse-gray">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <Button 
+                  className="btn-primary"
+                  onClick={() => window.location.href = "/recruitment-solutions"}
+                >
+                  Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-primary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Target className="w-8 h-8 text-synapse-primary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Legal Match Accuracy</div>
+                      <div className="text-2xl font-bold text-synapse-dark">93%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-secondary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Clock className="w-8 h-8 text-synapse-secondary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Faster Legal Hiring</div>
+                      <div className="text-2xl font-bold text-synapse-dark">62%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-tertiary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Scale className="w-8 h-8 text-synapse-tertiary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Case Success Rate</div>
+                      <div className="text-2xl font-bold text-synapse-dark">91%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-primary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Search className="w-8 h-8 text-synapse-primary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">AI-Powered Sourcing</div>
+                      <div className="text-2xl font-bold text-synapse-dark">24/7</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Core Legal Challenges Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
               Breakthrough Legal Talent Acquisition
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              Our revolutionary approach to legal recruitment combines AI intelligence with deep legal expertise to identify and engage the best legal professionals.
+              Our revolutionary approach to legal recruitment combines AI intelligence with deep legal expertise to identify and engage the best professionals.
             </p>
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
@@ -167,67 +233,15 @@ const LegalStaffingSolutions = () => {
         </div>
       </section>
 
-      {/* Key Features Section */}
-      <section className="py-16 bg-synapse-lighter/30">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div>
-              <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-                Advanced Legal Recruitment Capabilities
-              </h2>
-              <p className="text-lg text-synapse-gray mb-8">
-                Our AI-powered platform delivers comprehensive legal recruitment solutions with unmatched precision and efficiency.
-              </p>
-              <div className="space-y-3 mb-8">
-                {[
-                  "Real-time legal expertise assessment and validation",
-                  "Automated jurisdictional knowledge and bar admission verification", 
-                  "Comprehensive legal specialization compatibility analysis",
-                  "AI-powered cultural fit and team dynamics assessment",
-                  "Global legal talent network access and engagement",
-                  "Specialized recruitment for emerging legal technologies",
-                  "Executive legal leadership and General Counsel placement",
-                  "Rapid scaling for legal transformation initiatives"
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
-                    <span className="text-synapse-gray">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              <Button 
-                className="btn-primary"
-                onClick={() => window.location.href = "/recruitment-solutions"}
-              >
-                Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-            <div className="bg-white rounded-xl shadow-soft p-8">
-              <div className="grid grid-cols-1 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="bg-gradient-to-br from-synapse-primary/10 to-synapse-primary/5 rounded-lg p-6 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
-                      {benefit.icon}
-                    </div>
-                    <div className="text-2xl font-bold text-synapse-dark mb-2">{benefit.title}</div>
-                    <div className="text-sm text-synapse-gray">{benefit.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Critical Legal Roles Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
               Critical Legal Roles We Fill
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              From legal counsel to support staff, we understand the full spectrum of legal talent your organization needs to maintain legal excellence.
+              From associates to partners, we understand the full spectrum of legal talent your organization needs.
             </p>
           </div>
           
@@ -261,7 +275,7 @@ const LegalStaffingSolutions = () => {
       </section>
 
       {/* Ready to Transform CTA Section */}
-      <section className="py-16 bg-synapse-lighter/30">
+      <section className="py-10 bg-white">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -271,7 +285,7 @@ const LegalStaffingSolutions = () => {
               The Future of Legal Recruitment is Here
             </h3>
             <p className="text-lg text-synapse-gray mb-8">
-              Join leading organizations who are already using our AI-powered legal recruitment solutions to build world-class legal teams and ensure comprehensive legal protection.
+              Join leading law firms and corporations who are already using our AI-powered legal recruitment solutions to build world-class legal teams and achieve better outcomes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -293,7 +307,7 @@ const LegalStaffingSolutions = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">

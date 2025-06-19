@@ -4,7 +4,7 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Cog, Settings, Wrench, Factory, Users, Zap, ArrowRight, CheckCircle, Target, Search, Brain } from "lucide-react";
+import { Cog, Settings, Wrench, Factory, Users, Zap, ArrowRight, CheckCircle, Target, Search, Brain, Clock } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const EngineeringRecruitmentSolutions = () => {
@@ -65,24 +65,6 @@ const EngineeringRecruitmentSolutions = () => {
     }
   ];
 
-  const benefits = [
-    {
-      title: "95% Engineering Match Accuracy",
-      description: "Our AI algorithms ensure precise matching of technical engineering skills with project requirements",
-      icon: <Target className="w-8 h-8 text-white" />
-    },
-    {
-      title: "70% Faster Engineering Hiring",
-      description: "Reduce time-to-hire for critical engineering positions with automated sourcing and technical screening",
-      icon: <Zap className="w-8 h-8 text-white" />
-    },
-    {
-      title: "24/7 Engineering Talent Discovery",
-      description: "Continuous AI-powered sourcing ensures you never miss top engineering talent opportunities",
-      icon: <Search className="w-8 h-8 text-white" />
-    }
-  ];
-
   const processSteps = [
     {
       number: "1",
@@ -111,7 +93,8 @@ const EngineeringRecruitmentSolutions = () => {
       title="Engineering Recruitment Solutions" 
       description="AI-powered recruitment solutions for engineering professionals and technical teams"
     >
-      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
+      {/* Hero Section */}
+      <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
@@ -134,8 +117,91 @@ const EngineeringRecruitmentSolutions = () => {
         </div>
       </section>
 
+      {/* Advanced Engineering Recruitment Capabilities Section */}
+      <section className="py-16 bg-synapse-lighter/30">
+        <div className="container-wide">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-12">
+              Discover World-Class Engineering Talent Effortlessly
+            </h2>
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <div className="space-y-8">
+                <p className="text-lg text-synapse-gray">
+                  Built specifically for accessing the engineering talent market, our Engineering Recruitment Solutions offer advanced AI algorithms to identify and engage top engineering professionals across all technical disciplines.
+                </p>
+                <div className="space-y-3">
+                  {[
+                    "AI-powered identification of engineering candidates across all platforms",
+                    "Discreet engagement strategies that respect candidate privacy",
+                    "Comprehensive talent mapping across industries and specializations",
+                    "Long-term relationship building for future opportunities",
+                    "Advanced behavioral analysis and engagement optimization",
+                    "Global engineering talent network access and engagement",
+                    "Specialized recruitment for emerging engineering technologies",
+                    "Executive engineering leadership and director placement"
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
+                      <span className="text-synapse-gray">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <Button 
+                  className="btn-primary"
+                  onClick={() => window.location.href = "/recruitment-solutions"}
+                >
+                  Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-primary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Target className="w-8 h-8 text-synapse-primary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Engineering Match Accuracy</div>
+                      <div className="text-2xl font-bold text-synapse-dark">95%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-secondary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Clock className="w-8 h-8 text-synapse-secondary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Faster Engineering Hiring</div>
+                      <div className="text-2xl font-bold text-synapse-dark">70%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-tertiary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Wrench className="w-8 h-8 text-synapse-tertiary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Project Success Rate</div>
+                      <div className="text-2xl font-bold text-synapse-dark">88%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-primary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Search className="w-8 h-8 text-synapse-primary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">AI-Powered Sourcing</div>
+                      <div className="text-2xl font-bold text-synapse-dark">24/7</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Core Engineering Challenges Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -167,60 +233,8 @@ const EngineeringRecruitmentSolutions = () => {
         </div>
       </section>
 
-      {/* Key Features Section */}
-      <section className="py-16 bg-synapse-lighter/30">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div>
-              <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-                Advanced Engineering Recruitment Capabilities
-              </h2>
-              <p className="text-lg text-synapse-gray mb-8">
-                Our AI-powered platform delivers comprehensive engineering recruitment solutions with unmatched precision and efficiency.
-              </p>
-              <div className="space-y-3 mb-8">
-                {[
-                  "Real-time technical design assessment and validation",
-                  "Automated project portfolio and achievement evaluation", 
-                  "Comprehensive engineering specialization analysis",
-                  "AI-powered project fit and methodology assessment",
-                  "Global engineering talent network access and engagement",
-                  "Specialized recruitment for emerging engineering technologies",
-                  "Executive engineering leadership and director placement",
-                  "Rapid scaling for infrastructure development projects"
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
-                    <span className="text-synapse-gray">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              <Button 
-                className="btn-primary"
-                onClick={() => window.location.href = "/recruitment-solutions"}
-              >
-                Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-            <div className="bg-white rounded-xl shadow-soft p-8">
-              <div className="grid grid-cols-1 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="bg-gradient-to-br from-synapse-primary/10 to-synapse-primary/5 rounded-lg p-6 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
-                      {benefit.icon}
-                    </div>
-                    <div className="text-2xl font-bold text-synapse-dark mb-2">{benefit.title}</div>
-                    <div className="text-sm text-synapse-gray">{benefit.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Critical Engineering Roles Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -261,7 +275,7 @@ const EngineeringRecruitmentSolutions = () => {
       </section>
 
       {/* Ready to Transform CTA Section */}
-      <section className="py-16 bg-synapse-lighter/30">
+      <section className="py-10 bg-white">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -293,7 +307,7 @@ const EngineeringRecruitmentSolutions = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">

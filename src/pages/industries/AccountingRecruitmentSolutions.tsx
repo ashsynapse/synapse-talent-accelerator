@@ -4,24 +4,24 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calculator, PieChart, BarChart3, FileText, Users, Zap, ArrowRight, CheckCircle, Search, Target, TrendingUp } from "lucide-react";
+import { Calculator, DollarSign, FileText, TrendingUp, Users, Zap, ArrowRight, CheckCircle, Target, Search, Brain, BarChart3, Clock } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const AccountingRecruitmentSolutions = () => {
   const accountingChallenges = [
     {
       title: "AI-Powered Accounting Talent Discovery",
-      description: "Leverage advanced algorithms to identify and engage top accounting professionals with proven financial expertise and compliance knowledge",
+      description: "Leverage advanced algorithms to identify and engage top accounting professionals across all financial specializations",
+      icon: <Brain className="w-6 h-6" />
+    },
+    {
+      title: "Financial Expertise Assessment",
+      description: "Comprehensive evaluation of accounting skills, compliance knowledge, and financial analysis capabilities",
       icon: <Calculator className="w-6 h-6" />
     },
     {
-      title: "Financial Skills Assessment",
-      description: "Comprehensive evaluation of accounting capabilities, regulatory knowledge, and analytical competencies",
-      icon: <PieChart className="w-6 h-6" />
-    },
-    {
       title: "Rapid Finance Team Scaling",
-      description: "Build robust accounting and finance teams quickly to support growing business operations and compliance requirements",
+      description: "Build robust accounting teams quickly to support growing financial operations and compliance requirements",
       icon: <Zap className="w-6 h-6" />
     }
   ];
@@ -29,57 +29,39 @@ const AccountingRecruitmentSolutions = () => {
   const keyRoles = [
     {
       title: "Staff Accountants",
-      description: "General ledger accountants, accounts payable/receivable specialists, and financial record keepers",
+      description: "General ledger accountants, accounts payable/receivable specialists, and junior accounting professionals",
       icon: <Calculator className="w-6 h-6" />,
-      skills: ["General Ledger", "AP/AR Management", "Month-end Close", "Financial Reporting", "Bookkeeping", "Journal Entries"]
-    },
-    {
-      title: "Financial Analysts",
-      description: "Budget analysts, financial planners, variance analysts, and business performance specialists",
-      icon: <BarChart3 className="w-6 h-6" />,
-      skills: ["Financial Analysis", "Budgeting & Forecasting", "Variance Analysis", "Financial Modeling", "Business Intelligence", "Data Analysis"]
+      skills: ["General Ledger", "Accounts Payable", "Accounts Receivable", "Financial Reporting", "QuickBooks", "Excel"]
     },
     {
       title: "Senior Accountants",
-      description: "Accounting supervisors, senior financial analysts, and team coordination specialists",
+      description: "Financial analysts, cost accountants, tax specialists, and senior accounting professionals",
       icon: <FileText className="w-6 h-6" />,
-      skills: ["Advanced Financial Reporting", "Team Leadership", "Process Improvement", "Audit Coordination", "Compliance Management", "Training & Development"]
+      skills: ["Financial Analysis", "Cost Accounting", "Tax Preparation", "GAAP", "Financial Modeling", "Audit Support"]
     },
     {
-      title: "Controllers & Managers",
-      description: "Accounting managers, financial controllers, and department leadership professionals",
-      icon: <Users className="w-6 h-6" />,
-      skills: ["Financial Management", "Strategic Planning", "Team Leadership", "Regulatory Compliance", "Risk Management", "Executive Reporting"]
-    },
-    {
-      title: "Tax Specialists",
-      description: "Tax accountants, compliance specialists, and regulatory reporting professionals",
-      icon: <FileText className="w-6 h-6" />,
-      skills: ["Tax Preparation", "Tax Compliance", "Regulatory Reporting", "Tax Planning", "Audit Support", "Tax Research"]
-    },
-    {
-      title: "Accounting Leadership",
-      description: "CFOs, finance directors, and executive accounting leadership driving organizational growth",
+      title: "Controllers",
+      description: "Financial controllers, assistant controllers, and financial operations managers",
       icon: <TrendingUp className="w-6 h-6" />,
-      skills: ["Financial Strategy", "Executive Leadership", "Corporate Finance", "Team Building", "Financial Transformation", "P&L Management"]
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "94% Accounting Match Accuracy",
-      description: "Our AI algorithms ensure precise matching of accounting skills with financial requirements",
-      icon: <Target className="w-8 h-8 text-white" />
+      skills: ["Financial Control", "Management Reporting", "Internal Controls", "Month-end Close", "Budget Management", "Team Leadership"]
     },
     {
-      title: "68% Faster Accounting Hiring",
-      description: "Reduce time-to-hire for critical accounting positions with automated sourcing and screening",
-      icon: <Zap className="w-8 h-8 text-white" />
+      title: "CPAs & Tax Professionals",
+      description: "Certified public accountants, tax managers, and compliance specialists",
+      icon: <FileText className="w-6 h-6" />,
+      skills: ["CPA", "Tax Planning", "Tax Compliance", "Audit", "Financial Review", "Regulatory Compliance"]
     },
     {
-      title: "24/7 Accounting Talent Discovery",
-      description: "Continuous AI-powered sourcing ensures you never miss top accounting talent opportunities",
-      icon: <Search className="w-8 h-8 text-white" />
+      title: "Financial Analysts",
+      description: "Budget analysts, financial planning specialists, and business intelligence professionals",
+      icon: <BarChart3 className="w-6 h-6" />,
+      skills: ["Financial Planning", "Budget Analysis", "Forecasting", "Variance Analysis", "Business Intelligence", "Data Analysis"]
+    },
+    {
+      title: "Finance Leadership",
+      description: "CFOs, finance directors, VP of Finance, and executive financial leadership",
+      icon: <Users className="w-6 h-6" />,
+      skills: ["Strategic Finance", "Executive Leadership", "Financial Strategy", "M&A", "Investor Relations", "Risk Management"]
     }
   ];
 
@@ -92,12 +74,12 @@ const AccountingRecruitmentSolutions = () => {
     {
       number: "2", 
       title: "Financial Skills Validation",
-      description: "Comprehensive assessment of accounting knowledge, compliance understanding, and analytical capabilities"
+      description: "Comprehensive assessment of accounting capabilities, software proficiency, and analytical thinking"
     },
     {
       number: "3",
       title: "Cultural Fit Analysis", 
-      description: "Evaluate candidates for team dynamics, communication skills, and organizational alignment"
+      description: "Evaluate candidates for attention to detail, ethical standards, and organizational alignment"
     },
     {
       number: "4",
@@ -109,9 +91,10 @@ const AccountingRecruitmentSolutions = () => {
   return (
     <PageTemplate 
       title="Accounting Recruitment Solutions" 
-      description="AI-powered recruitment solutions for accounting professionals and financial teams"
+      description="AI-powered recruitment solutions for accounting professionals and finance teams"
     >
-      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
+      {/* Hero Section */}
+      <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
@@ -121,7 +104,7 @@ const AccountingRecruitmentSolutions = () => {
               Accounting Recruitment Solutions
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Transform your financial hiring with AI-powered accounting recruitment solutions. We specialize in finding exceptional accounting professionals who ensure financial accuracy, compliance, and strategic growth.
+              Transform your accounting hiring with AI-powered recruitment solutions. We specialize in finding exceptional accounting professionals who ensure financial accuracy and drive business success.
             </p>
             <Button 
               className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
@@ -134,15 +117,98 @@ const AccountingRecruitmentSolutions = () => {
         </div>
       </section>
 
+      {/* Advanced Accounting Recruitment Capabilities Section */}
+      <section className="py-16 bg-synapse-lighter/30">
+        <div className="container-wide">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-12">
+              Discover World-Class Accounting Talent Effortlessly
+            </h2>
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <div className="space-y-8">
+                <p className="text-lg text-synapse-gray">
+                  Built specifically for accessing the accounting talent market, our Accounting Recruitment Solutions offer advanced AI algorithms to identify and engage top accounting professionals across all financial disciplines.
+                </p>
+                <div className="space-y-3">
+                  {[
+                    "AI-powered identification of accounting candidates across all platforms",
+                    "Discreet engagement strategies that respect candidate privacy",
+                    "Comprehensive talent mapping across industries and specializations",
+                    "Long-term relationship building for future opportunities",
+                    "Advanced behavioral analysis and engagement optimization",
+                    "Global accounting talent network access and engagement",
+                    "Specialized recruitment for emerging financial technologies",
+                    "Executive finance leadership and CFO placement"
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
+                      <span className="text-synapse-gray">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <Button 
+                  className="btn-primary"
+                  onClick={() => window.location.href = "/recruitment-solutions"}
+                >
+                  Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-primary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Target className="w-8 h-8 text-synapse-primary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Financial Match Accuracy</div>
+                      <div className="text-2xl font-bold text-synapse-dark">94%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-secondary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Clock className="w-8 h-8 text-synapse-secondary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Faster Accounting Hiring</div>
+                      <div className="text-2xl font-bold text-synapse-dark">68%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-tertiary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <DollarSign className="w-8 h-8 text-synapse-tertiary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Cost Savings</div>
+                      <div className="text-2xl font-bold text-synapse-dark">55%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-primary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Search className="w-8 h-8 text-synapse-primary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">AI-Powered Sourcing</div>
+                      <div className="text-2xl font-bold text-synapse-dark">24/7</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Core Accounting Challenges Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
               Breakthrough Accounting Talent Acquisition
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              Our revolutionary approach to accounting recruitment combines AI intelligence with deep financial expertise to identify and engage the best accounting professionals.
+              Our revolutionary approach to accounting recruitment combines AI intelligence with deep financial expertise to identify and engage the best professionals.
             </p>
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
@@ -167,67 +233,15 @@ const AccountingRecruitmentSolutions = () => {
         </div>
       </section>
 
-      {/* Key Features Section */}
-      <section className="py-16 bg-synapse-lighter/30">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div>
-              <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-                Advanced Accounting Recruitment Capabilities
-              </h2>
-              <p className="text-lg text-synapse-gray mb-8">
-                Our AI-powered platform delivers comprehensive accounting recruitment solutions with unmatched precision and efficiency.
-              </p>
-              <div className="space-y-3 mb-8">
-                {[
-                  "Real-time financial skills assessment and validation",
-                  "Automated compliance knowledge and regulatory evaluation", 
-                  "Comprehensive accounting software proficiency analysis",
-                  "AI-powered cultural fit and team dynamics assessment",
-                  "Global accounting talent network access and engagement",
-                  "Specialized recruitment for emerging financial technologies",
-                  "Executive accounting leadership and CFO placement",
-                  "Rapid scaling for financial transformation projects"
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
-                    <span className="text-synapse-gray">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              <Button 
-                className="btn-primary"
-                onClick={() => window.location.href = "/recruitment-solutions"}
-              >
-                Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-            <div className="bg-white rounded-xl shadow-soft p-8">
-              <div className="grid grid-cols-1 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="bg-gradient-to-br from-synapse-primary/10 to-synapse-primary/5 rounded-lg p-6 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
-                      {benefit.icon}
-                    </div>
-                    <div className="text-2xl font-bold text-synapse-dark mb-2">{benefit.title}</div>
-                    <div className="text-sm text-synapse-gray">{benefit.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Critical Accounting Roles Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
               Critical Accounting Roles We Fill
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              From entry-level to executive leadership, we understand the full spectrum of accounting talent your organization needs to maintain financial excellence.
+              From bookkeeping to executive finance, we understand the full spectrum of accounting talent your organization needs.
             </p>
           </div>
           
@@ -261,7 +275,7 @@ const AccountingRecruitmentSolutions = () => {
       </section>
 
       {/* Ready to Transform CTA Section */}
-      <section className="py-16 bg-synapse-lighter/30">
+      <section className="py-10 bg-white">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -271,7 +285,7 @@ const AccountingRecruitmentSolutions = () => {
               The Future of Accounting Recruitment is Here
             </h3>
             <p className="text-lg text-synapse-gray mb-8">
-              Join leading organizations who are already using our AI-powered accounting recruitment solutions to build world-class finance teams and ensure regulatory compliance.
+              Join leading companies who are already using our AI-powered accounting recruitment solutions to build world-class finance teams and ensure financial excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -293,7 +307,7 @@ const AccountingRecruitmentSolutions = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">

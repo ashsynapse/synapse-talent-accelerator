@@ -4,7 +4,7 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp, Target, Users, Award, BarChart3, Zap, ArrowRight, CheckCircle, Search, DollarSign, Handshake } from "lucide-react";
+import { TrendingUp, Target, Users, Award, BarChart3, Zap, ArrowRight, CheckCircle, Search, DollarSign, Handshake, Clock } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const SalesRecruitmentSolutions = () => {
@@ -65,24 +65,6 @@ const SalesRecruitmentSolutions = () => {
     }
   ];
 
-  const benefits = [
-    {
-      title: "92% Sales Match Accuracy",
-      description: "Our AI algorithms ensure precise matching of sales skills with revenue requirements",
-      icon: <Target className="w-8 h-8 text-white" />
-    },
-    {
-      title: "65% Faster Sales Hiring",
-      description: "Reduce time-to-hire for critical sales positions with automated sourcing and screening",
-      icon: <Zap className="w-8 h-8 text-white" />
-    },
-    {
-      title: "24/7 Sales Talent Discovery",
-      description: "Continuous AI-powered sourcing ensures you never miss top sales talent opportunities",
-      icon: <Search className="w-8 h-8 text-white" />
-    }
-  ];
-
   const processSteps = [
     {
       number: "1",
@@ -111,7 +93,8 @@ const SalesRecruitmentSolutions = () => {
       title="Sales Recruitment Solutions" 
       description="AI-powered recruitment solutions for sales professionals and revenue-driving teams"
     >
-      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
+      {/* Hero Section */}
+      <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
@@ -134,8 +117,91 @@ const SalesRecruitmentSolutions = () => {
         </div>
       </section>
 
+      {/* Advanced Sales Recruitment Capabilities Section */}
+      <section className="py-16 bg-synapse-lighter/30">
+        <div className="container-wide">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-synapse-dark mb-12">
+              Discover World-Class Sales Talent Effortlessly
+            </h2>
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <div className="space-y-8">
+                <p className="text-lg text-synapse-gray">
+                  Built specifically for accessing the sales talent market, our Sales Recruitment Solutions offer advanced AI algorithms to identify and engage top sales professionals across all revenue domains.
+                </p>
+                <div className="space-y-3">
+                  {[
+                    "AI-powered identification of sales candidates across all platforms",
+                    "Discreet engagement strategies that respect candidate privacy",
+                    "Comprehensive talent mapping across industries and territories",
+                    "Long-term relationship building for future opportunities",
+                    "Advanced behavioral analysis and engagement optimization",
+                    "Global sales talent network access and engagement",
+                    "Specialized recruitment for emerging sales technologies",
+                    "Executive sales leadership and CRO placement"
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
+                      <span className="text-synapse-gray">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <Button 
+                  className="btn-primary"
+                  onClick={() => window.location.href = "/recruitment-solutions"}
+                >
+                  Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-primary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Target className="w-8 h-8 text-synapse-primary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Sales Match Accuracy</div>
+                      <div className="text-2xl font-bold text-synapse-dark">92%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-secondary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Clock className="w-8 h-8 text-synapse-secondary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Faster Sales Hiring</div>
+                      <div className="text-2xl font-bold text-synapse-dark">65%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-tertiary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <DollarSign className="w-8 h-8 text-synapse-tertiary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">Revenue Increase</div>
+                      <div className="text-2xl font-bold text-synapse-dark">120%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-soft border-l-4 border-synapse-primary">
+                  <div className="flex items-center space-x-4 w-full">
+                    <Search className="w-8 h-8 text-synapse-primary flex-shrink-0" />
+                    <div className="flex-grow">
+                      <div className="text-sm text-synapse-gray">AI-Powered Sourcing</div>
+                      <div className="text-2xl font-bold text-synapse-dark">24/7</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Core Sales Challenges Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -167,60 +233,8 @@ const SalesRecruitmentSolutions = () => {
         </div>
       </section>
 
-      {/* Key Features Section */}
-      <section className="py-16 bg-synapse-lighter/30">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div>
-              <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-                Advanced Sales Recruitment Capabilities
-              </h2>
-              <p className="text-lg text-synapse-gray mb-8">
-                Our AI-powered platform delivers comprehensive sales recruitment solutions with unmatched precision and efficiency.
-              </p>
-              <div className="space-y-3 mb-8">
-                {[
-                  "Real-time sales performance assessment and validation",
-                  "Automated quota achievement and revenue tracking analysis", 
-                  "Comprehensive sales methodology compatibility evaluation",
-                  "AI-powered cultural fit and team dynamics assessment",
-                  "Global sales talent network access and engagement",
-                  "Specialized recruitment for high-growth sales roles",
-                  "Executive sales leadership and CRO placement",
-                  "Rapid scaling for revenue transformation initiatives"
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
-                    <span className="text-synapse-gray">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              <Button 
-                className="btn-primary"
-                onClick={() => window.location.href = "/recruitment-solutions"}
-              >
-                Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-            <div className="bg-white rounded-xl shadow-soft p-8">
-              <div className="grid grid-cols-1 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="bg-gradient-to-br from-synapse-primary/10 to-synapse-primary/5 rounded-lg p-6 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
-                      {benefit.icon}
-                    </div>
-                    <div className="text-2xl font-bold text-synapse-dark mb-2">{benefit.title}</div>
-                    <div className="text-sm text-synapse-gray">{benefit.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Critical Sales Roles Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -261,7 +275,7 @@ const SalesRecruitmentSolutions = () => {
       </section>
 
       {/* Ready to Transform CTA Section */}
-      <section className="py-16 bg-synapse-lighter/30">
+      <section className="py-10 bg-white">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -293,7 +307,7 @@ const SalesRecruitmentSolutions = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
