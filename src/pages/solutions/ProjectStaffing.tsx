@@ -68,7 +68,12 @@ const ProjectStaffing = () => {
       title="Project Staffing Solutions"
       description="Specialized staffing for short-term and long-term project requirements"
       badge="Recruitment Solution"
-      heroTitle="Project Staffing Solutions"
+      heroTitle={
+        <>
+          <span className="text-synapse-dark">Project Staffing </span>
+          <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Solutions</span>
+        </>
+      }
       heroDescription="Power your projects with specialized talent. Our AI-driven project staffing connects you with expert professionals who deliver results, ensuring project success from conception to completion."
       ctaText="Staff Your Project"
       solutionOverview={solutionOverview}

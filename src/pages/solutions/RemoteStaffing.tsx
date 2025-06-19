@@ -68,7 +68,12 @@ const RemoteStaffing = () => {
       title="Remote Staffing Solutions"
       description="Global remote talent acquisition for distributed teams and remote-first companies"
       badge="Recruitment Solution"
-      heroTitle="Remote Staffing Solutions"
+      heroTitle={
+        <>
+          <span className="text-synapse-dark">Remote Staffing </span>
+          <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Solutions</span>
+        </>
+      }
       heroDescription="Build exceptional remote teams with global talent. Our AI-powered remote staffing platform connects you with skilled professionals worldwide, ensuring seamless integration and productivity from day one."
       ctaText="Build Remote Team"
       solutionOverview={solutionOverview}

@@ -64,8 +64,9 @@ const ATSBypassEngine = () => {
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
               Powered Tool
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              ATS Bypass Engine
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-synapse-dark">ATS Bypass </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Engine</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Unlock hidden talent with our intelligent ATS bypass technology that reverse-engineers applicant tracking systems. Our engine optimizes resumes for maximum compatibility, ensuring top candidates never get filtered out by algorithmic screening.
