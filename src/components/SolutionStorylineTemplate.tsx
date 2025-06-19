@@ -1,4 +1,3 @@
-
 import React from "react";
 import PageTemplate from "./PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -11,7 +10,7 @@ interface SolutionStorylineTemplateProps {
   title: string;
   description: string;
   badge: string;
-  heroTitle: string;
+  heroTitle: string | React.ReactNode;
   heroDescription: string;
   ctaText: string;
   mainChallenge?: {
@@ -68,7 +67,7 @@ const SolutionStorylineTemplate = ({
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
               {badge}
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {heroTitle}
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">

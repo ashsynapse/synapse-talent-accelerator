@@ -68,7 +68,12 @@ const PermanentStaffing = () => {
       title="Permanent Staffing Solutions"
       description="Full-time permanent staffing services across all industries and skill levels"
       badge="Recruitment Solution"
-      heroTitle="Permanent Staffing Solutions"
+      heroTitle={
+        <>
+          <span className="text-synapse-dark">Permanent Staffing </span>
+          <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Solutions</span>
+        </>
+      }
       heroDescription="Build lasting teams with permanent staffing that drives long-term success. Our AI-enhanced approach ensures perfect matches between candidates and roles, creating foundations for sustained growth and achievement."
       ctaText="Find Permanent Staff"
       solutionOverview={solutionOverview}

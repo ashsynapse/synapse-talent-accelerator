@@ -68,7 +68,12 @@ const PassiveRecruitment = () => {
       title="Passive Recruitment Solutions"
       description="AI-powered passive talent discovery and engagement strategies"
       badge="Recruitment Solution"
-      heroTitle="Passive Recruitment Solutions"
+      heroTitle={
+        <>
+          <span className="text-synapse-dark">Passive Recruitment </span>
+          <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Solutions</span>
+        </>
+      }
       heroDescription="Unlock the hidden talent market with our AI-powered passive recruitment solution. Identify, engage, and attract top-tier professionals who aren't actively looking but are open to exceptional opportunities."
       ctaText="Start Passive Recruitment"
       solutionOverview={solutionOverview}

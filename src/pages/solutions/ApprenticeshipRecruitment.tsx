@@ -68,7 +68,12 @@ const ApprenticeshipRecruitment = () => {
       title="Apprenticeship Solutions"
       description="Specialized recruitment for apprenticeship programs and early career professionals"
       badge="Recruitment Solution"
-      heroTitle="Apprenticeship Solutions"
+      heroTitle={
+        <>
+          <span className="text-synapse-dark">Apprenticeship </span>
+          <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Solutions</span>
+        </>
+      }
       heroDescription="Invest in the future with smart apprenticeship recruitment. Our AI-enhanced platform identifies high-potential early career talent and matches them with your development programs for long-term organizational success."
       ctaText="Find Apprentices"
       solutionOverview={solutionOverview}

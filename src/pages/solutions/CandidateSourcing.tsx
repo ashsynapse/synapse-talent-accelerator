@@ -68,7 +68,12 @@ const CandidateSourcing = () => {
       title="Candidate Sourcing Solutions"
       description="Advanced talent sourcing and candidate discovery"
       badge="Recruitment Solution"
-      heroTitle="Candidate Sourcing Solutions"
+      heroTitle={
+        <>
+          <span className="text-synapse-dark">Candidate Sourcing </span>
+          <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Solutions</span>
+        </>
+      }
       heroDescription="Transform your candidate sourcing with AI-powered discovery that finds the perfect match faster than ever. Our intelligent platform searches, analyzes, and ranks candidates across multiple channels in real-time."
       ctaText="Request a Demo"
       solutionOverview={solutionOverview}

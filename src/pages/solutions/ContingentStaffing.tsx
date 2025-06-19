@@ -68,7 +68,12 @@ const ContingentStaffing = () => {
       title="Contingent Staffing Solutions"
       description="Flexible staffing solutions for temporary and contract positions"
       badge="Recruitment Solution"
-      heroTitle="Contingent Staffing Solutions"
+      heroTitle={
+        <>
+          <span className="text-synapse-dark">Contingent Staffing </span>
+          <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Solutions</span>
+        </>
+      }
       heroDescription="Access skilled professionals on-demand with flexible contingent staffing. Our AI-powered platform delivers quality talent for temporary, contract, and project-based roles with speed, flexibility, and cost control."
       ctaText="Get Contingent Staff"
       solutionOverview={solutionOverview}

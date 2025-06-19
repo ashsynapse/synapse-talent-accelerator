@@ -68,7 +68,12 @@ const ExecutiveSearch = () => {
       title="Executive Search Services"
       description="Specialized recruitment for C-level and senior leadership positions"
       badge="Recruitment Solution"
-      heroTitle="Executive Search Services"
+      heroTitle={
+        <>
+          <span className="text-synapse-dark">Executive Search </span>
+          <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Services</span>
+        </>
+      }
       heroDescription="Find transformational leaders who drive success. Our AI-enhanced executive search combines traditional recruiting expertise with cutting-edge technology to identify and attract top-tier leadership talent."
       ctaText="Find Executive Talent"
       solutionOverview={solutionOverview}
