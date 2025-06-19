@@ -1,3 +1,4 @@
+
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -65,7 +66,8 @@ const OutreachAgent = () => {
               Powered Tool
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Outreach Agent</span>
+              <span className="text-synapse-dark">Outreach </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Agent</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Transform candidate engagement with intelligent Outreach Agent that creates hyper-personalized campaigns across multiple channels. Our agent crafts compelling messages, manages follow-ups, and optimizes communication strategies to maximize response rates and build meaningful connections.

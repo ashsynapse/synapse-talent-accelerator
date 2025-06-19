@@ -1,4 +1,5 @@
 
+
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -31,7 +32,8 @@ const Events = () => {
               Live Events
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Live Sourcing Deep Dive: Full-Funnel Focus</span>
+              <span className="text-synapse-dark">Live Sourcing Deep Dive: Full-Funnel </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Focus</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Join us for a no-fluff, high-impact session focused on driving real results through the recruiting funnel
@@ -173,3 +175,4 @@ const Events = () => {
 };
 
 export default Events;
+

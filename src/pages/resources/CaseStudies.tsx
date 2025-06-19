@@ -1,10 +1,9 @@
-
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, Users, Clock, ExternalLink, Star, CheckCircle, TrendingUp, Building, ArrowRight } from "lucide-react";
+import { ArrowRight, Building2, Users, TrendingUp, Target, CheckCircle, Calendar, MapPin, DollarSign, Briefcase, Clock, Star, Award, Globe, Zap, Brain, Shield } from "lucide-react";
 
 const realCaseStudies = [
   {
@@ -216,9 +215,10 @@ const realCaseStudies = [
 const CaseStudies = () => {
   return (
     <PageTemplate 
-      title="Case Studies"
-      description="Real success stories showcasing how we've helped companies transform their recruitment and build exceptional teams"
+      title="Client Success Stories" 
+      description="Real success stories from companies who have transformed their hiring with our recruitment solutions"
     >
+      {/* Hero Section */}
       <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -226,18 +226,12 @@ const CaseStudies = () => {
               Success Stories
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Client Success Stories</span>
+              <span className="text-synapse-dark">Client Success </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Stories</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Discover how we've helped leading companies across industries build exceptional teams and achieve their growth objectives through strategic talent acquisition
             </p>
-            <Button 
-              className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
-              onClick={() => window.location.href = "/contact"}
-            >
-              Start Your Success Story
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
           </div>
         </div>
       </section>
@@ -265,7 +259,7 @@ const CaseStudies = () => {
                       <div className="mb-6">
                         <div className="flex items-center gap-4 mb-3">
                           <div className="flex items-center gap-2">
-                            <Building size={16} className="text-synapse-primary" />
+                            <Building2 size={16} className="text-synapse-primary" />
                             <span className="text-sm text-synapse-gray font-medium">{study.industry}</span>
                           </div>
                           <div className="flex items-center gap-2">
