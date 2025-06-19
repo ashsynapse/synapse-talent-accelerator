@@ -90,27 +90,27 @@ const HumanResourceRecruitmentSolutions = () => {
 
   return (
     <PageTemplate 
-      title="HR Recruitment Solutions" 
+      title="Human Resource Recruitment Solutions" 
       description="AI-powered recruitment solutions for human resource professionals and people teams"
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-6 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary">
+      <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/30">
-              Specialized HR Solutions
+            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
+              Specialized Human Resource Solutions
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              HR Recruitment Solutions
+            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
+              Human Resource Recruitment Solutions
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Transform your HR hiring with AI-powered recruitment solutions. We specialize in finding exceptional human resource professionals who build strong teams and drive organizational success.
+            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
+              Transform your human resource hiring with AI-powered recruitment solutions. We specialize in finding exceptional human resources professionals who drive organizational success and employee engagement.
             </p>
             <Button 
-              className="bg-white text-synapse-primary hover:bg-white/90 px-8 py-3 text-lg"
+              className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
               onClick={() => window.location.href = "/contact"}
             >
-              Find HR Talent
+              Find Human Resource Talent
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
