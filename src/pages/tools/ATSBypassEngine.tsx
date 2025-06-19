@@ -1,4 +1,3 @@
-
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -59,7 +58,7 @@ const ATSBypassEngine = () => {
       description="Smart resume optimizer that reverse-engineers ATS systems for maximum compatibility"
     >
       {/* Hero Section */}
-      <section className="pt-20 pb-12 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
@@ -88,7 +87,7 @@ const ATSBypassEngine = () => {
       </section>
 
       {/* Main Value Proposition */}
-      <section className="py-10 bg-white">
+      <section className="py-16 bg-white">
         <div className="container-wide">
           <div className="max-w-5xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -136,7 +135,7 @@ const ATSBypassEngine = () => {
       </section>
 
       {/* Business Impact Section */}
-      <section className="py-10 bg-synapse-lighter/30">
+      <section className="py-16 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -186,7 +185,7 @@ const ATSBypassEngine = () => {
       </section>
 
       {/* How It Works Process */}
-      <section className="py-10 bg-white">
+      <section className="py-16 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -263,7 +262,7 @@ const ATSBypassEngine = () => {
       </section>
 
       {/* Advanced Features */}
-      <section className="py-10 bg-synapse-lighter/30">
+      <section className="py-16 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
