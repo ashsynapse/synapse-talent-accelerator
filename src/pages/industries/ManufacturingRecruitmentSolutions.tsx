@@ -4,7 +4,7 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Factory, Settings, Wrench, Users, Award, Zap, ArrowRight, CheckCircle, Target, Search, Brain, Clock } from "lucide-react";
+import { Factory, Settings, Wrench, Users, Award, Zap, ArrowRight, CheckCircle, Target, Search, Brain, Clock, Cog, Shield } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const ManufacturingRecruitmentSolutions = () => {
