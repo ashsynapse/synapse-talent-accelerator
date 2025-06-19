@@ -3,7 +3,7 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Send, Target, Users, Zap, Database, CheckCircle, Settings, Activity, Brain, TrendingUp, Shield, Lightbulb } from "lucide-react";
+import { ArrowRight, Bot, Send, Clock, Target, Users, Zap, Database, CheckCircle, Settings, Activity, Brain, TrendingUp, Shield, Lightbulb } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const SubmissionAgent = () => {
@@ -55,14 +55,14 @@ const SubmissionAgent = () => {
   return (
     <PageTemplate 
       title="Submission Agent" 
-      description="Automated candidate submission and application management"
+      description="End-to-end candidate submission with automated coordination and follow-ups"
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-20 pb-12 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
-              AI Powered Tool
+              Powered Tool
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-synapse-dark">Submission </span>
