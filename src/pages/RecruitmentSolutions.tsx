@@ -3,7 +3,7 @@ import React from "react";
 import PageTemplate from "../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Brain, Users, Target, Clock, Globe, UserCheck, Briefcase, GraduationCap } from "lucide-react";
+import { Brain, Users, Target, Clock, Globe, UserCheck, Briefcase, GraduationCap, ArrowRight } from "lucide-react";
 import FinalCtaSection from "../components/FinalCtaSection";
 
 const solutions = [
@@ -73,6 +73,69 @@ const RecruitmentSolutions = () => {
               End-to-end recruitment solutions powered by intelligent technology and backed by global expertise. From passive recruitment to executive search, we deliver tailored strategies that transform your hiring process.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* New Two-Column Section */}
+      <section className="py-16 bg-white">
+        <div className="container-wide">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-synapse-dark leading-tight">
+                Transform Your Hiring with AI-Powered Recruitment Solutions
+              </h2>
+              <p className="text-lg text-synapse-gray leading-relaxed">
+                Experience the future of recruitment with our comprehensive suite of intelligent solutions. From identifying passive talent to managing complex staffing projects, we deliver results that drive your business forward.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-synapse-primary rounded-full mt-2"></div>
+                  <p className="text-synapse-gray">Advanced AI algorithms for precise candidate matching</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-synapse-primary rounded-full mt-2"></div>
+                  <p className="text-synapse-gray">Global talent pool access across all industries</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-synapse-primary rounded-full mt-2"></div>
+                  <p className="text-synapse-gray">End-to-end recruitment process automation</p>
+                </div>
+              </div>
+              <Button 
+                className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
+                onClick={() => window.location.href = "/contact"}
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
+
+            {/* Right Image */}
+            <div className="lg:order-last">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/6c7b520d-1b7f-4b14-9afd-af1404a725fc.png"
+                  alt="Professional handshake in modern office setting"
+                  className="w-full h-auto rounded-lg shadow-medium"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Grid */}
+      <section className="py-16 bg-gray-50">
+        <div className="container-wide">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-synapse-dark mb-4">
+              Our Recruitment Solutions
+            </h2>
+            <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
+              Discover our comprehensive range of recruitment solutions designed to meet your unique hiring needs.
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {solutions.map((solution, index) => (
@@ -98,6 +161,7 @@ const RecruitmentSolutions = () => {
           </div>
         </div>
       </section>
+      
       <FinalCtaSection />
     </PageTemplate>
   );
