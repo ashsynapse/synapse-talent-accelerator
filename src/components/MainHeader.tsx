@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Plus, Minus, 
@@ -51,6 +50,14 @@ const MainHeader = () => {
       "Sourcing Agent": Bot,
       "Outreach Agent": Send,
       "Submission Agent": Target,
+      "Information Technology": Code,
+      "Digital Marketing": TrendingUp,
+      "Engineering": Heart,
+      "Human Resources (HR)": Scale,
+      "Sales": Factory,
+      "Accounting": Calculator,
+      "Legal": Crown,
+      "Manufacturing": Users,
       "Technology": Code,
       "Finance": TrendingUp,
       "Healthcare": Heart,
