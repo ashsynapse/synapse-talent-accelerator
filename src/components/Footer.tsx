@@ -93,7 +93,8 @@ const Footer = () => {
               {[
                 { label: "Sourcing Agent", href: "/tools/sourcing-agent" },
                 { label: "Outreach Agent", href: "/tools/outreach-agent" },
-                { label: "Submission Agent", href: "/tools/submission-agent" }
+                { label: "Submission Agent", href: "/tools/submission-agent" },
+                { label: "ATS Bypass Engine", href: "/tools/ats-bypass-engine" }
               ].map((item) => (
                 <li key={item.label}>
                   <a

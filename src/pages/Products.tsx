@@ -16,7 +16,7 @@ const tools = [
   },
   {
     icon: <Send className="w-8 h-8" />,
-    title: "Outreach Agent",
+    title: "Outreach Agent", 
     description: "Delivers hyper-personalized, automated outreach campaigns to prospective candidates and keeps them engaged with intelligent follow-ups and interview coordination, all while you stay updated in real time.",
     href: "/tools/outreach-agent"
   },
@@ -25,6 +25,12 @@ const tools = [
     title: "Submission Agent",
     description: "Handles end-to-end candidate submission by coordinating personalized outreach, interview scheduling, and post-interview follow-ups, ensuring seamless engagement and reminders throughout the process.",
     href: "/tools/submission-agent"
+  },
+  {
+    icon: <Zap className="w-8 h-8" />,
+    title: "ATS Bypass Engine",
+    description: "Smart resume optimizer that reverse-engineers ATS systems for maximum compatibility, ensuring top candidates never get filtered out by algorithmic screening.",
+    href: "/tools/ats-bypass-engine"
   }
 ];
 
