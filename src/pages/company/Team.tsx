@@ -38,8 +38,9 @@ const Team = () => {
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
               Our Team
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Meet Our Global Team
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-synapse-dark">Meet Our Global </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Team</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               The exceptional minds behind Synapse International's AI-first recruitment revolution, connecting the world's top 1% of talent with outstanding opportunities.

@@ -20,7 +20,8 @@ const Careers = () => {
               Careers
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Are You in the Top 1%?
+              <span className="text-synapse-dark">Are You in the </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Top 1%?</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               We don't have a traditional job board. Our DNA is to reach out to the top 1% of exceptional talent only - not job hoppers or those actively seeking positions. If you truly believe you're in that elite category of professionals, we'd love to hear from you.
