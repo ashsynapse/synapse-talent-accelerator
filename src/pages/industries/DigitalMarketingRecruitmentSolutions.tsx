@@ -1,4 +1,3 @@
-
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -148,9 +147,9 @@ const DigitalMarketingRecruitmentSolutions = () => {
                 </div>
                 <Button 
                   className="btn-primary"
-                  onClick={() => window.location.href = "/recruitment-solutions"}
+                  onClick={() => window.location.href = "/contact"}
                 >
-                  Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
+                  Get Started <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
               
@@ -293,13 +292,6 @@ const DigitalMarketingRecruitmentSolutions = () => {
                 onClick={() => window.location.href = "/contact"}
               >
                 Get a Demo <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white"
-                onClick={() => window.location.href = "/recruitment-solutions"}
-              >
-                Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
