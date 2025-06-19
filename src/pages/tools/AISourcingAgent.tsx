@@ -1,4 +1,3 @@
-
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -7,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Bot, Search, Clock, Target, Users, Zap, Database, CheckCircle, Settings, Activity, Brain, TrendingUp, Shield, Lightbulb } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
-const SourcingAgent = () => {
+const AISourcingAgent = () => {
   const coreCapabilities = [
     {
       icon: <Search className="w-6 h-6 text-white" />,
@@ -17,7 +16,7 @@ const SourcingAgent = () => {
     {
       icon: <Target className="w-6 h-6 text-white" />,
       title: "Multi-Platform Sourcing",
-      description: "Continuously searches across multiple platforms and databases to identify the best talent matches with our sourcing agent technology"
+      description: "Continuously searches across multiple platforms and databases to identify the best talent matches"
     },
     {
       icon: <Brain className="w-6 h-6 text-white" />,
@@ -30,7 +29,7 @@ const SourcingAgent = () => {
     {
       icon: <TrendingUp className="w-8 h-8 text-synapse-primary" />,
       title: "10x More Qualified Candidates",
-      description: "Discover significantly more qualified candidates than traditional sourcing agent methods"
+      description: "Discover significantly more qualified candidates than traditional sourcing methods"
     },
     {
       icon: <Clock className="w-8 h-8 text-synapse-secondary" />,
@@ -69,7 +68,7 @@ const SourcingAgent = () => {
               Sourcing Agent
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Revolutionize your talent acquisition with an intelligent sourcing agent that automatically scans job postings and continuously sources top-matching candidates in the background, delivering real-time status updates from discovery to shortlisting.
+              Revolutionize your talent acquisition with an intelligent agent that automatically scans job postings and continuously sources top-matching candidates in the background, delivering real-time status updates from discovery to shortlisting.
             </p>
             <div className="flex justify-center">
               <Button 
@@ -77,7 +76,7 @@ const SourcingAgent = () => {
                 onClick={() => window.location.href = "/contact"}
               >
                 <span className="flex items-center gap-2">
-                  Deploy Your Sourcing Agent
+                  Deploy Your Agent
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </span>
               </Button>
@@ -93,10 +92,10 @@ const SourcingAgent = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-                  Intelligent Sourcing Agent That Never Sleeps
+                  Intelligent Sourcing That Never Sleeps
                 </h2>
                 <p className="text-synapse-gray mb-6">
-                  Our sourcing agent continuously monitors job requirements, scans multiple talent databases, and identifies candidates who perfectly match your criteria. With advanced machine learning algorithms, this sourcing agent gets smarter with every search, delivering increasingly precise results.
+                  Our agent continuously monitors job requirements, scans multiple talent databases, and identifies candidates who perfectly match your criteria. With advanced machine learning algorithms, it gets smarter with every search, delivering increasingly precise results.
                 </p>
                 <div className="space-y-4 mb-8">
                   {keyFeatures.map((feature, index) => (
@@ -108,7 +107,7 @@ const SourcingAgent = () => {
                 </div>
                 <Button 
                   className="btn-primary"
-                  onClick={() => window.location.href = "/tools"}
+                  onClick={() => window.location.href = "/recruitment-tools"}
                 >
                   Explore All Tools <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -199,7 +198,7 @@ const SourcingAgent = () => {
               Your Sourcing Agent at Work
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              See how our intelligent sourcing agent process delivers results automatically
+              See how our intelligent sourcing process delivers results automatically
             </p>
           </div>
           
@@ -212,7 +211,7 @@ const SourcingAgent = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-synapse-dark mb-2">Analyze Job Requirements</h3>
-                    <p className="text-synapse-gray text-sm">Sourcing agent scans and understands job posting requirements, skills, and qualifications</p>
+                    <p className="text-synapse-gray text-sm">Agent scans and understands job posting requirements, skills, and qualifications</p>
                   </div>
                 </div>
                 
@@ -313,4 +312,4 @@ const SourcingAgent = () => {
   );
 };
 
-export default SourcingAgent;
+export default AISourcingAgent;
