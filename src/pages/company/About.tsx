@@ -73,8 +73,8 @@ const About = () => {
               About Us
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-synapse-dark">About Synapse </span>
-              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">International</span>
+              <span className="text-synapse-dark">Meet Our </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Global Team</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               AI-first fully automated recruitment company founded in 2013, headquartered in Los Angeles, CA, operating globally. We're transforming how exceptional talent connects with outstanding opportunities.

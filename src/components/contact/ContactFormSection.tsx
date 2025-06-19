@@ -13,8 +13,9 @@ const ContactFormSection = () => {
         <div className="grid lg:grid-cols-5 gap-8 items-start max-w-7xl mx-auto">
           {/* Mobile: Header Section - Shows first on mobile */}
           <div className="lg:hidden mb-6">
-            <h1 className="text-3xl lg:text-4xl font-bold text-synapse-dark mb-4">
-              Ready to Transform Your Hiring?
+            <h1 className="text-3xl lg:text-4xl font-bold mb-4">
+              <span className="text-synapse-dark">Ready to Transform </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Your Hiring?</span>
             </h1>
             <p className="text-lg text-synapse-gray">
               Let's discuss how our AI-powered solutions can revolutionize your talent acquisition process.
@@ -25,8 +26,9 @@ const ContactFormSection = () => {
           <div className="order-2 lg:order-1 lg:col-span-2 space-y-6">
             {/* Desktop: Header Section - Shows in left column on desktop */}
             <div className="mb-6 hidden lg:block">
-              <h1 className="text-2xl lg:text-3xl font-bold text-synapse-dark mb-3">
-                Ready to Transform Your Hiring?
+              <h1 className="text-2xl lg:text-3xl font-bold mb-3">
+                <span className="text-synapse-dark">Ready to Transform </span>
+                <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Your Hiring?</span>
               </h1>
               <p className="text-base text-synapse-gray">
                 Let's discuss how our AI-powered solutions can revolutionize your talent acquisition process.
