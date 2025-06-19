@@ -69,14 +69,14 @@ const MainHeader = () => {
 
   const getDescriptionForSubmenu = (label: string) => {
     const descriptionMap: { [key: string]: string } = {
-      "Passive Intelligent Sourcing": "Smart talent discovery",
-      "Intelligent Candidate Discovery": "Advanced candidate matching",
+      "Passive Recruitment": "Smart talent discovery",
+      "Candidate Sourcing": "Advanced candidate matching",
       "Project Staffing": "Flexible project teams",
       "Executive Search": "Leadership recruitment",
       "Remote Staffing": "Global remote talent",
-      "Permanent Placement": "Long-term hires",
+      "Permanent Staffing": "Long-term hires",
       "Contingent Staffing": "Temporary workforce",
-      "Apprenticeship Smart Sourcing": "Entry-level talent",
+      "Apprenticeship Recruitment": "Entry-level talent",
       "AI Sourcing Agent": "Automated candidate sourcing",
       "AI Outreach Agent": "Personalized candidate outreach",
       "AI Submission Agent": "End-to-end submission handling",
@@ -108,14 +108,14 @@ const MainHeader = () => {
       label: "Solutions", 
       href: "/recruitment-solutions",
       submenu: [
-        { label: "Passive Intelligent Sourcing", href: "/solutions/passive-intelligent-sourcing" },
-        { label: "Intelligent Candidate Discovery", href: "/solutions/intelligent-candidate-discovery" },
-        { label: "Project Staffing", href: "/solutions/project-staffing" },
-        { label: "Executive Search", href: "/solutions/executive-search" },
-        { label: "Remote Staffing", href: "/solutions/remote-staffing" },
-        { label: "Permanent Placement", href: "/solutions/permanent-placement" },
-        { label: "Contingent Staffing", href: "/solutions/contingent-staffing" },
-        { label: "Apprenticeship Smart Sourcing", href: "/solutions/apprenticeship-smart-sourcing" }
+        { label: "Passive Recruitment", href: "/recruitment-solutions/passive-recruitment" },
+        { label: "Candidate Sourcing", href: "/recruitment-solutions/candidate-sourcing" },
+        { label: "Project Staffing", href: "/recruitment-solutions/project-staffing" },
+        { label: "Executive Search", href: "/recruitment-solutions/executive-search" },
+        { label: "Remote Staffing", href: "/recruitment-solutions/remote-staffing" },
+        { label: "Permanent Staffing", href: "/recruitment-solutions/permanent-staffing" },
+        { label: "Contingent Staffing", href: "/recruitment-solutions/contingent-staffing" },
+        { label: "Apprenticeship Recruitment", href: "/recruitment-solutions/apprenticeship-recruitment" }
       ]
     },
     { 

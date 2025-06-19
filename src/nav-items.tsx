@@ -39,14 +39,14 @@ import Leadership from "./pages/industries/Leadership";
 import Operations from "./pages/industries/Operations";
 
 // Solution page imports
-import PassiveIntelligentSourcing from "./pages/solutions/PassiveIntelligentSourcing";
-import IntelligentCandidateDiscovery from "./pages/solutions/IntelligentCandidateDiscovery";
+import PassiveRecruitment from "./pages/solutions/PassiveRecruitment";
+import CandidateSourcing from "./pages/solutions/CandidateSourcing";
 import ProjectStaffing from "./pages/solutions/ProjectStaffing";
 import ExecutiveSearch from "./pages/solutions/ExecutiveSearch";
 import RemoteStaffing from "./pages/solutions/RemoteStaffing";
-import PermanentPlacement from "./pages/solutions/PermanentPlacement";
+import PermanentStaffing from "./pages/solutions/PermanentStaffing";
 import ContingentStaffing from "./pages/solutions/ContingentStaffing";
-import ApprenticeshipSmartSourcing from "./pages/solutions/ApprenticeshipSmartSourcing";
+import ApprenticeshipRecruitment from "./pages/solutions/ApprenticeshipRecruitment";
 
 export const navItems = [
   {
@@ -186,35 +186,35 @@ export const navItems = [
   },
   // Solution routes
   {
-    to: "/solutions/passive-intelligent-sourcing",
-    page: <PassiveIntelligentSourcing />,
+    to: "/recruitment-solutions/passive-recruitment",
+    page: <PassiveRecruitment />,
   },
   {
-    to: "/solutions/intelligent-candidate-discovery",
-    page: <IntelligentCandidateDiscovery />,
+    to: "/recruitment-solutions/candidate-sourcing",
+    page: <CandidateSourcing />,
   },
   {
-    to: "/solutions/project-staffing",
+    to: "/recruitment-solutions/project-staffing",
     page: <ProjectStaffing />,
   },
   {
-    to: "/solutions/executive-search",
+    to: "/recruitment-solutions/executive-search",
     page: <ExecutiveSearch />,
   },
   {
-    to: "/solutions/remote-staffing",
+    to: "/recruitment-solutions/remote-staffing",
     page: <RemoteStaffing />,
   },
   {
-    to: "/solutions/permanent-placement",
-    page: <PermanentPlacement />,
+    to: "/recruitment-solutions/permanent-staffing",
+    page: <PermanentStaffing />,
   },
   {
-    to: "/solutions/contingent-staffing",
+    to: "/recruitment-solutions/contingent-staffing",
     page: <ContingentStaffing />,
   },
   {
-    to: "/solutions/apprenticeship-smart-sourcing",
-    page: <ApprenticeshipSmartSourcing />,
+    to: "/recruitment-solutions/apprenticeship-recruitment",
+    page: <ApprenticeshipRecruitment />,
   },
 ];

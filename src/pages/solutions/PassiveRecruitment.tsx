@@ -3,10 +3,10 @@ import React from "react";
 import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplate";
 import { Brain, Search, Target, Users, Eye, Zap, Shield, Clock } from "lucide-react";
 
-const PassiveIntelligentSourcing = () => {
+const PassiveRecruitment = () => {
   const solutionOverview = {
     title: "Discover World-Class Passive Talent Effortlessly",
-    description: "Built specifically for accessing the hidden talent market, our Passive Intelligent Sourcing solution offers advanced AI algorithms to identify and engage professionals who aren't actively seeking new roles. Leverage stealth engagement strategies and relationship building to attract top-tier talent.",
+    description: "Built specifically for accessing the hidden talent market, our Passive Recruitment Solutions offer advanced AI algorithms to identify and engage professionals who aren't actively seeking new roles. Leverage stealth engagement strategies and relationship building to attract top-tier talent.",
     features: [
       "AI-powered identification of passive candidates across all platforms",
       "Discreet engagement strategies that respect candidate privacy",
@@ -40,9 +40,9 @@ const PassiveIntelligentSourcing = () => {
   };
 
   const productTour = {
-    title: "Product Tour: See Passive Sourcing in Action",
+    title: "Product Tour: See Passive Recruitment in Action",
     subtitle: "Intelligence-driven passive talent discovery starts here",
-    description: "With our platform, you can identify, analyze, and engage passive talent — all while maintaining discretion and building meaningful professional relationships. Experience our world-class passive sourcing suite in action."
+    description: "With our platform, you can identify, analyze, and engage passive talent — all while maintaining discretion and building meaningful professional relationships. Experience our world-class passive recruitment suite in action."
   };
 
   const additionalSections = [
@@ -65,12 +65,12 @@ const PassiveIntelligentSourcing = () => {
 
   return (
     <SolutionStorylineTemplate
-      title="Passive Intelligent Sourcing"
+      title="Passive Recruitment Solutions"
       description="AI-powered passive talent discovery and engagement strategies"
       badge="Recruitment Solution"
-      heroTitle="Passive Intelligent Sourcing"
-      heroDescription="Unlock the hidden talent market with our AI-powered passive sourcing solution. Identify, engage, and attract top-tier professionals who aren't actively looking but are open to exceptional opportunities."
-      ctaText="Start Passive Sourcing"
+      heroTitle="Passive Recruitment Solutions"
+      heroDescription="Unlock the hidden talent market with our AI-powered passive recruitment solution. Identify, engage, and attract top-tier professionals who aren't actively looking but are open to exceptional opportunities."
+      ctaText="Start Passive Recruitment"
       solutionOverview={solutionOverview}
       keyBenefits={keyBenefits}
       productTour={productTour}
@@ -79,4 +79,4 @@ const PassiveIntelligentSourcing = () => {
   );
 };
 
-export default PassiveIntelligentSourcing;
+export default PassiveRecruitment;

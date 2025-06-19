@@ -3,16 +3,10 @@ import React from "react";
 import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplate";
 import { GraduationCap, Users, TrendingUp, Target, Brain, BookOpen, Zap, Heart } from "lucide-react";
 
-const ApprenticeshipSmartSourcing = () => {
-  const mainChallenge = {
-    title: "Build Future Workforce and Develop Loyal Talent Pipelines",
-    description: "Skills shortages and talent gaps continue to challenge organizations across industries. Our AI-powered apprenticeship sourcing platform transforms how you identify and develop early career talent, creating loyal employees who grow with your organization while addressing critical skills needs.",
-    icon: <GraduationCap className="w-8 h-8 text-white" />
-  };
-
+const ApprenticeshipRecruitment = () => {
   const solutionOverview = {
     title: "Develop Tomorrow's Workforce Today",
-    description: "Built specifically for apprenticeship and early career programs, our Smart Sourcing solution offers comprehensive assessment of learning potential and growth trajectory. Leverage AI-powered evaluation and educational partnerships to build your future workforce from the ground up.",
+    description: "Built specifically for apprenticeship and early career programs, our Apprenticeship Solutions offer comprehensive assessment of learning potential and growth trajectory. Leverage AI-powered evaluation and educational partnerships to build your future workforce from the ground up.",
     features: [
       "Specialized sourcing for apprenticeships and entry-level positions",
       "AI-powered assessment of learning potential and growth trajectory",
@@ -25,7 +19,7 @@ const ApprenticeshipSmartSourcing = () => {
 
   const keyBenefits = {
     title: "Invest in Future Leaders & Build Sustainable Talent",
-    subtitle: "Transform your talent development strategy by investing in apprentices who will become your organization's future leaders. Our smart sourcing focuses on potential, passion, and cultural alignment for long-term success.",
+    subtitle: "Transform your talent development strategy by investing in apprentices who will become your organization's future leaders. Our apprenticeship solutions focus on potential, passion, and cultural alignment for long-term success.",
     benefits: [
       {
         title: "Future Workforce",
@@ -46,9 +40,9 @@ const ApprenticeshipSmartSourcing = () => {
   };
 
   const productTour = {
-    title: "Product Tour: See Apprenticeship Sourcing in Action",
+    title: "Product Tour: See Apprenticeship Recruitment in Action",
     subtitle: "Strategic apprenticeship development starts here",
-    description: "With our platform, you can identify, assess, and develop apprentice talent — all while building sustainable career pathways and organizational loyalty. Experience our world-class apprenticeship sourcing suite in action."
+    description: "With our platform, you can identify, assess, and develop apprentice talent — all while building sustainable career pathways and organizational loyalty. Experience our world-class apprenticeship recruitment suite in action."
   };
 
   const additionalSections = [
@@ -71,13 +65,12 @@ const ApprenticeshipSmartSourcing = () => {
 
   return (
     <SolutionStorylineTemplate
-      title="Apprenticeship Smart Sourcing"
+      title="Apprenticeship Solutions"
       description="Specialized recruitment for apprenticeship programs and early career professionals"
       badge="Recruitment Solution"
-      heroTitle="Apprenticeship Smart Sourcing"
-      heroDescription="Invest in the future with smart apprenticeship sourcing. Our AI-enhanced platform identifies high-potential early career talent and matches them with your development programs for long-term organizational success."
+      heroTitle="Apprenticeship Solutions"
+      heroDescription="Invest in the future with smart apprenticeship recruitment. Our AI-enhanced platform identifies high-potential early career talent and matches them with your development programs for long-term organizational success."
       ctaText="Find Apprentices"
-      mainChallenge={mainChallenge}
       solutionOverview={solutionOverview}
       keyBenefits={keyBenefits}
       productTour={productTour}
@@ -86,4 +79,4 @@ const ApprenticeshipSmartSourcing = () => {
   );
 };
 
-export default ApprenticeshipSmartSourcing;
+export default ApprenticeshipRecruitment;

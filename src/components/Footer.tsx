@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Linkedin, Twitter, Instagram, MessageCircle } from "lucide-react";
 import { FaDiscord } from 'react-icons/fa';
@@ -67,14 +66,14 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4">Solutions</h4>
             <ul className="space-y-2">
               {[
-                { label: "Passive Intelligent Sourcing", href: "/solutions/passive-intelligent-sourcing" },
-                { label: "Intelligent Candidate Discovery", href: "/solutions/intelligent-candidate-discovery" }, 
-                { label: "Project Staffing", href: "/solutions/project-staffing" },
-                { label: "Executive Search", href: "/solutions/executive-search" },
-                { label: "Remote Staffing", href: "/solutions/remote-staffing" },
-                { label: "Permanent Placement", href: "/solutions/permanent-placement" },
-                { label: "Contingent Staffing", href: "/solutions/contingent-staffing" },
-                { label: "Apprenticeship Smart Sourcing", href: "/solutions/apprenticeship-smart-sourcing" }
+                { label: "Passive Recruitment", href: "/recruitment-solutions/passive-recruitment" },
+                { label: "Candidate Sourcing", href: "/recruitment-solutions/candidate-sourcing" }, 
+                { label: "Project Staffing", href: "/recruitment-solutions/project-staffing" },
+                { label: "Executive Search", href: "/recruitment-solutions/executive-search" },
+                { label: "Remote Staffing", href: "/recruitment-solutions/remote-staffing" },
+                { label: "Permanent Staffing", href: "/recruitment-solutions/permanent-staffing" },
+                { label: "Contingent Staffing", href: "/recruitment-solutions/contingent-staffing" },
+                { label: "Apprenticeship Recruitment", href: "/recruitment-solutions/apprenticeship-recruitment" }
               ].map((item) => (
                 <li key={item.label}>
                   <a

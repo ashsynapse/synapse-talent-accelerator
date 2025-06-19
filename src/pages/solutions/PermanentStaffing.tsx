@@ -3,10 +3,10 @@ import React from "react";
 import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplate";
 import { UserCheck, Heart, Target, Shield, Users, CheckCircle, TrendingUp, Clock } from "lucide-react";
 
-const PermanentPlacement = () => {
+const PermanentStaffing = () => {
   const solutionOverview = {
     title: "Create Permanent Teams That Drive Long-Term Success",
-    description: "Built specifically for organizations seeking lasting talent solutions, our Permanent Placement service combines cultural fit assessment with long-term potential evaluation. Leverage comprehensive vetting processes and retention-focused strategies to build teams that grow with your organization.",
+    description: "Built specifically for organizations seeking lasting talent solutions, our Permanent Staffing Solutions combine cultural fit assessment with long-term potential evaluation. Leverage comprehensive vetting processes and retention-focused strategies to build teams that grow with your organization.",
     features: [
       "Deep cultural fit assessment and team dynamics evaluation",
       "Comprehensive background checks and skill verification",
@@ -40,9 +40,9 @@ const PermanentPlacement = () => {
   };
 
   const productTour = {
-    title: "Product Tour: See Permanent Placement in Action",
+    title: "Product Tour: See Permanent Staffing in Action",
     subtitle: "Strategic permanent hiring starts here",
-    description: "With our platform, you can evaluate, assess, and place permanent talent — all while ensuring cultural alignment and long-term success potential. Experience our world-class permanent placement suite in action."
+    description: "With our platform, you can evaluate, assess, and place permanent talent — all while ensuring cultural alignment and long-term success potential. Experience our world-class permanent staffing suite in action."
   };
 
   const additionalSections = [
@@ -65,11 +65,11 @@ const PermanentPlacement = () => {
 
   return (
     <SolutionStorylineTemplate
-      title="Permanent Placement Services"
-      description="Full-time permanent placement services across all industries and skill levels"
+      title="Permanent Staffing Solutions"
+      description="Full-time permanent staffing services across all industries and skill levels"
       badge="Recruitment Solution"
-      heroTitle="Permanent Placement Services"
-      heroDescription="Build lasting teams with permanent placements that drive long-term success. Our AI-enhanced approach ensures perfect matches between candidates and roles, creating foundations for sustained growth and achievement."
+      heroTitle="Permanent Staffing Solutions"
+      heroDescription="Build lasting teams with permanent staffing that drives long-term success. Our AI-enhanced approach ensures perfect matches between candidates and roles, creating foundations for sustained growth and achievement."
       ctaText="Find Permanent Staff"
       solutionOverview={solutionOverview}
       keyBenefits={keyBenefits}
@@ -79,4 +79,4 @@ const PermanentPlacement = () => {
   );
 };
 
-export default PermanentPlacement;
+export default PermanentStaffing;

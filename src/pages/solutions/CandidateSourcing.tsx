@@ -3,10 +3,10 @@ import React from "react";
 import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplate";
 import { Search, Target, Brain, Users, Zap, Database, Globe, Filter, Clock, Shield } from "lucide-react";
 
-const IntelligentCandidateDiscovery = () => {
+const CandidateSourcing = () => {
   const solutionOverview = {
     title: "Connect with Quality Candidates in Real Time",
-    description: "Built specifically for modern recruitment challenges, our Intelligent Candidate Discovery offers advanced AI algorithms to find candidates across multiple platforms instantly. Leverage automation and deliver a streamlined discovery experience that engages the right talent faster.",
+    description: "Built specifically for modern recruitment challenges, our Candidate Sourcing Solutions offer advanced AI algorithms to find candidates across multiple platforms instantly. Leverage automation and deliver a streamlined discovery experience that engages the right talent faster.",
     features: [
       "Multi-platform candidate sourcing across professional networks",
       "AI-powered matching with cultural fit indicators",
@@ -40,9 +40,9 @@ const IntelligentCandidateDiscovery = () => {
   };
 
   const productTour = {
-    title: "Product Tour: See Intelligent Discovery in Action",
-    subtitle: "Smarter candidate discovery starts here",
-    description: "With our platform, recruiters can discover, analyze, and engage the right talent — all while maintaining quality and delivering great candidate experiences. Watch the product tour to see our world-class discovery suite in action."
+    title: "Product Tour: See Candidate Sourcing in Action",
+    subtitle: "Smarter candidate sourcing starts here",
+    description: "With our platform, recruiters can discover, analyze, and engage the right talent — all while maintaining quality and delivering great candidate experiences. Watch the product tour to see our world-class candidate sourcing suite in action."
   };
 
   const additionalSections = [
@@ -65,10 +65,10 @@ const IntelligentCandidateDiscovery = () => {
 
   return (
     <SolutionStorylineTemplate
-      title="Intelligent Candidate Discovery"
-      description="Advanced talent fit"
+      title="Candidate Sourcing Solutions"
+      description="Advanced talent sourcing and candidate discovery"
       badge="Recruitment Solution"
-      heroTitle="Intelligent Candidate Discovery"
+      heroTitle="Candidate Sourcing Solutions"
       heroDescription="Transform your candidate sourcing with AI-powered discovery that finds the perfect match faster than ever. Our intelligent platform searches, analyzes, and ranks candidates across multiple channels in real-time."
       ctaText="Request a Demo"
       solutionOverview={solutionOverview}
@@ -79,4 +79,4 @@ const IntelligentCandidateDiscovery = () => {
   );
 };
 
-export default IntelligentCandidateDiscovery;
+export default CandidateSourcing;

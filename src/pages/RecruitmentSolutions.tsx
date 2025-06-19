@@ -9,51 +9,51 @@ import FinalCtaSection from "../components/FinalCtaSection";
 const solutions = [
   {
     icon: <Brain className="w-8 h-8" />,
-    title: "Passive Intelligent Sourcing",
+    title: "Passive Recruitment",
     description: "Smart sourcing to identify and engage top talent who aren't actively job searching",
-    href: "/solutions/passive-intelligent-sourcing"
+    href: "/recruitment-solutions/passive-recruitment"
   },
   {
     icon: <Target className="w-8 h-8" />,
-    title: "Intelligent Candidate Discovery",
+    title: "Candidate Sourcing",
     description: "Comprehensive candidate sourcing strategies to find the perfect match for your roles",
-    href: "/solutions/intelligent-candidate-discovery"
+    href: "/recruitment-solutions/candidate-sourcing"
   },
   {
     icon: <Briefcase className="w-8 h-8" />,
     title: "Project Staffing",
     description: "Specialized staffing solutions for short-term and long-term project requirements",
-    href: "/solutions/project-staffing"
+    href: "/recruitment-solutions/project-staffing"
   },
   {
     icon: <Users className="w-8 h-8" />,
     title: "Executive Search",
     description: "Specialized recruitment for C-level and senior leadership positions",
-    href: "/solutions/executive-search"
+    href: "/recruitment-solutions/executive-search"
   },
   {
     icon: <Globe className="w-8 h-8" />,
     title: "Remote Staffing",
     description: "Global remote talent acquisition for distributed teams and remote-first companies",
-    href: "/solutions/remote-staffing"
+    href: "/recruitment-solutions/remote-staffing"
   },
   {
     icon: <UserCheck className="w-8 h-8" />,
-    title: "Permanent Placement",
-    description: "Full-time permanent placement services across all industries and skill levels",
-    href: "/solutions/permanent-placement"
+    title: "Permanent Staffing",
+    description: "Full-time permanent staffing services across all industries and skill levels",
+    href: "/recruitment-solutions/permanent-staffing"
   },
   {
     icon: <Clock className="w-8 h-8" />,
     title: "Contingent Staffing",
     description: "Flexible staffing solutions for temporary and contract positions",
-    href: "/solutions/contingent-staffing"
+    href: "/recruitment-solutions/contingent-staffing"
   },
   {
     icon: <GraduationCap className="w-8 h-8" />,
-    title: "Apprenticeship Smart Sourcing",
+    title: "Apprenticeship Recruitment",
     description: "Specialized recruitment for apprenticeship programs and early career professionals",
-    href: "/solutions/apprenticeship-smart-sourcing"
+    href: "/recruitment-solutions/apprenticeship-recruitment"
   }
 ];
 
