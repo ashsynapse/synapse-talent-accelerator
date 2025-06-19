@@ -125,11 +125,11 @@ const ITRecruitmentSolutions = () => {
               Discover World-Class IT Talent Effortlessly
             </h2>
             <div className="grid lg:grid-cols-2 gap-12 items-start">
-              <div>
-                <p className="text-lg text-synapse-gray mb-8">
+              <div className="space-y-8">
+                <p className="text-lg text-synapse-gray">
                   Built specifically for accessing the IT talent market, our IT Recruitment Solutions offer advanced AI algorithms to identify and engage top technology professionals across all domains.
                 </p>
-                <div className="space-y-3 mb-8">
+                <div className="space-y-3">
                   {[
                     "AI-powered identification of IT candidates across all platforms",
                     "Discreet engagement strategies that respect candidate privacy",
@@ -153,28 +153,53 @@ const ITRecruitmentSolutions = () => {
                   Explore All Solutions <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
-              <div className="bg-white rounded-xl shadow-soft p-8">
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="bg-gradient-to-br from-synapse-primary/10 to-synapse-primary/5 rounded-lg p-4 text-center">
-                    <Code className="w-8 h-8 text-synapse-primary mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-synapse-dark">98%</div>
-                    <div className="text-sm text-synapse-gray">Technical Skills Match</div>
-                  </div>
-                  <div className="bg-gradient-to-br from-synapse-secondary/10 to-synapse-secondary/5 rounded-lg p-4 text-center">
-                    <Clock className="w-8 h-8 text-synapse-secondary mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-synapse-dark">60%</div>
-                    <div className="text-sm text-synapse-gray">Faster IT Hiring</div>
-                  </div>
+              
+              <div className="bg-white rounded-xl shadow-soft p-8 space-y-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-bold text-synapse-dark mb-2">IT Recruitment Performance</h3>
+                  <p className="text-sm text-synapse-gray">Proven results across all metrics</p>
                 </div>
-                <div className="bg-gradient-to-br from-synapse-tertiary/10 to-synapse-tertiary/5 rounded-lg p-4 text-center mb-4">
-                  <DollarSign className="w-8 h-8 text-synapse-tertiary mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-synapse-dark">75%</div>
-                  <div className="text-sm text-synapse-gray">Cost Reduction</div>
-                </div>
-                <div className="bg-gradient-to-br from-synapse-primary/10 to-synapse-secondary/10 rounded-lg p-4 text-center">
-                  <Brain className="w-8 h-8 text-synapse-primary mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-synapse-dark">24/7</div>
-                  <div className="text-sm text-synapse-gray">AI-Powered Sourcing</div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-synapse-primary/5 to-synapse-primary/10 rounded-lg border-l-4 border-synapse-primary">
+                    <div className="flex items-center space-x-3">
+                      <Code className="w-8 h-8 text-synapse-primary" />
+                      <div>
+                        <div className="text-sm text-synapse-gray">Technical Skills Match</div>
+                        <div className="text-2xl font-bold text-synapse-dark">98%</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-synapse-secondary/5 to-synapse-secondary/10 rounded-lg border-l-4 border-synapse-secondary">
+                    <div className="flex items-center space-x-3">
+                      <Clock className="w-8 h-8 text-synapse-secondary" />
+                      <div>
+                        <div className="text-sm text-synapse-gray">Faster IT Hiring</div>
+                        <div className="text-2xl font-bold text-synapse-dark">60%</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-synapse-tertiary/5 to-synapse-tertiary/10 rounded-lg border-l-4 border-synapse-tertiary">
+                    <div className="flex items-center space-x-3">
+                      <DollarSign className="w-8 h-8 text-synapse-tertiary" />
+                      <div>
+                        <div className="text-sm text-synapse-gray">Cost Reduction</div>
+                        <div className="text-2xl font-bold text-synapse-dark">75%</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-synapse-primary/5 to-synapse-secondary/5 rounded-lg border-l-4 border-synapse-primary">
+                    <div className="flex items-center space-x-3">
+                      <Brain className="w-8 h-8 text-synapse-primary" />
+                      <div>
+                        <div className="text-sm text-synapse-gray">AI-Powered Sourcing</div>
+                        <div className="text-2xl font-bold text-synapse-dark">24/7</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
