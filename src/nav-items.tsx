@@ -1,3 +1,4 @@
+
 import Index from "./pages/Index";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
@@ -28,17 +29,7 @@ import OutreachAgent from "./pages/tools/OutreachAgent";
 import SubmissionAgent from "./pages/tools/SubmissionAgent";
 import ATSBypassEngine from "./pages/tools/ATSBypassEngine";
 
-// Industry page imports
-import Technology from "./pages/industries/Technology";
-import Finance from "./pages/industries/Finance";
-import Healthcare from "./pages/industries/Healthcare";
-import Legal from "./pages/industries/Legal";
-import Manufacturing from "./pages/industries/Manufacturing";
-import SalesMarketing from "./pages/industries/SalesMarketing";
-import Leadership from "./pages/industries/Leadership";
-import Operations from "./pages/industries/Operations";
-
-// New industry child page imports
+// Industry child page imports
 import ITRecruitmentSolutions from "./pages/industries/ITRecruitmentSolutions";
 import DigitalMarketingRecruitmentSolutions from "./pages/industries/DigitalMarketingRecruitmentSolutions";
 import EngineeringRecruitmentSolutions from "./pages/industries/EngineeringRecruitmentSolutions";
@@ -161,40 +152,7 @@ export const navItems = [
     to: "/tools/ats-bypass-engine",
     page: <ATSBypassEngine />,
   },
-  // Industry routes
-  {
-    to: "/industries/technology",
-    page: <Technology />,
-  },
-  {
-    to: "/industries/finance",
-    page: <Finance />,
-  },
-  {
-    to: "/industries/healthcare",
-    page: <Healthcare />,
-  },
-  {
-    to: "/industries/legal",
-    page: <Legal />,
-  },
-  {
-    to: "/industries/manufacturing",
-    page: <Manufacturing />,
-  },
-  {
-    to: "/industries/sales-marketing",
-    page: <SalesMarketing />,
-  },
-  {
-    to: "/industries/leadership",
-    page: <Leadership />,
-  },
-  {
-    to: "/industries/operations",
-    page: <Operations />,
-  },
-  // New industry child routes
+  // Industry child routes
   {
     to: "/industries/IT-recruitment-solutions",
     page: <ITRecruitmentSolutions />,
