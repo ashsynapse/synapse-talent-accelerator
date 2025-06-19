@@ -1,4 +1,3 @@
-
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -286,7 +285,7 @@ const Legal = () => {
                   className="bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200"
                   onClick={() => window.location.href = "/contact"}
                 >
-                  Discover Our Legal Expertise <ArrowRight className="ml-2 h-4 w-4" />
+                  Get Started <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
               
