@@ -48,7 +48,6 @@ const AIResumeAnalysis = () => {
       features={features}
       benefits={benefits}
       caseStudy={caseStudy}
-      heroStyle="centered"
     />
   );
 };

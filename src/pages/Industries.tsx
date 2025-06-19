@@ -10,59 +10,59 @@ import FinalCtaSection from "../components/FinalCtaSection";
 const industries = [
   {
     icon: <Code className="w-8 h-8" />,
-    title: "Technology",
+    title: "Information Technology",
     description: "Specialized recruitment for software engineers, data scientists, AI/ML experts, and tech leadership",
-    href: "/industries/technology",
+    href: "/industries/IT-recruitment-solutions",
     roles: ["Software Engineers", "Data Scientists", "DevOps Engineers", "Product Managers"]
   },
   {
     icon: <TrendingUp className="w-8 h-8" />,
-    title: "Finance",
-    description: "Finance professionals including investment bankers, financial advisors, analysts, and portfolio managers",
-    href: "/industries/finance",
-    roles: ["Investment Bankers", "Financial Advisors", "Analysts", "Portfolio Managers"]
+    title: "Digital Marketing",
+    description: "Digital marketing professionals including campaign managers, SEO specialists, and growth experts",
+    href: "/industries/digital-marketing-recruitment-solutions",
+    roles: ["Digital Marketers", "SEO Specialists", "Campaign Managers", "Growth Experts"]
   },
   {
     icon: <Heart className="w-8 h-8" />,
-    title: "Healthcare",
-    description: "Medical professionals, administrators, technicians, and healthcare support staff",
-    href: "/industries/healthcare",
-    roles: ["Medical Professionals", "Healthcare Admins", "Technicians", "Support Staff"]
+    title: "Engineering",
+    description: "Engineering professionals including mechanical, civil, electrical, and project engineers",
+    href: "/industries/engineering-recruitment-solutions",
+    roles: ["Mechanical Engineers", "Civil Engineers", "Electrical Engineers", "Project Engineers"]
   },
   {
     icon: <Scale className="w-8 h-8" />,
-    title: "Legal",
-    description: "Legal professionals specializing in corporate law, litigation, compliance, and legal operations",
-    href: "/industries/legal",
-    roles: ["Corporate Lawyers", "Paralegals", "Legal Assistants", "Compliance Officers"]
+    title: "Human Resources (HR)",
+    description: "HR professionals specializing in talent acquisition, employee relations, and HR operations",
+    href: "/industries/human-resource-recruitment-solutions",
+    roles: ["HR Managers", "Recruiters", "HR Business Partners", "Talent Acquisition"]
   },
   {
     icon: <Factory className="w-8 h-8" />,
-    title: "Manufacturing",
-    description: "Manufacturing professionals from operations to supply chain management and quality control",
-    href: "/industries/manufacturing",
-    roles: ["Operations Managers", "Quality Engineers", "Supply Chain", "Plant Managers"]
+    title: "Sales",
+    description: "Sales professionals from account executives to sales managers and business development specialists",
+    href: "/industries/human-sales-recruitment-solutions",
+    roles: ["Sales Executives", "Sales Managers", "Business Development", "Account Managers"]
   },
   {
     icon: <Calculator className="w-8 h-8" />,
-    title: "Sales & Marketing",
-    description: "Sales executives, marketing managers, business development professionals, and revenue drivers",
-    href: "/industries/sales-marketing",
-    roles: ["Sales Executives", "Marketing Managers", "Business Development", "Revenue Specialists"]
+    title: "Accounting",
+    description: "Accounting professionals including staff accountants, financial analysts, and accounting managers",
+    href: "/industries/accounting-recruitment-solutions",
+    roles: ["Staff Accountants", "Financial Analysts", "Accounting Managers", "Controllers"]
   },
   {
     icon: <Crown className="w-8 h-8" />,
-    title: "Leadership",
-    description: "C-Suite executives, VPs, directors, and senior management professionals",
-    href: "/industries/leadership",
-    roles: ["C-Suite Executives", "VPs", "Directors", "Senior Management"]
+    title: "Legal",
+    description: "Legal professionals including attorneys, paralegals, and legal support staff",
+    href: "/industries/Legal-staffing-solutions",
+    roles: ["Attorneys", "Paralegals", "Legal Assistants", "Legal Secretaries"]
   },
   {
     icon: <Users className="w-8 h-8" />,
-    title: "Operations",
-    description: "Operations managers, business analysts, project coordinators, and process specialists",
-    href: "/industries/operations",
-    roles: ["Operations Managers", "Business Analysts", "Project Coordinators", "Process Specialists"]
+    title: "Manufacturing",
+    description: "Manufacturing professionals from production workers to supervisors and maintenance technicians",
+    href: "/industries/manufacturing-recruitment-solutions",
+    roles: ["Production Workers", "Supervisors", "Maintenance Technicians", "Quality Control"]
   }
 ];
 

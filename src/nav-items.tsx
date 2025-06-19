@@ -38,6 +38,16 @@ import SalesMarketing from "./pages/industries/SalesMarketing";
 import Leadership from "./pages/industries/Leadership";
 import Operations from "./pages/industries/Operations";
 
+// New industry child page imports
+import ITRecruitmentSolutions from "./pages/industries/ITRecruitmentSolutions";
+import DigitalMarketingRecruitmentSolutions from "./pages/industries/DigitalMarketingRecruitmentSolutions";
+import EngineeringRecruitmentSolutions from "./pages/industries/EngineeringRecruitmentSolutions";
+import HumanResourceRecruitmentSolutions from "./pages/industries/HumanResourceRecruitmentSolutions";
+import HumanSalesRecruitmentSolutions from "./pages/industries/HumanSalesRecruitmentSolutions";
+import AccountingRecruitmentSolutions from "./pages/industries/AccountingRecruitmentSolutions";
+import LegalStaffingSolutions from "./pages/industries/LegalStaffingSolutions";
+import ManufacturingRecruitmentSolutions from "./pages/industries/ManufacturingRecruitmentSolutions";
+
 // Solution page imports
 import PassiveRecruitment from "./pages/solutions/PassiveRecruitment";
 import CandidateSourcing from "./pages/solutions/CandidateSourcing";
@@ -183,6 +193,39 @@ export const navItems = [
   {
     to: "/industries/operations",
     page: <Operations />,
+  },
+  // New industry child routes
+  {
+    to: "/industries/IT-recruitment-solutions",
+    page: <ITRecruitmentSolutions />,
+  },
+  {
+    to: "/industries/digital-marketing-recruitment-solutions",
+    page: <DigitalMarketingRecruitmentSolutions />,
+  },
+  {
+    to: "/industries/engineering-recruitment-solutions",
+    page: <EngineeringRecruitmentSolutions />,
+  },
+  {
+    to: "/industries/human-resource-recruitment-solutions",
+    page: <HumanResourceRecruitmentSolutions />,
+  },
+  {
+    to: "/industries/human-sales-recruitment-solutions",
+    page: <HumanSalesRecruitmentSolutions />,
+  },
+  {
+    to: "/industries/accounting-recruitment-solutions",
+    page: <AccountingRecruitmentSolutions />,
+  },
+  {
+    to: "/industries/Legal-staffing-solutions",
+    page: <LegalStaffingSolutions />,
+  },
+  {
+    to: "/industries/manufacturing-recruitment-solutions",
+    page: <ManufacturingRecruitmentSolutions />,
   },
   // Solution routes
   {

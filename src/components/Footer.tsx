@@ -129,14 +129,14 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4">Industries</h4>
             <ul className="space-y-2">
               {[
-                { label: "Technology", href: "/industries/technology" },
-                { label: "Finance", href: "/industries/finance" },
-                { label: "Healthcare", href: "/industries/healthcare" },
-                { label: "Legal", href: "/industries/legal" },
-                { label: "Manufacturing", href: "/industries/manufacturing" },
-                { label: "Sales & Marketing", href: "/industries/sales-marketing" },
-                { label: "Leadership", href: "/industries/leadership" },
-                { label: "Operations", href: "/industries/operations" }
+                { label: "Information Technology", href: "/industries/IT-recruitment-solutions" },
+                { label: "Digital Marketing", href: "/industries/digital-marketing-recruitment-solutions" },
+                { label: "Engineering", href: "/industries/engineering-recruitment-solutions" },
+                { label: "Human Resources (HR)", href: "/industries/human-resource-recruitment-solutions" },
+                { label: "Sales", href: "/industries/human-sales-recruitment-solutions" },
+                { label: "Accounting", href: "/industries/accounting-recruitment-solutions" },
+                { label: "Legal", href: "/industries/Legal-staffing-solutions" },
+                { label: "Manufacturing", href: "/industries/manufacturing-recruitment-solutions" }
               ].map((item) => (
                 <li key={item.label}>
                   <a
