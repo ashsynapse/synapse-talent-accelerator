@@ -1,80 +1,95 @@
 
 import React from "react";
 import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplate";
-import { UserCheck, Heart, Target, Shield, Users, CheckCircle, TrendingUp, Clock } from "lucide-react";
 
 const PermanentStaffing = () => {
-  const solutionOverview = {
-    title: "Create Permanent Teams That Drive Long-Term Success",
-    description: "Built specifically for organizations seeking lasting talent solutions, our Permanent Staffing Solutions combine cultural fit assessment with long-term potential evaluation. Leverage comprehensive vetting processes and retention-focused strategies to build teams that grow with your organization.",
-    features: [
-      "Deep cultural fit assessment and team dynamics evaluation",
-      "Comprehensive background checks and skill verification",
-      "Long-term potential and career advancement assessment",
-      "Retention-focused strategies and onboarding support",
-      "Growth trajectory analysis and succession planning alignment"
-    ],
-    ctaText: "Learn More"
-  };
-
-  const keyBenefits = {
-    title: "Invest in Talent That Grows With Your Organization",
-    subtitle: "Transform your permanent hiring approach with placements that create lasting value. Our comprehensive assessment process ensures candidates who will thrive long-term and contribute to organizational growth.",
-    benefits: [
-      {
-        title: "Quality Hires",
-        description: "Higher success rates through comprehensive candidate evaluation and cultural matching that ensures perfect organizational fit.",
-        icon: <CheckCircle className="w-8 h-8 text-white" />
-      },
-      {
-        title: "Reduced Turnover",
-        description: "Better cultural and role fit leads to improved employee retention rates and reduced replacement costs over time.",
-        icon: <Users className="w-8 h-8 text-white" />
-      },
-      {
-        title: "Growth Investment",
-        description: "Candidates positioned for long-term growth within your organization, creating internal advancement opportunities.",
-        icon: <TrendingUp className="w-8 h-8 text-white" />
-      }
-    ]
-  };
-
-  const productTour = {
-    title: "Product Tour: See Permanent Staffing in Action",
-    subtitle: "Strategic permanent hiring starts here",
-    description: "With our platform, you can evaluate, assess, and place permanent talent — all while ensuring cultural alignment and long-term success potential. Experience our world-class permanent staffing suite in action."
-  };
-
-  const additionalSections = [
-    {
-      title: "Cultural Alignment",
-      description: "Deep assessment of candidate alignment with company values, team dynamics, and organizational culture for seamless integration.",
-      icon: <Heart className="w-6 h-6" />
-    },
-    {
-      title: "Long-term Focus",
-      description: "Focus on candidates with growth potential and career advancement opportunities within your organizational structure.",
-      icon: <Clock className="w-6 h-6" />
-    },
-    {
-      title: "Quality Assurance",
-      description: "Rigorous screening processes including background checks, skill assessments, and reference verification for confidence.",
-      icon: <Shield className="w-6 h-6" />
-    }
-  ];
-
   return (
     <SolutionStorylineTemplate
-      title="Permanent Staffing Solutions"
-      description="Full-time permanent staffing services across all industries and skill levels"
-      badge="Recruitment Solution"
-      heroTitle="Permanent Staffing Solutions"
-      heroDescription="Build lasting teams with permanent staffing that drives long-term success. Our AI-enhanced approach ensures perfect matches between candidates and roles, creating foundations for sustained growth and achievement."
-      ctaText="Find Permanent Staff"
-      solutionOverview={solutionOverview}
-      keyBenefits={keyBenefits}
-      productTour={productTour}
-      additionalSections={additionalSections}
+      // Hero Section
+      badge="Solution"
+      title="Permanent Staffing"
+      description="Strategic permanent staffing solutions that build the foundation of your organization. We specialize in finding full-time professionals who become long-term contributors to your company's success and culture."
+      ctaText="Build Your Team"
+      heroClassName="pt-20 pb-12"
+      
+      // Content sections with consistent spacing
+      sectionSpacing="py-12"
+      
+      // Two-Column Section
+      twoColumnTitle="Building Your Core Team"
+      twoColumnDescription="Our permanent staffing approach focuses on finding professionals who will become integral parts of your organization. Through comprehensive assessment and cultural alignment, we ensure every placement contributes to long-term organizational success and growth."
+      twoColumnImage="/lovable-uploads/7a0c2330-d0d6-49c8-9ed2-b824e1c54b9c.png"
+      twoColumnImageAlt="Permanent team building and collaboration"
+      
+      // Key Features
+      keyFeatures={[
+        "Full-time professional recruitment",
+        "Cultural fit and values assessment",
+        "Long-term career alignment",
+        "Comprehensive background verification",
+        "Skills and competency evaluation",
+        "Post-placement support and follow-up"
+      ]}
+      
+      // Business Impacts
+      businessImpacts={[
+        {
+          metric: "90% Retention Rate",
+          description: "Exceptional retention rates through careful matching and cultural alignment"
+        },
+        {
+          metric: "50% Faster Hiring",
+          description: "Streamlined process reduces time-to-hire while maintaining quality standards"
+        },
+        {
+          metric: "Long-Term Value",
+          description: "Permanent hires who grow with your organization and contribute to sustained success"
+        }
+      ]}
+      
+      // How It Works Steps
+      howItWorksSteps={[
+        {
+          title: "Role Definition & Strategy",
+          description: "Comprehensive understanding of role requirements, team dynamics, and growth potential"
+        },
+        {
+          title: "Candidate Sourcing & Screening",
+          description: "Multi-channel sourcing approach with rigorous initial screening and qualification"
+        },
+        {
+          title: "Assessment & Cultural Fit",
+          description: "Detailed evaluation of skills, experience, and alignment with organizational culture"
+        },
+        {
+          title: "Integration & Follow-Up",
+          description: "Support through the hiring process and post-placement integration monitoring"
+        }
+      ]}
+      
+      // Industry Applications
+      industryApplications={[
+        "Corporate and Business Services",
+        "Technology and Software",
+        "Healthcare and Medical",
+        "Engineering and Manufacturing",
+        "Financial Services",
+        "Marketing and Communications"
+      ]}
+      
+      // Success Stories
+      successStories={[
+        {
+          challenge: "Fast-growing startup needed to build core engineering team of 20 developers",
+          solution: "Implemented systematic permanent staffing approach with cultural fit emphasis",
+          result: "Successfully built cohesive engineering team with 95% retention after 2 years"
+        },
+        {
+          challenge: "Established company required replacement for key leadership positions",
+          solution: "Conducted confidential search for senior management roles with succession planning",
+          result: "Filled 5 critical leadership positions with internal promotion potential candidates"
+        }
+      ]}
     />
   );
 };

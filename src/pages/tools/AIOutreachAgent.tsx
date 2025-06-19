@@ -7,12 +7,12 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Bot, MessageSquare, Clock, Target, Users, Zap, Database, CheckCircle, Settings, Activity, Brain, TrendingUp, Shield, Lightbulb } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
-const AIOutreachAgent = () => {
+const OutreachAgent = () => {
   const coreCapabilities = [
     {
       icon: <MessageSquare className="w-6 h-6 text-white" />,
       title: "Hyper-Personalized Messaging",
-      description: "Creates uniquely tailored outreach messages based on candidate profiles, interests, and career background"
+      description: "Creates uniquely tailored outreach messages based on candidate profiles, interests, and career background using advanced outreach agent technology"
     },
     {
       icon: <Target className="w-6 h-6 text-white" />,
@@ -30,7 +30,7 @@ const AIOutreachAgent = () => {
     {
       icon: <TrendingUp className="w-8 h-8 text-synapse-primary" />,
       title: "5x Higher Response Rates",
-      description: "Achieve significantly higher candidate engagement through personalized outreach strategies"
+      description: "Achieve significantly higher candidate engagement through personalized outreach agent strategies"
     },
     {
       icon: <Clock className="w-8 h-8 text-synapse-secondary" />,
@@ -59,7 +59,7 @@ const AIOutreachAgent = () => {
       description="Hyper-personalized, automated outreach campaigns for candidate engagement"
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-20 pb-12 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
@@ -69,7 +69,7 @@ const AIOutreachAgent = () => {
               Outreach Agent
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Transform candidate engagement with intelligent outreach that creates hyper-personalized campaigns across multiple channels. Our agent crafts compelling messages, manages follow-ups, and optimizes communication strategies to maximize response rates and build meaningful connections.
+              Transform candidate engagement with intelligent outreach agent that creates hyper-personalized campaigns across multiple channels. Our outreach agent crafts compelling messages, manages follow-ups, and optimizes communication strategies to maximize response rates and build meaningful connections.
             </p>
             <div className="flex justify-center">
               <Button 
@@ -77,7 +77,7 @@ const AIOutreachAgent = () => {
                 onClick={() => window.location.href = "/contact"}
               >
                 <span className="flex items-center gap-2">
-                  Launch Your Campaign
+                  Launch Your Outreach Agent
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </span>
               </Button>
@@ -87,16 +87,16 @@ const AIOutreachAgent = () => {
       </section>
 
       {/* Main Value Proposition */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container-wide">
           <div className="max-w-5xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-                  Personalized Outreach at Scale
+                  Personalized Outreach Agent at Scale
                 </h2>
                 <p className="text-synapse-gray mb-6">
-                  Our agent analyzes candidate profiles, career trajectories, and interests to craft uniquely personalized messages that resonate. With advanced natural language processing, every outreach feels authentic and relevant, dramatically improving engagement rates.
+                  Our outreach agent analyzes candidate profiles, career trajectories, and interests to craft uniquely personalized messages that resonate. With advanced natural language processing, every outreach agent communication feels authentic and relevant, dramatically improving engagement rates.
                 </p>
                 <div className="space-y-4 mb-8">
                   {keyFeatures.map((feature, index) => (
@@ -108,7 +108,7 @@ const AIOutreachAgent = () => {
                 </div>
                 <Button 
                   className="btn-primary"
-                  onClick={() => window.location.href = "/recruitment-tools"}
+                  onClick={() => window.location.href = "/tools"}
                 >
                   Explore All Tools <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -192,14 +192,14 @@ const AIOutreachAgent = () => {
       </section>
 
       {/* How It Works Process */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
               Your Outreach Agent at Work
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              See how our intelligent outreach process delivers personalized engagement automatically
+              See how our intelligent outreach agent process delivers personalized engagement automatically
             </p>
           </div>
           
@@ -212,7 +212,7 @@ const AIOutreachAgent = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-synapse-dark mb-2">Analyze Candidate Profiles</h3>
-                    <p className="text-synapse-gray text-sm">Agent analyzes candidate backgrounds, interests, and career patterns for personalization</p>
+                    <p className="text-synapse-gray text-sm">Outreach agent analyzes candidate backgrounds, interests, and career patterns for personalization</p>
                   </div>
                 </div>
                 
@@ -313,4 +313,4 @@ const AIOutreachAgent = () => {
   );
 };
 
-export default AIOutreachAgent;
+export default OutreachAgent;

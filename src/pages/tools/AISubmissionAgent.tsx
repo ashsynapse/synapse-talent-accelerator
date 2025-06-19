@@ -1,4 +1,3 @@
-
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -7,12 +6,12 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Bot, Send, Clock, Target, Users, Zap, Database, CheckCircle, Settings, Activity, Brain, TrendingUp, Shield, Lightbulb } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
-const AISubmissionAgent = () => {
+const SubmissionAgent = () => {
   const coreCapabilities = [
     {
       icon: <Send className="w-6 h-6 text-white" />,
       title: "Intelligent Profile Matching",
-      description: "Automatically matches candidate profiles to job requirements and submits the best-fit candidates"
+      description: "Automatically matches candidate profiles to job requirements and submits the best-fit candidates using advanced submission agent algorithms"
     },
     {
       icon: <Target className="w-6 h-6 text-white" />,
@@ -30,7 +29,7 @@ const AISubmissionAgent = () => {
     {
       icon: <TrendingUp className="w-8 h-8 text-synapse-primary" />,
       title: "3x Faster Submissions",
-      description: "Dramatically accelerate candidate submission timelines while maintaining quality standards"
+      description: "Dramatically accelerate candidate submission timelines while maintaining quality standards with our submission agent"
     },
     {
       icon: <Clock className="w-8 h-8 text-synapse-secondary" />,
@@ -59,7 +58,7 @@ const AISubmissionAgent = () => {
       description="End-to-end candidate submission with automated coordination and follow-ups"
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-20 pb-12 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
@@ -69,7 +68,7 @@ const AISubmissionAgent = () => {
               Submission Agent
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Streamline your entire candidate submission process with intelligent automation that handles everything from profile matching to final coordination. Our agent ensures seamless communication, timely follow-ups, and successful placements.
+              Streamline your entire candidate submission process with intelligent submission agent automation that handles everything from profile matching to final coordination. Our submission agent ensures seamless communication, timely follow-ups, and successful placements.
             </p>
             <div className="flex justify-center">
               <Button 
@@ -77,7 +76,7 @@ const AISubmissionAgent = () => {
                 onClick={() => window.location.href = "/contact"}
               >
                 <span className="flex items-center gap-2">
-                  Automate Submissions
+                  Automate with Submission Agent
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </span>
               </Button>
@@ -87,16 +86,16 @@ const AISubmissionAgent = () => {
       </section>
 
       {/* Main Value Proposition */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container-wide">
           <div className="max-w-5xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-                  Seamless Submission Coordination
+                  Seamless Submission Agent Coordination
                 </h2>
                 <p className="text-synapse-gray mb-6">
-                  Our agent orchestrates the entire submission workflow, from initial candidate evaluation to final placement coordination. With intelligent matching algorithms and automated communication, every submission is handled with precision and professionalism.
+                  Our submission agent orchestrates the entire submission workflow, from initial candidate evaluation to final placement coordination. With intelligent matching algorithms and automated communication, every submission agent process is handled with precision and professionalism.
                 </p>
                 <div className="space-y-4 mb-8">
                   {keyFeatures.map((feature, index) => (
@@ -108,7 +107,7 @@ const AISubmissionAgent = () => {
                 </div>
                 <Button 
                   className="btn-primary"
-                  onClick={() => window.location.href = "/recruitment-tools"}
+                  onClick={() => window.location.href = "/tools"}
                 >
                   Explore All Tools <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -135,7 +134,7 @@ const AISubmissionAgent = () => {
       </section>
 
       {/* Business Impact Section */}
-      <section className="py-16 bg-synapse-lighter/30">
+      <section className="py-12 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -182,7 +181,7 @@ const AISubmissionAgent = () => {
               <Button 
                 variant="outline" 
                 className="border-2 border-synapse-primary text-synapse-primary hover:bg-synapse-primary hover:text-white text-lg px-8 py-3"
-                onClick={() => window.location.href = "/recruitment-tools"}
+                onClick={() => window.location.href = "/tools"}
               >
                 Explore All Tools <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -192,14 +191,14 @@ const AISubmissionAgent = () => {
       </section>
 
       {/* How It Works Process */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
               Your Submission Agent at Work
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              See how our intelligent submission process delivers seamless coordination automatically
+              See how our intelligent submission agent process delivers seamless coordination automatically
             </p>
           </div>
           
@@ -212,7 +211,7 @@ const AISubmissionAgent = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-synapse-dark mb-2">Match & Evaluate</h3>
-                    <p className="text-synapse-gray text-sm">Agent analyzes candidate profiles against job requirements for optimal matching</p>
+                    <p className="text-synapse-gray text-sm">Submission agent analyzes candidate profiles against job requirements for optimal matching</p>
                   </div>
                 </div>
                 
@@ -269,7 +268,7 @@ const AISubmissionAgent = () => {
       </section>
 
       {/* Advanced Features */}
-      <section className="py-16 bg-synapse-lighter/30">
+      <section className="py-12 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -313,4 +312,4 @@ const AISubmissionAgent = () => {
   );
 };
 
-export default AISubmissionAgent;
+export default SubmissionAgent;

@@ -1,80 +1,95 @@
 
 import React from "react";
 import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplate";
-import { Search, Target, Brain, Users, Zap, Database, Globe, Filter, Clock, Shield } from "lucide-react";
 
 const CandidateSourcing = () => {
-  const solutionOverview = {
-    title: "Connect with Quality Candidates in Real Time",
-    description: "Built specifically for modern recruitment challenges, our Candidate Sourcing Solutions offer advanced AI algorithms to find candidates across multiple platforms instantly. Leverage automation and deliver a streamlined discovery experience that engages the right talent faster.",
-    features: [
-      "Multi-platform candidate sourcing across professional networks",
-      "AI-powered matching with cultural fit indicators",
-      "Real-time discovery with instant notifications",
-      "Smart filtering beyond traditional keyword searches",
-      "Automated candidate profiling and assessment"
-    ],
-    ctaText: "Learn More"
-  };
-
-  const keyBenefits = {
-    title: "Remove Discovery Roadblocks & Streamline Efficiency",
-    subtitle: "Pinpoint where bottlenecks exist in finding quality candidates. Streamline discovery, engagement, and conversion by leveraging AI to eliminate manual searches and increase recruiter capacity.",
-    benefits: [
-      {
-        title: "Expanded Talent Access",
-        description: "Access comprehensive talent pools from multiple sources in a unified search experience, reaching candidates you never knew existed.",
-        icon: <Globe className="w-8 h-8 text-white" />
-      },
-      {
-        title: "Intelligent Matching",
-        description: "Advanced AI analyzes skills, experience, and cultural compatibility to surface the most relevant candidates for your roles.",
-        icon: <Brain className="w-8 h-8 text-white" />
-      },
-      {
-        title: "Instant Discovery",
-        description: "Reduce discovery time from weeks to hours with automated candidate identification and real-time matching alerts.",
-        icon: <Zap className="w-8 h-8 text-white" />
-      }
-    ]
-  };
-
-  const productTour = {
-    title: "Product Tour: See Candidate Sourcing in Action",
-    subtitle: "Smarter candidate sourcing starts here",
-    description: "With our platform, recruiters can discover, analyze, and engage the right talent — all while maintaining quality and delivering great candidate experiences. Watch the product tour to see our world-class candidate sourcing suite in action."
-  };
-
-  const additionalSections = [
-    {
-      title: "Build a Robust Talent Pipeline",
-      description: "Find, attract, and engage with active and passive job seekers to build a strong pool of quality candidates. Tap into AI-powered insights to develop personalized outreach campaigns.",
-      icon: <Database className="w-6 h-6" />
-    },
-    {
-      title: "Showcase Your Employer Brand",
-      description: "Build a strong, visible employer brand during the discovery process. Provide candidates with an authentic expression of what it's like to work at your company.",
-      icon: <Shield className="w-6 h-6" />
-    },
-    {
-      title: "Automate Discovery Tasks",
-      description: "Discover the best talent faster, smarter, and with confidence. Lean on the power of automation to streamline sourcing and screening processes.",
-      icon: <Clock className="w-6 h-6" />
-    }
-  ];
-
   return (
     <SolutionStorylineTemplate
-      title="Candidate Sourcing Solutions"
-      description="Advanced talent sourcing and candidate discovery"
-      badge="Recruitment Solution"
-      heroTitle="Candidate Sourcing Solutions"
-      heroDescription="Transform your candidate sourcing with AI-powered discovery that finds the perfect match faster than ever. Our intelligent platform searches, analyzes, and ranks candidates across multiple channels in real-time."
-      ctaText="Request a Demo"
-      solutionOverview={solutionOverview}
-      keyBenefits={keyBenefits}
-      productTour={productTour}
-      additionalSections={additionalSections}
+      // Hero Section
+      badge="Solution"
+      title="Candidate Sourcing"
+      description="Advanced candidate sourcing strategies that go beyond traditional methods to find the right talent for your organization. We leverage cutting-edge technology and proven methodologies to identify and engage top performers."
+      ctaText="Start Sourcing"
+      heroClassName="pt-20 pb-12"
+      
+      // Content sections with consistent spacing
+      sectionSpacing="py-12"
+      
+      // Two-Column Section
+      twoColumnTitle="Strategic Talent Discovery"
+      twoColumnDescription="Our candidate sourcing approach combines advanced technology with human expertise to identify talent across multiple channels. From passive candidates to active job seekers, we ensure no qualified professional is overlooked in your search for the perfect hire."
+      twoColumnImage="/lovable-uploads/7a0c2330-d0d6-49c8-9ed2-b824e1c54b9c.png"
+      twoColumnImageAlt="Advanced candidate sourcing and discovery"
+      
+      // Key Features
+      keyFeatures={[
+        "Multi-channel candidate discovery",
+        "Advanced Boolean search techniques",
+        "Social media and professional network mining",
+        "Passive candidate engagement strategies",
+        "Competitive intelligence and talent mapping",
+        "Real-time candidate pipeline management"
+      ]}
+      
+      // Business Impacts
+      businessImpacts={[
+        {
+          metric: "5x More Candidates",
+          description: "Dramatically expand your talent pool with comprehensive sourcing strategies"
+        },
+        {
+          metric: "70% Faster Fills",
+          description: "Reduce time-to-hire through proactive candidate identification and engagement"
+        },
+        {
+          metric: "Higher Quality Hires",
+          description: "Access to passive candidates who aren't actively job searching but are top performers"
+        }
+      ]}
+      
+      // How It Works Steps
+      howItWorksSteps={[
+        {
+          title: "Talent Mapping & Market Analysis",
+          description: "Comprehensive analysis of talent availability and competitive landscape"
+        },
+        {
+          title: "Multi-Channel Search Strategy",
+          description: "Deploy advanced sourcing techniques across all relevant platforms and networks"
+        },
+        {
+          title: "Candidate Identification & Qualification",
+          description: "Systematic evaluation and qualification of potential candidates"
+        },
+        {
+          title: "Engagement & Pipeline Management",
+          description: "Strategic outreach and continuous relationship building with qualified candidates"
+        }
+      ]}
+      
+      // Industry Applications
+      industryApplications={[
+        "Technology and Software",
+        "Financial Services",
+        "Healthcare and Pharmaceuticals",
+        "Manufacturing and Engineering",
+        "Professional Services",
+        "Retail and Consumer Goods"
+      ]}
+      
+      // Success Stories
+      successStories={[
+        {
+          challenge: "Global tech company needed 100 software engineers in competitive market",
+          solution: "Implemented comprehensive sourcing strategy across 15+ platforms and networks",
+          result: "Successfully sourced and hired 100 engineers within 6 months, 40% from passive channels"
+        },
+        {
+          challenge: "Healthcare organization required specialized medical professionals in shortage area",
+          solution: "Developed targeted sourcing campaign focusing on passive candidates and referrals",
+          result: "Filled 25 critical positions with 95% candidate retention rate after one year"
+        }
+      ]}
     />
   );
 };

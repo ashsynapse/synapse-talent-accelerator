@@ -1,80 +1,95 @@
 
 import React from "react";
 import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplate";
-import { Crown, Target, Shield, Users, Brain, Search, CheckCircle, Zap } from "lucide-react";
 
 const ExecutiveSearch = () => {
-  const solutionOverview = {
-    title: "Connect with Executive Leaders Who Transform Organizations",
-    description: "Built specifically for C-level and senior leadership recruitment, our Executive Search service offers comprehensive assessment and confidential processes. Leverage deep market intelligence and proven executive evaluation to secure leaders who align with your vision and drive growth.",
-    features: [
-      "Specialized focus on CEO, CTO, CFO, and senior executive positions",
-      "Confidential search processes protecting all stakeholders",
-      "Comprehensive leadership assessment and cultural fit evaluation",
-      "Board-level presentations and stakeholder management",
-      "Market intelligence and compensation benchmarking"
-    ],
-    ctaText: "Learn More"
-  };
-
-  const keyBenefits = {
-    title: "Secure Leadership That Drives Transformation",
-    subtitle: "Transform your organization with executive leaders who have demonstrated success in similar roles and challenges. Our comprehensive search process ensures strategic fit and long-term success.",
-    benefits: [
-      {
-        title: "Strategic Leadership",
-        description: "Access transformational leaders with proven track records who drive organizational growth and innovation.",
-        icon: <Brain className="w-8 h-8 text-white" />
-      },
-      {
-        title: "Market Intelligence",
-        description: "Deep insights into executive compensation, market positioning, and competitive landscape intelligence.",
-        icon: <Search className="w-8 h-8 text-white" />
-      },
-      {
-        title: "Cultural Alignment",
-        description: "Comprehensive assessment ensuring executives align with your company values, vision, and leadership philosophy.",
-        icon: <Zap className="w-8 h-8 text-white" />
-      }
-    ]
-  };
-
-  const productTour = {
-    title: "Product Tour: See Executive Search in Action",
-    subtitle: "Executive leadership recruitment starts here",
-    description: "With our platform, you can identify, assess, and secure executive talent — all while maintaining confidentiality and ensuring strategic fit. Experience our world-class executive search suite in action."
-  };
-
-  const additionalSections = [
-    {
-      title: "C-Level Expertise",
-      description: "Specialized focus on CEO, CTO, CFO, and other executive-level positions with deep understanding of leadership requirements.",
-      icon: <Crown className="w-6 h-6" />
-    },
-    {
-      title: "Confidential Search",
-      description: "Discreet executive search processes that protect both client and candidate privacy throughout the engagement.",
-      icon: <Shield className="w-6 h-6" />
-    },
-    {
-      title: "Leadership Assessment",
-      description: "Comprehensive evaluation of leadership capabilities, strategic thinking, and cultural fit for long-term success.",
-      icon: <Target className="w-6 h-6" />
-    }
-  ];
-
   return (
     <SolutionStorylineTemplate
-      title="Executive Search Services"
-      description="Specialized recruitment for C-level and senior leadership positions"
-      badge="Recruitment Solution"
-      heroTitle="Executive Search Services"
-      heroDescription="Find transformational leaders who drive success. Our AI-enhanced executive search combines traditional recruiting expertise with cutting-edge technology to identify and attract top-tier leadership talent."
-      ctaText="Find Executive Talent"
-      solutionOverview={solutionOverview}
-      keyBenefits={keyBenefits}
-      productTour={productTour}
-      additionalSections={additionalSections}
+      // Hero Section
+      badge="Solution"
+      title="Executive Search"
+      description="Strategic executive search services for C-level and senior leadership positions. Our comprehensive approach ensures you find transformational leaders who drive organizational success and growth."
+      ctaText="Find Your Executive"
+      heroClassName="pt-20 pb-12"
+      
+      // Content sections with consistent spacing
+      sectionSpacing="py-12"
+      
+      // Two-Column Section
+      twoColumnTitle="Leadership That Transforms Organizations"
+      twoColumnDescription="Our executive search methodology goes beyond traditional recruiting to identify leaders who can transform your organization. Through comprehensive assessment and deep industry knowledge, we connect you with executives who have the vision, experience, and cultural fit to drive sustainable growth."
+      twoColumnImage="/lovable-uploads/7a0c2330-d0d6-49c8-9ed2-b824e1c54b9c.png"
+      twoColumnImageAlt="Executive leadership and strategic planning"
+      
+      // Key Features
+      keyFeatures={[
+        "C-level and senior executive recruitment",
+        "Comprehensive leadership assessment",
+        "Industry expertise and market intelligence",
+        "Confidential search processes",
+        "Cultural fit and values alignment",
+        "Post-placement integration support"
+      ]}
+      
+      // Business Impacts
+      businessImpacts={[
+        {
+          metric: "95% Success Rate",
+          description: "Exceptional track record of successful executive placements that drive results"
+        },
+        {
+          metric: "6-Month Guarantee",
+          description: "Confidence in our process backed by comprehensive placement guarantees"
+        },
+        {
+          metric: "Leadership Impact",
+          description: "Executives who deliver measurable business transformation and growth"
+        }
+      ]}
+      
+      // How It Works Steps
+      howItWorksSteps={[
+        {
+          title: "Strategic Consultation & Requirements",
+          description: "Deep dive into organizational needs, culture, and leadership requirements"
+        },
+        {
+          title: "Market Mapping & Research",
+          description: "Comprehensive analysis of executive talent landscape and target identification"
+        },
+        {
+          title: "Assessment & Evaluation",
+          description: "Rigorous evaluation process including leadership competencies and cultural fit"
+        },
+        {
+          title: "Presentation & Integration Support",
+          description: "Final candidate presentation and ongoing support through successful integration"
+        }
+      ]}
+      
+      // Industry Applications
+      industryApplications={[
+        "Technology and Innovation",
+        "Financial Services",
+        "Healthcare and Life Sciences",
+        "Manufacturing and Industrial",
+        "Professional Services",
+        "Non-Profit and Government"
+      ]}
+      
+      // Success Stories
+      successStories={[
+        {
+          challenge: "Growing tech unicorn needed experienced CEO to lead IPO preparation",
+          solution: "Conducted confidential search for public company-ready CEO with relevant experience",
+          result: "Successfully placed CEO who led company through $2B IPO within 18 months"
+        },
+        {
+          challenge: "Traditional manufacturing company required digital transformation leader",
+          solution: "Identified CTO with both technical expertise and industrial experience",
+          result: "New CTO implemented digital strategy resulting in 40% operational efficiency gain"
+        }
+      ]}
     />
   );
 };
