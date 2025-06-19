@@ -3,6 +3,7 @@ import React from "react";
 import PageTemplate from "../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Code, TrendingUp, Heart, Scale, Factory, Calculator, Crown, Users, ArrowRight } from "lucide-react";
 import FinalCtaSection from "../components/FinalCtaSection";
 
@@ -71,21 +72,31 @@ const Industries = () => {
       title="Industry-Specific Recruitment Solutions"
       description="Specialized recruitment solutions tailored to industry-specific needs and challenges"
     >
-      <section className="pt-24 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
+              Industry Expertise
+            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
               Industry Expertise
             </h1>
-            <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
+            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Deep industry knowledge combined with AI-powered recruitment technology. We understand the unique challenges and requirements of each sector, delivering specialized talent acquisition solutions.
             </p>
+            <Button 
+              className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
+              onClick={() => window.location.href = "/contact"}
+            >
+              Find Industry Talent
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Two-Column Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -134,7 +145,7 @@ const Industries = () => {
       </section>
 
       {/* Industries Grid */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-synapse-dark mb-4">

@@ -3,6 +3,7 @@ import React from "react";
 import PageTemplate from "../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Bot, Send, Target, Zap, ArrowRight } from "lucide-react";
 import FinalCtaSection from "../components/FinalCtaSection";
 
@@ -39,21 +40,31 @@ const Products = () => {
       title="AI-Powered Recruitment Tools"
       description="Intelligent AI agents designed to streamline your recruitment process and deliver exceptional results"
     >
-      <section className="pt-24 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
+              AI Tools
+            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
               AI-Powered Recruitment Tools
             </h1>
-            <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
+            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Cutting-edge AI agents designed to automate and optimize every aspect of your recruitment process, from sourcing to submission.
             </p>
+            <Button 
+              className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
+              onClick={() => window.location.href = "/contact"}
+            >
+              Explore AI Tools
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Two-Column Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -102,7 +113,7 @@ const Products = () => {
       </section>
 
       {/* Tools Grid */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-synapse-dark mb-4">

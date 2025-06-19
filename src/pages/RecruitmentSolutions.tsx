@@ -3,6 +3,7 @@ import React from "react";
 import PageTemplate from "../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Brain, Users, Target, Clock, Globe, UserCheck, Briefcase, GraduationCap, ArrowRight } from "lucide-react";
 import FinalCtaSection from "../components/FinalCtaSection";
 
@@ -63,21 +64,31 @@ const RecruitmentSolutions = () => {
       title="Recruitment Solutions"
       description="Comprehensive intelligent recruitment solutions for modern hiring challenges"
     >
-      <section className="pt-24 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
+              Recruitment Solution
+            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
               Recruitment Solutions
             </h1>
-            <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
+            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               End-to-end recruitment solutions powered by intelligent technology and backed by global expertise. From passive recruitment to executive search, we deliver tailored strategies that transform your hiring process.
             </p>
+            <Button 
+              className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
+              onClick={() => window.location.href = "/contact"}
+            >
+              Start Recruitment Solutions
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Two-Column Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -126,7 +137,7 @@ const RecruitmentSolutions = () => {
       </section>
 
       {/* Solutions Grid */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-synapse-dark mb-4">
