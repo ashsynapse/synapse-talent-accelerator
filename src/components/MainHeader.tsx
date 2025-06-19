@@ -122,10 +122,9 @@ const MainHeader = () => {
       label: "Tools", 
       href: "/recruitment-tools",
       submenu: [
-        { label: "AI Sourcing Agent", href: "/tools/ai-sourcing-agent" },
-        { label: "AI Outreach Agent", href: "/tools/ai-outreach-agent" },
-        { label: "AI Submission Agent", href: "/tools/ai-submission-agent" },
-        { label: "ATS Bypass Engine", href: "/tools/ats-bypass-engine" }
+        { label: "Sourcing Agent", href: "/tools/sourcing-agent" },
+        { label: "Outreach Agent", href: "/tools/outreach-agent" },
+        { label: "Submission Agent", href: "/tools/submission-agent" }
       ]
     },
     { 

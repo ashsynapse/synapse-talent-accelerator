@@ -23,9 +23,9 @@ import Glossary from "./pages/Glossary";
 import SideHustlesGigEconomy from "./pages/blog/SideHustlesGigEconomy";
 
 // Tool page imports
-import AISourcingAgent from "./pages/tools/AISourcingAgent";
-import AIOutreachAgent from "./pages/tools/AIOutreachAgent";
-import AISubmissionAgent from "./pages/tools/AISubmissionAgent";
+import SourcingAgent from "./pages/tools/SourcingAgent";
+import OutreachAgent from "./pages/tools/OutreachAgent";
+import SubmissionAgent from "./pages/tools/SubmissionAgent";
 import ATSBypassEngine from "./pages/tools/ATSBypassEngine";
 
 // Industry page imports
@@ -146,16 +146,16 @@ export const navItems = [
   },
   // Tool routes
   {
-    to: "/tools/ai-sourcing-agent",
-    page: <AISourcingAgent />,
+    to: "/tools/sourcing-agent",
+    page: <SourcingAgent />,
   },
   {
-    to: "/tools/ai-outreach-agent",
-    page: <AIOutreachAgent />,
+    to: "/tools/outreach-agent",
+    page: <OutreachAgent />,
   },
   {
-    to: "/tools/ai-submission-agent",
-    page: <AISubmissionAgent />,
+    to: "/tools/submission-agent",
+    page: <SubmissionAgent />,
   },
   {
     to: "/tools/ats-bypass-engine",

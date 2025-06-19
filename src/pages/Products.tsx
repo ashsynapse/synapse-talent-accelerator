@@ -10,53 +10,47 @@ import FinalCtaSection from "../components/FinalCtaSection";
 const tools = [
   {
     icon: <Bot className="w-8 h-8" />,
-    title: "AI Sourcing Agent",
+    title: "Sourcing Agent",
     description: "Automatically scans job postings and continuously sources top-matching candidates in the background, offering real-time status updates from discovery to shortlisting.",
-    href: "/tools/ai-sourcing-agent"
+    href: "/tools/sourcing-agent"
   },
   {
     icon: <Send className="w-8 h-8" />,
-    title: "AI Outreach Agent",
+    title: "Outreach Agent",
     description: "Delivers hyper-personalized, automated outreach campaigns to prospective candidates and keeps them engaged with intelligent follow-ups and interview coordination, all while you stay updated in real time.",
-    href: "/tools/ai-outreach-agent"
+    href: "/tools/outreach-agent"
   },
   {
     icon: <Target className="w-8 h-8" />,
-    title: "AI Submission Agent",
+    title: "Submission Agent",
     description: "Handles end-to-end candidate submission by coordinating personalized outreach, interview scheduling, and post-interview follow-ups, ensuring seamless engagement and reminders throughout the process.",
-    href: "/tools/ai-submission-agent"
-  },
-  {
-    icon: <Zap className="w-8 h-8" />,
-    title: "ATS Bypass Engine",
-    description: "This smart resume optimizer reverse-engineers applicant tracking systems (ATS) to instantly generate a stealth-enhanced resume with invisible keyword embedding, a personalized screening failure report, and a data-driven success score to outmaneuver digital hiring filters.",
-    href: "/tools/ats-bypass-engine"
+    href: "/tools/submission-agent"
   }
 ];
 
 const Products = () => {
   return (
     <PageTemplate 
-      title="AI-Powered Recruitment Tools"
-      description="Intelligent AI agents designed to streamline your recruitment process and deliver exceptional results"
+      title="Recruitment Tools"
+      description="Intelligent agents designed to streamline your recruitment process and deliver exceptional results"
     >
       <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
-              AI Tools
+              Tools
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              AI-Powered Recruitment Tools
+              Recruitment Tools
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Cutting-edge AI agents designed to automate and optimize every aspect of your recruitment process, from sourcing to submission.
+              Cutting-edge agents designed to automate and optimize every aspect of your recruitment process, from sourcing to submission.
             </p>
             <Button 
               className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
               onClick={() => window.location.href = "/contact"}
             >
-              Explore AI Tools
+              Explore Tools
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
@@ -70,10 +64,10 @@ const Products = () => {
             {/* Left Content */}
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-synapse-dark leading-tight">
-                Next-Generation AI Tools for Modern Recruitment
+                Next-Generation Tools for Modern Recruitment
               </h2>
               <p className="text-lg text-synapse-gray leading-relaxed">
-                Harness the power of artificial intelligence with our innovative recruitment technology suite. Our AI agents work 24/7 to identify, engage, and manage candidates while you focus on strategic decision-making.
+                Harness the power of artificial intelligence with our innovative recruitment technology suite. Our agents work 24/7 to identify, engage, and manage candidates while you focus on strategic decision-making.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -93,7 +87,7 @@ const Products = () => {
                 className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
                 onClick={() => window.location.href = "/contact"}
               >
-                Explore AI Tools
+                Explore Tools
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
@@ -117,14 +111,14 @@ const Products = () => {
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-synapse-dark mb-4">
-              Our AI-Powered Tools
+              Our Recruitment Tools
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              Discover our comprehensive suite of AI recruitment tools designed to revolutionize your hiring process.
+              Discover our comprehensive suite of recruitment tools designed to revolutionize your hiring process.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tools.map((tool, index) => (
               <Card key={index} className="border border-gray-100 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 group h-full">
                 <CardContent className="p-8 flex flex-col h-full">

@@ -91,10 +91,9 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4">Tools</h4>
             <ul className="space-y-2">
               {[
-                { label: "AI Sourcing Agent", href: "/tools/ai-sourcing-agent" },
-                { label: "AI Outreach Agent", href: "/tools/ai-outreach-agent" },
-                { label: "AI Submission Agent", href: "/tools/ai-submission-agent" },
-                { label: "ATS Bypass Engine", href: "/tools/ats-bypass-engine" }
+                { label: "Sourcing Agent", href: "/tools/sourcing-agent" },
+                { label: "Outreach Agent", href: "/tools/outreach-agent" },
+                { label: "Submission Agent", href: "/tools/submission-agent" }
               ].map((item) => (
                 <li key={item.label}>
                   <a
