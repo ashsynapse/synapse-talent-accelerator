@@ -1,7 +1,7 @@
 
 import React from "react";
 import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplate";
-import { Brain, Search, Target, Users, Eye, Zap, Shield, Clock, TrendingUp, Award } from "lucide-react";
+import { Brain, Search, Target, Users, Eye, Zap, Shield, Clock } from "lucide-react";
 
 const PassiveIntelligentSourcing = () => {
   const solutionOverview = {
@@ -9,11 +9,10 @@ const PassiveIntelligentSourcing = () => {
     description: "Built specifically for accessing the hidden talent market, our Passive Intelligent Sourcing solution offers advanced AI algorithms to identify and engage professionals who aren't actively seeking new roles. Leverage stealth engagement strategies and relationship building to attract top-tier talent.",
     features: [
       "AI-powered identification of passive candidates across all platforms",
-      "Discreet engagement strategies that respect candidate privacy", 
+      "Discreet engagement strategies that respect candidate privacy",
       "Comprehensive talent mapping across industries and skill sets",
       "Long-term relationship building for future opportunities",
-      "Advanced behavioral analysis and engagement optimization",
-      "Real-time market intelligence and talent pipeline management"
+      "Advanced behavioral analysis and engagement optimization"
     ],
     ctaText: "Learn More"
   };
@@ -36,21 +35,6 @@ const PassiveIntelligentSourcing = () => {
         title: "Quality Focus",
         description: "Focus on high-caliber candidates who are currently employed and successful, ensuring proven track records.",
         icon: <Shield className="w-8 h-8 text-white" />
-      },
-      {
-        title: "Higher Success Rates",
-        description: "Achieve 85% higher placement success rates with candidates who are genuinely interested in growth opportunities.",
-        icon: <TrendingUp className="w-8 h-8 text-white" />
-      },
-      {
-        title: "Premium Network Building",
-        description: "Build lasting relationships with industry leaders and create a sustainable talent pipeline for future needs.",
-        icon: <Award className="w-8 h-8 text-white" />
-      },
-      {
-        title: "Intelligent Matching",
-        description: "AI-driven compatibility analysis ensures perfect cultural and skill alignment before first contact.",
-        icon: <Brain className="w-8 h-8 text-white" />
       }
     ]
   };
@@ -64,23 +48,18 @@ const PassiveIntelligentSourcing = () => {
   const additionalSections = [
     {
       title: "Stealth Discovery",
-      description: "Advanced algorithms identify passive candidates who aren't actively job searching but match your specific requirements perfectly. Our AI scans professional networks, social platforms, and industry databases to find hidden gems.",
+      description: "Advanced algorithms identify passive candidates who aren't actively job searching but match your specific requirements perfectly.",
       icon: <Eye className="w-6 h-6" />
     },
     {
-      title: "Relationship Building", 
-      description: "Long-term engagement strategies to nurture passive talent for current and future opportunities with personalized outreach. Build trust through value-driven interactions and thought leadership content.",
+      title: "Relationship Building",
+      description: "Long-term engagement strategies to nurture passive talent for current and future opportunities with personalized outreach.",
       icon: <Users className="w-6 h-6" />
     },
     {
       title: "Strategic Pipeline",
-      description: "Build comprehensive talent pipelines for future hiring needs and succession planning with continuous market intelligence. Stay ahead of industry trends and talent movements.",
+      description: "Build comprehensive talent pipelines for future hiring needs and succession planning with continuous market intelligence.",
       icon: <Clock className="w-6 h-6" />
-    },
-    {
-      title: "Market Intelligence",
-      description: "Gain deep insights into talent availability, compensation trends, and competitive landscape to make informed hiring decisions and strategic workforce planning.",
-      icon: <Target className="w-6 h-6" />
     }
   ];
 
