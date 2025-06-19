@@ -8,24 +8,6 @@ import { Code, Server, Cloud, Database, Shield, Cpu, Brain, Zap, ArrowRight, Che
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const ITRecruitmentSolutions = () => {
-  const itChallenges = [
-    {
-      title: "AI-Powered IT Talent Discovery",
-      description: "Leverage advanced algorithms to identify and engage top IT professionals across all technology domains",
-      icon: <Brain className="w-6 h-6" />
-    },
-    {
-      title: "Technical Skills Assessment",
-      description: "Comprehensive evaluation of coding abilities, system knowledge, and problem-solving competencies",
-      icon: <Code className="w-6 h-6" />
-    },
-    {
-      title: "Rapid IT Team Scaling",
-      description: "Build robust technology teams quickly to support growing digital transformation initiatives",
-      icon: <Zap className="w-6 h-6" />
-    }
-  ];
-
   const keyRoles = [
     {
       title: "Software Engineers",
@@ -134,60 +116,27 @@ const ITRecruitmentSolutions = () => {
         </div>
       </section>
 
-      {/* Core IT Challenges Section */}
-      <section className="py-10 bg-white">
-        <div className="container-wide">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              Breakthrough IT Talent Acquisition
-            </h2>
-            <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              Our revolutionary approach to IT recruitment combines AI intelligence with deep technical expertise to identify and engage the best technology professionals.
-            </p>
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {itChallenges.map((challenge, index) => (
-              <Card key={index} className="border border-gray-100 shadow-soft hover:shadow-medium transition-all duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <div className="text-white">
-                      {challenge.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-synapse-dark">
-                    {challenge.title}
-                  </h3>
-                  <p className="text-synapse-gray">
-                    {challenge.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Key Features Section */}
+      {/* Advanced IT Recruitment Capabilities Section */}
       <section className="py-10 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
             <div>
               <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-                Advanced IT Recruitment Capabilities
+                Discover World-Class IT Talent Effortlessly
               </h2>
               <p className="text-lg text-synapse-gray mb-8">
-                Our AI-powered platform delivers comprehensive IT recruitment solutions with unmatched precision and efficiency.
+                Built specifically for accessing the IT talent market, our IT Recruitment Solutions offer advanced AI algorithms to identify and engage top technology professionals across all domains.
               </p>
               <div className="space-y-3 mb-8">
                 {[
-                  "Real-time technical skills assessment and validation",
-                  "Automated coding challenge and system design evaluation", 
-                  "Comprehensive technology stack compatibility analysis",
-                  "AI-powered cultural fit and team dynamics assessment",
+                  "AI-powered identification of IT candidates across all platforms",
+                  "Discreet engagement strategies that respect candidate privacy",
+                  "Comprehensive talent mapping across industries and skill sets",
+                  "Long-term relationship building for future opportunities",
+                  "Advanced behavioral analysis and engagement optimization",
                   "Global IT talent network access and engagement",
                   "Specialized recruitment for emerging technologies",
-                  "Executive IT leadership and CTO placement",
-                  "Rapid scaling for technology transformation projects"
+                  "Executive IT leadership and CTO placement"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-synapse-primary flex-shrink-0" />
@@ -203,16 +152,22 @@ const ITRecruitmentSolutions = () => {
               </Button>
             </div>
             <div className="bg-white rounded-xl shadow-soft p-8">
-              <div className="grid grid-cols-1 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="bg-gradient-to-br from-synapse-primary/10 to-synapse-primary/5 rounded-lg p-6 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
-                      {benefit.icon}
-                    </div>
-                    <div className="text-2xl font-bold text-synapse-dark mb-2">{benefit.title}</div>
-                    <div className="text-sm text-synapse-gray">{benefit.description}</div>
-                  </div>
-                ))}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-gradient-to-br from-synapse-primary/10 to-synapse-primary/5 rounded-lg p-4 text-center">
+                  <Users className="w-8 h-8 text-synapse-primary mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-synapse-dark">95%</div>
+                  <div className="text-sm text-synapse-gray">Match Accuracy</div>
+                </div>
+                <div className="bg-gradient-to-br from-synapse-secondary/10 to-synapse-secondary/5 rounded-lg p-4 text-center">
+                  <Zap className="w-8 h-8 text-synapse-secondary mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-synapse-dark">70%</div>
+                  <div className="text-sm text-synapse-gray">Faster Discovery</div>
+                </div>
+              </div>
+              <div className="bg-gradient-to-br from-synapse-tertiary/10 to-synapse-tertiary/5 rounded-lg p-4 text-center">
+                <Target className="w-8 h-8 text-synapse-tertiary mx-auto mb-2" />
+                <div className="text-2xl font-bold text-synapse-dark">24/7</div>
+                <div className="text-sm text-synapse-gray">Intelligent Sourcing</div>
               </div>
             </div>
           </div>
