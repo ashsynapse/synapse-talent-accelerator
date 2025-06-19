@@ -58,7 +58,7 @@ const AIOutreachAgent = () => {
       description="Hyper-personalized, automated outreach campaigns for candidate engagement"
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-20 pb-12 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
@@ -87,7 +87,7 @@ const AIOutreachAgent = () => {
       </section>
 
       {/* Main Value Proposition */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container-wide">
           <div className="max-w-5xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -135,7 +135,7 @@ const AIOutreachAgent = () => {
       </section>
 
       {/* Business Impact Section */}
-      <section className="py-16 bg-synapse-lighter/30">
+      <section className="py-12 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -185,7 +185,7 @@ const AIOutreachAgent = () => {
       </section>
 
       {/* How It Works Process */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
@@ -262,7 +262,7 @@ const AIOutreachAgent = () => {
       </section>
 
       {/* Advanced Features */}
-      <section className="py-16 bg-synapse-lighter/30">
+      <section className="py-12 bg-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
