@@ -14,7 +14,7 @@ interface SolutionStorylineTemplateProps {
   heroTitle: string;
   heroDescription: string;
   ctaText: string;
-  mainChallenge: {
+  mainChallenge?: {
     title: string;
     description: string;
     icon: React.ReactNode;
@@ -84,30 +84,32 @@ const SolutionStorylineTemplate = ({
         </div>
       </section>
 
-      {/* Main Challenge Section */}
-      <section className="py-16 bg-white">
-        <div className="container-wide">
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-0 shadow-medium bg-gradient-to-r from-synapse-primary/5 to-synapse-secondary/5">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center flex-shrink-0">
-                    {mainChallenge.icon}
+      {/* Main Challenge Section - Only render if mainChallenge is provided */}
+      {mainChallenge && (
+        <section className="py-16 bg-white">
+          <div className="container-wide">
+            <div className="max-w-4xl mx-auto">
+              <Card className="border-0 shadow-medium bg-gradient-to-r from-synapse-primary/5 to-synapse-secondary/5">
+                <CardContent className="p-8">
+                  <div className="flex items-start space-x-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                      {mainChallenge.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h2 className="text-2xl font-bold text-synapse-dark mb-4">
+                        {mainChallenge.title}
+                      </h2>
+                      <p className="text-lg text-synapse-gray">
+                        {mainChallenge.description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h2 className="text-2xl font-bold text-synapse-dark mb-4">
-                      {mainChallenge.title}
-                    </h2>
-                    <p className="text-lg text-synapse-gray">
-                      {mainChallenge.description}
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Solution Overview Section */}
       <section className="py-16 bg-synapse-lighter/30">
