@@ -1,75 +1,108 @@
 
-import React from "react";
-import ContactForm from "./ContactForm";
-import { MessageCircle, Clock, Globe } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ContactForm } from "./ContactForm";
+import { CalendarBooking } from "./CalendarBooking";
+import { Phone, Mail, MapPin, Clock, MessageSquare, Calendar } from "lucide-react";
 
 const ContactFormSection = () => {
-  const { addToRefs } = useScrollAnimation();
+  const [activeTab, setActiveTab] = useState("form");
 
   return (
-    <section className="pt-32 pb-12 bg-white min-h-screen">
+    <section className="py-20 bg-white">
       <div className="container-wide">
-        <div className="grid lg:grid-cols-5 gap-8 items-start max-w-7xl mx-auto">
-          {/* Mobile: Header Section - Shows first on mobile */}
-          <div className="lg:hidden mb-6">
-            <h1 className="text-3xl lg:text-4xl font-bold text-synapse-dark mb-4">
-              Ready to Transform Your Hiring?
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Left Side - Info */}
+          <div>
+            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
+              Get in Touch
+            </Badge>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-synapse-dark">Ready to Transform </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Your Hiring?</span>
             </h1>
-            <p className="text-lg text-synapse-gray">
-              Let's discuss how our AI-powered solutions can revolutionize your talent acquisition process.
+            <p className="text-xl text-synapse-gray mb-8">
+              Connect with our team to discover how Synapse's AI-powered recruitment solutions can help you find exceptional talent faster than ever before.
             </p>
-          </div>
-
-          {/* Left Column - Feature Cards - Narrower */}
-          <div className="order-2 lg:order-1 lg:col-span-2 space-y-6">
-            {/* Desktop: Header Section - Shows in left column on desktop */}
-            <div className="mb-6 hidden lg:block">
-              <h1 className="text-2xl lg:text-3xl font-bold text-synapse-dark mb-3">
-                Ready to Transform Your Hiring?
-              </h1>
-              <p className="text-base text-synapse-gray">
-                Let's discuss how our AI-powered solutions can revolutionize your talent acquisition process.
-              </p>
-            </div>
-
-            <div 
-              ref={addToRefs}
-              className="scroll-animate bg-white p-5 rounded-xl shadow-soft border border-gray-100 hover:shadow-medium transition-shadow"
-            >
-              <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary p-2.5 rounded-lg inline-block mb-3">
-                <MessageCircle className="h-5 w-5 text-white" />
+            
+            {/* Contact Info */}
+            <div className="space-y-6 mb-8">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center text-white">
+                  <Phone size={20} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-synapse-dark">Phone</h3>
+                  <p className="text-synapse-gray">+1 (555) 123-4567</p>
+                </div>
               </div>
-              <h3 className="text-base font-bold text-synapse-dark mb-2">Quick Response</h3>
-              <p className="text-sm text-synapse-gray">Get a response within 24 hours from our AI hiring specialists</p>
-            </div>
-
-            <div 
-              ref={addToRefs}
-              className="scroll-animate bg-white p-5 rounded-xl shadow-soft border border-gray-100 hover:shadow-medium transition-shadow"
-            >
-              <div className="bg-gradient-to-br from-synapse-secondary to-synapse-tertiary p-2.5 rounded-lg inline-block mb-3">
-                <Clock className="h-5 w-5 text-white" />
+              
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center text-white">
+                  <Mail size={20} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-synapse-dark">Email</h3>
+                  <p className="text-synapse-gray">hello@synapseint.com</p>
+                </div>
               </div>
-              <h3 className="text-base font-bold text-synapse-dark mb-2">24/7 Availability</h3>
-              <p className="text-sm text-synapse-gray">Our AI systems work around the clock, just like your hiring needs</p>
-            </div>
-
-            <div 
-              ref={addToRefs}
-              className="scroll-animate bg-white p-5 rounded-xl shadow-soft border border-gray-100 hover:shadow-medium transition-shadow"
-            >
-              <div className="bg-gradient-to-br from-synapse-tertiary to-synapse-primary p-2.5 rounded-lg inline-block mb-3">
-                <Globe className="h-5 w-5 text-white" />
+              
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center text-white">
+                  <MapPin size={20} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-synapse-dark">Location</h3>
+                  <p className="text-synapse-gray">Los Angeles, CA</p>
+                </div>
               </div>
-              <h3 className="text-base font-bold text-synapse-dark mb-2">Global Reach</h3>
-              <p className="text-sm text-synapse-gray">Access talent worldwide with our AI-powered sourcing network</p>
+              
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-synapse-primary to-synapse-secondary rounded-xl flex items-center justify-center text-white">
+                  <Clock size={20} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-synapse-dark">Business Hours</h3>
+                  <p className="text-synapse-gray">Mon-Fri: 9AM-6PM PST</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Right Column - Contact Form - Wider */}
-          <div className="order-1 lg:order-2 lg:col-span-3">
-            <ContactForm />
+          {/* Right Side - Contact Form/Calendar */}
+          <div>
+            {/* Tab Navigation */}
+            <div className="flex gap-2 mb-6">
+              <Button
+                variant={activeTab === "form" ? "default" : "outline"}
+                onClick={() => setActiveTab("form")}
+                className={`flex-1 ${activeTab === "form" ? "bg-synapse-primary text-white" : "border-synapse-primary/20 text-synapse-primary hover:bg-synapse-primary/10"}`}
+              >
+                <MessageSquare className="mr-2 h-4 w-4" />
+                Send Message
+              </Button>
+              <Button
+                variant={activeTab === "calendar" ? "default" : "outline"}
+                onClick={() => setActiveTab("calendar")}
+                className={`flex-1 ${activeTab === "calendar" ? "bg-synapse-primary text-white" : "border-synapse-primary/20 text-synapse-primary hover:bg-synapse-primary/10"}`}
+              >
+                <Calendar className="mr-2 h-4 w-4" />
+                Book a Call
+              </Button>
+            </div>
+
+            <Card className="border-synapse-primary/20 shadow-soft">
+              <CardHeader>
+                <CardTitle className="text-synapse-dark">
+                  {activeTab === "form" ? "Send us a message" : "Schedule a consultation"}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                {activeTab === "form" ? <ContactForm /> : <CalendarBooking />}
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
