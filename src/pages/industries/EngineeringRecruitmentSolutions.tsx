@@ -4,7 +4,7 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Cog, Settings, Wrench, Factory, Users, Zap, ArrowRight, CheckCircle, Target, Search, Brain, Clock } from "lucide-react";
+import { Wrench, Cog, Zap, Users, Award, Target, ArrowRight, CheckCircle, Search, Brain, TrendingUp, Clock, Settings } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const EngineeringRecruitmentSolutions = () => {
@@ -101,9 +101,9 @@ const EngineeringRecruitmentSolutions = () => {
               Specialized Engineering Solutions
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-synapse-dark">Engineering </span>
+              <span className="text-synapse-dark">Engineering Recruitment </span>
               <span className="bg-gradient-to-r from-synapse-primary via-synapse-secondary to-synapse-tertiary bg-clip-text text-transparent">
-                Recruitment Solutions
+                Solutions
               </span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">

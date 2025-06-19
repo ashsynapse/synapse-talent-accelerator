@@ -101,9 +101,9 @@ const AccountingRecruitmentSolutions = () => {
               Specialized Accounting Solutions
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-synapse-dark">Accounting </span>
+              <span className="text-synapse-dark">Accounting Recruitment </span>
               <span className="bg-gradient-to-r from-synapse-primary via-synapse-secondary to-synapse-tertiary bg-clip-text text-transparent">
-                Recruitment Solutions
+                Solutions
               </span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">

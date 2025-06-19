@@ -4,7 +4,7 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Megaphone, TrendingUp, Users, Target, BarChart3, Zap, ArrowRight, CheckCircle, Search, Brain, PenTool, Monitor } from "lucide-react";
+import { Megaphone, TrendingUp, Target, Users, BarChart3, Zap, ArrowRight, CheckCircle, Search, Brain, Clock, MousePointer } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const DigitalMarketingRecruitmentSolutions = () => {
@@ -91,19 +91,19 @@ const DigitalMarketingRecruitmentSolutions = () => {
   return (
     <PageTemplate 
       title="Digital Marketing Recruitment Solutions" 
-      description="AI-powered recruitment solutions for digital marketing professionals and creative teams"
+      description="AI-powered recruitment solutions for digital marketing professionals and marketing teams"
     >
       {/* Hero Section */}
       <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
-              Specialized Marketing Solutions
+              Specialized Digital Marketing Solutions
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-synapse-dark">Digital Marketing </span>
+              <span className="text-synapse-dark">Digital Marketing Recruitment </span>
               <span className="bg-gradient-to-r from-synapse-primary via-synapse-secondary to-synapse-tertiary bg-clip-text text-transparent">
-                Recruitment Solutions
+                Solutions
               </span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
