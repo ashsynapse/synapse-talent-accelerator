@@ -63,7 +63,7 @@ const RecruitmentSolutions = () => {
       title="Recruitment Solutions"
       description="Comprehensive intelligent recruitment solutions for modern hiring challenges"
     >
-      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
@@ -76,7 +76,7 @@ const RecruitmentSolutions = () => {
         </div>
       </section>
 
-      {/* New Two-Column Section */}
+      {/* Two-Column Section */}
       <section className="py-16 bg-white">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

@@ -3,7 +3,7 @@ import React from "react";
 import PageTemplate from "../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Bot, Send, Target, Zap } from "lucide-react";
+import { Bot, Send, Target, Zap, ArrowRight } from "lucide-react";
 import FinalCtaSection from "../components/FinalCtaSection";
 
 const tools = [
@@ -39,7 +39,7 @@ const Products = () => {
       title="AI-Powered Recruitment Tools"
       description="Intelligent AI agents designed to streamline your recruitment process and deliver exceptional results"
     >
-      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
@@ -47,6 +47,69 @@ const Products = () => {
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
               Cutting-edge AI agents designed to automate and optimize every aspect of your recruitment process, from sourcing to submission.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Two-Column Section */}
+      <section className="py-16 bg-white">
+        <div className="container-wide">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-synapse-dark leading-tight">
+                Next-Generation AI Tools for Modern Recruitment
+              </h2>
+              <p className="text-lg text-synapse-gray leading-relaxed">
+                Harness the power of artificial intelligence with our innovative recruitment technology suite. Our AI agents work 24/7 to identify, engage, and manage candidates while you focus on strategic decision-making.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-synapse-primary rounded-full mt-2"></div>
+                  <p className="text-synapse-gray">Automated candidate sourcing and engagement</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-synapse-primary rounded-full mt-2"></div>
+                  <p className="text-synapse-gray">Intelligent resume optimization and ATS bypass</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-synapse-primary rounded-full mt-2"></div>
+                  <p className="text-synapse-gray">Real-time status updates and analytics</p>
+                </div>
+              </div>
+              <Button 
+                className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
+                onClick={() => window.location.href = "/contact"}
+              >
+                Explore AI Tools
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
+
+            {/* Right Image */}
+            <div className="lg:order-last">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/7558f28a-8bc4-4895-994e-0c2814aa6eaa.png"
+                  alt="Professional using VR technology for innovative recruitment solutions"
+                  className="w-full h-auto rounded-lg shadow-medium"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tools Grid */}
+      <section className="py-16 bg-gray-50">
+        <div className="container-wide">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-synapse-dark mb-4">
+              Our AI-Powered Tools
+            </h2>
+            <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
+              Discover our comprehensive suite of AI recruitment tools designed to revolutionize your hiring process.
             </p>
           </div>
 
