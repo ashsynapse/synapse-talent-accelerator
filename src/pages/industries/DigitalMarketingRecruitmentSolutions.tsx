@@ -4,7 +4,7 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Megaphone, TrendingUp, Target, Users, BarChart3, Zap, ArrowRight, CheckCircle, Search, Brain, Clock, MousePointer } from "lucide-react";
+import { Megaphone, TrendingUp, Target, Users, BarChart3, Zap, ArrowRight, CheckCircle, Search, Brain, Clock, MousePointer, PenTool } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const DigitalMarketingRecruitmentSolutions = () => {

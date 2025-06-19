@@ -4,7 +4,7 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Wrench, Cog, Zap, Users, Award, Target, ArrowRight, CheckCircle, Search, Brain, TrendingUp, Clock, Settings } from "lucide-react";
+import { Wrench, Cog, Zap, Users, Award, Target, ArrowRight, CheckCircle, Search, Brain, TrendingUp, Clock, Settings, Factory } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const EngineeringRecruitmentSolutions = () => {
