@@ -249,7 +249,7 @@ const ATSBypassEngine = () => {
               
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/8445fbb5-892b-4cdc-9ee4-54e42033a268.png" 
+                  src="/lovable-uploads/e8376a06-34fd-4ec4-b502-3bc911ac100f.png" 
                   alt="ATS Technology" 
                   className="w-full h-80 object-cover rounded-xl shadow-soft"
                 />
