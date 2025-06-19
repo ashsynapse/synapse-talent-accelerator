@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Plus, Minus, 
@@ -147,7 +148,7 @@ const MainHeader = () => {
         { label: "Digital Marketing", href: "/industries/digital-marketing-recruitment-solutions" },
         { label: "Engineering", href: "/industries/engineering-recruitment-solutions" },
         { label: "Human Resources (HR)", href: "/industries/human-resource-recruitment-solutions" },
-        { label: "Sales", href: "/industries/human-sales-recruitment-solutions" },
+        { label: "Sales", href: "/industries/sales-recruitment-solutions" },
         { label: "Accounting", href: "/industries/accounting-recruitment-solutions" },
         { label: "Legal", href: "/industries/Legal-staffing-solutions" },
         { label: "Manufacturing", href: "/industries/manufacturing-recruitment-solutions" }
