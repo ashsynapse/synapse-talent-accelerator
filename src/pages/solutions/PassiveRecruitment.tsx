@@ -1,95 +1,80 @@
 
 import React from "react";
 import SolutionStorylineTemplate from "../../components/SolutionStorylineTemplate";
+import { Brain, Search, Target, Users, Eye, Zap, Shield, Clock } from "lucide-react";
 
 const PassiveRecruitment = () => {
+  const solutionOverview = {
+    title: "Discover World-Class Passive Talent Effortlessly",
+    description: "Built specifically for accessing the hidden talent market, our Passive Recruitment Solutions offer advanced AI algorithms to identify and engage professionals who aren't actively seeking new roles. Leverage stealth engagement strategies and relationship building to attract top-tier talent.",
+    features: [
+      "AI-powered identification of passive candidates across all platforms",
+      "Discreet engagement strategies that respect candidate privacy",
+      "Comprehensive talent mapping across industries and skill sets",
+      "Long-term relationship building for future opportunities",
+      "Advanced behavioral analysis and engagement optimization"
+    ],
+    ctaText: "Learn More"
+  };
+
+  const keyBenefits = {
+    title: "Unlock Premium Talent & Gain Competitive Advantage",
+    subtitle: "Transform your talent acquisition strategy by accessing the 70% of professionals who aren't actively job searching but are open to exceptional opportunities. Our passive sourcing delivers quality over quantity.",
+    benefits: [
+      {
+        title: "Hidden Talent Access",
+        description: "Reach top-tier professionals who aren't visible through traditional recruitment channels but represent the best in their fields.",
+        icon: <Search className="w-8 h-8 text-white" />
+      },
+      {
+        title: "Competitive Advantage", 
+        description: "Access candidates before they enter the active job market, giving you first-mover advantage on premium talent.",
+        icon: <Zap className="w-8 h-8 text-white" />
+      },
+      {
+        title: "Quality Focus",
+        description: "Focus on high-caliber candidates who are currently employed and successful, ensuring proven track records.",
+        icon: <Shield className="w-8 h-8 text-white" />
+      }
+    ]
+  };
+
+  const productTour = {
+    title: "Product Tour: See Passive Recruitment in Action",
+    subtitle: "Intelligence-driven passive talent discovery starts here",
+    description: "With our platform, you can identify, analyze, and engage passive talent — all while maintaining discretion and building meaningful professional relationships. Experience our world-class passive recruitment suite in action."
+  };
+
+  const additionalSections = [
+    {
+      title: "Stealth Discovery",
+      description: "Advanced algorithms identify passive candidates who aren't actively job searching but match your specific requirements perfectly.",
+      icon: <Eye className="w-6 h-6" />
+    },
+    {
+      title: "Relationship Building",
+      description: "Long-term engagement strategies to nurture passive talent for current and future opportunities with personalized outreach.",
+      icon: <Users className="w-6 h-6" />
+    },
+    {
+      title: "Strategic Pipeline",
+      description: "Build comprehensive talent pipelines for future hiring needs and succession planning with continuous market intelligence.",
+      icon: <Clock className="w-6 h-6" />
+    }
+  ];
+
   return (
     <SolutionStorylineTemplate
-      // Hero Section
-      badge="Solution"
-      title="Passive Recruitment"
-      description="Discover and engage top-tier talent who aren't actively job searching but are open to the right opportunities. Our advanced sourcing techniques uncover passive candidates through strategic outreach and relationship building."
-      ctaText="Start Passive Sourcing"
-      heroClassName="pt-20 pb-12"
-      
-      // Content sections with consistent spacing
-      sectionSpacing="py-12"
-      
-      // Two-Column Section
-      twoColumnTitle="Strategic Passive Talent Discovery"
-      twoColumnDescription="Our approach goes beyond traditional recruiting to identify and engage passive candidates who represent the highest quality talent in your industry. Through intelligent research and personalized outreach, we build relationships with professionals who aren't actively seeking new roles but are open to exceptional opportunities."
-      twoColumnImage="/lovable-uploads/7a0c2330-d0d6-49c8-9ed2-b824e1c54b9c.png"
-      twoColumnImageAlt="Professional networking and talent discovery"
-      
-      // Key Features
-      keyFeatures={[
-        "Advanced passive candidate identification",
-        "Strategic outreach and relationship building",
-        "Industry-specific talent mapping",
-        "Personalized engagement strategies",
-        "Long-term talent pipeline development",
-        "Confidential recruitment processes"
-      ]}
-      
-      // Business Impacts
-      businessImpacts={[
-        {
-          metric: "3x Higher Quality",
-          description: "Passive candidates typically demonstrate higher job performance and cultural fit"
-        },
-        {
-          metric: "40% Better Retention",
-          description: "Passive hires show significantly longer tenure and career satisfaction"
-        },
-        {
-          metric: "Access to Hidden Talent",
-          description: "Reach the 85% of professionals not actively searching but open to opportunities"
-        }
-      ]}
-      
-      // How It Works Steps
-      howItWorksSteps={[
-        {
-          title: "Talent Mapping & Research",
-          description: "Comprehensive market analysis to identify passive talent pools and key professionals"
-        },
-        {
-          title: "Strategic Outreach Design",
-          description: "Crafting personalized, value-driven messages that resonate with passive candidates"
-        },
-        {
-          title: "Relationship Building",
-          description: "Nurturing long-term relationships through consistent, valuable professional interactions"
-        },
-        {
-          title: "Opportunity Presentation",
-          description: "Presenting compelling career opportunities when timing and fit align perfectly"
-        }
-      ]}
-      
-      // Industry Applications
-      industryApplications={[
-        "Executive and C-level positions",
-        "Specialized technical roles",
-        "Niche industry expertise",
-        "High-demand skill sets",
-        "Strategic leadership positions",
-        "Innovation and R&D roles"
-      ]}
-      
-      // Success Stories
-      successStories={[
-        {
-          challenge: "A Fortune 500 company needed a CTO with specific blockchain expertise",
-          solution: "Identified and engaged passive candidates from leading tech companies",
-          result: "Successfully recruited a top-tier CTO who wasn't actively job searching"
-        },
-        {
-          challenge: "Healthcare organization required specialized medical device engineers",
-          solution: "Mapped passive talent across medical technology companies",
-          result: "Built a pipeline of qualified engineers, reducing future hiring time by 60%"
-        }
-      ]}
+      title="Passive Recruitment Solutions"
+      description="AI-powered passive talent discovery and engagement strategies"
+      badge="Recruitment Solution"
+      heroTitle="Passive Recruitment Solutions"
+      heroDescription="Unlock the hidden talent market with our AI-powered passive recruitment solution. Identify, engage, and attract top-tier professionals who aren't actively looking but are open to exceptional opportunities."
+      ctaText="Start Passive Recruitment"
+      solutionOverview={solutionOverview}
+      keyBenefits={keyBenefits}
+      productTour={productTour}
+      additionalSections={additionalSections}
     />
   );
 };
