@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Linkedin, Twitter, Instagram, MessageCircle } from "lucide-react";
 import { FaDiscord } from 'react-icons/fa';
@@ -133,7 +134,7 @@ const Footer = () => {
                 { label: "Digital Marketing", href: "/industries/digital-marketing-recruitment-solutions" },
                 { label: "Engineering", href: "/industries/engineering-recruitment-solutions" },
                 { label: "Human Resources (HR)", href: "/industries/human-resource-recruitment-solutions" },
-                { label: "Sales", href: "/industries/human-sales-recruitment-solutions" },
+                { label: "Sales", href: "/industries/sales-recruitment-solutions" },
                 { label: "Accounting", href: "/industries/accounting-recruitment-solutions" },
                 { label: "Legal", href: "/industries/Legal-staffing-solutions" },
                 { label: "Manufacturing", href: "/industries/manufacturing-recruitment-solutions" }

@@ -4,7 +4,7 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Megaphone, TrendingUp, Users, Target, BarChart3, Zap, ArrowRight, CheckCircle, Search, Brain, PenTool, Monitor } from "lucide-react";
+import { Target, Users, TrendingUp, BarChart3, Megaphone, PenTool, ArrowRight, CheckCircle, Search, Clock, DollarSign, Zap, Brain } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const DigitalMarketingRecruitmentSolutions = () => {
@@ -94,20 +94,20 @@ const DigitalMarketingRecruitmentSolutions = () => {
       description="AI-powered recruitment solutions for digital marketing professionals and creative teams"
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-6 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary">
         <div className="container-wide">
           <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
+            <Badge variant="secondary" className="mb-6 bg-white/10 text-white border-white/20">
               Specialized Marketing Solutions
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Digital Marketing Recruitment Solutions
             </h1>
-            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Transform your marketing hiring with AI-powered recruitment solutions. We specialize in finding exceptional digital marketing professionals who drive brand growth and customer engagement.
+            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+              Transform your marketing hiring with AI-powered digital marketing recruitment solutions. We specialize in finding exceptional marketing professionals who drive brand growth and digital engagement.
             </p>
             <Button 
-              className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
+              className="bg-white text-synapse-primary hover:bg-white/90 px-8 py-3 text-lg"
               onClick={() => window.location.href = "/contact"}
             >
               Find Marketing Talent

@@ -4,7 +4,7 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Heart, Award, Target, UserCheck, Zap, ArrowRight, CheckCircle, Search, Brain, TrendingUp, Clock } from "lucide-react";
+import { Users, Target, TrendingUp, UserCheck, Award, BarChart3, ArrowRight, CheckCircle, Search, Clock, DollarSign, Zap, Brain } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const HumanResourceRecruitmentSolutions = () => {
@@ -91,26 +91,26 @@ const HumanResourceRecruitmentSolutions = () => {
   return (
     <PageTemplate 
       title="Human Resource Recruitment Solutions" 
-      description="AI-powered recruitment solutions for human resource professionals and people teams"
+      description="AI-powered recruitment solutions for HR professionals and people operations teams"
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-6 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary">
         <div className="container-wide">
           <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
-              Specialized Human Resource Solutions
+            <Badge variant="secondary" className="mb-6 bg-white/10 text-white border-white/20">
+              Specialized HR Solutions
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Human Resource Recruitment Solutions
             </h1>
-            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Transform your human resource hiring with AI-powered recruitment solutions. We specialize in finding exceptional human resources professionals who drive organizational success and employee engagement.
+            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+              Transform your HR hiring with AI-powered human resource recruitment solutions. We specialize in finding exceptional HR professionals who drive organizational success and employee engagement.
             </p>
             <Button 
-              className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
+              className="bg-white text-synapse-primary hover:bg-white/90 px-8 py-3 text-lg"
               onClick={() => window.location.href = "/contact"}
             >
-              Find Human Resource Talent
+              Find HR Talent
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
