@@ -1,3 +1,4 @@
+
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -106,6 +107,12 @@ const SourcingAgent = () => {
                     </div>
                   ))}
                 </div>
+                <Button 
+                  className="btn-primary"
+                  onClick={() => window.location.href = "/contact"}
+                >
+                  Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
               </div>
               
               <div className="bg-gradient-to-br from-synapse-primary/5 to-synapse-secondary/5 rounded-2xl p-8">
