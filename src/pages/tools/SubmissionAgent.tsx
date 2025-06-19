@@ -1,3 +1,4 @@
+
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -58,7 +59,7 @@ const SubmissionAgent = () => {
       description="End-to-end candidate submission with automated coordination and follow-ups"
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
