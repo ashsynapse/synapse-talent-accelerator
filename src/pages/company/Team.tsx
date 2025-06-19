@@ -3,6 +3,7 @@ import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Linkedin, Mail, Users, Globe, ArrowRight, Sparkles } from "lucide-react";
 
 const leadership = [
@@ -33,13 +34,23 @@ const Team = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
-          <div className="text-center mb-8">
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
+              Our Team
+            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
               Meet Our Global Team
             </h1>
-            <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
+            <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               The exceptional minds behind Synapse International's AI-first recruitment revolution, connecting the world's top 1% of talent with outstanding opportunities.
             </p>
+            <Button 
+              className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
+              onClick={() => window.location.href = "/contact"}
+            >
+              Get in Touch
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </section>

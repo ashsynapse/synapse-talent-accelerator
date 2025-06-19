@@ -1,4 +1,3 @@
-
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -89,7 +88,7 @@ const SalesMarketing = () => {
       description="AI-powered recruitment for sales and marketing professionals"
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
@@ -101,17 +100,13 @@ const SalesMarketing = () => {
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Compete for top revenue-driving positions by revolutionizing how you attract, hire, onboard, and retain highly skilled sales and marketing professionals. Our AI-powered platform understands the unique demands of revenue-focused recruiting.
             </p>
-            <div className="flex justify-center">
-              <Button 
-                className="bg-black hover:bg-gray-800 text-white font-medium py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-                onClick={() => window.location.href = "/contact"}
-              >
-                <span className="flex items-center gap-2">
-                  Find Sales & Marketing Talent
-                  <ArrowRight className="h-5 w-5" />
-                </span>
-              </Button>
-            </div>
+            <Button 
+              className="bg-synapse-dark text-white hover:bg-synapse-dark/90 px-8 py-3 text-lg"
+              onClick={() => window.location.href = "/contact"}
+            >
+              Find Sales & Marketing Talent
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </section>

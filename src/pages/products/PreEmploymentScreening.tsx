@@ -48,6 +48,7 @@ const PreEmploymentScreening = () => {
       features={features}
       benefits={benefits}
       caseStudy={caseStudy}
+      heroStyle="centered"
     />
   );
 };
