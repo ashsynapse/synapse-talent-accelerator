@@ -97,7 +97,7 @@ const SalesRecruitmentSolutions = () => {
       <section className="pt-32 pb-6 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary">
         <div className="container-wide">
           <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-6 bg-white/10 text-white border-white/20">
+            <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/30">
               Specialized Sales Solutions
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">

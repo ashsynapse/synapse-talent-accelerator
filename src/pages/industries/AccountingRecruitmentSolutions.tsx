@@ -4,7 +4,7 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calculator, TrendingUp, Target, Users, BarChart3, DollarSign, ArrowRight, CheckCircle, Search, Clock, Zap, Brain } from "lucide-react";
+import { Calculator, DollarSign, FileText, TrendingUp, Users, Zap, ArrowRight, CheckCircle, Target, Search, Brain, BarChart3, Clock } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const AccountingRecruitmentSolutions = () => {
@@ -91,20 +91,20 @@ const AccountingRecruitmentSolutions = () => {
   return (
     <PageTemplate 
       title="Accounting Recruitment Solutions" 
-      description="AI-powered recruitment solutions for accounting professionals and finance teams"
+      description="AI-powered recruitment solutions for accounting and finance professionals"
     >
       {/* Hero Section */}
       <section className="pt-32 pb-6 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary">
         <div className="container-wide">
           <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-6 bg-white/10 text-white border-white/20">
+            <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/30">
               Specialized Accounting Solutions
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Accounting Recruitment Solutions
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Transform your accounting hiring with AI-powered recruitment solutions. We specialize in finding exceptional accounting professionals who drive financial accuracy and business growth.
+              Transform your financial hiring with AI-powered accounting recruitment solutions. We specialize in finding exceptional accounting professionals who ensure accuracy and drive financial excellence.
             </p>
             <Button 
               className="bg-white text-synapse-primary hover:bg-white/90 px-8 py-3 text-lg"

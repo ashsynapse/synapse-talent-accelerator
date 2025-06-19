@@ -4,7 +4,7 @@ import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Cog, Wrench, Zap, Target, Users, TrendingUp, ArrowRight, CheckCircle, Search, Clock, DollarSign, Brain, Settings, Cpu } from "lucide-react";
+import { Cog, Settings, Wrench, Factory, Users, Zap, ArrowRight, CheckCircle, Target, Search, Brain, Clock } from "lucide-react";
 import FinalCtaSection from "../../components/FinalCtaSection";
 
 const EngineeringRecruitmentSolutions = () => {
@@ -97,14 +97,14 @@ const EngineeringRecruitmentSolutions = () => {
       <section className="pt-32 pb-6 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary">
         <div className="container-wide">
           <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-6 bg-white/10 text-white border-white/20">
+            <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/30">
               Specialized Engineering Solutions
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Engineering Recruitment Solutions
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Transform your engineering hiring with AI-powered recruitment solutions. We specialize in finding exceptional engineering professionals who drive innovation and technical excellence.
+              Transform your engineering hiring with AI-powered recruitment solutions. We specialize in finding exceptional engineers who build innovative solutions and drive technical excellence.
             </p>
             <Button 
               className="bg-white text-synapse-primary hover:bg-white/90 px-8 py-3 text-lg"

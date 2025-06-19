@@ -1,3 +1,4 @@
+
 import Index from "./pages/Index";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
@@ -169,7 +170,7 @@ export const navItems = [
     page: <HumanResourceRecruitmentSolutions />,
   },
   {
-    to: "/industries/human-sales-recruitment-solutions",
+    to: "/industries/sales-recruitment-solutions",
     page: <HumanSalesRecruitmentSolutions />,
   },
   {
@@ -216,9 +217,5 @@ export const navItems = [
   {
     to: "/recruitment-solutions/apprenticeship-recruitment",
     page: <ApprenticeshipRecruitment />,
-  },
-  {
-    to: "/industries/sales-recruitment-solutions",
-    page: <HumanSalesRecruitmentSolutions />,
   },
 ];
