@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Plus, Minus, 
@@ -33,18 +34,23 @@ const MainHeader = () => {
 
   const getIconForSubmenu = (label: string) => {
     const iconMap: { [key: string]: any } = {
-      "Passive Intelligent Sourcing": Bot,
-      "Intelligent Candidate Discovery": Search,
-      "Project Staffing": Users,
+      "Passive Recruitment": Brain,
+      "Candidate Sourcing": Target,
+      "Project Staffing": Briefcase,
       "Executive Search": Crown,
       "Remote Staffing": Globe,
       "Permanent Placement": UserCheck,
+      "Permanent Staffing": UserCheck,
       "Contingent Staffing": Clock,
       "Apprenticeship Smart Sourcing": GraduationCap,
+      "Apprenticeship Recruitment": GraduationCap,
       "AI Sourcing Agent": Bot,
       "AI Outreach Agent": Send,
       "AI Submission Agent": Target,
       "ATS Bypass Engine": Zap,
+      "Sourcing Agent": Bot,
+      "Outreach Agent": Send,
+      "Submission Agent": Target,
       "Technology": Code,
       "Finance": TrendingUp,
       "Healthcare": Heart,
