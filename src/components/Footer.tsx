@@ -94,6 +94,7 @@ const Footer = () => {
                 { label: "Sourcing Agent", href: "/tools/sourcing-agent" },
                 { label: "Outreach Agent", href: "/tools/outreach-agent" },
                 { label: "Submission Agent", href: "/tools/submission-agent" },
+                { label: "Recruiting Browser Agent", href: "/tools/recruiting-browser-agent" },
                 { label: "ATS Bypass Engine", href: "/tools/ats-bypass-engine" }
               ].map((item) => (
                 <li key={item.label}>

@@ -26,6 +26,7 @@ import SideHustlesGigEconomy from "./pages/blog/SideHustlesGigEconomy";
 import SourcingAgent from "./pages/tools/SourcingAgent";
 import OutreachAgent from "./pages/tools/OutreachAgent";
 import SubmissionAgent from "./pages/tools/SubmissionAgent";
+import RecruitingBrowserAgent from "./pages/tools/RecruitingBrowserAgent";
 import ATSBypassEngine from "./pages/tools/ATSBypassEngine";
 
 // Industry child page imports
@@ -146,6 +147,10 @@ export const navItems = [
   {
     to: "/tools/submission-agent",
     page: <SubmissionAgent />,
+  },
+  {
+    to: "/tools/recruiting-browser-agent",
+    page: <RecruitingBrowserAgent />,
   },
   {
     to: "/tools/ats-bypass-engine",
