@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 type HeaderProps = {
   isRecruiterPage?: boolean;
@@ -10,6 +10,7 @@ type HeaderProps = {
 const Header = ({ isRecruiterPage = false }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [toolsDropdownOpen, setToolsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +24,18 @@ const Header = ({ isRecruiterPage = false }: HeaderProps) => {
   }, []);
 
   const navItems = [
+    { 
+      label: "Tools", 
+      href: "/recruitment-tools",
+      hasDropdown: true,
+      children: [
+        { label: "Sourcing Agent", href: "/tools/sourcing-agent" },
+        { label: "Outreach Agent", href: "/tools/outreach-agent" },
+        { label: "Submission Agent", href: "/tools/submission-agent" },
+        { label: "Recruiting Browser Agent", href: "/tools/recruiting-browser-agent" },
+        { label: "ATS Bypass Engine", href: "/tools/ats-bypass-engine" }
+      ]
+    },
     { label: "Contact", href: "mailto:info@synapseint.com" },
   ];
 
@@ -36,7 +49,7 @@ const Header = ({ isRecruiterPage = false }: HeaderProps) => {
     >
       <div className="container-wide flex justify-between items-center">
         <div className="flex items-center">
-          <a href="#" className="flex items-center space-x-2">
+          <a href="/home" className="flex items-center space-x-2">
             <img 
               src="/lovable-uploads/4e0b1cf8-ab85-4f55-a3fb-5f39206731ef.png" 
               alt="Synapse Logo" 
@@ -51,13 +64,43 @@ const Header = ({ isRecruiterPage = false }: HeaderProps) => {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
           {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="text-synapse-dark hover:text-synapse-primary font-medium transition-colors"
-            >
-              {item.label}
-            </a>
+            <div key={item.label} className="relative">
+              {item.hasDropdown ? (
+                <div 
+                  className="relative"
+                  onMouseEnter={() => setToolsDropdownOpen(true)}
+                  onMouseLeave={() => setToolsDropdownOpen(false)}
+                >
+                  <a
+                    href={item.href}
+                    className="text-synapse-dark hover:text-synapse-primary font-medium transition-colors flex items-center gap-1"
+                  >
+                    {item.label}
+                    <ChevronDown size={16} />
+                  </a>
+                  {toolsDropdownOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
+                      {item.children?.map((child) => (
+                        <a
+                          key={child.label}
+                          href={child.href}
+                          className="block px-4 py-2 text-synapse-dark hover:text-synapse-primary hover:bg-synapse-lighter/20 transition-colors"
+                        >
+                          {child.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <a
+                  href={item.href}
+                  className="text-synapse-dark hover:text-synapse-primary font-medium transition-colors"
+                >
+                  {item.label}
+                </a>
+              )}
+            </div>
           ))}
           
           {isRecruiterPage ? (
@@ -95,14 +138,29 @@ const Header = ({ isRecruiterPage = false }: HeaderProps) => {
         <nav className="lg:hidden bg-white absolute w-full py-5 shadow-medium">
           <div className="container-wide flex flex-col space-y-4">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-synapse-dark hover:text-synapse-primary font-medium transition-colors py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.label}
-              </a>
+              <div key={item.label}>
+                <a
+                  href={item.href}
+                  className="text-synapse-dark hover:text-synapse-primary font-medium transition-colors py-2 block"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+                {item.hasDropdown && item.children && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    {item.children.map((child) => (
+                      <a
+                        key={child.label}
+                        href={child.href}
+                        className="text-synapse-gray hover:text-synapse-primary transition-colors py-1 block text-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {child.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             
             {isRecruiterPage ? (

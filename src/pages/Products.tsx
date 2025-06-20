@@ -4,7 +4,7 @@ import PageTemplate from "../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Bot, Send, Target, Zap, ArrowRight } from "lucide-react";
+import { Bot, Send, Target, Zap, ArrowRight, Globe } from "lucide-react";
 import FinalCtaSection from "../components/FinalCtaSection";
 
 const tools = [
@@ -25,6 +25,12 @@ const tools = [
     title: "Submission Agent",
     description: "Handles end-to-end candidate submission by coordinating personalized outreach, interview scheduling, and post-interview follow-ups, ensuring seamless engagement and reminders throughout the process.",
     href: "/tools/submission-agent"
+  },
+  {
+    icon: <Globe className="w-8 h-8" />,
+    title: "Recruiting Browser Agent",
+    description: "Automated web browsing and data extraction for comprehensive recruiting research. Navigates job boards, career sites, and professional networks to gather candidate information at scale.",
+    href: "/tools/recruiting-browser-agent"
   },
   {
     icon: <Zap className="w-8 h-8" />,

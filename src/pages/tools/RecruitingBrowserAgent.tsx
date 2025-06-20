@@ -75,7 +75,7 @@ const RecruitingBrowserAgent = () => {
             <div className="flex justify-center">
               <Button 
                 className="btn-primary"
-                onClick={() => window.location.href = "/contact"}
+                onClick={() => window.open("https://inspiring-choux-462db3.netlify.app/", "_blank")}
               >
                 <span className="flex items-center gap-2">
                   Deploy Your Agent
@@ -109,7 +109,7 @@ const RecruitingBrowserAgent = () => {
                 </div>
                 <Button 
                   className="btn-primary"
-                  onClick={() => window.location.href = "/contact"}
+                  onClick={() => window.open("https://inspiring-choux-462db3.netlify.app/", "_blank")}
                 >
                   Get Started <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
