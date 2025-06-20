@@ -65,7 +65,8 @@ const RecruitingBrowserAgent = () => {
               AI Browser Extension
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Recruiting Browser Agent</span>
+              <span className="text-synapse-dark">Recruiting Browser </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Agent</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
               Your AI recruiting browser agent, now live in beta. Simple, powerful, and lightning-fast candidate evaluation with smart criteria-based scoring.
