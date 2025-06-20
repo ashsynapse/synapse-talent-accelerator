@@ -51,6 +51,7 @@ const MainHeader = () => {
       "Sourcing Agent": Bot,
       "Outreach Agent": Send,
       "Submission Agent": Target,
+      "Recruiting Browser Agent": Globe,
       "Information Technology": Code,
       "Digital Marketing": TrendingUp,
       "Engineering": Heart,
@@ -93,6 +94,10 @@ const MainHeader = () => {
       "AI Outreach Agent": "Personalized candidate outreach",
       "AI Submission Agent": "End-to-end submission handling",
       "ATS Bypass Engine": "Smart resume optimization",
+      "Sourcing Agent": "Automated candidate sourcing",
+      "Outreach Agent": "Personalized candidate outreach",
+      "Submission Agent": "End-to-end submission handling",
+      "Recruiting Browser Agent": "Automated web browsing",
       "Technology": "Tech talent solutions",
       "Finance": "Financial sector expertise",
       "Healthcare": "Medical professionals",
@@ -137,6 +142,7 @@ const MainHeader = () => {
         { label: "Sourcing Agent", href: "/tools/sourcing-agent" },
         { label: "Outreach Agent", href: "/tools/outreach-agent" },
         { label: "Submission Agent", href: "/tools/submission-agent" },
+        { label: "Recruiting Browser Agent", href: "/tools/recruiting-browser-agent" },
         { label: "ATS Bypass Engine", href: "/tools/ats-bypass-engine" }
       ]
     },
