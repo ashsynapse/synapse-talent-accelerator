@@ -10,67 +10,67 @@ import FinalCtaSection from "../../components/FinalCtaSection";
 const RecruitingBrowserAgent = () => {
   const coreCapabilities = [
     {
-      icon: <Globe className="w-6 h-6 text-white" />,
-      title: "Intelligent Web Navigation",
-      description: "Automatically navigates and interacts with job boards, career sites, and professional networks"
+      icon: <Brain className="w-6 h-6 text-white" />,
+      title: "AI Job-Fit Scoring",
+      description: "Smart criteria-based evaluation for precise candidate matching"
     },
     {
       icon: <Target className="w-6 h-6 text-white" />,
-      title: "Multi-Platform Integration",
-      description: "Seamlessly operates across multiple recruiting platforms and databases simultaneously"
+      title: "Instant Breakdown",
+      description: "Immediate analysis of candidate strengths and weaknesses"
     },
     {
-      icon: <Brain className="w-6 h-6 text-white" />,
-      title: "Smart Data Extraction",
-      description: "Advanced algorithms extract and organize candidate information from various web sources"
+      icon: <Globe className="w-6 h-6 text-white" />,
+      title: "Sourcing Templates",
+      description: "Ready-to-use templates with personalization tips"
     }
   ];
 
   const businessImpacts = [
     {
       icon: <TrendingUp className="w-8 h-8 text-synapse-primary" />,
-      title: "5x Faster Data Collection",
-      description: "Dramatically accelerate candidate research and data gathering across multiple platforms"
+      title: "Lightning-Fast Evaluation",
+      description: "Instantly score candidates with 8.5+ scores being 100% submission-worthy"
     },
     {
       icon: <Clock className="w-8 h-8 text-synapse-secondary" />,
-      title: "24/7 Automated Browsing",
-      description: "Continuous web-based recruiting activities without manual intervention"
+      title: "Simple 5-Step Process",
+      description: "From job description to candidate submission in minutes"
     },
     {
       icon: <Zap className="w-8 h-8 text-synapse-tertiary" />,
-      title: "95% Accuracy Rate",
-      description: "Highly accurate data extraction and candidate profile compilation"
+      title: "Find Top 1% Talent",
+      description: "AI-powered browser extension identifies elite candidates instantly"
     }
   ];
 
   const keyFeatures = [
-    "Automated job board navigation and searching",
-    "Real-time candidate profile extraction", 
-    "Multi-platform data synchronization",
-    "Intelligent form filling and submissions",
-    "Compliance with platform terms of service",
-    "Comprehensive activity logging and reporting"
+    "AI Job-Fit Scoring with SR and FIT evaluators",
+    "Instant candidate analysis and breakdown", 
+    "Ready-to-use sourcing templates with personalization",
+    "Weekly updates with rapid improvements",
+    "Simple paste and analyze workflow",
+    "Smart criteria-based candidate evaluation"
   ];
 
   return (
     <PageTemplate 
       title="Recruiting Browser Agent" 
-      description="Automated web browsing and data extraction for comprehensive recruiting research"
+      description="Your AI recruiting browser agent for finding top 1% talent instantly"
     >
       {/* Hero Section */}
       <section className="pt-32 pb-6 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 bg-synapse-primary/10 text-synapse-primary border-synapse-primary/20">
-              Powered Tool
+              AI Browser Extension
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-synapse-dark">Recruiting Browser </span>
-              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Agent</span>
+              <span className="text-synapse-dark">Find Top 1% Talent </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Instantly</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto mb-8">
-              Transform your recruiting research with an intelligent browser agent that automatically navigates job boards, career sites, and professional networks. Our agent extracts candidate data, monitors job postings, and conducts comprehensive market research at scale.
+              Your AI recruiting browser agent, now live in beta. Simple, powerful, and lightning-fast candidate evaluation with smart criteria-based scoring.
             </p>
             <div className="flex justify-center">
               <Button 
@@ -78,7 +78,7 @@ const RecruitingBrowserAgent = () => {
                 onClick={() => window.open("https://inspiring-choux-462db3.netlify.app/", "_blank")}
               >
                 <span className="flex items-center gap-2">
-                  Deploy Your Agent
+                  Install Extension (Free for SRN Members)
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </span>
               </Button>
@@ -94,10 +94,10 @@ const RecruitingBrowserAgent = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-                  Intelligent Web-Based Recruiting
+                  Simple, Powerful, Lightning-Fast
                 </h2>
                 <p className="text-synapse-gray mb-6">
-                  Our Recruiting Browser Agent operates like a skilled researcher, automatically navigating the web to gather candidate information, monitor job market trends, and extract valuable recruiting data. With advanced AI capabilities, it understands context and adapts to different platform layouts.
+                  Transform your hiring process with our AI recruiting browser agent. From pasting job descriptions to submitting top candidates, our extension provides instant AI scoring with SR and FIT evaluators that identify submission-worthy talent.
                 </p>
                 <div className="space-y-4 mb-8">
                   {keyFeatures.map((feature, index) => (
@@ -140,10 +140,10 @@ const RecruitingBrowserAgent = () => {
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              Measurable Impact on Your Research Efficiency
+              Everything You Need to Find Elite Talent
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              See how Recruiting Browser Agent transforms your data collection metrics
+              Powerful features designed for efficient talent discovery and evaluation
             </p>
           </div>
           
@@ -168,10 +168,10 @@ const RecruitingBrowserAgent = () => {
           {/* Updated CTA Section */}
           <div className="max-w-4xl mx-auto text-center mt-16">
             <h2 className="text-3xl font-bold text-synapse-dark mb-6">
-              Ready to Transform Your Recruiting Research?
+              Start Finding Elite Talent Today
             </h2>
             <p className="text-lg text-synapse-gray mb-8 max-w-2xl mx-auto">
-              Join leading companies who are already using Recruiting Browser Agent to automate data collection and accelerate their recruiting research processes.
+              Join thousands of recruiters already using Synapse to identify top candidates with our AI-powered browser extension.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -190,10 +190,10 @@ const RecruitingBrowserAgent = () => {
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              Your Browser Agent at Work
+              How It Works
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              See how our intelligent browsing process delivers comprehensive research automatically
+              Simple, powerful, and lightning-fast candidate evaluation
             </p>
           </div>
           
@@ -205,8 +205,8 @@ const RecruitingBrowserAgent = () => {
                     1
                   </div>
                   <div>
-                    <h3 className="font-semibold text-synapse-dark mb-2">Navigate & Search</h3>
-                    <p className="text-synapse-gray text-sm">Agent automatically navigates job boards and career sites to locate relevant information</p>
+                    <h3 className="font-semibold text-synapse-dark mb-2">Paste Job Description</h3>
+                    <p className="text-synapse-gray text-sm">Simply paste your job requirements into the extension</p>
                   </div>
                 </div>
                 
@@ -215,8 +215,8 @@ const RecruitingBrowserAgent = () => {
                     2
                   </div>
                   <div>
-                    <h3 className="font-semibold text-synapse-dark mb-2">Extract & Analyze</h3>
-                    <p className="text-synapse-gray text-sm">Intelligently extracts candidate profiles and job market data from various sources</p>
+                    <h3 className="font-semibold text-synapse-dark mb-2">Upload & Analyze</h3>
+                    <p className="text-synapse-gray text-sm">Click extension to analyze candidates instantly</p>
                   </div>
                 </div>
                 
@@ -225,8 +225,8 @@ const RecruitingBrowserAgent = () => {
                     3
                   </div>
                   <div>
-                    <h3 className="font-semibold text-synapse-dark mb-2">Organize & Sync</h3>
-                    <p className="text-synapse-gray text-sm">Automatically organizes collected data and synchronizes across your recruiting platforms</p>
+                    <h3 className="font-semibold text-synapse-dark mb-2">AI Scores Instantly</h3>
+                    <p className="text-synapse-gray text-sm">SR and FIT evaluators provide immediate scores</p>
                   </div>
                 </div>
                 
@@ -235,8 +235,18 @@ const RecruitingBrowserAgent = () => {
                     4
                   </div>
                   <div>
-                    <h3 className="font-semibold text-synapse-dark mb-2">Report & Insights</h3>
-                    <p className="text-synapse-gray text-sm">Delivers comprehensive reports with actionable recruiting insights and trends</p>
+                    <h3 className="font-semibold text-synapse-dark mb-2">View Analysis</h3>
+                    <p className="text-synapse-gray text-sm">See rationale, strengths, and templates</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-synapse-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                    5
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-synapse-dark mb-2">Submit Top Fits</h3>
+                    <p className="text-synapse-gray text-sm">8.5+ scores = 100% submission-worthy candidates</p>
                   </div>
                 </div>
               </div>
@@ -244,15 +254,15 @@ const RecruitingBrowserAgent = () => {
               <div className="relative">
                 <img 
                   src="/lovable-uploads/8445fbb5-892b-4cdc-9ee4-54e42033a268.png" 
-                  alt="Browser Technology" 
+                  alt="AI Browser Extension" 
                   className="w-full h-80 object-cover rounded-xl shadow-soft"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-56 h-56 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-full flex items-center justify-center shadow-lg">
                     <div className="text-center text-white">
-                      <Globe className="w-10 h-10 mx-auto mb-3" />
-                      <h3 className="text-xl font-bold mb-2">Browser Active</h3>
-                      <p className="text-sm opacity-90">Researching 24/7</p>
+                      <Brain className="w-10 h-10 mx-auto mb-3" />
+                      <h3 className="text-xl font-bold mb-2">AI Brain Active</h3>
+                      <p className="text-sm opacity-90">Analyzing talent</p>
                     </div>
                   </div>
                 </div>
@@ -267,10 +277,10 @@ const RecruitingBrowserAgent = () => {
         <div className="container-wide">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-synapse-dark mb-4">
-              Advanced Capabilities
+              Special Beta Offer
             </h2>
             <p className="text-lg text-synapse-gray max-w-2xl mx-auto">
-              Powered by cutting-edge artificial intelligence and machine learning
+              Free for all SRN members during beta! Join our community and access unlimited features at no cost.
             </p>
           </div>
           
@@ -278,24 +288,35 @@ const RecruitingBrowserAgent = () => {
             <Card className="border-0 shadow-soft hover:shadow-medium transition-all duration-300">
               <CardContent className="p-6">
                 <Shield className="w-12 h-12 text-synapse-primary mb-4" />
-                <h3 className="text-lg font-bold mb-3 text-synapse-dark">Compliance Assured</h3>
-                <p className="text-synapse-gray text-sm">Built-in compliance protocols ensure all browsing activities respect platform terms of service</p>
+                <h3 className="text-lg font-bold mb-3 text-synapse-dark">Free Tier</h3>
+                <p className="text-synapse-gray text-sm mb-4">Perfect for getting started</p>
+                <ul className="text-sm text-synapse-gray space-y-2">
+                  <li>• 20 candidate evaluations/month</li>
+                  <li>• Basic scoring features</li>
+                  <li>• Standard templates</li>
+                </ul>
               </CardContent>
             </Card>
             
-            <Card className="border-0 shadow-soft hover:shadow-medium transition-all duration-300">
+            <Card className="border-0 shadow-soft hover:shadow-medium transition-all duration-300 bg-synapse-primary/5">
               <CardContent className="p-6">
                 <Activity className="w-12 h-12 text-synapse-secondary mb-4" />
-                <h3 className="text-lg font-bold mb-3 text-synapse-dark">Real-Time Monitoring</h3>
-                <p className="text-synapse-gray text-sm">Live dashboard tracks browsing activities and data collection progress in real-time</p>
+                <h3 className="text-lg font-bold mb-3 text-synapse-dark">Unlimited - $9.99/month</h3>
+                <p className="text-synapse-gray text-sm mb-4">For serious recruiters</p>
+                <ul className="text-sm text-synapse-gray space-y-2">
+                  <li>• Unlimited evaluations</li>
+                  <li>• Advanced AI scoring</li>
+                  <li>• Premium templates</li>
+                  <li>• Priority support</li>
+                </ul>
               </CardContent>
             </Card>
             
             <Card className="border-0 shadow-soft hover:shadow-medium transition-all duration-300">
               <CardContent className="p-6">
                 <Lightbulb className="w-12 h-12 text-synapse-tertiary mb-4" />
-                <h3 className="text-lg font-bold mb-3 text-synapse-dark">Adaptive Learning</h3>
-                <p className="text-synapse-gray text-sm">Continuously learns and adapts to new website layouts and platform changes</p>
+                <h3 className="text-lg font-bold mb-3 text-synapse-dark">Weekly Updates</h3>
+                <p className="text-synapse-gray text-sm">Rapid improvements based on user feedback with continuous feature enhancements</p>
               </CardContent>
             </Card>
           </div>
