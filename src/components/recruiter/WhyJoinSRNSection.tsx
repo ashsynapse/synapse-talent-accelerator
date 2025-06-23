@@ -1,8 +1,11 @@
 
 import React from "react";
 import { DollarSign, Bot, FileText, GraduationCap, Briefcase, Globe, TrendingUp, Users, Clock, Shield } from "lucide-react";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 const WhyJoinSRNSection = () => {
+  const { addToRefs } = useScrollAnimation();
+  
   const benefits = [
     {
       icon: <DollarSign className="h-8 w-8 text-white" />,
@@ -51,12 +54,15 @@ const WhyJoinSRNSection = () => {
       </div>
       
       <div className="container-wide relative">
-        <div className="text-center mb-16 max-w-4xl mx-auto">
+        <div 
+          ref={addToRefs}
+          className="text-center mb-16 max-w-4xl mx-auto scroll-animate"
+        >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-synapse-primary/10 to-synapse-secondary/10 px-6 py-3 rounded-full mb-6 border border-synapse-primary/20">
             <TrendingUp className="h-4 w-4 text-synapse-primary" />
             <span className="text-sm font-semibold text-synapse-primary uppercase tracking-wide">Elite Network Benefits</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-synapse-dark mb-6 leading-tight">
             Why Top Recruiters Choose 
             <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent"> SRN</span>
           </h2>
@@ -67,7 +73,11 @@ const WhyJoinSRNSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <div key={index} className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-soft border border-synapse-light/30 hover:shadow-xl hover:border-synapse-primary/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+            <div 
+              key={index} 
+              ref={addToRefs}
+              className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-soft border border-synapse-light/30 hover:shadow-xl hover:border-synapse-primary/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden scroll-animate"
+            >
               {/* Highlight badge */}
               <div className="absolute top-4 right-4 bg-gradient-to-r from-synapse-primary to-synapse-secondary text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {benefit.highlight}

@@ -2,8 +2,11 @@
 import React from "react";
 import { Quote, Star } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 const RecruiterTestimonialsSection = () => {
+  const { addToRefs } = useScrollAnimation();
+  
   const testimonial = {
     text: "What makes SRN different is the quality of roles and how it rewards consistency. Even with limited time, I've made successful placements thanks to my background and the platform's structure. It's perfect for recruiters who value high standards and real commissions.",
     author: "Camirama",
@@ -25,7 +28,10 @@ const RecruiterTestimonialsSection = () => {
       </div>
       
       <div className="container-wide relative">
-        <div className="text-center mb-10 md:mb-12 max-w-4xl mx-auto">
+        <div 
+          ref={addToRefs}
+          className="text-center mb-10 md:mb-12 max-w-4xl mx-auto scroll-animate"
+        >
           <div className="inline-flex items-center gap-3 bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full mb-6 shadow-soft border border-synapse-light/30">
             <div className="flex gap-1">
               {[1,2,3,4,5].map((star) => (
@@ -44,7 +50,10 @@ const RecruiterTestimonialsSection = () => {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="bg-white/95 backdrop-blur-sm p-10 rounded-3xl shadow-soft border border-white/60 hover:shadow-xl transition-all duration-700 hover:-translate-y-2 group relative overflow-hidden">
+          <div 
+            ref={addToRefs}
+            className="bg-white/95 backdrop-blur-sm p-10 rounded-3xl shadow-soft border border-white/60 hover:shadow-xl transition-all duration-700 hover:-translate-y-2 group relative overflow-hidden scroll-animate"
+          >
             {/* Gradient overlay */}
             <div className={`absolute inset-0 bg-gradient-to-br ${testimonial.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
             

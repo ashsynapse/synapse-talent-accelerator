@@ -243,9 +243,9 @@ const CaseStudies = () => {
             {realCaseStudies.map((study, index) => (
               <Card key={index} className="border hover:border-synapse-primary transition-all duration-300 group overflow-hidden">
                 <CardContent className="p-0">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    {/* Image Section */}
-                    <div className="relative h-64 md:h-full">
+                  <div className="grid md:grid-cols-5 gap-0">
+                    {/* Image Section - Reduced from md:grid-cols-2 to smaller column */}
+                    <div className="relative h-64 md:h-full md:col-span-2">
                       <img
                         src={study.image}
                         alt={study.client}
@@ -254,8 +254,8 @@ const CaseStudies = () => {
                       <div className="absolute inset-0 bg-gradient-to-r from-synapse-primary/20 to-transparent"></div>
                     </div>
                     
-                    {/* Content Section */}
-                    <div className="p-8">
+                    {/* Content Section - Expanded to take more space */}
+                    <div className="p-8 md:col-span-3">
                       <div className="mb-6">
                         <div className="flex items-center gap-4 mb-3">
                           <div className="flex items-center gap-2">
