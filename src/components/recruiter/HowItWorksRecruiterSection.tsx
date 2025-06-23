@@ -1,9 +1,11 @@
 
-
 import React from "react";
 import { UserPlus, Briefcase, Users, DollarSign } from "lucide-react";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 const HowItWorksRecruiterSection = () => {
+  const { addToRefs } = useScrollAnimation();
+  
   const steps = [
     {
       icon: <UserPlus className="h-10 w-10 text-white" />,
@@ -30,7 +32,10 @@ const HowItWorksRecruiterSection = () => {
   return (
     <section className="section-padding bg-white">
       <div className="container-wide">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div 
+          ref={addToRefs}
+          className="text-center mb-16 max-w-3xl mx-auto scroll-animate"
+        >
           <div className="inline-flex items-center gap-3 bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full mb-6 shadow-soft border border-synapse-light/30">
             <span className="text-sm font-semibold text-synapse-primary uppercase tracking-wide">ELITE NETWORK BENEFITS</span>
           </div>
@@ -45,7 +50,11 @@ const HowItWorksRecruiterSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="text-center">
+            <div 
+              key={index} 
+              ref={addToRefs}
+              className="text-center scroll-animate"
+            >
               <div className="bg-gradient-to-br from-synapse-primary to-synapse-secondary p-6 rounded-lg inline-block mb-6">
                 {step.icon}
               </div>

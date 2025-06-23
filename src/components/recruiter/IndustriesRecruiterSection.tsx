@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
@@ -12,8 +11,11 @@ import {
   Crown,
   Users
 } from "lucide-react";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 const IndustriesRecruiterSection = () => {
+  const { addToRefs } = useScrollAnimation();
+  
   const industries = [
     {
       name: "Technology",
@@ -60,7 +62,10 @@ const IndustriesRecruiterSection = () => {
   return (
     <section className="section-padding bg-gradient-to-br from-synapse-lighter/30 via-white to-synapse-light/20">
       <div className="container-wide">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div 
+          ref={addToRefs}
+          className="text-center mb-16 max-w-3xl mx-auto scroll-animate"
+        >
           <div className="inline-flex items-center gap-3 bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full mb-6 shadow-soft border border-synapse-light/30">
             <span className="text-sm font-semibold text-synapse-primary uppercase tracking-wide">ELITE NETWORK BENEFITS</span>
           </div>
@@ -77,7 +82,11 @@ const IndustriesRecruiterSection = () => {
           {industries.map((industry, index) => {
             const IconComponent = industry.icon;
             return (
-              <Card key={index} className="border border-gray-100 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
+              <Card 
+                key={index} 
+                ref={addToRefs}
+                className="border border-gray-100 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 scroll-animate"
+              >
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-synapse-primary to-synapse-secondary rounded-lg flex items-center justify-center mr-4">
