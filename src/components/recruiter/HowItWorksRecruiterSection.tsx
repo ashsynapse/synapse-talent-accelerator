@@ -1,4 +1,3 @@
-
 import React from "react";
 import { UserPlus, Briefcase, Users, DollarSign } from "lucide-react";
 
