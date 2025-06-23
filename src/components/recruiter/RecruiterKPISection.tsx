@@ -13,10 +13,15 @@ const RecruiterKPISection = () => {
     <section className="py-10 bg-gradient-to-br from-synapse-lighter/30 via-white to-synapse-light/20">
       <div className="container-wide">
         <div className="bg-gradient-to-br from-synapse-lighter/30 via-white to-synapse-light/20 rounded-xl p-8 border border-synapse-light/30">
-          <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-8 leading-tight">
-            <span className="text-synapse-dark">SRN Network </span>
-            <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Performance</span>
-          </h3>
+          <div className="text-center mb-10 md:mb-12 max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-3 bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full mb-6 shadow-soft border border-synapse-light/30">
+              <span className="text-sm font-semibold text-synapse-primary uppercase tracking-wide">ELITE NETWORK BENEFITS</span>
+            </div>
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-8 leading-tight">
+              <span className="text-synapse-dark">SRN Network </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Performance</span>
+            </h3>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {metrics.map((metric, index) => (
               <div key={index} className="text-center">
