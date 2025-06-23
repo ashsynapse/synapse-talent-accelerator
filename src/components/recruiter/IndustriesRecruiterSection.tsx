@@ -60,8 +60,9 @@ const IndustriesRecruiterSection = () => {
     <section className="section-padding bg-gradient-to-br from-synapse-lighter/30 via-white to-synapse-light/20">
       <div className="container-wide">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-synapse-dark mb-4">
-            Industries You Can Recruit For
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="text-synapse-dark">Industries You Can </span>
+            <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Recruit For</span>
           </h2>
           <p className="text-lg text-synapse-gray">
             Access high-quality job opportunities across diverse industries with competitive commissions.

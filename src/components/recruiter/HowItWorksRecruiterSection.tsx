@@ -30,8 +30,9 @@ const HowItWorksRecruiterSection = () => {
     <section className="section-padding bg-white">
       <div className="container-wide">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-synapse-dark mb-4">
-            How SRN Works
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="text-synapse-dark">How SRN </span>
+            <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Works</span>
           </h2>
           <p className="text-lg text-synapse-gray">
             Join our network in 4 simple steps and start earning commissions on quality placements.

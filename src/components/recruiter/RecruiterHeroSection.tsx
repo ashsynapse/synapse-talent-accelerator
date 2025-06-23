@@ -8,7 +8,8 @@ const RecruiterHeroSection = () => {
       <div className="container-wide">
         <div className="text-center max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-synapse-dark mb-6 leading-tight">
-            Join a High-Performing Global Recruiter Network
+            <span className="text-synapse-dark">Join a High-Performing </span>
+            <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Global Recruiter Network</span>
           </h1>
           <p className="text-xl md:text-2xl text-synapse-gray mb-10 leading-relaxed max-w-4xl mx-auto">
             Earn top commissions. Access live jobs. Work on your schedule.
