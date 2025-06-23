@@ -1,3 +1,4 @@
+
 import React from "react";
 import { UserPlus, Briefcase, Users, DollarSign } from "lucide-react";
 
@@ -29,7 +30,7 @@ const HowItWorksRecruiterSection = () => {
     <section className="section-padding bg-white">
       <div className="container-wide">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
             <span className="text-synapse-dark">How SRN </span>
             <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Works</span>
           </h2>

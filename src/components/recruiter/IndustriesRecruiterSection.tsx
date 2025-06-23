@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
@@ -59,7 +60,7 @@ const IndustriesRecruiterSection = () => {
     <section className="section-padding bg-gradient-to-br from-synapse-lighter/30 via-white to-synapse-light/20">
       <div className="container-wide">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
             <span className="text-synapse-dark">Industries You Can </span>
             <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Recruit For</span>
           </h2>
