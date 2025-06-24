@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import PageTemplate from "@/components/PageTemplate";
 import { ChevronDown, ChevronRight, MapPin, ArrowRight, Sparkles } from "lucide-react";
@@ -142,6 +143,11 @@ const Locations = () => {
       <section className="pt-32 pb-12 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 bg-synapse-primary/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-synapse-primary/20">
+              <MapPin className="h-4 w-4 text-synapse-primary" />
+              <span className="text-synapse-primary text-sm font-medium">Our Locations</span>
+            </div>
+            
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-synapse-dark">Our </span>
               <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Locations</span>
