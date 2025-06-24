@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import PageTemplate from "@/components/PageTemplate";
 import { ChevronDown, ChevronRight, MapPin, ArrowRight, Sparkles } from "lucide-react";
@@ -149,8 +148,8 @@ const Locations = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-synapse-dark">Our </span>
-              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Locations</span>
+              <span className="text-synapse-dark">Where We </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Operate</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
               Synapse has a presence across North America, providing exceptional recruitment services 
