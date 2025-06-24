@@ -1,7 +1,7 @@
-
 import React, { useState } from "react";
 import PageTemplate from "@/components/PageTemplate";
-import { ChevronDown, ChevronRight, MapPin } from "lucide-react";
+import { ChevronDown, ChevronRight, MapPin, ArrowRight, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Locations = () => {
   const [expandedStates, setExpandedStates] = useState<Set<string>>(new Set());
@@ -139,41 +139,70 @@ const Locations = () => {
       title="Our Locations"
       description="Find Synapse recruitment services across the United States and Canada"
     >
-      <div className="section-padding">
+      <section className="pt-32 pb-12 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-4">
-              Our Locations
+          <div className="text-center mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-synapse-dark">Our </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Locations</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
               Synapse has a presence across North America, providing exceptional recruitment services 
               in major cities and metropolitan areas throughout the United States and Canada.
             </p>
           </div>
+        </div>
+      </section>
 
+      <div className="section-padding">
+        <div className="container-wide">
           <div className="space-y-8">
             <LocationSection title="United States" locations={usaLocations} />
             <LocationSection title="Canada" locations={canadaLocations} isProvince={true} />
           </div>
-
-          <div className="mt-12 text-center">
-            <div className="bg-synapse-lighter rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-synapse-dark mb-4">
-                Don't see your location?
-              </h3>
-              <p className="text-synapse-gray mb-6">
-                We're always expanding our reach. Contact us to learn about opportunities in your area.
-              </p>
-              <a 
-                href="/contact" 
-                className="btn-primary inline-block"
-              >
-                Contact Us
-              </a>
-            </div>
-          </div>
         </div>
       </div>
+
+      {/* CTA Section from Partners page */}
+      <section className="py-20 bg-gradient-to-br from-synapse-primary via-synapse-secondary to-synapse-tertiary relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-20 left-1/3 w-24 h-24 bg-white/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+        
+        {/* Grid Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+            backgroundSize: '40px 40px'
+          }}></div>
+        </div>
+        
+        <div className="container-wide text-center relative">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/30">
+            <Sparkles className="h-4 w-4 text-white animate-pulse" />
+            <span className="text-white/90 text-sm font-medium">Don't see your location?</span>
+          </div>
+          
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            We're Always Expanding Our Reach
+          </h2>
+          <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto">
+            Contact us to learn about opportunities in your area and discover how we can help you with your recruitment needs.
+          </p>
+          <Button 
+            className="bg-white text-synapse-primary hover:bg-gray-100 font-medium py-6 px-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
+            onClick={() => window.location.href = "/contact"}
+          >
+            <span className="flex items-center gap-2">
+              Contact Us
+              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </span>
+          </Button>
+        </div>
+      </section>
     </PageTemplate>
   );
 };

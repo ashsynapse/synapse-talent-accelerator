@@ -22,7 +22,7 @@ const Footer = () => {
               Global AI-powered talent acquisition platform automating the entire hiring lifecycle — from job intake to offer — with autonomous AI agents for infinite scale.
             </p>
             
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-6">
               <a
                 href="https://www.linkedin.com/company/synapse-international/?viewAsMember=true"
                 target="_blank" 
@@ -59,6 +59,12 @@ const Footer = () => {
               >
                 <FaDiscord size={20} />
               </a>
+            </div>
+
+            <div className="text-gray-300 text-sm">
+              <p className="font-semibold mb-1">Address:</p>
+              <p>1927 W Broadway #203, Vancouver, BC V6J 1Z3, Canada</p>
+              <p>British Columbia</p>
             </div>
           </div>
 
