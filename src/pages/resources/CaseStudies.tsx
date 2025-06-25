@@ -244,60 +244,59 @@ const CaseStudies = () => {
               <Card key={index} className="border hover:border-synapse-primary transition-all duration-300 group overflow-hidden">
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-5 gap-0">
-                    {/* Image Section - Made much smaller and fully rounded */}
-                    <div className="relative h-32 md:h-40 md:col-span-1 p-4 flex items-center justify-center">
-                      <div className="relative w-20 h-20 md:w-24 md:h-24">
-                        <img
-                          src={study.image}
-                          alt={study.client}
-                          className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-700 shadow-md border-2 border-gray-100"
-                        />
-                      </div>
+                    {/* Image Section - Reduced from md:grid-cols-2 to smaller column */}
+                    <div className="relative h-64 md:h-full md:col-span-2">
+                      <img
+                        src={study.image}
+                        alt={study.client}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-synapse-primary/20 to-transparent"></div>
                     </div>
                     
                     {/* Content Section - Expanded to take more space */}
-                    <div className="p-6 md:col-span-4">
-                      <div className="mb-4">
-                        <div className="flex items-center gap-4 mb-2">
+                    <div className="p-8 md:col-span-3">
+                      <div className="mb-6">
+                        <div className="flex items-center gap-4 mb-3">
                           <div className="flex items-center gap-2">
-                            <Building2 size={14} className="text-synapse-primary" />
-                            <span className="text-xs text-synapse-gray font-medium">{study.industry}</span>
+                            <Building2 size={16} className="text-synapse-primary" />
+                            <span className="text-sm text-synapse-gray font-medium">{study.industry}</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <Calendar size={14} className="text-synapse-primary" />
-                            <span className="text-xs text-synapse-gray">{study.year}</span>
+                            <Calendar size={16} className="text-synapse-primary" />
+                            <span className="text-sm text-synapse-gray">{study.year}</span>
                           </div>
                         </div>
-                        <h3 className="text-xl font-bold text-synapse-dark mb-2 group-hover:text-synapse-primary transition-colors">
+                        <h3 className="text-2xl font-bold text-synapse-dark mb-2 group-hover:text-synapse-primary transition-colors">
                           {study.title}
                         </h3>
-                        <div className="flex items-center gap-2 mb-2">
-                          <MapPin size={14} className="text-synapse-primary" />
-                          <span className="text-synapse-gray font-medium text-sm">{study.location}</span>
+                        <div className="flex items-center gap-2 mb-3">
+                          <MapPin size={16} className="text-synapse-primary" />
+                          <span className="text-synapse-gray font-medium">{study.location}</span>
                         </div>
-                        <p className="text-synapse-gray text-sm mb-3">{study.description}</p>
+                        <p className="text-synapse-gray text-sm mb-4">{study.description}</p>
                       </div>
 
-                      <div className="space-y-3 mb-4">
+                      <div className="space-y-4 mb-6">
                         <div>
-                          <h4 className="font-semibold text-synapse-dark mb-1 text-sm">Challenge</h4>
-                          <p className="text-synapse-gray text-xs">{study.challenge}</p>
+                          <h4 className="font-semibold text-synapse-dark mb-2">Challenge</h4>
+                          <p className="text-synapse-gray text-sm">{study.challenge}</p>
                         </div>
                         
                         <div>
-                          <h4 className="font-semibold text-synapse-dark mb-1 text-sm">Solution</h4>
-                          <p className="text-synapse-gray text-xs">{study.solution}</p>
+                          <h4 className="font-semibold text-synapse-dark mb-2">Solution</h4>
+                          <p className="text-synapse-gray text-sm">{study.solution}</p>
                         </div>
                       </div>
 
                       {/* Results */}
-                      <div className="bg-synapse-lighter/50 rounded-lg p-3">
-                        <h4 className="font-semibold text-synapse-dark mb-2 text-sm">Key Results</h4>
-                        <div className="grid grid-cols-1 gap-1">
+                      <div className="bg-synapse-lighter/50 rounded-lg p-4">
+                        <h4 className="font-semibold text-synapse-dark mb-3">Key Results</h4>
+                        <div className="grid grid-cols-1 gap-2">
                           {Object.entries(study.results).map(([key, value]) => (
                             <div key={key} className="flex items-center gap-2">
-                              <TrendingUp size={12} className="text-synapse-primary flex-shrink-0" />
-                              <span className="text-xs text-synapse-dark">
+                              <TrendingUp size={14} className="text-synapse-primary flex-shrink-0" />
+                              <span className="text-sm text-synapse-dark">
                                 <strong className="capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}:</strong> {value}
                               </span>
                             </div>
