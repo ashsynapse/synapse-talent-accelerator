@@ -245,13 +245,15 @@ const CaseStudies = () => {
               <Card key={index} className="border hover:border-synapse-primary transition-all duration-300 group overflow-hidden">
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-6 gap-0">
-                    {/* Image Section - Much smaller and rounded */}
-                    <div className="relative h-48 md:h-64 md:col-span-1 flex items-center justify-center p-6">
-                      <img
-                        src={study.image}
-                        alt={study.client}
-                        className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full shadow-lg group-hover:scale-105 transition-transform duration-700"
-                      />
+                    {/* Image Section - Fully rounded and consistent sizing */}
+                    <div className="relative h-48 md:h-64 md:col-span-1 flex items-center justify-center p-8">
+                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-700 bg-white border-2 border-gray-100">
+                        <img
+                          src={study.image}
+                          alt={study.client}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     </div>
                     
                     {/* Content Section - Takes more space */}
