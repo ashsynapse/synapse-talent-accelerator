@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Quote, Star, ArrowLeft, ArrowRight } from "lucide-react";
 import {
@@ -33,16 +34,6 @@ const TestimonialsSection = () => {
       rating: 5,
       company: "Sparrow",
       gradient: "from-emerald-500 to-green-500"
-    },
-    {
-      text: "Working with Cody and his team at Synapse International was such a pleasure. We often get inbound marketing messages from recruiters offering to help us source talent for our open roles, and more times than not they aren't equipped to locate the web3 talent and experience we're looking for. However, that was not the case for Synapse International so I am looking forward to working with them again in the future. They were an amazing recruitment partner for quite a few of our open roles.",
-      author: "Shaykara Webster, MBA",
-      position: "Head of People",
-      avatar: "/lovable-uploads/5248e727-e17d-45e1-b631-2c2de4612977.png",
-      initials: "SW",
-      rating: 5,
-      company: "Livepeer",
-      gradient: "from-purple-500 to-indigo-500"
     },
     {
       text: "These guys truly lived up to their moniker of 'The Startup Recruiters' by being dedicated to their craft and passionate about their work, all while being flexible and transparent in their process. They brought quality candidates to us when it was needed most.",
@@ -166,12 +157,12 @@ const TestimonialsSection = () => {
                 <CarouselItem key={index} className="pl-6 md:basis-1/2 lg:basis-1/2">
                   <div 
                     ref={addToRefs}
-                    className="scroll-animate bg-white/95 backdrop-blur-sm p-10 rounded-3xl shadow-soft border border-white/60 hover:shadow-xl transition-all duration-700 hover:-translate-y-2 group relative overflow-hidden h-full"
+                    className="scroll-animate bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-soft border border-white/60 hover:shadow-xl transition-all duration-700 hover:-translate-y-2 group relative overflow-hidden h-full"
                   >
                     {/* Gradient overlay */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${testimonial.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                     
-                    <div className="relative z-10 flex flex-col h-full min-h-[400px]">
+                    <div className="relative z-10 flex flex-col h-full min-h-[350px]">
                       {/* Quote and rating */}
                       <div className="flex items-center justify-between mb-6">
                         <Quote className="h-10 w-10 text-synapse-primary/40 group-hover:text-synapse-primary/60 transition-colors duration-300" />
@@ -183,12 +174,12 @@ const TestimonialsSection = () => {
                       </div>
                       
                       {/* Testimonial text */}
-                      <p className="text-synapse-dark mb-8 flex-grow leading-relaxed text-lg italic font-medium">
+                      <p className="text-synapse-dark mb-6 flex-grow leading-relaxed text-lg italic font-medium">
                         "{testimonial.text}"
                       </p>
                       
                       {/* Author info */}
-                      <div className="flex items-center gap-4 pt-6 border-t border-gray-100 mt-auto">
+                      <div className="flex items-center gap-4 pt-4 border-t border-gray-100 mt-auto">
                         <div className="relative">
                           <Avatar className="h-14 w-14 ring-3 ring-synapse-light/50 group-hover:ring-synapse-primary/30 transition-all duration-300">
                             <AvatarImage src={testimonial.avatar} alt={testimonial.author} />

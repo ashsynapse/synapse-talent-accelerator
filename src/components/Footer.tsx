@@ -1,6 +1,5 @@
 import React from "react";
 import { Linkedin, Twitter, Instagram, MessageCircle } from "lucide-react";
-import { FaDiscord } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -49,15 +48,6 @@ const Footer = () => {
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
-              </a>
-              <a
-                href="https://discord.com/invite/7gwf45DJgh"
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="h-10 w-10 bg-synapse-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition-all"
-                aria-label="Discord"
-              >
-                <FaDiscord size={20} />
               </a>
             </div>
 
