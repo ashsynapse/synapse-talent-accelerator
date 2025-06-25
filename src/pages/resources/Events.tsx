@@ -48,65 +48,65 @@ const Events = () => {
         </div>
       </section>
 
-      {/* Main Event Card - Reduced height */}
-      <section className="py-12 bg-white">
+      {/* Main Event Card - Reduced height significantly */}
+      <section className="py-8 bg-white">
         <div className="container-wide">
-          <div className="max-w-4xl mx-auto mb-16">
+          <div className="max-w-4xl mx-auto mb-12">
             <Card className="border-2 border-synapse-primary shadow-xl">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <Star className="text-yellow-500 fill-current" size={24} />
-                  <span className="text-lg font-semibold text-synapse-primary">Featured Event</span>
+              <CardContent className="p-4">
+                <div className="flex items-center gap-3 mb-3">
+                  <Star className="text-yellow-500 fill-current" size={20} />
+                  <span className="text-base font-semibold text-synapse-primary">Featured Event</span>
                 </div>
                 
-                <h2 className="text-3xl font-bold text-synapse-dark mb-4">
+                <h2 className="text-2xl font-bold text-synapse-dark mb-3">
                   Live Recruiting Webinar and AMA
                 </h2>
                 
-                <div className="grid md:grid-cols-2 gap-6 mb-4">
-                  <div className="space-y-3">
+                <div className="grid md:grid-cols-2 gap-4 mb-3">
+                  <div className="space-y-2">
                     <div className="flex items-center gap-3">
-                      <Calendar className="text-synapse-primary" size={20} />
+                      <Calendar className="text-synapse-primary" size={18} />
                       <span className="text-synapse-dark font-medium">Every Friday</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Clock className="text-synapse-primary" size={20} />
+                      <Clock className="text-synapse-primary" size={18} />
                       <span className="text-synapse-dark font-medium">8:30 AM Eastern Time (ET)</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <MapPin className="text-synapse-primary" size={20} />
+                      <MapPin className="text-synapse-primary" size={18} />
                       <span className="text-synapse-dark font-medium">Virtual Event</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Users className="text-synapse-primary" size={20} />
+                      <Users className="text-synapse-primary" size={18} />
                       <span className="text-synapse-dark font-medium">15+ People Interested</span>
                     </div>
                   </div>
                   
-                  <div className="bg-synapse-lighter/50 p-4 rounded-lg">
-                    <h3 className="font-bold text-synapse-dark mb-2">Event Host</h3>
-                    <p className="text-synapse-gray">Ali Taghikhani</p>
-                    <p className="text-sm text-synapse-gray">CEO at Synapse</p>
-                    <div className="mt-3">
-                      <span className="inline-block bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
+                  <div className="bg-synapse-lighter/50 p-3 rounded-lg">
+                    <h3 className="font-bold text-synapse-dark mb-1">Event Host</h3>
+                    <p className="text-synapse-gray text-sm">Ali Taghikhani</p>
+                    <p className="text-xs text-synapse-gray">CEO at Synapse</p>
+                    <div className="mt-2">
+                      <span className="inline-block bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
                         Absolutely Free
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <div className="mb-4">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Star className="text-yellow-500 fill-current" size={20} />
-                    <h3 className="text-xl font-bold text-synapse-dark">
+                <div className="mb-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Star className="text-yellow-500 fill-current" size={18} />
+                    <h3 className="text-lg font-bold text-synapse-dark">
                       What You'll Learn
                     </h3>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-2">
+                  <div className="grid md:grid-cols-2 gap-1">
                     {eventDetails.map((detail, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <CheckCircle className="text-green-500 mt-0.5" size={16} />
-                        <span className="text-synapse-gray text-sm">{detail}</span>
+                      <div key={index} className="flex items-start gap-2">
+                        <CheckCircle className="text-green-500 mt-0.5" size={14} />
+                        <span className="text-synapse-gray text-xs">{detail}</span>
                       </div>
                     ))}
                   </div>
@@ -114,40 +114,33 @@ const Events = () => {
 
                 <div className="text-center">
                   <Button 
-                    className="btn-primary text-lg px-8 py-3"
+                    className="btn-primary text-base px-6 py-2"
                     onClick={() => window.open("https://meet.google.com/qcw-unwt-xrc", "_blank")}
                   >
                     Join Live Session
-                    <ExternalLink size={18} className="ml-2" />
+                    <ExternalLink size={16} className="ml-2" />
                   </Button>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          {/* Event Series - Updated dates */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-synapse-dark mb-8 text-center">Upcoming Events in Series</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {[
-                { date: "Every Friday", time: "8:30 AM ET" },
-                { date: "Every Friday", time: "8:30 AM ET" },
-                { date: "Every Friday", time: "8:30 AM ET" },
-                { date: "Every Friday", time: "8:30 AM ET" }
-              ].map((event, index) => (
-                <Card key={index} className="border hover:border-synapse-primary transition-all duration-300">
+          {/* Event Series - Single card for Every Friday */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-synapse-dark mb-6 text-center">Recurring Event</h2>
+            <div className="flex justify-center">
+              <div className="max-w-sm">
+                <Card className="border hover:border-synapse-primary transition-all duration-300">
                   <CardContent className="p-4 text-center">
                     <Calendar className="mx-auto mb-3 text-synapse-primary" size={24} />
-                    <h3 className="font-bold text-synapse-dark mb-1">{event.date}</h3>
-                    <p className="text-synapse-gray text-sm">{event.time}</p>
-                    {index === 0 && (
-                      <span className="inline-block mt-2 bg-synapse-primary text-white text-xs px-2 py-1 rounded">
-                        Next Session
-                      </span>
-                    )}
+                    <h3 className="font-bold text-synapse-dark mb-1">Every Friday</h3>
+                    <p className="text-synapse-gray text-sm mb-2">8:30 AM ET</p>
+                    <span className="inline-block bg-synapse-primary text-white text-xs px-2 py-1 rounded">
+                      Weekly Session
+                    </span>
                   </CardContent>
                 </Card>
-              ))}
+              </div>
             </div>
           </div>
 
