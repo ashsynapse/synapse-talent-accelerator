@@ -191,7 +191,7 @@ const Glossary = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-synapse-primary/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-synapse-primary/20">
               <BookOpen className="h-4 w-4 text-synapse-primary" />
-              <span className="text-synapse-primary text-sm font-medium">Recruitment Glossary</span>
+              <span className="text-synapse-primary text-sm font-medium">Resources</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
