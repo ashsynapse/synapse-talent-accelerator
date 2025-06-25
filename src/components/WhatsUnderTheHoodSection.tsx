@@ -1,7 +1,7 @@
 
 import React from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Brain, Cpu, Zap, Infinity, ArrowRight } from "lucide-react";
+import { Brain, Cpu, Zap, Infinity } from "lucide-react";
 
 const WhatsUnderTheHoodSection = () => {
   const { addToRefs } = useScrollAnimation();
@@ -97,15 +97,9 @@ const WhatsUnderTheHoodSection = () => {
                   <h3 className="text-2xl font-bold text-synapse-dark mb-5 group-hover:text-synapse-primary transition-colors duration-300 leading-tight">
                     {feature.title}
                   </h3>
-                  <p className="text-synapse-gray leading-relaxed text-lg group-hover:text-synapse-dark transition-colors duration-300 mb-6 flex-grow">
+                  <p className="text-synapse-gray leading-relaxed text-lg group-hover:text-synapse-dark transition-colors duration-300 flex-grow">
                     {feature.description}
                   </p>
-                  
-                  {/* Action indicator */}
-                  <div className="flex items-center text-synapse-primary font-medium group-hover:translate-x-2 transition-transform duration-300 mt-auto">
-                    <span className="text-sm uppercase tracking-wide">Learn More</span>
-                    <ArrowRight className="h-4 w-4 ml-2" />
-                  </div>
                 </div>
               </div>
             </div>

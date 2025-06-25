@@ -48,26 +48,26 @@ const Events = () => {
         </div>
       </section>
 
-      {/* Main Event Card */}
+      {/* Main Event Card - Reduced height */}
       <section className="py-12 bg-white">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto mb-16">
             <Card className="border-2 border-synapse-primary shadow-xl">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-6">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
                   <Star className="text-yellow-500 fill-current" size={24} />
                   <span className="text-lg font-semibold text-synapse-primary">Featured Event</span>
                 </div>
                 
-                <h2 className="text-3xl font-bold text-synapse-dark mb-4">
+                <h2 className="text-2xl font-bold text-synapse-dark mb-3">
                   Live Recruiting Webinar and AMA
                 </h2>
                 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div className="space-y-3">
+                <div className="grid md:grid-cols-2 gap-4 mb-4">
+                  <div className="space-y-2">
                     <div className="flex items-center gap-3">
                       <Calendar className="text-synapse-primary" size={20} />
-                      <span className="text-synapse-dark font-medium">Friday</span>
+                      <span className="text-synapse-dark font-medium">Every Friday</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Clock className="text-synapse-primary" size={20} />
@@ -83,29 +83,29 @@ const Events = () => {
                     </div>
                   </div>
                   
-                  <div className="bg-synapse-lighter/50 p-4 rounded-lg">
-                    <h3 className="font-bold text-synapse-dark mb-2">Event Host</h3>
+                  <div className="bg-synapse-lighter/50 p-3 rounded-lg">
+                    <h3 className="font-bold text-synapse-dark mb-1">Event Host</h3>
                     <p className="text-synapse-gray">Ali Taghikhani</p>
                     <p className="text-sm text-synapse-gray">CEO at Synapse</p>
-                    <div className="mt-3">
-                      <span className="inline-block bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
+                    <div className="mt-2">
+                      <span className="inline-block bg-green-100 text-green-800 text-sm font-medium px-2 py-1 rounded-full">
                         Absolutely Free
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <div className="mb-6">
-                  <div className="flex items-center gap-2 mb-4">
+                <div className="mb-4">
+                  <div className="flex items-center gap-2 mb-3">
                     <Star className="text-yellow-500 fill-current" size={20} />
-                    <h3 className="text-xl font-bold text-synapse-dark">
+                    <h3 className="text-lg font-bold text-synapse-dark">
                       What You'll Learn
                     </h3>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-3">
+                  <div className="grid md:grid-cols-2 gap-2">
                     {eventDetails.map((detail, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <CheckCircle className="text-green-500 mt-0.5" size={16} />
+                      <div key={index} className="flex items-start gap-2">
+                        <CheckCircle className="text-green-500 mt-0.5" size={14} />
                         <span className="text-synapse-gray text-sm">{detail}</span>
                       </div>
                     ))}
@@ -114,40 +114,31 @@ const Events = () => {
 
                 <div className="text-center">
                   <Button 
-                    className="btn-primary text-lg px-8 py-3"
+                    className="btn-primary text-lg px-6 py-2"
                     onClick={() => window.open("https://meet.google.com/qcw-unwt-xrc", "_blank")}
                   >
                     Join Live Session
-                    <ExternalLink size={18} className="ml-2" />
+                    <ExternalLink size={16} className="ml-2" />
                   </Button>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          {/* Event Series */}
+          {/* Single Event Card */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-synapse-dark mb-8 text-center">Upcoming Events in Series</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {[
-                { date: "Fri Dec 6th", time: "8:30 AM ET" },
-                { date: "Fri Dec 13th", time: "8:30 AM ET" },
-                { date: "Fri Dec 20th", time: "8:30 AM ET" },
-                { date: "Fri Dec 27th", time: "8:30 AM ET" }
-              ].map((event, index) => (
-                <Card key={index} className="border hover:border-synapse-primary transition-all duration-300">
-                  <CardContent className="p-4 text-center">
-                    <Calendar className="mx-auto mb-3 text-synapse-primary" size={24} />
-                    <h3 className="font-bold text-synapse-dark mb-1">{event.date}</h3>
-                    <p className="text-synapse-gray text-sm">{event.time}</p>
-                    {index === 0 && (
-                      <span className="inline-block mt-2 bg-synapse-primary text-white text-xs px-2 py-1 rounded">
-                        Next Session
-                      </span>
-                    )}
-                  </CardContent>
-                </Card>
-              ))}
+            <h2 className="text-3xl font-bold text-synapse-dark mb-8 text-center">Recurring Event</h2>
+            <div className="flex justify-center">
+              <Card className="border hover:border-synapse-primary transition-all duration-300 max-w-sm">
+                <CardContent className="p-6 text-center">
+                  <Calendar className="mx-auto mb-4 text-synapse-primary" size={32} />
+                  <h3 className="font-bold text-synapse-dark mb-2">Every Friday</h3>
+                  <p className="text-synapse-gray mb-2">8:30 AM ET</p>
+                  <span className="inline-block bg-synapse-primary text-white text-sm px-3 py-1 rounded-full">
+                    Weekly Session
+                  </span>
+                </CardContent>
+              </Card>
             </div>
           </div>
 

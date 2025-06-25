@@ -1,3 +1,4 @@
+
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -243,19 +244,18 @@ const CaseStudies = () => {
             {realCaseStudies.map((study, index) => (
               <Card key={index} className="border hover:border-synapse-primary transition-all duration-300 group overflow-hidden">
                 <CardContent className="p-0">
-                  <div className="grid md:grid-cols-5 gap-0">
-                    {/* Image Section - Reduced from md:grid-cols-2 to smaller column */}
-                    <div className="relative h-64 md:h-full md:col-span-2">
+                  <div className="grid md:grid-cols-6 gap-0">
+                    {/* Image Section - Much smaller and rounded */}
+                    <div className="relative h-48 md:h-64 md:col-span-1 flex items-center justify-center p-6">
                       <img
                         src={study.image}
                         alt={study.client}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full shadow-lg group-hover:scale-105 transition-transform duration-700"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-r from-synapse-primary/20 to-transparent"></div>
                     </div>
                     
-                    {/* Content Section - Expanded to take more space */}
-                    <div className="p-8 md:col-span-3">
+                    {/* Content Section - Takes more space */}
+                    <div className="p-8 md:col-span-5">
                       <div className="mb-6">
                         <div className="flex items-center gap-4 mb-3">
                           <div className="flex items-center gap-2">
