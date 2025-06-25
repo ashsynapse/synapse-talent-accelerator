@@ -1,3 +1,4 @@
+
 import React from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { Button } from "@/components/ui/button";
@@ -243,15 +244,17 @@ const CaseStudies = () => {
             {realCaseStudies.map((study, index) => (
               <Card key={index} className="border hover:border-synapse-primary transition-all duration-300 group overflow-hidden">
                 <CardContent className="p-0">
-                  <div className="grid md:grid-cols-5 gap-0">
-                    {/* Image Section - Reduced from md:grid-cols-2 to smaller column */}
-                    <div className="relative h-64 md:h-full md:col-span-2">
-                      <img
-                        src={study.image}
-                        alt={study.client}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-r from-synapse-primary/20 to-transparent"></div>
+                  <div className="grid md:grid-cols-4 gap-0">
+                    {/* Image Section - Made smaller and rounded */}
+                    <div className="relative h-48 md:h-64 md:col-span-1 p-6 flex items-center justify-center">
+                      <div className="relative w-32 h-32 md:w-40 md:h-40">
+                        <img
+                          src={study.image}
+                          alt={study.client}
+                          className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-700 shadow-lg"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-synapse-primary/10 to-transparent rounded-full"></div>
+                      </div>
                     </div>
                     
                     {/* Content Section - Expanded to take more space */}

@@ -48,13 +48,13 @@ const Events = () => {
         </div>
       </section>
 
-      {/* Main Event Card */}
+      {/* Main Event Card - Reduced height */}
       <section className="py-12 bg-white">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto mb-16">
             <Card className="border-2 border-synapse-primary shadow-xl">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-6">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
                   <Star className="text-yellow-500 fill-current" size={24} />
                   <span className="text-lg font-semibold text-synapse-primary">Featured Event</span>
                 </div>
@@ -63,11 +63,11 @@ const Events = () => {
                   Live Recruiting Webinar and AMA
                 </h2>
                 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="grid md:grid-cols-2 gap-6 mb-4">
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <Calendar className="text-synapse-primary" size={20} />
-                      <span className="text-synapse-dark font-medium">Friday</span>
+                      <span className="text-synapse-dark font-medium">Every Friday</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Clock className="text-synapse-primary" size={20} />
@@ -95,14 +95,14 @@ const Events = () => {
                   </div>
                 </div>
 
-                <div className="mb-6">
-                  <div className="flex items-center gap-2 mb-4">
+                <div className="mb-4">
+                  <div className="flex items-center gap-2 mb-3">
                     <Star className="text-yellow-500 fill-current" size={20} />
                     <h3 className="text-xl font-bold text-synapse-dark">
                       What You'll Learn
                     </h3>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-3">
+                  <div className="grid md:grid-cols-2 gap-2">
                     {eventDetails.map((detail, index) => (
                       <div key={index} className="flex items-start gap-3">
                         <CheckCircle className="text-green-500 mt-0.5" size={16} />
@@ -125,15 +125,15 @@ const Events = () => {
             </Card>
           </div>
 
-          {/* Event Series */}
+          {/* Event Series - Updated dates */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-synapse-dark mb-8 text-center">Upcoming Events in Series</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {[
-                { date: "Fri Dec 6th", time: "8:30 AM ET" },
-                { date: "Fri Dec 13th", time: "8:30 AM ET" },
-                { date: "Fri Dec 20th", time: "8:30 AM ET" },
-                { date: "Fri Dec 27th", time: "8:30 AM ET" }
+                { date: "Every Friday", time: "8:30 AM ET" },
+                { date: "Every Friday", time: "8:30 AM ET" },
+                { date: "Every Friday", time: "8:30 AM ET" },
+                { date: "Every Friday", time: "8:30 AM ET" }
               ].map((event, index) => (
                 <Card key={index} className="border hover:border-synapse-primary transition-all duration-300">
                   <CardContent className="p-4 text-center">
