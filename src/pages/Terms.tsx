@@ -1,6 +1,7 @@
 
 import React from "react";
 import PageTemplate from "../components/PageTemplate";
+import { FileText } from "lucide-react";
 
 const Terms = () => {
   return (
@@ -8,11 +9,17 @@ const Terms = () => {
       title="Terms of Service"
       description="Read our terms of service and understand the conditions for using Synapse International's services"
     >
-      <section className="py-20 bg-gradient-to-br from-white to-synapse-lighter/30">
+      <section className="pt-32 pb-8 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide max-w-4xl">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Terms of Service
+            <div className="inline-flex items-center gap-2 bg-synapse-primary/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-synapse-primary/20">
+              <FileText className="h-4 w-4 text-synapse-primary" />
+              <span className="text-synapse-primary text-sm font-medium">Terms of Service</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-synapse-dark">Terms of </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Service</span>
             </h1>
             <p className="text-xl text-synapse-gray">
               Last updated: June 8, 2025

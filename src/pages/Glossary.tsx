@@ -1,7 +1,7 @@
-
 import React from "react";
 import PageTemplate from "../components/PageTemplate";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { BookOpen } from "lucide-react";
 
 const glossaryTerms = [
   {
@@ -189,8 +189,14 @@ const Glossary = () => {
       <section className="pt-32 pb-20 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-synapse-dark mb-6">
-              Recruitment Glossary
+            <div className="inline-flex items-center gap-2 bg-synapse-primary/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-synapse-primary/20">
+              <BookOpen className="h-4 w-4 text-synapse-primary" />
+              <span className="text-synapse-primary text-sm font-medium">Recruitment Glossary</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-synapse-dark">Recruitment </span>
+              <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Glossary</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
               Your comprehensive guide to recruitment and talent acquisition terminology
