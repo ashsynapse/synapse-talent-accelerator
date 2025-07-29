@@ -8,8 +8,9 @@ const Locations = () => {
   const [expandedProvinces, setExpandedProvinces] = useState<Set<string>>(new Set());
   const [expandedLatam, setExpandedLatam] = useState<Set<string>>(new Set());
   const [expandedEmea, setExpandedEmea] = useState<Set<string>>(new Set());
+  const [expandedApac, setExpandedApac] = useState<Set<string>>(new Set());
 
-  const toggleExpanded = (location: string, type: 'states' | 'provinces' | 'latam' | 'emea' = 'states') => {
+  const toggleExpanded = (location: string, type: 'states' | 'provinces' | 'latam' | 'emea' | 'apac' = 'states') => {
     let setExpanded: React.Dispatch<React.SetStateAction<Set<string>>>;
     let expanded: Set<string>;
     
@@ -25,6 +26,10 @@ const Locations = () => {
       case 'emea':
         setExpanded = setExpandedEmea;
         expanded = expandedEmea;
+        break;
+      case 'apac':
+        setExpanded = setExpandedApac;
+        expanded = expandedApac;
         break;
       default:
         setExpanded = setExpandedStates;
@@ -149,6 +154,23 @@ const Locations = () => {
     Kenya: ["Nairobi", "Mombasa", "Kisumu"]
   };
 
+  const apacLocations = {
+    Australia: ["Sydney", "Melbourne", "Brisbane"],
+    Japan: ["Tokyo", "Osaka", "Kyoto"],
+    China: ["Beijing", "Shanghai", "Guangzhou"],
+    India: ["Mumbai", "Delhi", "Bangalore"],
+    Singapore: ["Singapore", "Jurong", "Tampines"],
+    "South Korea": ["Seoul", "Busan", "Incheon"],
+    "Hong Kong": ["Hong Kong", "Kowloon", "New Territories"],
+    Thailand: ["Bangkok", "Chiang Mai", "Phuket"],
+    Malaysia: ["Kuala Lumpur", "George Town", "Johor Bahru"],
+    Indonesia: ["Jakarta", "Surabaya", "Bandung"],
+    Philippines: ["Manila", "Cebu", "Davao"],
+    Vietnam: ["Ho Chi Minh City", "Hanoi", "Da Nang"],
+    Taiwan: ["Taipei", "Kaohsiung", "Taichung"],
+    "New Zealand": ["Auckland", "Wellington", "Christchurch"]
+  };
+
   const LocationSection = ({ 
     title, 
     locations, 
@@ -156,7 +178,7 @@ const Locations = () => {
   }: { 
     title: string; 
     locations: Record<string, string[]>; 
-    type?: 'states' | 'provinces' | 'latam' | 'emea';
+    type?: 'states' | 'provinces' | 'latam' | 'emea' | 'apac';
   }) => {
     let expanded: Set<string>;
     
@@ -169,6 +191,9 @@ const Locations = () => {
         break;
       case 'emea':
         expanded = expandedEmea;
+        break;
+      case 'apac':
+        expanded = expandedApac;
         break;
       default:
         expanded = expandedStates;
@@ -230,7 +255,7 @@ const Locations = () => {
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
               Synapse has a global presence, providing exceptional recruitment services 
-              in major cities and metropolitan areas throughout North America, Latin America, Europe, Middle East, and Africa.
+              in major cities and metropolitan areas throughout North America, Latin America, Europe, Middle East, Africa, and Asia-Pacific.
             </p>
           </div>
         </div>
@@ -243,6 +268,7 @@ const Locations = () => {
             <LocationSection title="Canada" locations={canadaLocations} type="provinces" />
             <LocationSection title="LATAM" locations={latamLocations} type="latam" />
             <LocationSection title="EMEA" locations={emeaLocations} type="emea" />
+            <LocationSection title="APAC" locations={apacLocations} type="apac" />
           </div>
         </div>
       </div>
