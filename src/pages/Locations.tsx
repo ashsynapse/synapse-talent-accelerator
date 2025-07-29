@@ -7,8 +7,9 @@ const Locations = () => {
   const [expandedStates, setExpandedStates] = useState<Set<string>>(new Set());
   const [expandedProvinces, setExpandedProvinces] = useState<Set<string>>(new Set());
   const [expandedLatam, setExpandedLatam] = useState<Set<string>>(new Set());
+  const [expandedEmea, setExpandedEmea] = useState<Set<string>>(new Set());
 
-  const toggleExpanded = (location: string, type: 'states' | 'provinces' | 'latam' = 'states') => {
+  const toggleExpanded = (location: string, type: 'states' | 'provinces' | 'latam' | 'emea' = 'states') => {
     let setExpanded: React.Dispatch<React.SetStateAction<Set<string>>>;
     let expanded: Set<string>;
     
@@ -20,6 +21,10 @@ const Locations = () => {
       case 'latam':
         setExpanded = setExpandedLatam;
         expanded = expandedLatam;
+        break;
+      case 'emea':
+        setExpanded = setExpandedEmea;
+        expanded = expandedEmea;
         break;
       default:
         setExpanded = setExpandedStates;
@@ -116,6 +121,34 @@ const Locations = () => {
     Guatemala: ["Guatemala City", "Quetzaltenango", "Escuintla"]
   };
 
+  const emeaLocations = {
+    "United Kingdom": ["London", "Manchester", "Edinburgh"],
+    Germany: ["Berlin", "Munich", "Frankfurt"],
+    France: ["Paris", "Lyon", "Marseille"],
+    Netherlands: ["Amsterdam", "Rotterdam", "The Hague"],
+    Spain: ["Madrid", "Barcelona", "Valencia"],
+    Italy: ["Rome", "Milan", "Naples"],
+    Switzerland: ["Zurich", "Geneva", "Basel"],
+    Austria: ["Vienna", "Salzburg", "Innsbruck"],
+    Belgium: ["Brussels", "Antwerp", "Ghent"],
+    Sweden: ["Stockholm", "Gothenburg", "Malmö"],
+    Norway: ["Oslo", "Bergen", "Trondheim"],
+    Denmark: ["Copenhagen", "Aarhus", "Odense"],
+    Finland: ["Helsinki", "Tampere", "Turku"],
+    Poland: ["Warsaw", "Krakow", "Gdansk"],
+    "Czech Republic": ["Prague", "Brno", "Ostrava"],
+    Ireland: ["Dublin", "Cork", "Galway"],
+    Portugal: ["Lisbon", "Porto", "Braga"],
+    Israel: ["Tel Aviv", "Jerusalem", "Haifa"],
+    "United Arab Emirates": ["Dubai", "Abu Dhabi", "Sharjah"],
+    "Saudi Arabia": ["Riyadh", "Jeddah", "Dammam"],
+    "South Africa": ["Cape Town", "Johannesburg", "Durban"],
+    Egypt: ["Cairo", "Alexandria", "Giza"],
+    Morocco: ["Casablanca", "Rabat", "Marrakech"],
+    Nigeria: ["Lagos", "Abuja", "Kano"],
+    Kenya: ["Nairobi", "Mombasa", "Kisumu"]
+  };
+
   const LocationSection = ({ 
     title, 
     locations, 
@@ -123,7 +156,7 @@ const Locations = () => {
   }: { 
     title: string; 
     locations: Record<string, string[]>; 
-    type?: 'states' | 'provinces' | 'latam';
+    type?: 'states' | 'provinces' | 'latam' | 'emea';
   }) => {
     let expanded: Set<string>;
     
@@ -133,6 +166,9 @@ const Locations = () => {
         break;
       case 'latam':
         expanded = expandedLatam;
+        break;
+      case 'emea':
+        expanded = expandedEmea;
         break;
       default:
         expanded = expandedStates;
@@ -193,8 +229,8 @@ const Locations = () => {
               <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Operate</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
-              Synapse has a presence across North America and Latin America, providing exceptional recruitment services 
-              in major cities and metropolitan areas throughout the United States, Canada, and LATAM region.
+              Synapse has a global presence, providing exceptional recruitment services 
+              in major cities and metropolitan areas throughout North America, Latin America, Europe, Middle East, and Africa.
             </p>
           </div>
         </div>
@@ -206,6 +242,7 @@ const Locations = () => {
             <LocationSection title="United States" locations={usaLocations} type="states" />
             <LocationSection title="Canada" locations={canadaLocations} type="provinces" />
             <LocationSection title="LATAM" locations={latamLocations} type="latam" />
+            <LocationSection title="EMEA" locations={emeaLocations} type="emea" />
           </div>
         </div>
       </div>
