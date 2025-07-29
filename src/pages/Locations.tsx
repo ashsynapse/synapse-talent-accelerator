@@ -6,10 +6,25 @@ import { Button } from "@/components/ui/button";
 const Locations = () => {
   const [expandedStates, setExpandedStates] = useState<Set<string>>(new Set());
   const [expandedProvinces, setExpandedProvinces] = useState<Set<string>>(new Set());
+  const [expandedLatam, setExpandedLatam] = useState<Set<string>>(new Set());
 
-  const toggleExpanded = (location: string, isProvince = false) => {
-    const setExpanded = isProvince ? setExpandedProvinces : setExpandedStates;
-    const expanded = isProvince ? expandedProvinces : expandedStates;
+  const toggleExpanded = (location: string, type: 'states' | 'provinces' | 'latam' = 'states') => {
+    let setExpanded: React.Dispatch<React.SetStateAction<Set<string>>>;
+    let expanded: Set<string>;
+    
+    switch (type) {
+      case 'provinces':
+        setExpanded = setExpandedProvinces;
+        expanded = expandedProvinces;
+        break;
+      case 'latam':
+        setExpanded = setExpandedLatam;
+        expanded = expandedLatam;
+        break;
+      default:
+        setExpanded = setExpandedStates;
+        expanded = expandedStates;
+    }
     
     const newExpanded = new Set(expanded);
     if (newExpanded.has(location)) {
@@ -86,16 +101,42 @@ const Locations = () => {
     "Newfoundland and Labrador": ["St. John's", "Mount Pearl", "Corner Brook"]
   };
 
+  const latamLocations = {
+    Argentina: ["Buenos Aires", "Córdoba", "Rosario"],
+    Brazil: ["São Paulo", "Rio de Janeiro", "Brasília"],
+    Chile: ["Santiago", "Valparaíso", "Concepción"],
+    Colombia: ["Bogotá", "Medellín", "Cali"],
+    Mexico: ["Mexico City", "Guadalajara", "Monterrey"],
+    Peru: ["Lima", "Arequipa", "Trujillo"],
+    Uruguay: ["Montevideo", "Salto", "Paysandú"],
+    Ecuador: ["Quito", "Guayaquil", "Cuenca"],
+    Venezuela: ["Caracas", "Maracaibo", "Valencia"],
+    "Costa Rica": ["San José", "Cartago", "Puntarenas"],
+    Panama: ["Panama City", "Colón", "David"],
+    Guatemala: ["Guatemala City", "Quetzaltenango", "Escuintla"]
+  };
+
   const LocationSection = ({ 
     title, 
     locations, 
-    isProvince = false 
+    type = 'states'
   }: { 
     title: string; 
     locations: Record<string, string[]>; 
-    isProvince?: boolean;
+    type?: 'states' | 'provinces' | 'latam';
   }) => {
-    const expanded = isProvince ? expandedProvinces : expandedStates;
+    let expanded: Set<string>;
+    
+    switch (type) {
+      case 'provinces':
+        expanded = expandedProvinces;
+        break;
+      case 'latam':
+        expanded = expandedLatam;
+        break;
+      default:
+        expanded = expandedStates;
+    }
     
     return (
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
@@ -107,7 +148,7 @@ const Locations = () => {
           {Object.entries(locations).map(([state, cities]) => (
             <div key={state} className="border border-gray-100 rounded-lg">
               <button
-                onClick={() => toggleExpanded(state, isProvince)}
+                onClick={() => toggleExpanded(state, type)}
                 className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors"
               >
                 <span className="font-medium text-synapse-dark">{state}</span>
@@ -152,8 +193,8 @@ const Locations = () => {
               <span className="bg-gradient-to-r from-synapse-primary to-synapse-secondary bg-clip-text text-transparent">Operate</span>
             </h1>
             <p className="text-xl text-synapse-gray max-w-3xl mx-auto">
-              Synapse has a presence across North America, providing exceptional recruitment services 
-              in major cities and metropolitan areas throughout the United States and Canada.
+              Synapse has a presence across North America and Latin America, providing exceptional recruitment services 
+              in major cities and metropolitan areas throughout the United States, Canada, and LATAM region.
             </p>
           </div>
         </div>
@@ -162,8 +203,9 @@ const Locations = () => {
       <div className="section-padding">
         <div className="container-wide">
           <div className="space-y-8">
-            <LocationSection title="United States" locations={usaLocations} />
-            <LocationSection title="Canada" locations={canadaLocations} isProvince={true} />
+            <LocationSection title="United States" locations={usaLocations} type="states" />
+            <LocationSection title="Canada" locations={canadaLocations} type="provinces" />
+            <LocationSection title="LATAM" locations={latamLocations} type="latam" />
           </div>
         </div>
       </div>
