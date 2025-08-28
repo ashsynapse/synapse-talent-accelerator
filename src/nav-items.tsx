@@ -47,7 +47,6 @@ import ExecutiveSearch from "./pages/solutions/ExecutiveSearch";
 import RemoteStaffing from "./pages/solutions/RemoteStaffing";
 import PermanentStaffing from "./pages/solutions/PermanentStaffing";
 import ContingentStaffing from "./pages/solutions/ContingentStaffing";
-import ApprenticeshipRecruitment from "./pages/solutions/ApprenticeshipRecruitment";
 
 export const navItems = [
   {
@@ -217,9 +216,5 @@ export const navItems = [
   {
     to: "/recruitment-solutions/contingent-staffing",
     page: <ContingentStaffing />,
-  },
-  {
-    to: "/recruitment-solutions/apprenticeship-recruitment",
-    page: <ApprenticeshipRecruitment />,
   },
 ];

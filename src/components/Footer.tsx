@@ -62,8 +62,7 @@ const Footer = () => {
                 { label: "Executive Search", href: "/recruitment-solutions/executive-search" },
                 { label: "Remote Staffing", href: "/recruitment-solutions/remote-staffing" },
                 { label: "Permanent Staffing", href: "/recruitment-solutions/permanent-staffing" },
-                { label: "Contingent Staffing", href: "/recruitment-solutions/contingent-staffing" },
-                { label: "Apprenticeship Recruitment", href: "/recruitment-solutions/apprenticeship-recruitment" }
+                { label: "Contingent Staffing", href: "/recruitment-solutions/contingent-staffing" }
               ].map((item) => (
                 <li key={item.label}>
                   <a

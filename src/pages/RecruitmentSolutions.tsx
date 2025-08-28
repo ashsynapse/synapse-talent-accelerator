@@ -1,10 +1,9 @@
-
 import React from "react";
 import PageTemplate from "../components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Brain, Users, Target, Clock, Globe, UserCheck, Briefcase, GraduationCap, ArrowRight } from "lucide-react";
+import { Brain, Users, Target, Clock, Globe, UserCheck, Briefcase, ArrowRight } from "lucide-react";
 import FinalCtaSection from "../components/FinalCtaSection";
 
 const solutions = [
@@ -49,12 +48,6 @@ const solutions = [
     title: "Contingent Staffing",
     description: "Flexible staffing solutions for temporary and contract positions",
     href: "/recruitment-solutions/contingent-staffing"
-  },
-  {
-    icon: <GraduationCap className="w-8 h-8" />,
-    title: "Apprenticeship Recruitment",
-    description: "Specialized recruitment for apprenticeship programs and early career professionals",
-    href: "/recruitment-solutions/apprenticeship-recruitment"
   }
 ];
 
