@@ -1,192 +1,204 @@
-
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
-type HeaderProps = {
-  isRecruiterPage?: boolean;
-};
+const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-const Header = ({ isRecruiterPage = false }: HeaderProps) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [toolsDropdownOpen, setToolsDropdownOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const navItems = [
-    { 
-      label: "Tools", 
-      href: "/recruitment-tools",
-      hasDropdown: true,
-      children: [
-        { label: "Sourcing Agent", href: "/tools/sourcing-agent" },
-        { label: "Outreach Agent", href: "/tools/outreach-agent" },
-        { label: "Submission Agent", href: "/tools/submission-agent" },
-        { label: "Recruiting Browser Agent", href: "/tools/recruiting-browser-agent" },
-        { label: "ATS Bypass Engine", href: "/tools/ats-bypass-engine" }
-      ]
-    },
-    { label: "Contact", href: "mailto:info@synapseint.com" },
+  const solutionsMenuItems = [
+    { title: "Passive Recruitment", href: "/recruitment-solutions/passive-recruitment" },
+    { title: "Candidate Sourcing", href: "/recruitment-solutions/candidate-sourcing" },
+    { title: "Project Staffing", href: "/recruitment-solutions/project-staffing" },
+    { title: "Executive Search", href: "/recruitment-solutions/executive-search" },
+    { title: "Remote Staffing", href: "/recruitment-solutions/remote-staffing" },
+    { title: "Permanent Staffing", href: "/recruitment-solutions/permanent-staffing" },
+    { title: "Contingent Staffing", href: "/recruitment-solutions/contingent-staffing" }
   ];
 
   return (
-    <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white shadow-soft py-3"
-          : "bg-transparent py-5"
-      }`}
-    >
-      <div className="container-wide flex justify-between items-center">
-        <div className="flex items-center">
-          <a href="/home" className="flex items-center space-x-2">
-            <img 
-              src="/lovable-uploads/4e0b1cf8-ab85-4f55-a3fb-5f39206731ef.png" 
-              alt="Synapse Logo" 
-              className="h-8 w-8"
-            />
-            <span className="text-2xl font-bold text-synapse-primary">
-              Synapse
-            </span>
+    <header className="bg-white py-4 shadow-sm">
+      <div className="container-wide flex items-center justify-between">
+        {/* Logo */}
+        <div className="text-2xl font-bold text-synapse-primary">
+          <a href="/">
+            Synapse
           </a>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-8">
-          {navItems.map((item) => (
-            <div key={item.label} className="relative">
-              {item.hasDropdown ? (
-                <div 
-                  className="relative"
-                  onMouseEnter={() => setToolsDropdownOpen(true)}
-                  onMouseLeave={() => setToolsDropdownOpen(false)}
-                >
-                  <a
-                    href={item.href}
-                    className="text-synapse-dark hover:text-synapse-primary font-medium transition-colors flex items-center gap-1"
-                  >
-                    {item.label}
-                    <ChevronDown size={16} />
-                  </a>
-                  {toolsDropdownOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
-                      {item.children?.map((child) => (
-                        <a
-                          key={child.label}
-                          href={child.href}
-                          className="block px-4 py-2 text-synapse-dark hover:text-synapse-primary hover:bg-synapse-lighter/20 transition-colors"
-                        >
-                          {child.label}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <a
-                  href={item.href}
-                  className="text-synapse-dark hover:text-synapse-primary font-medium transition-colors"
-                >
-                  {item.label}
-                </a>
-              )}
-            </div>
-          ))}
-          
-          {isRecruiterPage ? (
-            <Button
-              className="bg-gradient-to-r from-synapse-primary to-synapse-secondary hover:from-synapse-secondary hover:to-synapse-primary text-white font-semibold px-6 py-2 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent"
-              onClick={() => window.open("https://app.synapserecruiternetwork.com/", "_blank")}
-            >
-              Login
-            </Button>
-          ) : (
-            <Button
-              className="btn-primary ml-4"
-              onClick={() => window.location.href = "mailto:info@synapseint.com"}
-            >
-              Hire Talent
-            </Button>
-          )}
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden text-synapse-dark p-2"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? (
-            <X size={24} />
-          ) : (
-            <Menu size={24} />
-          )}
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <nav className="lg:hidden bg-white absolute w-full py-5 shadow-medium">
-          <div className="container-wide flex flex-col space-y-4">
-            {navItems.map((item) => (
-              <div key={item.label}>
-                <a
-                  href={item.href}
-                  className="text-synapse-dark hover:text-synapse-primary font-medium transition-colors py-2 block"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-                {item.hasDropdown && item.children && (
-                  <div className="ml-4 mt-2 space-y-2">
-                    {item.children.map((child) => (
-                      <a
-                        key={child.label}
-                        href={child.href}
-                        className="text-synapse-gray hover:text-synapse-primary transition-colors py-1 block text-sm"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {child.label}
-                      </a>
+        <div className="hidden lg:flex items-center space-x-6">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>
+                  Solutions
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:grid-cols-3">
+                    {solutionsMenuItems.map((item) => (
+                      <li key={item.title}>
+                        <NavigationMenuLink asChild>
+                          <a
+                            href={item.href}
+                            className="block p-3 leading-tight rounded-md hover:bg-accent focus:outline-none focus:shadow-md"
+                          >
+                            <div className="text-sm font-medium leading-none">{item.title}</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Learn more about our {item.title} services.
+                            </p>
+                          </a>
+                        </NavigationMenuLink>
+                      </li>
                     ))}
-                  </div>
-                )}
-              </div>
-            ))}
-            
-            {isRecruiterPage ? (
-              <Button
-                className="bg-gradient-to-r from-synapse-primary to-synapse-secondary hover:from-synapse-secondary hover:to-synapse-primary text-white font-semibold w-full mt-4"
-                onClick={() => {
-                  window.open("https://app.synapserecruiternetwork.com/", "_blank");
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Login
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink href="/industries">
+                  Industries
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink href="/recruitment-tools">
+                  Tools
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>
+                  Company
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 md:w-[400px] md:grid-cols-2">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="/about"
+                          className="block p-3 leading-tight rounded-md hover:bg-accent focus:outline-none focus:shadow-md"
+                        >
+                          <div className="text-sm font-medium leading-none">About</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Learn about our company, vision, and team.
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="/careers"
+                          className="block p-3 leading-tight rounded-md hover:bg-accent focus:outline-none focus:shadow-md"
+                        >
+                          <div className="text-sm font-medium leading-none">Careers</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Join our team and help us change the world.
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="/contact"
+                          className="block p-3 leading-tight rounded-md hover:bg-accent focus:outline-none focus:shadow-md"
+                        >
+                          <div className="text-sm font-medium leading-none">Contact</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Contact us for more information.
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>
+                  Resources
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 md:w-[400px] md:grid-cols-2">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="/blog"
+                          className="block p-3 leading-tight rounded-md hover:bg-accent focus:outline-none focus:shadow-md"
+                        >
+                          <div className="text-sm font-medium leading-none">Blog</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Read our latest blog posts.
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="/case-studies"
+                          className="block p-3 leading-tight rounded-md hover:bg-accent focus:outline-none focus:shadow-md"
+                        >
+                          <div className="text-sm font-medium leading-none">Case Studies</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            See how we've helped our clients.
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="/events"
+                          className="block p-3 leading-tight rounded-md hover:bg-accent focus:outline-none focus:shadow-md"
+                        >
+                          <div className="text-sm font-medium leading-none">Events</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            See our upcoming events.
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
+          <Button variant="outline" onClick={() => window.location.href = "/contact"}>Contact Us</Button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="lg:hidden">
+          <Button variant="ghost" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </Button>
+        </div>
+
+        {/* Mobile Menu (Conditionally Rendered) */}
+        {isMobileMenuOpen && (
+          <div className="fixed top-0 left-0 w-full h-screen bg-white z-50 p-8">
+            <div className="flex justify-end mb-8">
+              <Button variant="ghost" onClick={() => setIsMobileMenuOpen(false)}>
+                <X className="w-6 h-6" />
               </Button>
-            ) : (
-              <Button
-                className="btn-primary w-full mt-4"
-                onClick={() => {
-                  window.location.href = "mailto:info@synapseint.com";
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Hire Talent
-              </Button>
-            )}
+            </div>
+            <nav className="flex flex-col space-y-4">
+              <a href="/recruitment-solutions" className="block py-2 text-lg font-medium text-synapse-dark">Solutions</a>
+              <a href="/industries" className="block py-2 text-lg font-medium text-synapse-dark">Industries</a>
+              <a href="/recruitment-tools" className="block py-2 text-lg font-medium text-synapse-dark">Tools</a>
+              <a href="/about" className="block py-2 text-lg font-medium text-synapse-dark">Company</a>
+              <a href="/resources" className="block py-2 text-lg font-medium text-synapse-dark">Resources</a>
+              <Button variant="secondary" onClick={() => window.location.href = "/contact"}>Contact Us</Button>
+            </nav>
           </div>
-        </nav>
-      )}
+        )}
+      </div>
     </header>
   );
 };
