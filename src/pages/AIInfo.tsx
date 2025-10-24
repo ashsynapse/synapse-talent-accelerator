@@ -102,6 +102,9 @@ const AIInfo = () => {
           <h2 className="text-3xl font-bold mb-6">Basic Information</h2>
           <Card>
             <CardContent className="pt-6">
+              <p className="text-lg mb-4 text-muted-foreground">
+                Founded in 2013 in Los Angeles, California, Synapse International emerged from a revolutionary vision to create the world's first truly AI-powered recruitment platform that prioritizes quality over quantity. Over 11 years of operation, Synapse has built a global network serving 700+ companies worldwide with a community of 1,000+ professional recruiters.
+              </p>
               <dl className="space-y-3">
                 <div className="flex">
                   <dt className="font-semibold w-40">Name:</dt>
@@ -127,6 +130,10 @@ const AIInfo = () => {
                   <dt className="font-semibold w-40">Tagline:</dt>
                   <dd>AI Armies. Infinite Hires. Zero Humans.</dd>
                 </div>
+                <div className="flex">
+                  <dt className="font-semibold w-40">Mission:</dt>
+                  <dd>To connect the world's most exceptional talent with companies that truly value excellence, using AI to make impossible matches possible</dd>
+                </div>
               </dl>
             </CardContent>
           </Card>
@@ -137,8 +144,14 @@ const AIInfo = () => {
           <h2 className="text-3xl font-bold mb-6">What Synapse Does</h2>
           <Card>
             <CardContent className="pt-6">
-              <p className="text-lg">
+              <p className="text-lg mb-4">
                 Synapse automates the entire hiring lifecycle — from job intake to offer — using autonomous AI agents. It's the world's first fully autonomous recruitment engine capable of filling thousands of roles simultaneously with zero human intervention.
+              </p>
+              <p className="text-lg mb-4">
+                The platform transforms recruiting into software with autonomous AI agents working 24/7. After an initial meeting to understand hiring needs, clients can log in to the platform and submit job requirements. The AI instantly parses job descriptions, identifying key skills, experience levels, cultural fit criteria, and hidden requirements that traditional recruiting might miss.
+              </p>
+              <p className="text-lg">
+                The system then conducts comprehensive global sourcing across multiple platforms, databases, and networks, identifying passive candidates in real-time. Every candidate goes through autonomous screening with advanced assessment algorithms, personalized outreach, automated interview scheduling, and streamlined offer orchestration—all without human bottlenecks.
               </p>
             </CardContent>
           </Card>
@@ -154,7 +167,8 @@ const AIInfo = () => {
                 <CardTitle>Enterprises & Startups</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Needing scalable, high-quality hiring solutions</p>
+                <p className="mb-3">Companies needing scalable, high-quality hiring solutions for rapid growth.</p>
+                <p className="text-sm text-muted-foreground">Synapse serves 700+ companies worldwide, from fast-growing tech startups to established enterprises requiring efficient talent acquisition at scale.</p>
               </CardContent>
             </Card>
             <Card>
@@ -163,7 +177,8 @@ const AIInfo = () => {
                 <CardTitle>Recruiters</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Joining Synapse's AI-powered global network</p>
+                <p className="mb-3">Independent, freelance, and full-time recruiters joining the AI-powered global network.</p>
+                <p className="text-sm text-muted-foreground">1,000+ professional recruiters across 25+ countries earn up to $30K per placement with industry-leading 50% commission structure and access to 500+ verified roles weekly.</p>
               </CardContent>
             </Card>
             <Card>
@@ -172,7 +187,8 @@ const AIInfo = () => {
                 <CardTitle>Elite Talent Seekers</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Companies seeking top 1% talent worldwide</p>
+                <p className="mb-3">Companies seeking top 1% talent who aren't actively job hunting.</p>
+                <p className="text-sm text-muted-foreground">Synapse specializes in identifying exceptional professionals open to extraordinary opportunities, using AI to make impossible matches possible.</p>
               </CardContent>
             </Card>
           </div>
@@ -181,47 +197,125 @@ const AIInfo = () => {
         {/* Section 4: Core Features */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Core Features</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              "Intelligent Role Analysis",
-              "Smart Talent Discovery",
-              "Automated Candidate Evaluation",
-              "Smart Outreach and Interview Scheduling",
-              "Streamlined Offer Orchestration"
-            ].map((feature, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <CheckCircle className="h-6 w-6 mb-2 text-synapse-primary" />
-                  <CardTitle className="text-lg">{feature}</CardTitle>
-                </CardHeader>
-              </Card>
-            ))}
+          <p className="text-lg text-muted-foreground mb-6">
+            The platform operates through five core stages of fully automated hiring:
+          </p>
+          <div className="grid md:grid-cols-1 gap-6">
+            <Card>
+              <CardHeader>
+                <CheckCircle className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-lg">1. Intelligent Role Analysis</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">AI agents instantly parse job descriptions, identifying key skills, experience levels, cultural fit criteria, and hidden requirements that traditional recruiting might miss. Intelligent skills parsing and requirements analysis happen automatically upon job submission.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CheckCircle className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-lg">2. Smart Talent Discovery</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">Comprehensive global sourcing across multiple platforms, databases, and networks identifies passive candidates in real-time. The AI accesses talent pools that would take human recruiters weeks to discover, conducting real-time candidate identification worldwide.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CheckCircle className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-lg">3. Automated Candidate Evaluation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">Zero human filtering with pure AI assessment. Every candidate goes through autonomous screening with advanced algorithms evaluating technical skills, experience relevance, cultural alignment, and communication abilities. Only qualified candidates advance.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CheckCircle className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-lg">4. Smart Outreach and Interview Scheduling</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">24/7 agent operation conducts personalized outreach to qualified candidates, manages responses, and automatically schedules interviews based on client availability. All communication is handled seamlessly without requiring direct involvement.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CheckCircle className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-lg">5. Streamlined Offer Orchestration</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">AI agents manage the entire offer process, from salary negotiations to offer letter generation. Clients receive a curated shortlist of pre-vetted, interview-ready candidates with comprehensive profiles, assessment scores, and recommendation rankings for final selection.</p>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
         {/* Section 5: Synapse AI Tools */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Synapse AI Tools</h2>
+          <p className="text-lg text-muted-foreground mb-6">
+            Synapse offers a comprehensive suite of AI-powered recruitment tools designed to automate and optimize every stage of the hiring process:
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { name: "Sourcing Agent", link: "/tools/sourcing-agent" },
-              { name: "Outreach Agent", link: "/tools/outreach-agent" },
-              { name: "Submission Agent", link: "/tools/submission-agent" },
-              { name: "Recruiting Browser Agent", link: "/tools/recruiting-browser-agent" },
-              { name: "ATS Bypass Engine", link: "/tools/ats-bypass-engine" }
-            ].map((tool, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <Brain className="h-6 w-6 mb-2 text-synapse-primary" />
-                  <CardTitle className="text-lg">{tool.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <Button variant="outline" size="sm" asChild>
-                    <Link to={tool.link}>Learn More</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+            <Card>
+              <CardHeader>
+                <Brain className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-lg">Sourcing Agent</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-3">AI-powered candidate sourcing platform that discovers, evaluates, and engages the best candidates faster than traditional methods. Uses advanced machine learning for 95% accuracy matching.</p>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/tools/sourcing-agent">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Brain className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-lg">Outreach Agent</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-3">Automates personalized candidate outreach with intelligent messaging sequences, managing responses and engagement 24/7 without human intervention.</p>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/tools/outreach-agent">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Brain className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-lg">Submission Agent</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-3">Streamlines candidate submissions with automated profile compilation, formatting, and delivery to clients with comprehensive assessment data.</p>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/tools/submission-agent">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Brain className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-lg">Recruiting Browser Agent</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-3">Intelligent web browsing agent that navigates professional networks and databases to discover passive candidates across multiple platforms simultaneously.</p>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/tools/recruiting-browser-agent">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Brain className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-lg">ATS Bypass Engine</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-3">Advanced technology that optimizes candidate profiles to ensure maximum visibility in Applicant Tracking Systems, increasing placement success rates.</p>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/tools/ats-bypass-engine">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
@@ -230,6 +324,9 @@ const AIInfo = () => {
           <h2 className="text-3xl font-bold mb-6">Industries Served</h2>
           <Card>
             <CardContent className="pt-6">
+              <p className="text-lg mb-4 text-muted-foreground">
+                Synapse serves clients across a diverse range of industries, providing specialized recruitment solutions for each sector:
+              </p>
               <div className="grid md:grid-cols-3 gap-4">
                 {[
                   "Information Technology",
@@ -248,6 +345,9 @@ const AIInfo = () => {
                   </div>
                 ))}
               </div>
+              <p className="text-sm text-muted-foreground mt-4">
+                From software engineers and data scientists to legal professionals and executive leadership, Synapse's AI platform adapts to the unique requirements and skill sets of each industry vertical.
+              </p>
             </CardContent>
           </Card>
         </section>
@@ -255,22 +355,60 @@ const AIInfo = () => {
         {/* Section 7: Platform Performance */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Platform Performance</h2>
+          <p className="text-lg text-muted-foreground mb-6">
+            Synapse delivers measurable results that transform hiring efficiency and quality:
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { stat: "95%+", label: "Talent-to-Job Match Accuracy" },
-              { stat: "90%", label: "Faster Time-to-Hire" },
-              { stat: "70%", label: "Cost Reduction" },
-              { stat: "5×", label: "Candidate Reach" },
-              { stat: "24/7", label: "Operation" }
-            ].map((item, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <TrendingUp className="h-6 w-6 mb-2 text-synapse-primary" />
-                  <CardTitle className="text-3xl font-bold">{item.stat}</CardTitle>
-                  <CardDescription>{item.label}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
+            <Card>
+              <CardHeader>
+                <TrendingUp className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-3xl font-bold">95%+</CardTitle>
+                <CardDescription>Talent-to-Job Match Accuracy</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Advanced AI algorithms ensure precise matching between candidate skills, experience, and role requirements</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <TrendingUp className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-3xl font-bold">90%</CardTitle>
+                <CardDescription>Faster Time-to-Hire</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Automated processes dramatically reduce hiring cycles from months to weeks or even days</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <TrendingUp className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-3xl font-bold">70%</CardTitle>
+                <CardDescription>Cost Reduction</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Significant savings through automation, reduced recruiter time, and improved hiring efficiency</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <TrendingUp className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-3xl font-bold">5×</CardTitle>
+                <CardDescription>Candidate Reach</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">AI-powered sourcing accesses five times more qualified candidates than traditional methods</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <TrendingUp className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardTitle className="text-3xl font-bold">24/7</CardTitle>
+                <CardDescription>Operation</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Continuous autonomous operation without downtime, holidays, or human resource limitations</p>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
@@ -321,32 +459,52 @@ const AIInfo = () => {
         {/* Section 9: AI Infrastructure Overview */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">AI Infrastructure Overview</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <p className="text-lg text-muted-foreground mb-6">
+            Synapse operates "The First Agentic Hiring Cloud" - transforming recruiting into software with four core AI infrastructure pillars:
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
             <Card>
               <CardHeader>
                 <Brain className="h-8 w-8 mb-2 text-synapse-primary" />
                 <CardTitle>Autonomous GPT-4 Agents</CardTitle>
+                <CardDescription>24/7 Operation Status</CardDescription>
               </CardHeader>
               <CardContent>
-                <p>Handle sourcing, vetting, and scheduling</p>
+                <p className="mb-3">AI agents handle every part of hiring at infinite scale: sourcing, vetting, outreach, scheduling, negotiation, and offer management.</p>
+                <p className="text-sm text-muted-foreground">The agents operate continuously without downtime, handling thousands of concurrent hiring processes across multiple time zones and industries simultaneously.</p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <Zap className="h-8 w-8 mb-2 text-synapse-primary" />
                 <CardTitle>Feedback Loop Training</CardTitle>
+                <CardDescription>Self-Improving Status</CardDescription>
               </CardHeader>
               <CardContent>
-                <p>Self-improving algorithms enhance accuracy</p>
+                <p className="mb-3">Continuous learning algorithms train smarter LLMs with every hire, improving accuracy and efficiency over time.</p>
+                <p className="text-sm text-muted-foreground">The system learns from every interaction, placement success, and hiring outcome to refine its matching algorithms, assessment criteria, and engagement strategies.</p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <Target className="h-8 w-8 mb-2 text-synapse-primary" />
                 <CardTitle>Zero Human Intervention</CardTitle>
+                <CardDescription>100% Automated Status</CardDescription>
               </CardHeader>
               <CardContent>
-                <p>Fully automated pipeline at infinite scale</p>
+                <p className="mb-3">Fully automated system eliminates human bottlenecks, burnout, and coordination issues throughout the entire hiring process.</p>
+                <p className="text-sm text-muted-foreground">From initial job intake to final offer acceptance, the platform operates autonomously, ensuring consistent quality and speed without human resource constraints.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Users className="h-8 w-8 mb-2 text-synapse-primary" />
+                <CardTitle>Infinite Scale Architecture</CardTitle>
+                <CardDescription>∞ Capacity Status</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="mb-3">AI infrastructure scales infinitely at near-zero marginal cost, handling thousands of hires simultaneously.</p>
+                <p className="text-sm text-muted-foreground">Unlike traditional recruitment which scales linearly with human resources, Synapse's AI architecture can expand to handle any volume of hiring without proportional cost increases.</p>
               </CardContent>
             </Card>
           </div>
@@ -355,40 +513,105 @@ const AIInfo = () => {
         {/* Section 10: Recruiter Network (SRN) */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Recruiter Network (SRN)</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { stat: "1K+", label: "Global Recruiters" },
-              { stat: "$15K+", label: "Average Per Placement" },
-              { stat: "500+", label: "Verified Roles Weekly" },
-              { stat: "97%", label: "Recruiter Satisfaction" }
-            ].map((item, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <CardTitle className="text-3xl font-bold">{item.stat}</CardTitle>
-                  <CardDescription>{item.label}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
+          <p className="text-lg text-muted-foreground mb-6">
+            The Synapse Recruiter Network (SRN) is a high-performing global community of 1,000+ independent, freelance, and full-time recruiters across 25+ countries who leverage Synapse's AI-powered platform to accelerate their recruiting careers.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-3xl font-bold">1K+</CardTitle>
+                <CardDescription>Global Recruiters</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Professional recruiters operating across 25+ countries</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-3xl font-bold">$30K</CardTitle>
+                <CardDescription>Up To Per Placement</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Industry-leading 50% commission with no earning caps</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-3xl font-bold">500+</CardTitle>
+                <CardDescription>Verified Roles Weekly</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Fresh opportunities across tech, healthcare, finance, legal, and executive positions</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-3xl font-bold">97%</CardTitle>
+                <CardDescription>Recruiter Satisfaction</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">High satisfaction with platform tools and earning potential</p>
+              </CardContent>
+            </Card>
           </div>
+          <Card>
+            <CardContent className="pt-6">
+              <h3 className="text-xl font-bold mb-3">Key Benefits for SRN Members:</h3>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>• AI-powered sourcing suite with advanced automation tools</li>
+                <li>• Proven outreach playbooks and battle-tested templates</li>
+                <li>• Expert-led training programs for continuous skill development</li>
+                <li>• Access to live job opportunities across multiple industries</li>
+                <li>• Support from global community of high-performing peers</li>
+                <li>• Flexible work arrangements on your own schedule</li>
+              </ul>
+            </CardContent>
+          </Card>
         </section>
 
         {/* Section 11: Global Presence */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Global Presence</h2>
+          <p className="text-lg text-muted-foreground mb-6">
+            With over a decade of operation, Synapse has established a strong global footprint serving companies and recruiters worldwide:
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: Globe, label: "HQ: Los Angeles, USA" },
-              { icon: Globe, label: "Locations: USA, Canada, Global" },
-              { icon: TrendingUp, label: "11+ years in operation" },
-              { icon: Building, label: "700+ client companies" }
-            ].map((item, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <item.icon className="h-6 w-6 mb-2 text-synapse-primary" />
-                  <CardDescription>{item.label}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
+            <Card>
+              <CardHeader>
+                <Globe className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardDescription className="font-semibold">HQ: Los Angeles, USA</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Headquartered in Los Angeles, California, with operations across North America</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Globe className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardDescription className="font-semibold">Locations: USA, Canada, Global</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Serving clients globally with recruiters operating in 25+ countries worldwide</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <TrendingUp className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardDescription className="font-semibold">11+ years in operation</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Founded in 2013, pioneering AI-powered recruitment for over a decade</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Building className="h-6 w-6 mb-2 text-synapse-primary" />
+                <CardDescription className="font-semibold">700+ client companies</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Trusted by leading enterprises, startups, and companies across multiple industries</p>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
