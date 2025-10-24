@@ -629,13 +629,13 @@ const AIInfo = () => {
           <h2 className="text-3xl font-bold mb-6">Related Links</h2>
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              { label: "About Us", link: "/company/about" },
+              { label: "About Us", link: "/about" },
               { label: "Solutions", link: "/recruitment-solutions" },
               { label: "Tools", link: "/tools/sourcing-agent" },
               { label: "Industries", link: "/industries" },
               { label: "Recruiters", link: "/recruiters" },
-              { label: "Careers", link: "/company/careers" },
-              { label: "Case Studies", link: "/resources/case-studies" },
+              { label: "Careers", link: "/careers" },
+              { label: "Case Studies", link: "/case-studies" },
               { label: "Contact Us", link: "/contact" }
             ].map((item, index) => (
               <Button key={index} variant="outline" asChild className="w-full">
