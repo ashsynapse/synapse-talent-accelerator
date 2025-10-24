@@ -193,6 +193,9 @@ const Footer = () => {
         <div className="pt-8 border-t border-gray-700 text-gray-400 flex flex-col md:flex-row justify-between items-center">
           <p>© {currentYear} Synapse International. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
+            <a href="/ai-info" className="hover:text-white transition-colors">
+              AI Info
+            </a>
             <a href="/glossary" className="hover:text-white transition-colors">
               Glossary
             </a>
