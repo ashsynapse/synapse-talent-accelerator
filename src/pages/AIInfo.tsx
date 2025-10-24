@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import PageTemplate from "@/components/PageTemplate";
-import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -60,23 +59,6 @@ const AIInfo = () => {
 
       <section className="pt-32 pb-20 bg-gradient-to-br from-white to-synapse-lighter/30">
         <div className="container-wide">
-          {/* Breadcrumb */}
-          <div className="mb-8">
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link to="/">Home</Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbPage>AI Info</BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          </div>
-
           {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-synapse-primary/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-synapse-primary/20">
